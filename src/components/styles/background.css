@@ -1,0 +1,15 @@
+#background {
+  position: fixed;
+  background-color: #EAE6E1;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+#background #doodle {
+  width: 98%;
+  height: 98%;
+}
+/*# sourceMappingURL=background.css.map */

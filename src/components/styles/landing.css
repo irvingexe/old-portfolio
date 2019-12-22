@@ -1,0 +1,12 @@
+#cover {
+  height: 100vh;
+  width: 43vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2em;
+}
+/*# sourceMappingURL=landing.css.map */

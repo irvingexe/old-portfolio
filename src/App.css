@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.App{
+    font-family: 'Montserrat';
+    font-size: x-large;
+    margin-left: 6.3em;
+    margin-right: 6.3em;
+}
+
+.font-xxs{
+    font-size: 25px;
+}
+
+.font-xs{
+    font-size: 25px;
+}
+
+.font-s{
+    font-size: 25px;
+}
+
+.font-m{
+    font-size: 25px;
+}
+
+.font-xl{
+    font-size: 25px;
+}
+
+.font-xxl{
+    font-size: 25px;
+}
