@@ -2,9 +2,15 @@
 
 .App{
     font-family: 'Montserrat';
-    font-size: x-large;
-    margin-left: 6.3em;
-    margin-right: 6.3em;
+}
+
+.lateral-margin{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+label{
+    cursor: pointer;
 }
 
 .font-xxs{
