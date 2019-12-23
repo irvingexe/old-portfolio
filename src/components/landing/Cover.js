@@ -6,13 +6,13 @@ export default class Cover extends Component {
     render() {
         return (
             <div id="cover" className="lateral-margin">
-                <p>
+                <p className="center">
                     Hey! <br/>
                     I’m Irving Mariscales, <br/>
                     a software developer with a taste for design and interactivity
                 </p>
 
-                <label id="arrow">
+                <label id="arrow" className="center">
                     <img src={arrow} className="up"/>
                 </label>
             </div>
