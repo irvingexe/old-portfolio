@@ -4,15 +4,6 @@
     font-family: 'Montserrat';
 }
 
-.asdf{
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    backdrop-filter: blur(100px);
-}
-
 .lateral-margin{
     margin-left: 10%;
     margin-right: 10%;
