@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Logo from './Logo'
-import '../styles/nav.css'
+import '../../styles/nav.css'
 
 export default class Nav extends Component {
 
@@ -12,7 +12,6 @@ export default class Nav extends Component {
     menuState = () => {this.setState((state, props) => ({menuState:!state.menuState}))}
 
     render() {
-        console.log(this.state.menuState)
         return (
             <nav id="nav" className="fixed font-xs">
                 <label className="App-logo">

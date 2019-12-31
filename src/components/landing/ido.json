@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Front",
+        "description": "Responsive front-end developement using React",
+        "tecnologies": [
+            {
+                "img": "./assets/tecnologies/react.svg",
+                "title": "React"
+            },
+            {
+                "img": "../../assets/tecnologies/javascript.svg",
+                "title": "JavaScript"
+            },
+            {
+                "img": "../../assets/tecnologies/html.svg",
+                "title": "HTML"
+            },
+            {
+                "img": "../../assets/tecnologies/sass.svg",
+                "title": "SCSS/SASS"
+            },
+            {
+                "img": "../../assets/tecnologies/materialui.svg",
+                "title": "MaterialUI"
+            },
+            {
+                "img": "../../assets/tecnologies/bootstrap.svg",
+                "title": "Bootstrap"
+            }
+        ]
+    },
+    {
+        "name": "Back",
+        "description": "Backend microservices as well as database management",
+        "tecnologies": [
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Node.js"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Java"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "MongoDB"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "SQL"
+            }
+        ]
+    },
+    {
+        "name": "Mobile",
+        "description": "Native Android applications and Cross Platform applications Android & IOS using React Native",
+        "tecnologies": [
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "React Native"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Kotlin"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Firebase"
+            }
+        ]
+    },
+    {
+        "name": "Design",
+        "description": "Wireframing and prototiping with tools such as Sketch and Figma, 3D modeling and SVG illustration and animation",
+        "tecnologies": [
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Sketch"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Photoshop"
+            },
+            {
+                "img": "../../assets/tecnologies/react.svg",
+                "title": "Illustrator"
+            }
+        ]
+    }
+]

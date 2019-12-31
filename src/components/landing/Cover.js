@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import '../styles/landing.css'
+import '../../styles/landing.css'
 import arrow from '../../assets/arrow.svg'
 
 export default class Cover extends Component {
     render() {
         return (
-            <div id="cover" className="lateral-margin">
+            <div id="cover">
                 <p className="center">
                     Hey! <br/>
                     I’m Irving Mariscales, <br/>
@@ -13,7 +13,7 @@ export default class Cover extends Component {
                 </p>
 
                 <label id="arrow" className="center">
-                    <img src={arrow} className="up"/>
+                    <img alt="" src={arrow} className="up"/>
                 </label>
             </div>
         )
