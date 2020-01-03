@@ -18,7 +18,7 @@
   margin: 1.3em;
 }
 
-#nav #menu-items #contact {
+#nav #menu-items .contact {
   position: absolute;
   right: .5em;
   top: 0em;
@@ -168,7 +168,7 @@
   #nav #menu-items li {
     margin: 1.3em;
   }
-  #nav #menu-items #contact {
+  #nav #menu-items .contact {
     position: initial;
   }
 }

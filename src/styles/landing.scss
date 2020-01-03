@@ -144,4 +144,75 @@
             transform-origin: left;
         }
     }
+    #contact{
+        #mailto{
+            transform: translate(0,0) !important;
+        }
+        ul{
+            grid-template-columns: none !important;
+        }
+    }
+}
+
+#who{
+    height: 100vh;
+    display: flex;
+    /*
+    .cursor-image{
+        opacity: 0;
+        pointer-events: none;
+        width: 0;
+        height: 0;
+    }
+    &:hover{
+        .cursor-image{
+            opacity: 1;
+            width: 10em;
+            height: 10em;
+        }
+    }
+    */
+    div:first-child{
+        width: 100%;
+        p{
+            width: 100%;
+            max-width: 27em;
+            text-align: justify;
+            &:last-child{
+                margin-left: auto;
+                margin-top: 3em;
+            }
+        }
+    }
+}
+
+#contact{
+    height: 100vh;
+    display: flex;
+    div:first-child{
+        width: 100%;
+        h1{
+            text-align: center;
+            margin-bottom: 5em;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: 1fr min-content min-content;
+            /*grid-template-columns: repeat(auto-fit, minmax(10em, min-content));*/
+            align-items: center;
+            margin: 0;
+            gap: 1em;
+        }
+        #mailto{
+            flex-direction: column;
+            /*transform: translate(-25%, 0em);*/
+            .shine{
+                height: 2em;
+                width: 2em;
+                &:last-child{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
 }

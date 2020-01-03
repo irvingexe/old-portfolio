@@ -31,6 +31,9 @@ export default class Lottie extends Component{
                 prevState.anim.playSegments([s1, s2], true)
             }
         }
+        if (nextProps.play === true && prevState.anim){
+            prevState.anim.play();
+        }
         return null;
     }
 

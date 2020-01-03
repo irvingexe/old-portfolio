@@ -18,6 +18,7 @@ a {
 }
 
 .unselectable {
+  /*user-drag: none;*/
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -72,5 +73,19 @@ a {
   .font-xxl {
     font-size: 8em;
   }
+}
+
+.cursor-image {
+  border-radius: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 /*# sourceMappingURL=app.css.map */
