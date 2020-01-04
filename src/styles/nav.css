@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
 }
 
 #nav #menu-items {
@@ -22,7 +22,6 @@
   position: absolute;
   right: .5em;
   top: 0em;
-  z-index: 1;
 }
 
 #toggle {
@@ -73,7 +72,6 @@
             animation: App-logo-spin infinite 5s linear;
     -webkit-transition: all 0.33s cubic-bezier(1, 0, 0, 1);
     transition: all 0.33s cubic-bezier(1, 0, 0, 1);
-    cursor: pointer;
     font-size: 100px;
     letter-spacing: 15px;
     text-align: justify;
@@ -133,6 +131,7 @@
     top: 0em;
     width: 100vw;
     height: 100vh;
+    z-index: 2;
   }
   #nav #toggle {
     opacity: 1;
@@ -140,7 +139,6 @@
   #nav #menu-items {
     height: 100vh;
     background-color: #EAE6E1;
-    z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

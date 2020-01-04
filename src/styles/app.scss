@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .App{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 .lateral-margin{
@@ -81,34 +81,28 @@ ul{
 }
 
 #cursor{
-    border: solid 1px #000;
     border-radius: 50%;
     position: fixed;
     width: .5em;
     height: .5em;
     pointer-events: none;
-    z-index: 3;
+    z-index: 2;
     transform: translate(-50%, -50%);
     left: 200vw;
     background-color: #000;
-    transition: transform .0s linear;
-    display: flex;
-    align-items: center;
+    transition: transform .0s ease-out;
     div{
+        background-color: #000;
         border-radius: 50%;
-        width: 2px;
-        height: 2px;
-        background-color: #fff;
-    }
-}
-
-label:hover, a:hover{
-    background-color: rebeccapurple;
-    #cursor{
-        border: none;
-        background-color: #fff;
-        width: 1em;
-        height: 1em;
-        z-index: 0;
+        width: .5em;
+        height: .5em;
+        transition: all .2s ease-out;
+        text-align: center;
+        &.hover{
+            transform: translate(-50%, -50%) !important;
+            background-color: #fff;
+            width: 4em;
+            height: 4em;
+        }
     }
 }

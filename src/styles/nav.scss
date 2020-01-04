@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 2;
+  z-index: 3;
 
   #menu-items {
     list-style: none;
@@ -21,7 +21,6 @@
       position: absolute;
       right: .5em;
       top: 0em;
-      z-index: 1;
     }
   }
 }
@@ -68,7 +67,6 @@
     opacity: 0;
     animation: App-logo-spin infinite 5s linear;
     transition: all .33s cubic-bezier(1, 0, 0, 1);
-    cursor: pointer;
     font-size: 100px;
     letter-spacing: 15px;
     text-align: justify;
@@ -107,6 +105,7 @@
     top: 0em;
     width: 100vw;
     height: 100vh;
+    z-index: 2;
 
     #toggle{
       opacity: 1;
@@ -115,7 +114,6 @@
     #menu-items{
       height: 100vh;
       background-color: #EAE6E1;
-      z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;

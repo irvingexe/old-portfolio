@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 .App {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 .lateral-margin {
@@ -90,45 +90,37 @@ ul {
 }
 
 #cursor {
-  border: solid 1px #000;
   border-radius: 50%;
   position: fixed;
   width: .5em;
   height: .5em;
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 200vw;
   background-color: #000;
-  -webkit-transition: -webkit-transform .0s linear;
-  transition: -webkit-transform .0s linear;
-  transition: transform .0s linear;
-  transition: transform .0s linear, -webkit-transform .0s linear;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-transition: -webkit-transform .0s ease-out;
+  transition: -webkit-transform .0s ease-out;
+  transition: transform .0s ease-out;
+  transition: transform .0s ease-out, -webkit-transform .0s ease-out;
 }
 
 #cursor div {
+  background-color: #000;
   border-radius: 50%;
-  width: 2px;
-  height: 2px;
-  background-color: #fff;
+  width: .5em;
+  height: .5em;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  text-align: center;
 }
 
-label:hover, a:hover {
-  background-color: rebeccapurple;
-}
-
-label:hover #cursor, a:hover #cursor {
-  border: none;
+#cursor div.hover {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
   background-color: #fff;
-  width: 1em;
-  height: 1em;
-  z-index: 0;
+  width: 4em;
+  height: 4em;
 }
 /*# sourceMappingURL=app.css.map */
