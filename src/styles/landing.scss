@@ -18,6 +18,9 @@
 
     #arrow{
         height: 10vh;
+        img{
+            z-index: 3;
+        }
     }
     
     .up {
@@ -200,16 +203,20 @@
             align-items: center;
             margin: 0;
             gap: 1em;
-        }
-        #mailto{
-            flex-direction: column;
-            /*transform: translate(-25%, 0em);*/
-            .shine{
-                height: 2em;
-                width: 2em;
-                &:last-child{
-                    transform: rotate(180deg);
+            
+            #mailto{
+                flex-direction: column;
+                /*transform: translate(-25%, 0em);*/
+                .shine{
+                    height: 2em;
+                    width: 2em;
+                    &:last-child{
+                        transform: rotate(180deg);
+                    }
                 }
+            }
+            li{
+                z-index: 3;
             }
         }
     }

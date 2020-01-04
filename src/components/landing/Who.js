@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import me from '../../assets/me.svg'
+import cursor from '../../cursor'
 
 export default class Who extends Component {
+    cursorImage = () => {cursor.type = "image"; cursor.image = me}
+    resetCursor = () => {cursor.type = "default";}
     render() {
         return (
-            <div id="who" className="center">
+            <div id="who" className="center" onMouseEnter={this.cursorImage} onMouseLeave={this.resetCursor}>
                 <div>
                     <h1 className="font-m">In a few words</h1>
                     <p className="font-s">

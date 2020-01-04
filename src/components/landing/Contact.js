@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import Lottie from '../Lottie'
 import shine from '../../assets/smile';
+import cursor from '../../cursor'
 
 export default class Contact extends Component {
     constructor(props){
         super(props)
         this.state = {shine: true}
     }
+    cursorHover = () => {cursor.type = "hover"}
+    resetCursor = () => {cursor.type = "default"}
     shine = () => {this.setState((state, props) => ({shine: true}), () => {this.setState((state, props) => ({shine: false}))})}
     render() {
         return (
@@ -17,11 +20,11 @@ export default class Contact extends Component {
                     <ul>
                         <li onMouseEnter={this.shine} id="mailto" className="center">
                             <div className="shine"><Lottie play={this.state.shine} animationData = {shine}/></div>
-                            <a className="font-s" href="mailto:mariscales.irving@gmail.com">mariscales.irving@gmail.com</a>
+                            <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="mailto:mariscales.irving@gmail.com">mariscales.irving@gmail.com</a>
                             <div className="shine"><Lottie play={this.state.shine} animationData = {shine}/></div>
                         </li>
-                        <li><a className="font-s" href="https://www.linkedin.com/in/irving-mariscales/">LinkedIn</a></li>
-                        <li><a className="font-s" href="https://github.com/irvingexe">GitHub</a></li>
+                        <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://www.linkedin.com/in/irving-mariscales/">LinkedIn</a></li>
+                        <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://github.com/irvingexe">GitHub</a></li>
                     </ul>
                 </div>
                 <div className="bg-title font-xxl bold center unselectable"><h1>@</h1></div>

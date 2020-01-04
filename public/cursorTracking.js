@@ -1,21 +1,24 @@
 let cursor;
+let image;
 let lastX = 0;
 let lastY = 0;
 let timeout;
-let hover = false;
+let deformation = false;
 
 cursorTracking = (e) => {
     clearTimeout(timeout);
     cursor = document.getElementById("cursor");
+    deformation = (document.getElementsByClassName("cursor-default")[0])? true :false;
+    image = document.querySelector("#cursor+.img");
+
     cursor.style.left = e.clientX+"px";
     cursor.style.top = e.clientY+"px";
-    hover = (document.getElementsByClassName("hover")[0])? true :false;
-
-    console.log(document.getElementsByClassName("hover"))
+    image.style.left = (e.clientX+4)+"px";
+    image.style.top = (e.clientY+4)+"px";
 
     cursor.style.transform = (Math.abs((e.clientY-lastY)+(e.clientX-lastX))>4)?
-        "rotate("+(hover? 0 :Math.atan2((e.clientY-lastY), (e.clientX-lastX))*180/Math.PI)
-            +"deg) rotateX("+(hover? 0 :60)+"deg) scale("+(hover? 1 :1.5)+")"
+        "rotate("+(deformation? Math.atan2((e.clientY-lastY), (e.clientX-lastX))*180/Math.PI :0) 
+            +"deg) rotateX("+(deformation? 60 :0)+"deg) scale("+(deformation? 1.5 :1)+")"
         :"none"
 
     lastX = e.clientX;

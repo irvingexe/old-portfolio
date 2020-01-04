@@ -87,22 +87,48 @@ ul{
     height: .5em;
     pointer-events: none;
     z-index: 2;
-    transform: translate(-50%, -50%);
     left: 200vw;
     background-color: #000;
     transition: transform .0s ease-out;
     div{
         background-color: #000;
         border-radius: 50%;
-        width: .5em;
-        height: .5em;
+        width: 0;
+        height: 0;
         transition: all .2s ease-out;
         text-align: center;
-        &.hover{
-            transform: translate(-50%, -50%) !important;
-            background-color: #fff;
-            width: 4em;
-            height: 4em;
+    }
+    &.cursor-hover div{
+        transform: translate(-50%, -50%) !important;
+        background-color: #fff;
+        width: 4em;
+        height: 4em;
+    }
+    &.cursor-image+.img{
+        width: 9.9em;
+        height: 9.9em;
+        background-color: #fff;
+        img{
+            opacity: 1;
+            width: 10em;
+            height: 10em;
+        }
+    }
+    +.img{
+        background-color: #000;
+        transform: translate(-50%, -50%) !important;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 2;
+        transition: all .2s ease-out, left 0s, top 0s;
+        width: 0;
+        height: 0;
+        img{
+            transition: all .2s ease-out, left 0s, top 0s;
+            opacity: 0;
+            width: 0;
+            height: 0;
         }
     }
 }

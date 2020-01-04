@@ -4,10 +4,13 @@ import cursor from '../../cursor'
 export default class Cursor extends Component {
     render() {
         return (
-            <div id="cursor">
-                <div className={"center "+cursor.type}>
-                    {(cursor.type === "project")? "See project" :null}
+            <div>
+                <div id="cursor" className={"cursor-"+cursor.type}>
+                    <div className="center">
+                        {(cursor.type === "project")? "See project" :null}
+                    </div>
                 </div>
+                <div className="img center"><img alt="" src={cursor.image}></img></div>
             </div>
         )
     }

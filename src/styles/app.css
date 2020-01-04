@@ -96,8 +96,6 @@ ul {
   height: .5em;
   pointer-events: none;
   z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   left: 200vw;
   background-color: #000;
   -webkit-transition: -webkit-transform .0s ease-out;
@@ -109,18 +107,52 @@ ul {
 #cursor div {
   background-color: #000;
   border-radius: 50%;
-  width: .5em;
-  height: .5em;
+  width: 0;
+  height: 0;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
   text-align: center;
 }
 
-#cursor div.hover {
+#cursor.cursor-hover div {
   -webkit-transform: translate(-50%, -50%) !important;
           transform: translate(-50%, -50%) !important;
   background-color: #fff;
   width: 4em;
   height: 4em;
+}
+
+#cursor.cursor-image + .img {
+  width: 9.9em;
+  height: 9.9em;
+  background-color: #fff;
+}
+
+#cursor.cursor-image + .img img {
+  opacity: 1;
+  width: 10em;
+  height: 10em;
+}
+
+#cursor + .img {
+  background-color: #000;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-transition: all .2s ease-out, left 0s, top 0s;
+  transition: all .2s ease-out, left 0s, top 0s;
+  width: 0;
+  height: 0;
+}
+
+#cursor + .img img {
+  -webkit-transition: all .2s ease-out, left 0s, top 0s;
+  transition: all .2s ease-out, left 0s, top 0s;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 /*# sourceMappingURL=app.css.map */

@@ -30,7 +30,7 @@
   right: .8em;
   margin: 1.15em;
   margin-top: 1em;
-  opacity: 0;
+  display: none;
 }
 
 .App-logo {
@@ -134,7 +134,7 @@
     z-index: 2;
   }
   #nav #toggle {
-    opacity: 1;
+    display: block;
   }
   #nav #menu-items {
     height: 100vh;
