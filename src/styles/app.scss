@@ -9,10 +9,6 @@
     margin-right: 10%;
 }
 
-label{
-    cursor: pointer;
-}
-
 a{
     text-decoration: none;
     color: #000000;
@@ -78,4 +74,41 @@ a{
 ul{
     list-style: none;
     padding: 0;
+}
+
+*{
+    cursor: none;
+}
+
+#cursor{
+    border: solid 1px #000;
+    border-radius: 50%;
+    position: fixed;
+    width: .5em;
+    height: .5em;
+    pointer-events: none;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    left: 200vw;
+    background-color: #000;
+    transition: transform .0s linear;
+    display: flex;
+    align-items: center;
+    div{
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        background-color: #fff;
+    }
+}
+
+label:hover, a:hover{
+    background-color: rebeccapurple;
+    #cursor{
+        border: none;
+        background-color: #fff;
+        width: 1em;
+        height: 1em;
+        z-index: 0;
+    }
 }
