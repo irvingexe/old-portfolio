@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Lottie from '../Lottie'
-import shine from '../../assets/smile';
+import shine from '../../assets/shine';
 import cursor from '../../cursor'
 
 export default class Contact extends Component {
@@ -8,7 +8,8 @@ export default class Contact extends Component {
         super(props)
         this.state = {shine: false}
     }
-    cursorHover = () => {cursor.type = "hover"; this.shine()}
+    mailHover = () => {this.cursorHover(); this.shine();}
+    cursorHover = () => {cursor.type = "hover"}
     resetCursor = () => {cursor.type = "default"}
     shine = () => {this.setState((state, props) => ({shine: true}), () => {this.setState((state, props) => ({shine: false}))})}
     render() {
@@ -20,7 +21,10 @@ export default class Contact extends Component {
                     <ul>
                         <li id="mailto" className="center">
                             <div className="shine"><Lottie play={this.state.shine} animationData = {shine}/></div>
-                            <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="mailto:mariscales.irving@gmail.com">mariscales.irving@gmail.com</a>
+                            <a onMouseEnter={this.mailHover} onMouseLeave={this.resetCursor} 
+                            className="font-s" href="mailto:mariscales.irving@gmail.com">
+                                    mariscales.irving@gmail.com
+                            </a>
                             <div className="shine"><Lottie play={this.state.shine} animationData = {shine}/></div>
                         </li>
                         <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://www.linkedin.com/in/irving-mariscales/">LinkedIn</a></li>
