@@ -32,7 +32,10 @@ export default class Lottie extends Component{
             }
         }
         if (nextProps.play === true && prevState.anim){
-            prevState.anim.play();
+            console.log(prevState.anim)
+            if((prevState.anim.currentFrame === prevState.anim.totalFrames-1) || (prevState.anim.currentFrame === 0)){
+                prevState.anim.goToAndPlay(0,true);
+            }
         }
         return null;
     }

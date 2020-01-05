@@ -3,6 +3,7 @@
   left: 0;
   width: 100vw;
   z-index: 3;
+  pointer-events: none;
 }
 
 #nav #menu-items {
@@ -16,6 +17,7 @@
   display: -ms-flexbox;
   display: flex;
   margin: 1.3em;
+  pointer-events: all;
 }
 
 #nav #menu-items .contact {
@@ -31,6 +33,7 @@
   margin: 1.15em;
   margin-top: 1em;
   display: none;
+  pointer-events: all;
 }
 
 .App-logo {
@@ -38,6 +41,7 @@
   position: fixed;
   top: -13px;
   left: -3px;
+  pointer-events: all;
 }
 
 .smile {
@@ -131,7 +135,7 @@
     top: 0em;
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 4;
   }
   #nav #toggle {
     display: block;

@@ -195,6 +195,9 @@
     -webkit-transform-origin: left;
             transform-origin: left;
   }
+  #nav {
+    z-index: 3;
+  }
   #contact #mailto {
     -webkit-transform: translate(0, 0) !important;
             transform: translate(0, 0) !important;
@@ -291,6 +294,6 @@
 }
 
 #contact div:first-child ul li {
-  z-index: 3;
+  z-index: 2;
 }
 /*# sourceMappingURL=landing.css.map */

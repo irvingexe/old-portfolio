@@ -5,7 +5,7 @@ export default class Cursor extends Component {
     render() {
         return (
             <div>
-                <div id="cursor" className={"cursor-"+cursor.type}>
+                <div id="cursor" className={"center cursor-"+cursor.type}>
                     <div className="center">
                         {(cursor.type === "project")? "See project" :null}
                     </div>

@@ -145,6 +145,9 @@
             transform-origin: left;
         }
     }
+    #nav{
+        z-index: 3;
+    }
     #contact{
         #mailto{
             transform: translate(0,0) !important;
@@ -203,7 +206,7 @@
             align-items: center;
             margin: 0;
             gap: 1em;
-            
+
             #mailto{
                 flex-direction: column;
                 /*transform: translate(-25%, 0em);*/
@@ -216,7 +219,7 @@
                 }
             }
             li{
-                z-index: 3;
+                z-index: 2;
             }
         }
     }
