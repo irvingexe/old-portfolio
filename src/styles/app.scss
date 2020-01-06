@@ -167,3 +167,32 @@ ul{
         }
     }
 }
+
+.link:hover .line{
+    width: 40%;
+}
+.link:active .line{
+    width: 100%;
+    animation: tab-selection .2s ease-in-out;
+}
+.line{
+    pointer-events: none;
+    transition: all .2s;
+    height: 2px;
+    width: 0;
+    top: 50%;
+    background: #000;
+    transform: translate(0px, .70em);
+    &.active{
+        width: 100%;
+    }
+}
+
+@keyframes tab-selection {
+  50%{
+    width: 120%;
+  }
+  100%{
+    width: 100%;
+  }
+}

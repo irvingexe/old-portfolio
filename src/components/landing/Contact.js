@@ -21,14 +21,24 @@ export default class Contact extends Component {
                     <ul>
                         <li id="mailto" className="center">
                             <div className="shine"><Lottie play={this.state.shine} animationData = {shine}/></div>
-                            <a onMouseEnter={this.mailHover} onMouseLeave={this.resetCursor} 
-                            className="font-s" href="mailto:mariscales.irving@gmail.com">
-                                    mariscales.irving@gmail.com
-                            </a>
+                            <div className="link">
+                                <a onMouseEnter={this.mailHover} onMouseLeave={this.resetCursor} 
+                                className="font-s" href="mailto:mariscales.irving@gmail.com">
+                                        <div className="line"></div>mariscales.irving@gmail.com
+                                </a>
+                            </div>
                             <div className="shine"><Lottie play={this.state.shine} animationData = {shine}/></div>
                         </li>
-                        <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://www.linkedin.com/in/irving-mariscales/">LinkedIn</a></li>
-                        <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://github.com/irvingexe">GitHub</a></li>
+                        <li className="link">
+                            <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://www.linkedin.com/in/irving-mariscales/">
+                                <div className="line"></div>LinkedIn
+                            </a>
+                        </li>
+                        <li className="link">
+                            <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} className="font-s" href="https://github.com/irvingexe">
+                                <div className="line"></div>GitHub
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div className="bg-title font-xxl bold center unselectable"><h1>@</h1></div>

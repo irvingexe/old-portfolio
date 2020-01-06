@@ -252,16 +252,16 @@
   display: flex;
 }
 
-#contact div:first-child {
+#contact > div:first-child {
   width: 100%;
 }
 
-#contact div:first-child h1 {
+#contact > div:first-child h1 {
   text-align: center;
   margin-bottom: 5em;
 }
 
-#contact div:first-child ul {
+#contact > div:first-child ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr min-content min-content;
@@ -275,7 +275,7 @@
   gap: 1em;
 }
 
-#contact div:first-child ul #mailto {
+#contact > div:first-child ul #mailto {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -283,17 +283,17 @@
   /*transform: translate(-25%, 0em);*/
 }
 
-#contact div:first-child ul #mailto .shine {
+#contact > div:first-child ul #mailto .shine {
   height: 3em;
   width: 5em;
 }
 
-#contact div:first-child ul #mailto .shine:last-child {
+#contact > div:first-child ul #mailto .shine:last-child {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-#contact div:first-child ul li {
+#contact > div:first-child ul li {
   z-index: 2;
 }
 /*# sourceMappingURL=landing.css.map */

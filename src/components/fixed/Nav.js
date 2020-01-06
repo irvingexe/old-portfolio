@@ -21,11 +21,19 @@ export default class Nav extends Component {
                     <Logo/>
                     <a id="home" href="home"></a>
                 </label>
-                <ul id="menu-items"   className={"center" + (this.state.menuState? " active" :"")}>
-                    <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="ido">I do</a></li>
-                    <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="work">Work</a></li>
-                    <li><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="who">Who</a></li>
-                    <li className="contact"><a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="contact">Contact</a></li>
+                <ul id="menu-items"   className={"center links" + (this.state.menuState? " active" :"")}>
+                    <li className="link">
+                        <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="ido"><div className="line"></div>I do</a>
+                    </li>
+                    <li className="link">
+                        <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="work"><div className="line"></div>Work</a>
+                    </li>
+                    <li className="link">
+                        <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="who"><div className="line"></div>Who</a>
+                    </li>
+                    <li className="contact link">
+                        <a onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor} href="contact"><div className="line"></div>Contact</a>
+                    </li>
                 </ul>
                 <label id="toggle" onClick={this.menuState} onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor}>
                     <ul className={"buns" + (this.state.menuState? " active" :"")}>

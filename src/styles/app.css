@@ -189,4 +189,48 @@ ul {
     height: 0;
   }
 }
+
+.link:hover .line {
+  width: 40%;
+}
+
+.link:active .line {
+  width: 100%;
+  -webkit-animation: tab-selection .2s ease-in-out;
+          animation: tab-selection .2s ease-in-out;
+}
+
+.line {
+  pointer-events: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  height: 2px;
+  width: 0;
+  top: 50%;
+  background: #000;
+  -webkit-transform: translate(0px, 0.7em);
+          transform: translate(0px, 0.7em);
+}
+
+.line.active {
+  width: 100%;
+}
+
+@-webkit-keyframes tab-selection {
+  50% {
+    width: 120%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes tab-selection {
+  50% {
+    width: 120%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=app.css.map */
