@@ -13,11 +13,11 @@ import Work from './components/landing/Work';
 export default function App() {
   const [x, setX] = useState(0), [y, setY] = useState(0);
   return (
-    <div className="App lateral-margin" onMouseMove={(e) => {setX(e.clientX);setY(e.clientY);}}>
+    <div className="App" onMouseMove={(e) => {setX(e.clientX);setY(e.clientY);}}>
       <Cursor/>
       <Background/>
       <Nav/>
-      <section id="sections">
+      <section id="sections" className="lateral-margin">
         <Cover/>
         <Ido/>
         <Work/>
