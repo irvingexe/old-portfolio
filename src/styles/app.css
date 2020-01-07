@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 .App {
   font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
+  pointer-events: none;
+}
+
+.App section, .App > div {
+  pointer-events: all;
 }
 
 .lateral-margin {

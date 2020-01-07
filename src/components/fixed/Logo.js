@@ -32,7 +32,7 @@ export default class Logo extends Component{
                         <path id="curve" fill="transparent" d="M0,246.9c0,125.5,90.1,253.6,250,253.6c127.8,0,250-104.7,250-250C500,79.4,353,0,249.9,0C128,0,0,99.8,0,246.9"/>
                         <text fill="#000000">
                             <textPath xlinkHref="#curve">
-                            IRVING MARISCALES
+                            IRVING&#160; &#160;MARISCALES
                             </textPath>
                         </text>
                     </svg>
