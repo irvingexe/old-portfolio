@@ -9,8 +9,10 @@ export default class Logo extends Component{
         this.state = {isHover: null, reverse: false, playFromCurrent: true};
     }
 
-    onMouseEnter = () => { this.setState((state, props) => ({isHover: true, playFromCurrent: true})) }
-    onMouseLeave = () => { this.setState((state, props) => ({isHover: false, playFromCurrent: true})) }
+    onMouseEnter = () => { this.setState((state, props) => ({isHover: true, playFromCurrent: true}),
+                    () => { this.setState((state, props) => ({playFromCurrent: false})) }) }
+    onMouseLeave = () => { this.setState((state, props) => ({isHover: false, playFromCurrent: true}),
+                    () => { this.setState((state, props) => ({playFromCurrent: false})) }) }
     onClick = () => { 
         this.setState((state, props) => ({reverse: true, playFromCurrent: false}),
         () => setTimeout(function() {this.setState({reverse: false})}.bind(this), 500)) 

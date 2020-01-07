@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .App{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .lateral-margin{
@@ -190,7 +190,7 @@ ul{
 
 @keyframes tab-selection {
   50%{
-    width: 120%;
+    width: calc(100% + .2em);
   }
   100%{
     width: 100%;

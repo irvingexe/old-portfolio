@@ -7,19 +7,23 @@ import Ido from './components/landing/Ido';
 import Who from './components/landing/Who';
 import Contact from './components/landing/Contact';
 import Cursor from './components/fixed/Cursor';
+import Work from './components/landing/Work';
 
 
 export default function App() {
   const [x, setX] = useState(0), [y, setY] = useState(0);
   return (
     <div className="App lateral-margin" onMouseMove={(e) => {setX(e.clientX);setY(e.clientY);}}>
+      <Cursor/>
       <Background/>
       <Nav/>
-      <Cursor/>
-      <Cover/>
-      <Ido/>
-      <Who x={x} y={y}/>
-      <Contact/>
+      <section id="sections">
+        <Cover/>
+        <Ido/>
+        <Work/>
+        <Who x={x} y={y}/>
+        <Contact/>
+      </section>
     </div>
   );
 }
