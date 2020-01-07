@@ -200,11 +200,17 @@ ul {
           animation: tab-selection .2s ease-in-out;
 }
 
+.link.active .line {
+  width: 100%;
+  -webkit-animation: tab-selection .2s ease-in-out;
+          animation: tab-selection .2s ease-in-out;
+}
+
 .line {
   pointer-events: none;
   -webkit-transition: all .2s;
   transition: all .2s;
-  height: 2px;
+  height: .1em;
   width: 0;
   top: 50%;
   background: #000;
@@ -217,6 +223,9 @@ ul {
 }
 
 @-webkit-keyframes tab-selection {
+  0% {
+    width: 40%;
+  }
   50% {
     width: calc(100% + .2em);
   }
@@ -226,6 +235,9 @@ ul {
 }
 
 @keyframes tab-selection {
+  0% {
+    width: 40%;
+  }
   50% {
     width: calc(100% + .2em);
   }

@@ -18,8 +18,7 @@ export default class Nav extends Component {
         return (
             <nav id="nav" className="fixed font-xs">
                 <label htmlFor="#home" className="App-logo" onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor}>
-                    <Logo/>
-                    <a id="home" href="home"></a>
+                    <a id="home" href="home"><Logo/></a>
                 </label>
                 <ul id="menu-items"   className={"center links" + (this.state.menuState? " active" :"")}>
                     <li className="link">

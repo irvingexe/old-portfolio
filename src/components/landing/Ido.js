@@ -23,8 +23,8 @@ export default class Ido extends Component {
             areas.push(
                 <div    key={i}
                         onMouseEnter={(e) => {this.setState((state, props) => ({active: ido[i].name}))}} 
-                        className={"area" + ((this.state.active === ido[i].name)? " active" :"")}>
-                    <div className="tag center font-m bold"><a>{ido[i].name}</a></div>
+                        className={"area link" + ((this.state.active === ido[i].name)? " active" :"")}>
+                    <div className="tag center font-m bold"><div><div className="line"></div>{ido[i].name}</div></div>
                     <div className="info">
                         <p className="description font-s">{ido[i].description}</p>
                         <div className="images">

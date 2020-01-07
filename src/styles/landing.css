@@ -84,16 +84,15 @@
           align-items: baseline;
 }
 
-#ido .content .area .tag a {
+#ido .content .area .tag > div {
   position: absolute;
   left: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-#ido .content .area.active .tag a {
+#ido .content .area.active .tag > div {
   left: 10px;
-  text-decoration: line-through;
 }
 
 #ido .content .area.active .description {
@@ -163,7 +162,7 @@
     grid-auto-rows: unset;
     gap: 2em;
   }
-  #ido .content .area .tag a {
+  #ido .content .area .tag > div {
     text-decoration: none !important;
   }
   #ido .content .area .info {
@@ -189,7 +188,7 @@
         grid-template-columns: 2.1em 1fr !important;
     grid-column-gap: 1em;
   }
-  .area .tag a {
+  .area .tag > div {
     -webkit-transform: rotate(-90deg) translate(-90%, 30%);
             transform: rotate(-90deg) translate(-90%, 30%);
     -webkit-transform-origin: left;
