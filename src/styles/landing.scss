@@ -7,17 +7,21 @@
 }
 
 #cover{
+    min-height: calc(100vh - 5rem);
+    position: relative;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-rows: 1fr 5rem;
+    grid-template-columns: 100%;
     p{
-        height: fit-content;
-        min-height: 80vh;
         font-size: 3em;
         max-width: 13em;
         margin: 0;
-        margin-top: 10vh;
     }
 
     #arrow{
-        height: 10vh;
+        height: 5em;
+        width: 100%;
         img{
             z-index: 3;
         }
@@ -144,15 +148,12 @@
             transform-origin: left;
         }
     }
-    #nav{
-        z-index: 3;
-    }
     #contact{
         #mailto{
             transform: translate(0,0) !important;
         }
         ul{
-            grid-template-columns: none !important;
+            grid-template-columns: 100% !important;
         }
     }
 }
@@ -194,9 +195,12 @@
     display: flex;
     >div:first-child{
         width: 100%;
+        display: grid;
+        grid-template-rows: 1fr max-content;
+        grid-template-columns: 100%;
+        min-height: 60vh;
         h1{
             text-align: center;
-            margin-bottom: 5em;
         }
         ul{
             display: grid;

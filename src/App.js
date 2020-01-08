@@ -17,7 +17,7 @@ export default function App() {
       <Cursor/>
       <Background/>
       <Nav/>
-      <section id="sections" className="lateral-margin">
+      <section className="lateral-margin">
         <Cover/>
         <Ido/>
         <Work/>

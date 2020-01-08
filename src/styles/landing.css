@@ -6,19 +6,27 @@
   z-index: -1;
 }
 
+#cover {
+  min-height: calc(100vh - 5rem);
+  position: relative;
+  margin-top: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 5rem;
+      grid-template-rows: 1fr 5rem;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
 #cover p {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  min-height: 80vh;
   font-size: 3em;
   max-width: 13em;
   margin: 0;
-  margin-top: 10vh;
 }
 
 #cover #arrow {
-  height: 10vh;
+  height: 5em;
+  width: 100%;
 }
 
 #cover #arrow img {
@@ -194,16 +202,13 @@
     -webkit-transform-origin: left;
             transform-origin: left;
   }
-  #nav {
-    z-index: 3;
-  }
   #contact #mailto {
     -webkit-transform: translate(0, 0) !important;
             transform: translate(0, 0) !important;
   }
   #contact ul {
-    -ms-grid-columns: none !important;
-        grid-template-columns: none !important;
+    -ms-grid-columns: 100% !important;
+        grid-template-columns: 100% !important;
   }
 }
 
@@ -253,11 +258,18 @@
 
 #contact > div:first-child {
   width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr max-content;
+      grid-template-rows: 1fr -webkit-max-content;
+      grid-template-rows: 1fr max-content;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  min-height: 60vh;
 }
 
 #contact > div:first-child h1 {
   text-align: center;
-  margin-bottom: 5em;
 }
 
 #contact > div:first-child ul {
