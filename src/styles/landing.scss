@@ -38,22 +38,21 @@
 }
 
 #ido{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     /*
     margin-top: 5em;
     margin-bottom: 5em;
     */
     .content{
-        position: absolute;
-        width: 80%;
         display: grid;
         grid-auto-rows: 1fr;
-        
+        position: relative;
         .area{
             display: grid;
             grid-template-columns: 25% 75%;
             .tag{
+                position: relative;
                 align-items: baseline;
                 >div{
                     position: absolute;

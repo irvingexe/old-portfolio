@@ -61,7 +61,7 @@
 }
 
 #ido {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,11 +72,10 @@
 }
 
 #ido .content {
-  position: absolute;
-  width: 80%;
   display: -ms-grid;
   display: grid;
   grid-auto-rows: 1fr;
+  position: relative;
 }
 
 #ido .content .area {
@@ -87,6 +86,7 @@
 }
 
 #ido .content .area .tag {
+  position: relative;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
