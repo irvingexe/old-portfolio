@@ -26,7 +26,9 @@
 
 #cover #arrow {
   height: 5em;
-  width: 100%;
+  width: 5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #cover #arrow img {
@@ -81,8 +83,9 @@
 #ido .content .area {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 75%;
-      grid-template-columns: 25% 75%;
+  -ms-grid-columns: 10em 1fr;
+      grid-template-columns: 10em 1fr;
+  min-height: 6em;
 }
 
 #ido .content .area .tag {
@@ -121,8 +124,8 @@
 #ido .content .info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20em;
-      grid-template-columns: 1fr 20em;
+  -ms-grid-columns: 1fr 18em;
+      grid-template-columns: 1fr 18em;
   gap: 1em;
 }
 
@@ -138,7 +141,7 @@
   display: grid;
   -ms-grid-columns: (5em)[3];
       grid-template-columns: repeat(3, 5em);
-  gap: 1em;
+  gap: 1.5em;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -147,16 +150,22 @@
   right: 0;
   opacity: 0;
   pointer-events: none;
+  text-align: center;
 }
 
-#ido .content .images div {
+#ido .content .images > div {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-@media screen and (max-width: 1050px) {
+#ido .content .images > div > img {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+@media screen and (max-width: 940px) {
   /*
     #nav{
         backdrop-filter: blur(2px);
@@ -171,7 +180,10 @@
     gap: 2em;
   }
   #ido .content .area .tag > div {
-    text-decoration: none !important;
+    left: 0 !important;
+  }
+  #ido .content .area .tag > div .line {
+    display: none;
   }
   #ido .content .area .info {
     -ms-grid-columns: 1fr;

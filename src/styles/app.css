@@ -223,9 +223,6 @@ ul {
 }
 
 @-webkit-keyframes tab-selection {
-  0% {
-    width: 40%;
-  }
   50% {
     width: calc(100% + .2em);
   }
@@ -235,9 +232,6 @@ ul {
 }
 
 @keyframes tab-selection {
-  0% {
-    width: 40%;
-  }
   50% {
     width: calc(100% + .2em);
   }

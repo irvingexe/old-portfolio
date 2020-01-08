@@ -21,7 +21,9 @@
 
     #arrow{
         height: 5em;
-        width: 100%;
+        width: 5em;
+        margin-left: auto;
+        margin-right: auto;
         img{
             z-index: 3;
         }
@@ -50,7 +52,8 @@
         position: relative;
         .area{
             display: grid;
-            grid-template-columns: 25% 75%;
+            grid-template-columns: 10em 1fr;
+            min-height: 6em;
             .tag{
                 position: relative;
                 align-items: baseline;
@@ -79,7 +82,7 @@
 
         .info{
             display: grid;
-            grid-template-columns: 1fr 20em;
+            grid-template-columns: 1fr 18em;
             gap: 1em;
             .description{
                 margin: 5px;
@@ -91,21 +94,26 @@
         .images{
             display: grid;
             grid-template-columns: repeat(3, 5em);
-            gap: 1em;
+            gap: 1.5em;
             align-items: start;
             position: absolute;
             top: 5px;
             right: 0;
             opacity: 0;
             pointer-events: none;
-            div {
-                flex-direction: column;;
+            text-align: center;
+            >div {
+                flex-direction: column;
+                >img {
+                    width: 3.5em;
+                    height: 3.5em;
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 940px){
     /*
     #nav{
         backdrop-filter: blur(2px);
@@ -119,7 +127,10 @@
             gap: 2em;
             .area {
                 .tag>div{
-                    text-decoration: none !important;
+                    left: 0 !important;
+                    .line{
+                        display: none;
+                    }
                 }
                 .info{
                     grid-template-columns: 1fr;
