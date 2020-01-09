@@ -2,6 +2,10 @@
 
 .App{
     font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
+    >section >div{ //, #work >div
+        min-height: calc(100vh - 5rem);
+        margin-top: 5rem;
+    }
 }
 
 .lateral-margin{
@@ -50,7 +54,8 @@ a{
 }
 
 .font-xl{
-    font-size: 25px;
+    font-size: 28vh;
+    font-weight: 100;
 }
 
 .font-xxl{
@@ -112,6 +117,14 @@ ul{
             height: 4em;
         }
         */
+        &:not(.cursor-project)+.img+.msg{
+            font-size: 0;
+        }
+        &.cursor-project+.img+.msg{
+            background: #FCFCFC;
+            height: 10em;
+            width: 10em;
+        }
         &.cursor-hover{
             +.img{
                 z-index: 1;
@@ -119,6 +132,9 @@ ul{
                 img{
                     width: 4em;
                     height: 4em;
+                }
+                +.msg{
+                    background-color: #fff;
                 }
             }
             div{
@@ -165,6 +181,17 @@ ul{
                 height: 0;
             }
         }
+        +.img+.msg{
+            position: fixed;
+            transform: translate(-50%, -50%);
+            transition: all .2s ease-out, left 0s, top 0s;
+            z-index: 2;
+            pointer-events: none;
+            background: #000;
+            border-radius: 50%;
+            height: 0;
+            width: 0;
+        }
     }
 }
 
@@ -193,6 +220,9 @@ ul{
 }
 
 @keyframes tab-selection {
+    0%{
+        width: 40%;
+    }
     50%{
         width: calc(100% + .2em);
     }

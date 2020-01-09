@@ -7,9 +7,7 @@
 }
 
 #cover {
-  min-height: calc(100vh - 5rem);
   position: relative;
-  margin-top: 5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 5rem;
@@ -320,10 +318,134 @@
   z-index: 2;
 }
 
-/*
-#work{
-    height: 100vh;
-    display: flex;
+#work > div:not(.bg-title) {
+  height: 100vh;
+  position: relative;
 }
-    */
+
+#work > div:not(.bg-title) .mockup {
+  max-height: 80vh;
+  max-width: 25em;
+  z-index: 1;
+}
+
+#work > div:not(.bg-title) .mockup > img {
+  height: 100%;
+  width: 100%;
+}
+
+#work > div:not(.bg-title) .title {
+  position: fixed;
+  margin: 0;
+  height: 1em;
+  letter-spacing: -.05em;
+  pointer-events: none;
+}
+
+#work > div:not(.bg-title) .title:nth-child(1) {
+  -webkit-animation: titleA-out 1s ease-out forwards;
+          animation: titleA-out 1s ease-out forwards;
+  bottom: 1rem;
+}
+
+#work > div:not(.bg-title) .title:nth-child(2) {
+  text-align: right;
+  -webkit-animation: titleB-out 1s ease-out forwards;
+          animation: titleB-out 1s ease-out forwards;
+  top: 2rem;
+}
+
+#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(1) {
+  -webkit-animation: titleA-in 1s ease-out forwards;
+          animation: titleA-in 1s ease-out forwards;
+}
+
+#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(2) {
+  -webkit-animation: titleB-in 1s ease-out forwards;
+          animation: titleB-in 1s ease-out forwards;
+}
+
+@-webkit-keyframes titleA-in {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: -.12em;
+  }
+}
+
+@keyframes titleA-in {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: -.12em;
+  }
+}
+
+@-webkit-keyframes titleA-out {
+  0% {
+    left: -.12em;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes titleA-out {
+  0% {
+    left: -.12em;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes titleB-in {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: -100%;
+  }
+  100% {
+    right: -.05em;
+  }
+}
+
+@keyframes titleB-in {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: -100%;
+  }
+  100% {
+    right: -.05em;
+  }
+}
+
+@-webkit-keyframes titleB-out {
+  0% {
+    right: -.05em;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+@keyframes titleB-out {
+  0% {
+    right: -.05em;
+  }
+  100% {
+    right: -100%;
+  }
+}
 /*# sourceMappingURL=landing.css.map */

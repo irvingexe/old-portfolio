@@ -7,10 +7,11 @@ export default class Cursor extends Component {
             <div>
                 <div id="cursor" className={"center cursor-"+cursor.type}>
                     <div className="center">
-                        {(cursor.type === "project")? "See project" :null}
+                        
                     </div>
                 </div>
                 <div className="img center"><img alt="" src={cursor.image}></img></div>
+                <div className="msg center font-xs">See project</div>
             </div>
         )
     }

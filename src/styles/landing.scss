@@ -7,9 +7,7 @@
 }
 
 #cover{
-    min-height: calc(100vh - 5rem);
     position: relative;
-    margin-top: 5rem;
     display: grid;
     grid-template-rows: 1fr 5rem;
     grid-template-columns: 100%;
@@ -238,9 +236,87 @@
     }
 }
 
-    /*
 #work{
-    height: 100vh;
-    display: flex;
+    >div:not(.bg-title){
+        height: 100vh;
+        position: relative;
+        .mockup{
+            max-height: 80vh;
+            max-width: 25em;
+                z-index: 1;
+            >img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .title{
+            position: fixed;
+            margin: 0;
+            height: 1em;
+            letter-spacing: -.05em;
+            pointer-events: none;
+            
+            &:nth-child(1){
+                animation: titleA-out 1s ease-out forwards;
+                bottom: 1rem;
+            }
+            &:nth-child(2){
+                text-align: right;
+                animation: titleB-out 1s ease-out forwards;
+                top: 2rem;
+            }
+        }
+        &[data-scroll="in"]{
+            .title{
+                &:nth-child(1){
+                    animation: titleA-in 1s ease-out forwards;
+                }
+                &:nth-child(2){
+                    animation: titleB-in 1s ease-out forwards;
+                }
+            }
+        }
+    }
 }
-    */
+
+@keyframes titleA-in{
+    0%{
+        left: -100%;
+    }
+    50%{
+        left: -100%;
+    }
+    100%{
+        left: -.12em;
+    }
+}
+
+@keyframes titleA-out{
+    0%{
+        left: -.12em;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+@keyframes titleB-in{
+    0%{
+        right: -100%;
+    }
+    50%{
+        right: -100%;
+    }
+    100%{
+        right: -.05em;
+    }
+}
+
+@keyframes titleB-out{
+    0%{
+        right: -.05em;
+    }
+    100%{
+        right: -100%;
+    }
+}
