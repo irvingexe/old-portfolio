@@ -1,16 +1,17 @@
 .bg-title{
     position: absolute;
-    height: 100%;
     width: 80%;
     color: rgba(0, 69, 126, 0.15);
     z-index: -1;
 }
 
-#cover{
+#cover >div{
     position: relative;
     display: grid;
     grid-template-rows: 1fr 5rem;
     grid-template-columns: 100%;
+    height: calc(100vh - 5rem);
+    margin-top: 5rem;
     p{
         font-size: 3em;
         max-width: 13em;
@@ -38,13 +39,9 @@
 }
 
 #ido{
-    min-height: 100vh;
     display: flex;
-    /*
-    margin-top: 5em;
-    margin-bottom: 5em;
-    */
     .content{
+        max-width: 60em;
         display: grid;
         grid-auto-rows: 1fr;
         position: relative;
@@ -112,12 +109,9 @@
 }
 
 @media screen and (max-width: 940px){
-    /*
-    #nav{
-        backdrop-filter: blur(2px);
-        background: #eae6e1a8;
+    #work > div:not(.bg-title) .title {
+        font-size: 20vw;
     }
-    */
     #ido{
         display: block;
         .content{
@@ -167,23 +161,7 @@
 }
 
 #who{
-    height: 100vh;
     display: flex;
-    /*
-    .cursor-image{
-        opacity: 0;
-        pointer-events: none;
-        width: 0;
-        height: 0;
-    }
-    &:hover{
-        .cursor-image{
-            opacity: 1;
-            width: 10em;
-            height: 10em;
-        }
-    }
-    */
     div:first-child{
         width: 100%;
         p{
@@ -199,7 +177,6 @@
 }
 
 #contact{
-    height: 100vh;
     display: flex;
     >div:first-child{
         width: 100%;
@@ -238,11 +215,12 @@
 
 #work{
     >div:not(.bg-title){
-        height: 100vh;
         position: relative;
+        min-height: calc(100vh - 5rem);
+        margin-top: 5rem;
         .mockup{
             max-height: 80vh;
-            max-width: 25em;
+            max-width: 23em;
                 z-index: 1;
             >img{
                 height: 100%;
@@ -255,15 +233,17 @@
             height: 1em;
             letter-spacing: -.05em;
             pointer-events: none;
-            
+            white-space:nowrap;
             &:nth-child(1){
                 animation: titleA-out 1s ease-out forwards;
-                bottom: 1rem;
+                //bottom: 1rem;
+                top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
             }
             &:nth-child(2){
                 text-align: right;
                 animation: titleB-out 1s ease-out forwards;
-                top: 2rem;
+                //top: 2rem;
+                bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
             }
         }
         &[data-scroll="in"]{

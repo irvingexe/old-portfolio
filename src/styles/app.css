@@ -3,12 +3,11 @@
   font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
 }
 
-.App > section > div {
-  min-height: calc(100vh - 5rem);
-  margin-top: 5rem;
+.App > section > div:not(#cover), .App > section .bg-title {
+  min-height: 100vh;
 }
 
-.lateral-margin {
+.App > section > div > *:not(.bg-title) {
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -63,7 +62,7 @@ a {
 }
 
 .font-xl {
-  font-size: 28vh;
+  font-size: 12rem;
   font-weight: 100;
 }
 
@@ -118,13 +117,6 @@ ul {
     transition: -webkit-transform .0s ease-out;
     transition: transform .0s ease-out;
     transition: transform .0s ease-out, -webkit-transform .0s ease-out;
-    /*
-        &.cursor-default+.img{
-            background-color: #000;
-            width: 4em;
-            height: 4em;
-        }
-        */
   }
   #cursor div {
     z-index: 1;

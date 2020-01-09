@@ -1,12 +1,11 @@
 .bg-title {
   position: absolute;
-  height: 100%;
   width: 80%;
   color: rgba(0, 69, 126, 0.15);
   z-index: -1;
 }
 
-#cover {
+#cover > div {
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -14,26 +13,28 @@
       grid-template-rows: 1fr 5rem;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
+  height: calc(100vh - 5rem);
+  margin-top: 5rem;
 }
 
-#cover p {
+#cover > div p {
   font-size: 3em;
   max-width: 13em;
   margin: 0;
 }
 
-#cover #arrow {
+#cover > div #arrow {
   height: 5em;
   width: 5em;
   margin-left: auto;
   margin-right: auto;
 }
 
-#cover #arrow img {
+#cover > div #arrow img {
   z-index: 3;
 }
 
-#cover .up {
+#cover > div .up {
   -webkit-animation: uparrow 0.6s infinite alternate ease-in-out;
           animation: uparrow 0.6s infinite alternate ease-in-out;
 }
@@ -61,17 +62,13 @@
 }
 
 #ido {
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*
-    margin-top: 5em;
-    margin-bottom: 5em;
-    */
 }
 
 #ido .content {
+  max-width: 60em;
   display: -ms-grid;
   display: grid;
   grid-auto-rows: 1fr;
@@ -164,12 +161,9 @@
 }
 
 @media screen and (max-width: 940px) {
-  /*
-    #nav{
-        backdrop-filter: blur(2px);
-        background: #eae6e1a8;
-    }
-    */
+  #work > div:not(.bg-title) .title {
+    font-size: 20vw;
+  }
   #ido {
     display: block;
   }
@@ -223,25 +217,9 @@
 }
 
 #who {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*
-    .cursor-image{
-        opacity: 0;
-        pointer-events: none;
-        width: 0;
-        height: 0;
-    }
-    &:hover{
-        .cursor-image{
-            opacity: 1;
-            width: 10em;
-            height: 10em;
-        }
-    }
-    */
 }
 
 #who div:first-child {
@@ -260,7 +238,6 @@
 }
 
 #contact {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,13 +296,14 @@
 }
 
 #work > div:not(.bg-title) {
-  height: 100vh;
   position: relative;
+  min-height: calc(100vh - 5rem);
+  margin-top: 5rem;
 }
 
 #work > div:not(.bg-title) .mockup {
   max-height: 80vh;
-  max-width: 25em;
+  max-width: 23em;
   z-index: 1;
 }
 
@@ -340,19 +318,20 @@
   height: 1em;
   letter-spacing: -.05em;
   pointer-events: none;
+  white-space: nowrap;
 }
 
 #work > div:not(.bg-title) .title:nth-child(1) {
   -webkit-animation: titleA-out 1s ease-out forwards;
           animation: titleA-out 1s ease-out forwards;
-  bottom: 1rem;
+  top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
 }
 
 #work > div:not(.bg-title) .title:nth-child(2) {
   text-align: right;
   -webkit-animation: titleB-out 1s ease-out forwards;
           animation: titleB-out 1s ease-out forwards;
-  top: 2rem;
+  bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
 }
 
 #work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(1) {
