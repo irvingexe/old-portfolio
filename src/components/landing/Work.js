@@ -11,14 +11,14 @@ export default class Work extends Component {
                 <div className="center scrollOut">
                     <h1 className="title font-xl">La guarida</h1>
                     <h1 className="title font-xl">del sushi</h1>
-                    <div className="mockup center" onMouseEnter={this.cursorProject} onMouseLeave={this.resetCursor}>
+                    <div className="mockup center unselectable" onMouseEnter={this.cursorProject} onMouseLeave={this.resetCursor}>
                         <img alt="" src={mockup}></img>
                     </div>
                 </div>
                 <div className="center scrollOut">
                     <h1 className="title font-xl">Tlaloc</h1>
                     <h1 className="title font-xl"></h1>
-                    <div className="mockup center" onMouseEnter={this.cursorProject} onMouseLeave={this.resetCursor}>
+                    <div className="mockup center unselectable" onMouseEnter={this.cursorProject} onMouseLeave={this.resetCursor}>
                         <img alt="" src={mockup}></img>
                     </div>
                 </div>
