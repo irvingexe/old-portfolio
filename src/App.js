@@ -8,6 +8,7 @@ import Who from './components/landing/Who';
 import Contact from './components/landing/Contact';
 import Cursor from './components/fixed/Cursor';
 import Work from './components/landing/Work';
+import Project from './components/fixed/Project';
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <Cursor/>
       <Background/>
       <Nav/>
+      <Project/>
       <section className="lateral-margin">
         <Cover/>
         <Ido/>

@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=project.css.map */
+#project .modal {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  background-color: silver;
+  -webkit-clip-path: circle(5rem at 0% 0%);
+          clip-path: circle(5rem at 0% 0%);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#project .modal.open {
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+}
+/*# sourceMappingURL=project.css.map */
