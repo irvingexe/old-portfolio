@@ -10,8 +10,8 @@
     display: grid;
     grid-template-rows: 1fr 5rem;
     grid-template-columns: 100%;
-    margin-top: calc(100vh - 5rem);
-    margin-top: 5rem;
+    min-height: calc(100vh - 5rem);
+    padding-top: 5rem;
     p{
         font-size: 3em;
         max-width: 13em;

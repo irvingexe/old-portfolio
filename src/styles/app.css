@@ -3,7 +3,7 @@
   font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
 }
 
-.App > section > div:not(#cover), .App > section .bg-title {
+.App > section > div, .App > section .bg-title {
   min-height: 100vh;
 }
 

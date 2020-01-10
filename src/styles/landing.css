@@ -13,8 +13,8 @@
       grid-template-rows: 1fr 5rem;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  margin-top: calc(100vh - 5rem);
-  margin-top: 5rem;
+  min-height: calc(100vh - 5rem);
+  padding-top: 5rem;
 }
 
 #cover > div p {
