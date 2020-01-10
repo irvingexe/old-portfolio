@@ -85,7 +85,16 @@ ul {
   cursor: none;
 }
 
+@media (pointer: fine) {
+  #cursor {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
 #cursor {
+  display: none;
   position: fixed;
   pointer-events: none;
   z-index: 2;
