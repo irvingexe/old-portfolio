@@ -209,7 +209,7 @@
                 }
             }
             li{
-                z-index: 2;
+                z-index: 4;
             }
         }
     }
@@ -223,7 +223,23 @@
         .mockup{
             max-height: 80vh;
             max-width: 23em;
-                z-index: 1;
+            z-index: 1;
+            position: absolute;
+            right: 50%;
+            top: calc(calc(100% + 5rem) / 2);
+            transform: translate(50%, -50%);
+            transition: all .5s ease-in-out;
+            &.open{
+                right: 0;
+                top: 5rem;
+                transform: translate(0,0);
+                +.title{
+                    animation: titleA-out 1s ease-out forwards !important;
+                    &+.title{
+                        animation: titleB-out 1s ease-out forwards !important;
+                    }
+                }
+            }
             >img{
                 height: 100%;
                 width: 100%;
@@ -236,12 +252,12 @@
             letter-spacing: -.05em;
             pointer-events: none;
             white-space:nowrap;
-            &:nth-child(1){
+            &:nth-child(2){
                 animation: titleA-out 1s ease-out forwards;
                 //bottom: 1rem;
                 top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
             }
-            &:nth-child(2){
+            &:nth-child(3){
                 text-align: right;
                 animation: titleB-out 1s ease-out forwards;
                 //top: 2rem;
@@ -250,10 +266,10 @@
         }
         &[data-scroll="in"]{
             .title{
-                &:nth-child(1){
+                &:nth-child(2){
                     animation: titleA-in 1s ease-out forwards;
                 }
-                &:nth-child(2){
+                &:nth-child(3){
                     animation: titleB-in 1s ease-out forwards;
                 }
             }

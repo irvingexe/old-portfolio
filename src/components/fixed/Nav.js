@@ -10,24 +10,25 @@ export default function Nav() {
     const menuState = () => {setMenu(!state.menuState)}
     const cursorHover = () => {actions({type: 'setState', payload: {...state, cursor: {type: "hover"}}})}
     const resetCursor = () => {actions({type: 'setState', payload: {...state, cursor: {type: "default"}}})}
+    const closeProject = () => {actions({type: 'setState', payload: {...state, project: {isOpened: false}}})}
 
     return (
         <nav id="nav" className="fixed font-xs">
-            <label htmlFor="#home" className="App-logo" onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
-                <a id="home" href="home"><Logo/></a>
+            <label onClick={closeProject} htmlFor="#home" className="App-logo" onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+                <a id="home" href="#cover"><Logo/></a>
             </label>
             <ul id="menu-items"   className={"center links" + (menu? " active" :"")}>
-                <li className="link">
-                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="ido"><div className="line"></div>I do</a>
+                <li className="link" onClick={closeProject}>
+                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#ido"><div className="line"></div>I do</a>
                 </li>
-                <li className="link">
-                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="work"><div className="line"></div>Work</a>
+                <li className="link" onClick={closeProject}>
+                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#work"><div className="line"></div>Work</a>
                 </li>
-                <li className="link">
-                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="who"><div className="line"></div>Who</a>
+                <li className="link" onClick={closeProject}>
+                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#who"><div className="line"></div>Who</a>
                 </li>
-                <li className="contact link">
-                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="contact"><div className="line"></div>Contact</a>
+                <li className="contact link" onClick={closeProject}>
+                    <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#contact"><div className="line"></div>Contact</a>
                 </li>
             </ul>
             <label id="toggle" onClick={menuState} onMouseEnter={cursorHover} onMouseLeave={resetCursor}>

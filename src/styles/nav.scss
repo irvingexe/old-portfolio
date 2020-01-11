@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 4;
+  z-index: 5;
   pointer-events: none;
 
   #menu-items {
@@ -110,7 +110,6 @@
     top: 0em;
     width: 100vw;
     height: 100vh;
-    z-index: 4;
 
     #toggle{
       display: block;

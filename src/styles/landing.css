@@ -294,7 +294,7 @@
 }
 
 #contact > div:first-child ul li {
-  z-index: 2;
+  z-index: 4;
 }
 
 #work > div:not(.bg-title) {
@@ -307,6 +307,30 @@
   max-height: 80vh;
   max-width: 23em;
   z-index: 1;
+  position: absolute;
+  right: 50%;
+  top: calc(calc(100% + 5rem) / 2);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+#work > div:not(.bg-title) .mockup.open {
+  right: 0;
+  top: 5rem;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#work > div:not(.bg-title) .mockup.open + .title {
+  -webkit-animation: titleA-out 1s ease-out forwards !important;
+          animation: titleA-out 1s ease-out forwards !important;
+}
+
+#work > div:not(.bg-title) .mockup.open + .title + .title {
+  -webkit-animation: titleB-out 1s ease-out forwards !important;
+          animation: titleB-out 1s ease-out forwards !important;
 }
 
 #work > div:not(.bg-title) .mockup > img {
@@ -323,25 +347,25 @@
   white-space: nowrap;
 }
 
-#work > div:not(.bg-title) .title:nth-child(1) {
+#work > div:not(.bg-title) .title:nth-child(2) {
   -webkit-animation: titleA-out 1s ease-out forwards;
           animation: titleA-out 1s ease-out forwards;
   top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
 }
 
-#work > div:not(.bg-title) .title:nth-child(2) {
+#work > div:not(.bg-title) .title:nth-child(3) {
   text-align: right;
   -webkit-animation: titleB-out 1s ease-out forwards;
           animation: titleB-out 1s ease-out forwards;
   bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
 }
 
-#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(1) {
+#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(2) {
   -webkit-animation: titleA-in 1s ease-out forwards;
           animation: titleA-in 1s ease-out forwards;
 }
 
-#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(2) {
+#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(3) {
   -webkit-animation: titleB-in 1s ease-out forwards;
           animation: titleB-in 1s ease-out forwards;
 }
