@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
 import '../../styles/landing.css'
 import arrow from '../../assets/arrow.svg'
-import cursor from '../../cursor'
+import Context from '../../store/context'
 
-export default class Cover extends Component {
-    cursorHover = () => {cursor.type = "hover"}
-    resetCursor = () => {cursor.type = "default"}
-    render() {
-        return (
-            <div id="cover">
+export default function Cover() {
+    const {state, actions} = useContext(Context);
+    const cursorHover = () => {actions({type: 'setState', payload: {...state, cursor: {type: "hover"}}})}
+    const resetCursor = () => {actions({type: 'setState', payload: {...state, cursor: {type: "default"}}})}
+    return (
+        <div id="cover">
                 <div>
                     <p className="center">
                         Hey! <br/>
@@ -16,11 +16,10 @@ export default class Cover extends Component {
                         a software developer with a taste for design and interactivity
                     </p>
 
-                    <label id="arrow" className="center" onMouseEnter={this.cursorHover} onMouseLeave={this.resetCursor}>
+                    <label id="arrow" className="center" onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
                         <img alt="" src={arrow} className="up"/>
                     </label>
                 </div>
             </div>
-        )
-    }
+    )
 }

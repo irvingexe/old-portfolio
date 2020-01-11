@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
-import cursor from '../../cursor'
+import React, { useContext } from 'react'
+import Context from '../../store/context'
+import me from '../../assets/me.svg'
 
-export default class Cursor extends Component {
-    render() {
-        return (
-            <div id="cursor" className={"center cursor-"+cursor.type}>
-                <div></div>
-                <div className="hover"></div>
-                <div className="img center"><img alt="" src={cursor.image}></img></div>
-                <div className="msg center font-xs">See project</div>
-            </div>
-        )
-    }
+export default function Cursor() {
+    const {state} = useContext(Context);
+
+    return (
+        <div id="cursor" className={"center cursor-"+state.cursor.type}>
+            <div></div>
+            <div className="hover"></div>
+            <div className="img center"><img alt="" src={me}></img></div>
+            <div className="msg center font-xs">See project</div>
+        </div>
+    )
 }

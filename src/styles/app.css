@@ -97,7 +97,7 @@ ul {
   display: none;
   position: fixed;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
 }
 
 #cursor > :first-child {
