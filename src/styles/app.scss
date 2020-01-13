@@ -157,12 +157,10 @@ ul{
     width: 40%;
 }
 .link:active .line{
-    width: 100%;
-    animation: tab-selection .2s ease-in-out;
+    width: calc(100% + .5rem);
 }
 .link.active .line{
     width: 100%;
-    animation: tab-selection .2s ease-in-out;
 }
 .line{
     pointer-events: none;
@@ -172,19 +170,4 @@ ul{
     top: 50%;
     background: #000;
     transform: translate(0px, .70em);
-    &.active{
-        width: 100%;
-    }
-}
-
-@keyframes tab-selection {
-    0%{
-        width: 40%;
-    }
-    50%{
-        width: calc(100% + .2em);
-    }
-    100%{
-        width: 100%;
-    }
 }

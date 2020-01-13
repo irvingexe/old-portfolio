@@ -3,7 +3,8 @@ import {useState} from 'react'
 const useGlobalState = () => {
     const [state, setState] = useState({
         cursor: {type: 'default'},
-        project: {isOpened: false}
+        project: {isOpened: false},
+        section: "cover"
     });
 
     const actions = (action) => {

@@ -171,15 +171,11 @@ ul {
 }
 
 .link:active .line {
-  width: 100%;
-  -webkit-animation: tab-selection .2s ease-in-out;
-          animation: tab-selection .2s ease-in-out;
+  width: calc(100% + .5rem);
 }
 
 .link.active .line {
   width: 100%;
-  -webkit-animation: tab-selection .2s ease-in-out;
-          animation: tab-selection .2s ease-in-out;
 }
 
 .line {
@@ -192,33 +188,5 @@ ul {
   background: #000;
   -webkit-transform: translate(0px, 0.7em);
           transform: translate(0px, 0.7em);
-}
-
-.line.active {
-  width: 100%;
-}
-
-@-webkit-keyframes tab-selection {
-  0% {
-    width: 40%;
-  }
-  50% {
-    width: calc(100% + .2em);
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes tab-selection {
-  0% {
-    width: 40%;
-  }
-  50% {
-    width: calc(100% + .2em);
-  }
-  100% {
-    width: 100%;
-  }
 }
 /*# sourceMappingURL=app.css.map */
