@@ -1,10 +1,130 @@
 #project{
     .modal{
         transition: all .5s ease-out;
-        background-color: rgba(192, 192, 192, 0.281);
         position: fixed;
+        left: 0;
         width: 100%;
         height: 100%;
         z-index: 2;
+        overflow: hidden;
+
+        .modal-scroll{
+            transition: all .5s ease-out;
+			position: fixed;
+			left: 0;
+			height: 100%;
+			width: 100%;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+
+            .modal-content{
+                background-color: #FCFCFC;
+                margin-top: 22rem;
+
+                >*:not(.screens), .screens section >*:not(*:last-child){
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
+
+                .btn-repo{
+                    background-color: #171717;
+                    padding: 1rem;
+                    border-radius: 2rem;
+                    color: #fff;
+                    position: absolute;
+                    top: 11rem;
+
+                    img{
+                        margin-right: 1rem;
+                    }
+                }
+
+                .role{
+                    color: #0094B9;
+                    margin-top: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .description{
+                    display: grid;
+                    grid-template-columns: 1fr min-content;
+                    gap: 5rem;
+                    margin-top: 5rem;
+                    
+                    p{
+                        text-align: justify;
+                    }
+
+                    h2{
+                        font-weight: bold;
+                    }
+
+                    +.img{
+                        transform: translate(0px, 50%);
+                    }
+                }
+
+                .screens {
+                    padding-top: 50vh;
+                    section >div{
+                        justify-content: flex-start;
+                        min-height: 100vh;
+                        &.reverse{
+                            justify-content: flex-end;
+                        }
+                        &.three{
+                            justify-content: center;
+                            //align-items: stretch;
+                            img{
+                                flex: 1;
+                            }
+                        }
+                        &:last-child{
+                            overflow: hidden;
+                            height: 100vh;
+                            img{
+                                width: 100%;
+                            }
+                        } 
+                        p{
+                            margin: 5rem;
+                            text-align: justify;
+                            max-width: 20rem;
+                        }
+                    }
+                    >*:last-child{
+                        height: 20rem;
+                        overflow: hidden;
+                        h1{
+                            position: absolute;
+                            width: 100%;
+                            height: 20rem;
+                            background-color: #ffffff80;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 940px){
+    .description{
+        grid-template-columns: 1fr !important;
+    }
+    .screens section >div{
+        flex-direction: column;
+        justify-content: center;
+        &.reverse{
+            flex-direction: column-reverse;
+        }
+        p{
+            max-width: none !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
     }
 }

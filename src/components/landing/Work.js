@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import mockup from '../../assets/mockup.svg'
+import mockup from '../../assets/mockup.png'
+import mockup2 from '../../assets/mockup2.png'
 import Context from '../../store/context'
 
 export default function Work() {
@@ -14,7 +15,7 @@ export default function Work() {
             <div className="center scrollOut">
                 <div onClick={open} className={"mockup center unselectable" + (state.project.isOpened? " open" :"")} 
                         onMouseEnter={cursorProject} onMouseLeave={resetCursor}>
-                    <img alt="" src={mockup}></img>
+                    <img alt="" src={mockup2}></img>
                 </div>
                 <h1 className="title font-xl">La guarida</h1>
                 <h1 className="title font-xl">del sushi</h1>

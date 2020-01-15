@@ -15,10 +15,12 @@ export default function Cover() {
                         I’m Irving Mariscales, <br/>
                         a software developer with a taste for design and interactivity
                     </p>
-
-                    <label id="arrow" className="center" onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
-                        <img alt="" src={arrow} className="up"/>
-                    </label>
+                    
+                    <a href="#ido">
+                        <label id="arrow" className="center" onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+                            <img alt="" src={arrow} className="up"/>
+                        </label>
+                    </a>
                 </div>
             </div>
     )

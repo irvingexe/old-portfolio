@@ -23,15 +23,15 @@
   margin: 0;
 }
 
-#cover > div #arrow {
+#cover > div a {
+  z-index: 3;
+}
+
+#cover > div a #arrow {
   height: 5em;
   width: 5em;
   margin-left: auto;
   margin-right: auto;
-}
-
-#cover > div #arrow img {
-  z-index: 3;
 }
 
 #cover > div .up {
@@ -324,13 +324,11 @@
 }
 
 #work > div:not(.bg-title) .mockup.open + .title {
-  -webkit-animation: titleA-out 1s ease-out forwards !important;
-          animation: titleA-out 1s ease-out forwards !important;
+  left: -100% !important;
 }
 
 #work > div:not(.bg-title) .mockup.open + .title + .title {
-  -webkit-animation: titleB-out 1s ease-out forwards !important;
-          animation: titleB-out 1s ease-out forwards !important;
+  right: -100% !important;
 }
 
 #work > div:not(.bg-title) .mockup > img {
@@ -345,112 +343,26 @@
   letter-spacing: -.05em;
   pointer-events: none;
   white-space: nowrap;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
 
 #work > div:not(.bg-title) .title:nth-child(2) {
-  -webkit-animation: titleA-out 1s ease-out forwards;
-          animation: titleA-out 1s ease-out forwards;
+  left: -100%;
   top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
 }
 
 #work > div:not(.bg-title) .title:nth-child(3) {
   text-align: right;
-  -webkit-animation: titleB-out 1s ease-out forwards;
-          animation: titleB-out 1s ease-out forwards;
+  right: -100%;
   bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
 }
 
 #work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(2) {
-  -webkit-animation: titleA-in 1s ease-out forwards;
-          animation: titleA-in 1s ease-out forwards;
+  left: -.12em;
 }
 
 #work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(3) {
-  -webkit-animation: titleB-in 1s ease-out forwards;
-          animation: titleB-in 1s ease-out forwards;
-}
-
-@-webkit-keyframes titleA-in {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: -100%;
-  }
-  100% {
-    left: -.12em;
-  }
-}
-
-@keyframes titleA-in {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: -100%;
-  }
-  100% {
-    left: -.12em;
-  }
-}
-
-@-webkit-keyframes titleA-out {
-  0% {
-    left: -.12em;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-@keyframes titleA-out {
-  0% {
-    left: -.12em;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-@-webkit-keyframes titleB-in {
-  0% {
-    right: -100%;
-  }
-  50% {
-    right: -100%;
-  }
-  100% {
-    right: -.05em;
-  }
-}
-
-@keyframes titleB-in {
-  0% {
-    right: -100%;
-  }
-  50% {
-    right: -100%;
-  }
-  100% {
-    right: -.05em;
-  }
-}
-
-@-webkit-keyframes titleB-out {
-  0% {
-    right: -.05em;
-  }
-  100% {
-    right: -100%;
-  }
-}
-
-@keyframes titleB-out {
-  0% {
-    right: -.05em;
-  }
-  100% {
-    right: -100%;
-  }
+  right: -.05em;
 }
 /*# sourceMappingURL=landing.css.map */

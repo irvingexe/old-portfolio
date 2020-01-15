@@ -17,6 +17,19 @@ a {
   color: #000000;
 }
 
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-weight: lighter;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .unselectable {
   /*user-drag: none;*/
   -webkit-user-select: none;
@@ -50,15 +63,15 @@ a {
 }
 
 .font-xs, #cursor.cursor-project .msg {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .font-s {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .font-m {
-  font-size: 2.1em;
+  font-size: 2.1rem;
 }
 
 .font-xl {

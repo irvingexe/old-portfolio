@@ -33,7 +33,7 @@ export default function Nav() {
                 </li>
             </ul>
             <label id="toggle" onClick={menuState} onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
-                <ul className={"buns" + (state.menuState? " active" :"")}>
+                <ul className={"buns" + (menu? " active" :"")}>
                     <li className="bun"></li>
                     <li className="bun"></li>
                 </ul>

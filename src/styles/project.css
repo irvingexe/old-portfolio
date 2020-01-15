@@ -1,10 +1,161 @@
 #project .modal {
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
-  background-color: rgba(192, 192, 192, 0.281);
   position: fixed;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
+  overflow: hidden;
+}
+
+#project .modal .modal-scroll {
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#project .modal .modal-scroll .modal-content {
+  background-color: #FCFCFC;
+  margin-top: 22rem;
+}
+
+#project .modal .modal-scroll .modal-content > *:not(.screens), #project .modal .modal-scroll .modal-content .screens section > *:not(*:last-child) {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#project .modal .modal-scroll .modal-content .btn-repo {
+  background-color: #171717;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 11rem;
+}
+
+#project .modal .modal-scroll .modal-content .btn-repo img {
+  margin-right: 1rem;
+}
+
+#project .modal .modal-scroll .modal-content .role {
+  color: #0094B9;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#project .modal .modal-scroll .modal-content .description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr min-content;
+      grid-template-columns: 1fr -webkit-min-content;
+      grid-template-columns: 1fr min-content;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+#project .modal .modal-scroll .modal-content .description p {
+  text-align: justify;
+}
+
+#project .modal .modal-scroll .modal-content .description h2 {
+  font-weight: bold;
+}
+
+#project .modal .modal-scroll .modal-content .description + .img {
+  -webkit-transform: translate(0px, 50%);
+          transform: translate(0px, 50%);
+}
+
+#project .modal .modal-scroll .modal-content .screens {
+  padding-top: 50vh;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 100vh;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div.reverse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div.three {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div.three img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div:last-child {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div:last-child img {
+  width: 100%;
+}
+
+#project .modal .modal-scroll .modal-content .screens section > div p {
+  margin: 5rem;
+  text-align: justify;
+  max-width: 20rem;
+}
+
+#project .modal .modal-scroll .modal-content .screens > *:last-child {
+  height: 20rem;
+  overflow: hidden;
+}
+
+#project .modal .modal-scroll .modal-content .screens > *:last-child h1 {
+  position: absolute;
+  width: 100%;
+  height: 20rem;
+  background-color: #ffffff80;
+}
+
+#project .modal .modal-scroll .modal-content .screens > *:last-child img {
+  width: 100%;
+}
+
+@media screen and (max-width: 940px) {
+  .description {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .screens section > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .screens section > div.reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .screens section > div p {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 /*# sourceMappingURL=project.css.map */

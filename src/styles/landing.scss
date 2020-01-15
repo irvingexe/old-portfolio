@@ -18,13 +18,13 @@
         margin: 0;
     }
 
-    #arrow{
-        height: 5em;
-        width: 5em;
-        margin-left: auto;
-        margin-right: auto;
-        img{
-            z-index: 3;
+    a{
+        z-index: 3;
+        #arrow{
+            height: 5em;
+            width: 5em;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     
@@ -234,9 +234,9 @@
                 top: 5rem;
                 transform: translate(0,0);
                 +.title{
-                    animation: titleA-out 1s ease-out forwards !important;
+                    left: -100% !important;
                     &+.title{
-                        animation: titleB-out 1s ease-out forwards !important;
+                        right: -100% !important;
                     }
                 }
             }
@@ -252,14 +252,15 @@
             letter-spacing: -.05em;
             pointer-events: none;
             white-space:nowrap;
+            transition: all .5s ease-out;
             &:nth-child(2){
-                animation: titleA-out 1s ease-out forwards;
+                left: -100%;
                 //bottom: 1rem;
                 top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
             }
             &:nth-child(3){
                 text-align: right;
-                animation: titleB-out 1s ease-out forwards;
+                right: -100%;
                 //top: 2rem;
                 bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
             }
@@ -267,54 +268,12 @@
         &[data-scroll="in"]{
             .title{
                 &:nth-child(2){
-                    animation: titleA-in 1s ease-out forwards;
+                    left: -.12em;
                 }
                 &:nth-child(3){
-                    animation: titleB-in 1s ease-out forwards;
+                    right: -.05em;
                 }
             }
         }
-    }
-}
-
-@keyframes titleA-in{
-    0%{
-        left: -100%;
-    }
-    50%{
-        left: -100%;
-    }
-    100%{
-        left: -.12em;
-    }
-}
-
-@keyframes titleA-out{
-    0%{
-        left: -.12em;
-    }
-    100%{
-        left: -100%;
-    }
-}
-
-@keyframes titleB-in{
-    0%{
-        right: -100%;
-    }
-    50%{
-        right: -100%;
-    }
-    100%{
-        right: -.05em;
-    }
-}
-
-@keyframes titleB-out{
-    0%{
-        right: -.05em;
-    }
-    100%{
-        right: -100%;
     }
 }
