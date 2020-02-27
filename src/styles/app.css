@@ -3,11 +3,11 @@
   font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
 }
 
-.App > section > div:not(#cover), .App > section .bg-title {
+.App > .sections > div:not(#cover), .App > .sections .bg-title {
   min-height: 100vh;
 }
 
-.App > section > div > *:not(.bg-title) {
+.App > .sections > div > *:not(.bg-title) {
   margin-left: 10%;
   margin-right: 10%;
 }

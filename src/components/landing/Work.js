@@ -26,7 +26,7 @@ export default function Work() {
                     <img alt="" src={mockup}></img>
                 </div>
                 <h1 className="title font-xl">Tlaloc</h1>
-                <h1 className="title font-xl"></h1>
+                <h1 className="title font-xl">&nbsp;</h1>
             </div>
             <div className="bg-title font-xxl bold center unselectable"><h1>Work</h1></div>
         </div>

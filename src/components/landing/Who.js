@@ -17,7 +17,7 @@ export default function Who() {
                 </p>
                 <p className="font-s">
                     I am a software developer who enjoy creating beautiful design and good experiences.
-                    I’m experienced working as a full-stack but I’m majorly involved into web developement. 
+                    I’m experienced working as a full-stack but I’m majorly involved into front-end developement. 
                 </p>
             </div>
             <div className="bg-title font-xxl bold center unselectable"><h1>Who</h1></div>

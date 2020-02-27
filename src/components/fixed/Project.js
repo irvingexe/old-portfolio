@@ -1,18 +1,21 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import "../../styles/project.css"
 import Context from '../../store/context'
 import github from '../../assets/github.svg'
 import mockup from '../../assets/mockup.png'
 
 export default function Project() {
-    const {state} = useContext(Context);
+    const {state, actions} = useContext(Context);
+    const cursorProject = () => {actions({type: 'setState', payload: {...state, cursor: {type: "project"}}})}
+    const resetCursor = () => {actions({type: 'setState', payload: {...state, cursor: {type: "default"}}})}
 
+    
     return (
         <div id="project">
             <div></div>
             <div className="modal" style={{top: (state.project.isOpened? 0 : "100vh")}}>
-                <div class="modal-scroll" style={{top: (state.project.isOpened? 0 : "100vh")}}>
-                    <div class="modal-content">
+                <div className="modal-scroll" style={{top: (state.project.isOpened? 0 : "100vh")}}>
+                    <div className="modal-content">
                         <div className="center">
                             <label className="btn-repo center">
                                 <img alt="" src={github}/>
@@ -53,18 +56,18 @@ export default function Project() {
                                     </p>
                                     <img alt="" src={mockup}/>
                                 </div>
-                                <div className="center three">
-                                    <img alt="" src={mockup}/>
-                                    <img alt="" src={mockup}/>
-                                    <img alt="" src={mockup}/>
+                                <div className="three">
+                                    <div className="center"><img alt="" src={mockup}/></div>
+                                    <div className="center"><img alt="" src={mockup}/></div>
+                                    <div className="center"><img alt="" src={mockup}/></div>
                                 </div>
                                 <div className="center">
                                     <img alt="" src={mockup}/>
                                 </div>
                             </section> 
-                            <label className="center">
-                                <img className="unselectable" alt="" src={mockup}/>
+                            <label className="center" onMouseEnter={cursorProject} onMouseLeave={resetCursor}>
                                 <h1 className="font-m center">Wearify</h1>
+                                <img className="unselectable" alt="" src={mockup}/>
                             </label>
                         </div>
                     </div>

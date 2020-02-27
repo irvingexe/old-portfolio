@@ -19,13 +19,13 @@ export default function App() {
       <Background/>
       <Nav/>
       <Project/>
-      <section className="lateral-margin">
+      <div className="sections lateral-margin">
         <Cover/>
         <Ido/>
         <Work/>
         <Who x={x} y={y}/>
         <Contact/>
-      </section>
+      </div>
     </div>
   );
 }

@@ -61,6 +61,7 @@
 
 #project .modal .modal-scroll .modal-content .description p {
   text-align: justify;
+  max-width: 50rem;
 }
 
 #project .modal .modal-scroll .modal-content .description h2 {
@@ -90,24 +91,28 @@
 }
 
 #project .modal .modal-scroll .modal-content .screens section > div.three {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
 }
 
 #project .modal .modal-scroll .modal-content .screens section > div.three img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 100%;
+  max-width: 16rem;
 }
 
 #project .modal .modal-scroll .modal-content .screens section > div:last-child {
   overflow: hidden;
   height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #project .modal .modal-scroll .modal-content .screens section > div:last-child img {
-  width: 100%;
+  height: 100vh;
 }
 
 #project .modal .modal-scroll .modal-content .screens section > div p {
@@ -126,10 +131,24 @@
   width: 100%;
   height: 20rem;
   background-color: #ffffff80;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  z-index: 1;
+}
+
+#project .modal .modal-scroll .modal-content .screens > *:last-child h1:hover {
+  background-color: #ffffff00;
+}
+
+#project .modal .modal-scroll .modal-content .screens > *:last-child h1:hover + img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #project .modal .modal-scroll .modal-content .screens > *:last-child img {
   width: 100%;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
 @media screen and (max-width: 940px) {

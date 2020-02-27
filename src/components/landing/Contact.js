@@ -13,7 +13,7 @@ export default function Contact() {
 
     useEffect(() => {
         setShining(false)
-    });
+    }, [shining]);
 
     return (
         <div id="contact" className="center">
@@ -26,19 +26,19 @@ export default function Contact() {
                                 <div className="shine"><Lottie play={shining} animationData = {shineSVG}/></div>
                                 <div className="link">
                                     <a onMouseEnter={mailHover} onMouseLeave={resetCursor} 
-                                    className="font-s" href="mailto:mariscales.irving@gmail.com" target="_blank">
+                                    className="font-s" href="mailto:mariscales.irving@gmail.com" target="_blank" rel="noopener noreferrer">
                                             <div className="line"></div>mariscales.irving@gmail.com
                                     </a>
                                 </div>
                                 <div className="shine"><Lottie play={shining} animationData = {shineSVG}/></div>
                             </li>
                             <li className="link">
-                                <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} className="font-s" href="https://www.linkedin.com/in/irving-mariscales/" target="_blank">
+                                <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} className="font-s" href="https://www.linkedin.com/in/irving-mariscales/" target="_blank" rel="noopener noreferrer">
                                     <div className="line"></div>LinkedIn
                                 </a>
                             </li>
                             <li className="link">
-                                <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} className="font-s" href="https://github.com/irvingexe" target="_blank">
+                                <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} className="font-s" href="https://github.com/irvingexe" target="_blank" rel="noopener noreferrer">
                                     <div className="line"></div>GitHub
                                 </a>
                             </li>
