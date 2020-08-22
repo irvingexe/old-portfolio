@@ -10,7 +10,7 @@ export default function Nav() {
     const menuState = () => {setMenu(!menu)}
     const cursorHover = () => {actions({type: 'setState', payload: {...state, cursor: {type: "hover"}}})}
     const resetCursor = () => {actions({type: 'setState', payload: {...state, cursor: {type: "default"}}})}
-    const changeSection = (section) => {actions({type: 'setState', payload: {...state, section, project: {isOpened: false}}}); 
+    const changeSection = (section) => {actions({type: 'setState', payload: {...state, section, project: {isOpened: false, id: 0}}}); 
                                         setMenu(false)}
 
     return (

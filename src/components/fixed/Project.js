@@ -2,13 +2,24 @@ import React, { useContext } from 'react'
 import "../../styles/project.css"
 import Context from '../../store/context'
 import github from '../../assets/github.svg'
-import mockup from '../../assets/mockup.png'
+import infoProjects from '../projects.json'
 
 export default function Project() {
     const {state, actions} = useContext(Context);
     const cursorProject = () => {actions({type: 'setState', payload: {...state, cursor: {type: "project"}}})}
     const resetCursor = () => {actions({type: 'setState', payload: {...state, cursor: {type: "default"}}})}
 
+    let id = state.project.id
+
+    let role = ""
+    for(let i in infoProjects[id].role){
+        role += ((i > 0)? (" ● " + infoProjects[id].role[i]) : infoProjects[id].role[i])
+    };
+
+    let technologies = []
+    for(let i in infoProjects[id].technologies){
+        technologies.push(<li key={i}>{infoProjects[id].technologies[i]}</li>)
+    };
     
     return (
         <div id="project">
@@ -23,51 +34,48 @@ export default function Project() {
                             </label>
                         </div>
 
-                        <div className="font-xs role">UI design • App developement</div>
+                        <div className="font-xs role">{role}</div>
 
-                        <h1 className="font-m">Wearify</h1>
-                        <h2 className="font-xs">An app that helps you choose the right outfit</h2>
+                        <h1 className="font-m">{infoProjects[id].title}</h1>
+                        <h2 className="font-xs">{infoProjects[id].subtitle}</h2>
                         <div className="description">
                             <p className="font-s">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia. 
+                                {infoProjects[id].abstract}
                             </p>
                             <div className="font-xs">
                                 <h2 className="font-xs">Tecnologies</h2>
                                 <ul>
-                                    <li>Fnsetur</li>
-                                    <li>Consectetur</li>
-                                    <li>Tetur huu</li>
-                                    <li>Bonsectur</li>
+                                    {technologies}
                                 </ul>
                             </div>
                         </div>
-                        <div className="center img"><img alt="" src={mockup}/></div>
+                        <div className="center img"><img alt="" src={"../../assets/projects/"+id+"/0.png"}/></div>
                         <div className="screens" style={{background: "#EED3D3"}}>
                             <section>
                                 <div className="center">
-                                    <img alt="" src={mockup}/>
+                                    <img alt="" src={"../../assets/projects/"+id+"/1.png"}/>
                                     <p className="font-s center">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.
+                                        {infoProjects[id].details[0]}
                                     </p>
                                 </div>
                                 <div className="center reverse">
                                     <p className="font-s center">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.
+                                        {infoProjects[id].details[1]}
                                     </p>
-                                    <img alt="" src={mockup}/>
+                                    <img alt="" src={"../../assets/projects/"+id+"/2.png"}/>
                                 </div>
                                 <div className="three">
-                                    <div className="center"><img alt="" src={mockup}/></div>
-                                    <div className="center"><img alt="" src={mockup}/></div>
-                                    <div className="center"><img alt="" src={mockup}/></div>
+                                    <div className="center"><img alt="" src={"../../assets/projects/"+id+"/3.png"}/></div>
+                                    <div className="center"><img alt="" src={"../../assets/projects/"+id+"/4.png"}/></div>
+                                    <div className="center"><img alt="" src={"../../assets/projects/"+id+"/5.png"}/></div>
                                 </div>
                                 <div className="center">
-                                    <img alt="" src={mockup}/>
+                                    <img alt="" src={"../../assets/projects/"+id+"/6.png"}/>
                                 </div>
                             </section> 
                             <label className="center" onMouseEnter={cursorProject} onMouseLeave={resetCursor}>
-                                <h1 className="font-m center">Wearify</h1>
-                                <img className="unselectable" alt="" src={mockup}/>
+                                <h1 className="font-m center">{infoProjects[(((id+1) > infoProjects.lenght)? 0 : (id+1))].title}</h1>
+                                <img className="unselectable" alt="" src={"../../assets/projects/"+(((id+1) > infoProjects.lenght)? 0 : (id+1))+"/7.png"}/>
                             </label>
                         </div>
                     </div>

@@ -199,7 +199,7 @@ ul {
   width: 0;
   top: 50%;
   background: #000;
-  -webkit-transform: translate(0px, 0.7em);
-          transform: translate(0px, 0.7em);
+  -webkit-transform: translate(0px, 0.75em);
+          transform: translate(0px, 0.75em);
 }
 /*# sourceMappingURL=app.css.map */
