@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.71506874.chunk.css",
-    "main.js": "/portfolio/static/js/main.6c495fd9.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.6c495fd9.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.eee7dd2d.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.eee7dd2d.js.map",
-    "static/js/2.b5b2de78.chunk.js": "/portfolio/static/js/2.b5b2de78.chunk.js",
-    "static/js/2.b5b2de78.chunk.js.map": "/portfolio/static/js/2.b5b2de78.chunk.js.map",
-    "index.html": "/portfolio/index.html",
-    "precache-manifest.358178b8524961ad6c22c8fedc42994c.js": "/portfolio/precache-manifest.358178b8524961ad6c22c8fedc42994c.js",
-    "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.71506874.chunk.css.map": "/portfolio/static/css/main.71506874.chunk.css.map",
-    "static/js/2.b5b2de78.chunk.js.LICENSE": "/portfolio/static/js/2.b5b2de78.chunk.js.LICENSE",
-    "static/media/arrow.svg": "/portfolio/static/media/arrow.c508b01c.svg",
-    "static/media/doodle.svg": "/portfolio/static/media/doodle.38c13946.svg",
-    "static/media/github.svg": "/portfolio/static/media/github.a31a4f76.svg",
-    "static/media/me.svg": "/portfolio/static/media/me.b69bc648.svg"
+    "main.css": "/static/css/main.71506874.chunk.css",
+    "main.js": "/static/js/main.140402ee.chunk.js",
+    "main.js.map": "/static/js/main.140402ee.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2c8ac538.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2c8ac538.js.map",
+    "static/js/2.b5b2de78.chunk.js": "/static/js/2.b5b2de78.chunk.js",
+    "static/js/2.b5b2de78.chunk.js.map": "/static/js/2.b5b2de78.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d4134f4dd340a66e25b4e4f4f09b3d70.js": "/precache-manifest.d4134f4dd340a66e25b4e4f4f09b3d70.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.71506874.chunk.css.map": "/static/css/main.71506874.chunk.css.map",
+    "static/js/2.b5b2de78.chunk.js.LICENSE": "/static/js/2.b5b2de78.chunk.js.LICENSE",
+    "static/media/arrow.svg": "/static/media/arrow.c508b01c.svg",
+    "static/media/doodle.svg": "/static/media/doodle.38c13946.svg",
+    "static/media/github.svg": "/static/media/github.a31a4f76.svg",
+    "static/media/me.svg": "/static/media/me.b69bc648.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eee7dd2d.js",
+    "static/js/runtime-main.2c8ac538.js",
     "static/js/2.b5b2de78.chunk.js",
     "static/css/main.71506874.chunk.css",
-    "static/js/main.6c495fd9.chunk.js"
+    "static/js/main.140402ee.chunk.js"
   ]
 }
