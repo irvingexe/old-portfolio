@@ -232,11 +232,11 @@
   width: 100%;
   max-width: 27em;
   text-align: justify;
+  margin-top: 2em;
 }
 
 #who div:first-child p:last-child {
   margin-left: auto;
-  margin-top: 3em;
 }
 
 #contact {
