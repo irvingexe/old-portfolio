@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 .App {
-  font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
+  font-family: "Montserrat", "Segoe UI", "Roboto", sans-serif;
 }
 
-.App > .sections > div:not(#cover), .App > .sections .bg-title {
+.App > .sections > div:not(#cover),
+.App > .sections .bg-title {
   min-height: 100vh;
 }
 
@@ -118,13 +119,13 @@ ul {
   transition: all 0s;
   background-color: #000;
   border-radius: 50%;
-  width: .5em;
-  height: .5em;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 #cursor > div {
-  -webkit-transition: all .2s ease-out, left 0s, top 0s;
-  transition: all .2s ease-out, left 0s, top 0s;
+  -webkit-transition: all 0.2s ease-out, left 0s, top 0s;
+  transition: all 0.2s ease-out, left 0s, top 0s;
   position: absolute;
   border-radius: 50%;
   width: 0;
@@ -184,7 +185,7 @@ ul {
 }
 
 .link:active .line {
-  width: calc(100% + .5rem);
+  width: calc(100% + 0.5rem);
 }
 
 .link.active .line {
@@ -193,13 +194,23 @@ ul {
 
 .line {
   pointer-events: none;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  height: .1em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 0.1em;
   width: 0;
   top: 50%;
   background: #000;
   -webkit-transform: translate(0px, 0.75em);
           transform: translate(0px, 0.75em);
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
 }
 /*# sourceMappingURL=app.css.map */

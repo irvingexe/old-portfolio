@@ -1,186 +1,191 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-.App{
-    font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
-    >.sections {
-        >div:not(#cover), .bg-title{
-            min-height: 100vh;
-        }
-        >div >*:not(.bg-title){
-            margin-left: 10%;
-            margin-right: 10%;
-        }
+.App {
+  font-family: "Montserrat", "Segoe UI", "Roboto", sans-serif;
+  > .sections {
+    > div:not(#cover),
+    .bg-title {
+      min-height: 100vh;
     }
+    > div > *:not(.bg-title) {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
 }
 
-a{
-    text-decoration: none;
-    color: #000000;
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
-h1{
-    margin: 0;
+h1 {
+  margin: 0;
 }
 
-h2{
-    font-weight: lighter;
-    margin: 0;
+h2 {
+  font-weight: lighter;
+  margin: 0;
 }
 
-p{
-    margin: 0;
+p {
+  margin: 0;
 }
-  
+
 .unselectable {
   /*user-drag: none;*/
   user-select: none;
 }
 
-.fixed{
-    position: fixed;
+.fixed {
+  position: fixed;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bold{
-    font-weight: bold;
+.bold {
+  font-weight: bold;
 }
 
-.font-xxs{
-    font-size: 25px;
+.font-xxs {
+  font-size: 25px;
 }
 
-.font-xs{
-    font-size: 1.2rem;
+.font-xs {
+  font-size: 1.2rem;
 }
 
-.font-s{
-    font-size: 1.25rem;
+.font-s {
+  font-size: 1.25rem;
 }
 
-.font-m{
-    font-size: 2.1rem;
+.font-m {
+  font-size: 2.1rem;
 }
 
-.font-xl{
-    font-size: 12rem;
-    font-weight: 100;
+.font-xl {
+  font-size: 12rem;
+  font-weight: 100;
 }
 
-.font-xxl{
-    font-size: 15vw;
-    
+.font-xxl {
+  font-size: 15vw;
 }
 
 @media screen and (min-width: 800px) {
-    .font-xxl {
-        font-size: 8em;
-    }
+  .font-xxl {
+    font-size: 8em;
+  }
 }
 
-ul{
-    list-style: none;
-    padding: 0;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-*{
-    cursor: none;
+* {
+  cursor: none;
 }
 
 @media (pointer: fine) {
-    #cursor{
-        display: flex !important;
-    }
+  #cursor {
+    display: flex !important;
+  }
 }
 
-#cursor{
-    display: none;
-    position: fixed;
-    pointer-events: none;
-    z-index: 3;
-    >:first-child{
-        transition: all 0s;
-        background-color: #000;
-        border-radius: 50%;
-        width: .5em;
-        height: .5em;
-    }
-    >div{
-        transition: all .2s ease-out, left 0s, top 0s;
-        position: absolute;
-        border-radius: 50%;
-        width: 0;
-        height: 0;
-        &.hover{
-            background-color: #000;
-        }
-        &.msg{
-            font-size: 0;
-            white-space:nowrap;
-        }
-        &.img{
-            opacity: 0;
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-    &.cursor-hover{
-        .hover{
-            background-color: #fcfcfc;
-            width: 4em;
-            height: 4em;
-        }
-        .img{
-            width: 4em;
-            height: 4em;
-            opacity: 0;
-        }
-    }
-    &.cursor-image{
-        .hover{
-            background-color: #fcfcfc;
-            width: 9.9em;
-            height: 9.9em;
-        }
-        .img{
-            opacity: 1;
-            width: 10em;
-            height: 10em;
-        }
-    }
-    &.cursor-project{
-        .hover{
-            background-color: #fcfcfc;
-            width: 10em;
-            height: 10em;
-        }
-        .msg{
-            @extend .font-xs;
-        }
-    }
-}
-
-.link:hover .line{
-    width: 40%;
-}
-.link:active .line{
-    width: calc(100% + .5rem);
-}
-.link.active .line{
-    width: 100%;
-}
-.line{
-    pointer-events: none;
-    transition: all .2s;
-    height: .1em;
+#cursor {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  z-index: 3;
+  > :first-child {
+    transition: all 0s;
+    background-color: #000;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+  }
+  > div {
+    transition: all 0.2s ease-out, left 0s, top 0s;
+    position: absolute;
+    border-radius: 50%;
     width: 0;
-    top: 50%;
-    background: #000;
-    transform: translate(0px, .75em);
+    height: 0;
+    &.hover {
+      background-color: #000;
+    }
+    &.msg {
+      font-size: 0;
+      white-space: nowrap;
+    }
+    &.img {
+      opacity: 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &.cursor-hover {
+    .hover {
+      background-color: #fcfcfc;
+      width: 4em;
+      height: 4em;
+    }
+    .img {
+      width: 4em;
+      height: 4em;
+      opacity: 0;
+    }
+  }
+  &.cursor-image {
+    .hover {
+      background-color: #fcfcfc;
+      width: 9.9em;
+      height: 9.9em;
+    }
+    .img {
+      opacity: 1;
+      width: 10em;
+      height: 10em;
+    }
+  }
+  &.cursor-project {
+    .hover {
+      background-color: #fcfcfc;
+      width: 10em;
+      height: 10em;
+    }
+    .msg {
+      @extend .font-xs;
+    }
+  }
+}
+
+.link:hover .line {
+  width: 40%;
+}
+.link:active .line {
+  width: calc(100% + 0.5rem);
+}
+.link.active .line {
+  width: 100%;
+}
+.line {
+  pointer-events: none;
+  transition: all 0.2s;
+  height: 0.1em;
+  width: 0;
+  top: 50%;
+  background: #000;
+  transform: translate(0px, 0.75em);
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
 }

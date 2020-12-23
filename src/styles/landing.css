@@ -95,8 +95,8 @@
 #ido .content .area .tag > div {
   position: absolute;
   left: 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #ido .content .area.active .tag > div {
@@ -107,15 +107,15 @@
   -webkit-filter: none;
           filter: none;
   opacity: 1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #ido .content .area.active .images {
   top: 5rem;
   opacity: 1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #ido .content .info {
@@ -130,7 +130,7 @@
   margin: 5px;
   -webkit-filter: blur(1px);
           filter: blur(1px);
-  opacity: .3;
+  opacity: 0.3;
 }
 
 #ido .content .images {
@@ -247,6 +247,7 @@
 
 #contact > div:first-child {
   width: 100%;
+  max-width: 65em;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr max-content;
@@ -297,6 +298,10 @@
   z-index: 4;
 }
 
+#work {
+  overflow: hidden;
+}
+
 #work > div:not(.bg-title) {
   position: relative;
   min-height: calc(100vh - 5rem);
@@ -304,16 +309,17 @@
 }
 
 #work > div:not(.bg-title) .mockup {
+  height: 28em;
+  width: 15em;
   max-height: 80vh;
-  max-width: 23em;
   z-index: 1;
   position: absolute;
   right: 50%;
   top: calc(calc(100% + 5rem) / 2);
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #work > div:not(.bg-title) .mockup.open {
@@ -331,6 +337,10 @@
   right: -100% !important;
 }
 
+#work > div:not(.bg-title) .mockup :first-child {
+  pointer-events: none;
+}
+
 #work > div:not(.bg-title) .mockup > img {
   height: 100%;
   width: 100%;
@@ -340,16 +350,16 @@
   position: fixed;
   margin: 0;
   height: 1em;
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
   pointer-events: none;
   white-space: nowrap;
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #work > div:not(.bg-title) .title:nth-child(2) {
   left: -100%;
-  top: calc(calc(calc(calc(100% + 5rem) / 2) - .3em) + 23%);
+  top: calc(calc(calc(calc(100% + 5rem) / 2) - 0.3em) + 23%);
 }
 
 #work > div:not(.bg-title) .title:nth-child(3) {
@@ -359,10 +369,10 @@
 }
 
 #work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(2) {
-  left: -.12em;
+  left: -0.12em;
 }
 
 #work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(3) {
-  right: -.05em;
+  right: -0.05em;
 }
 /*# sourceMappingURL=landing.css.map */

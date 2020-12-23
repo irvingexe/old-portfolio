@@ -1,7 +1,7 @@
 [
     {
-        "title" : "Wearify",
-        "splitTitle" : ["Wearify", ""],
+        "title" : "AR Gallery",
+        "splitTitle" : ["AR", "Gallery"],
         "subtitle" : "An app that helps you choose the right outfit",
         "abstract" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.",
         "technologies" : [
@@ -14,7 +14,8 @@
             "App developer"],
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."]
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
+        "device":1
     },
     {
         "title" : "La guarida del sushi",
@@ -31,11 +32,12 @@
             "Front-end developer"],
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."]
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
+        "device":0
     },
     {
-        "title" : "Wearify3",
-        "splitTitle" : ["Wearify", ""],
+        "title" : "Robix UML",
+        "splitTitle" : ["Robix", "UML"],
         "subtitle" : "An app that helps you choose the right outfit",
         "abstract" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.",
         "technologies" : [
@@ -48,23 +50,7 @@
             "App developement"],
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."]
-    },
-    {
-        "title" : "Wearify4",
-        "splitTitle" : ["Wearify", ""],
-        "subtitle" : "An app that helps you choose the right outfit",
-        "abstract" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.",
-        "technologies" : [
-            "Fnsetur",
-            "Consectetur",
-            "Tetur huu",
-            "Bonsectur"],
-        "role" : [
-            "UI design", 
-            "App developement"],
-        "details" : [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."]
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
+        "device":0
     }
 ]
