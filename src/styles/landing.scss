@@ -229,8 +229,8 @@
     min-height: calc(100vh - 5rem);
     padding-top: 5rem;
     .mockup {
-      height: 28em;
-      width: 15em;
+      perspective: 50rem;
+      transform-style: preserve-3d;
       max-height: 80vh;
       //max-width: 23em;
       z-index: 1;
@@ -250,12 +250,16 @@
           }
         }
       }
+      .phone {
+        height: 29em;
+        width: 20em;
+      }
+      .desktop {
+        height: 29em;
+        width: 44em;
+      }
       :first-child {
         pointer-events: none;
-      }
-      > img {
-        height: 100%;
-        width: 100%;
       }
     }
     .title {

@@ -309,8 +309,10 @@
 }
 
 #work > div:not(.bg-title) .mockup {
-  height: 28em;
-  width: 15em;
+  -webkit-perspective: 50rem;
+          perspective: 50rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   max-height: 80vh;
   z-index: 1;
   position: absolute;
@@ -337,13 +339,18 @@
   right: -100% !important;
 }
 
-#work > div:not(.bg-title) .mockup :first-child {
-  pointer-events: none;
+#work > div:not(.bg-title) .mockup .phone {
+  height: 29em;
+  width: 20em;
 }
 
-#work > div:not(.bg-title) .mockup > img {
-  height: 100%;
-  width: 100%;
+#work > div:not(.bg-title) .mockup .desktop {
+  height: 29em;
+  width: 44em;
+}
+
+#work > div:not(.bg-title) .mockup :first-child {
+  pointer-events: none;
 }
 
 #work > div:not(.bg-title) .title {
