@@ -15,7 +15,7 @@ export default function Work() {
   const cursorProject = () => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "project" } },
+      payload: { ...state, cursor: { type: "project", msg: "See project" } },
     });
   };
   const resetCursor = () => {

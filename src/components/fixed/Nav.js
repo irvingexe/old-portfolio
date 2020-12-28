@@ -44,19 +44,19 @@ export default function Nav() {
       </label>
       <ul id="menu-items" className={"center links" + (menu ? " active" : "")}>
         <li
-          className={"link" + (state.section === "ido" ? " active" : "")}
-          onClick={() => changeSection("ido")}
-        >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#ido">
-            <div className="line"></div>I do
-          </a>
-        </li>
-        <li
           className={"link" + (state.section === "work" ? " active" : "")}
           onClick={() => changeSection("work")}
         >
           <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#work">
             <div className="line"></div>Works
+          </a>
+        </li>
+        <li
+          className={"link" + (state.section === "ido" ? " active" : "")}
+          onClick={() => changeSection("ido")}
+        >
+          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#ido">
+            <div className="line"></div>I do
           </a>
         </li>
         <li

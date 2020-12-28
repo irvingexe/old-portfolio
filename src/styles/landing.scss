@@ -8,7 +8,7 @@
 #cover > div {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 5rem;
+  grid-template-rows: 1fr 6rem;
   grid-template-columns: 100%;
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
@@ -21,10 +21,13 @@
   a {
     z-index: 3;
     #arrow {
-      height: 5em;
-      width: 5em;
+      height: 6em;
+      width: 6em;
       margin-left: auto;
       margin-right: auto;
+      img {
+        width: 40px;
+      }
     }
   }
 

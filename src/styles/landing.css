@@ -9,8 +9,8 @@
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 5rem;
-      grid-template-rows: 1fr 5rem;
+  -ms-grid-rows: 1fr 6rem;
+      grid-template-rows: 1fr 6rem;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   min-height: calc(100vh - 5rem);
@@ -28,10 +28,14 @@
 }
 
 #cover > div a #arrow {
-  height: 5em;
-  width: 5em;
+  height: 6em;
+  width: 6em;
   margin-left: auto;
   margin-right: auto;
+}
+
+#cover > div a #arrow img {
+  width: 40px;
 }
 
 #cover > div .up {
