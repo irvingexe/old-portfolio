@@ -10,6 +10,7 @@ export default function Work() {
     desk: { x: -10, y: -90 },
   });
   const [transition, setTransition] = useState("all 0.2s ease");
+  const [dimensions, setDimensions] = useState({ width: window.innerWidth });
 
   const cursorProject = () => {
     actions({
@@ -50,9 +51,21 @@ export default function Work() {
   const fastTransition = () => {
     setTransition("all 0.2s ease");
   };
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({ width: window.innerWidth });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return (_) => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
   const scale =
-    ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5 > 0.45
-      ? ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5
+    ((dimensions.width - dimensions.width * 0.4) * 0.7) / 921.5 > 0.45
+      ? ((dimensions.width - dimensions.width * 0.4) * 0.7) / 921.5
       : 0.45;
   const projects = [];
 
