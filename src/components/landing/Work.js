@@ -50,7 +50,10 @@ export default function Work() {
   const fastTransition = () => {
     setTransition("all 0.2s ease");
   };
-
+  const scale =
+    ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5 > 0.45
+      ? ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5
+      : 0.45;
   const projects = [];
 
   for (let i in infoProjects) {
@@ -70,11 +73,11 @@ export default function Work() {
           <Mockup
             style={{
               phone: {
-                transform: `rotateX(${axis.phone.y}deg) rotateZ(${axis.phone.x}deg) scale3d(0.7, 0.7, 0.7)`,
+                transform: `rotateX(${axis.phone.y}deg) rotateZ(${axis.phone.x}deg) scale3d(${scale},${scale},${scale})`,
                 transition: transition,
               },
               desk: {
-                transform: `rotateX(${axis.desk.y}deg) rotateZ(${axis.desk.x}deg) scale3d(0.7, 0.7, 0.7)`,
+                transform: `rotateX(${axis.desk.y}deg) rotateZ(${axis.desk.x}deg) scale3d(${scale}, ${scale}, ${scale})`,
                 transition: transition,
               },
             }}
