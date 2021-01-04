@@ -1,15 +1,67 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import "../../styles/project.css";
 import Context from "../../store/context";
 import github from "../../assets/github.svg";
 import infoProjects from "../projects.json";
+import useWindowSize from "../../hooks/useWindowSize";
 
 export default function Project() {
   const { state, actions } = useContext(Context);
+  const size = useWindowSize();
+  const scrollContainer = useRef();
+  const data = {
+    ease: 0.1,
+    current: 0,
+    previous: 0,
+    rounded: 0,
+  };
+  const requests = useRef([]);
+
+  useEffect(() => {
+    if (state.project.isOpened) {
+      document.body.style.height = `${
+        scrollContainer.current.getBoundingClientRect().height
+      }px`;
+    }
+  }, [size.height, state.project.isOpened]);
+
+  // Run scrollrender once page is loaded.
+  useEffect(() => {
+    if (state.project.isOpened) {
+      requests.current.push(requestAnimationFrame(skewScrolling));
+    } else {
+      requests.current.map((i) => {
+        cancelAnimationFrame(i);
+      });
+    }
+  }, [state.project.isOpened]);
+
+  // Scrolling
+  const skewScrolling = () => {
+    //Set Current to the scroll position amount
+    data.current = window.scrollY;
+    // Set Previous to the scroll previous position
+    data.previous += (data.current - data.previous) * data.ease;
+    // Set rounded to
+    data.rounded = Math.round(data.previous * 100) / 100;
+
+    // Difference between
+    const difference = data.current - data.rounded;
+    const acceleration = difference / size.width;
+    const velocity = +acceleration;
+    const skew = velocity * 20;
+
+    //Assign skew and smooth scrolling to the scroll container
+    scrollContainer.current.style.transform = `translateY(-${data.rounded}px) skewY(${skew}deg)`;
+
+    //loop vai raf
+    requests.current.push(requestAnimationFrame(skewScrolling));
+  };
+
   const cursorProject = () => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "project" } },
+      payload: { ...state, cursor: { type: "project", msg: "See project" } },
     });
   };
   const resetCursor = () => {
@@ -38,10 +90,7 @@ export default function Project() {
         className="modal"
         style={{ top: state.project.isOpened ? 0 : "100vh" }}
       >
-        <div
-          className="modal-scroll"
-          style={{ top: state.project.isOpened ? 0 : "100vh" }}
-        >
+        <div ref={scrollContainer} className="modal-scroll">
           <div className="modal-content">
             <div className="center">
               <label className="btn-repo center">

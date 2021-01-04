@@ -22,6 +22,7 @@ export default function Nav() {
     });
   };
   const changeSection = (section) => {
+    document.body.style.overflow = "overlay";
     actions({
       type: "setState",
       payload: { ...state, section, project: { isOpened: false, id: 0 } },

@@ -231,7 +231,7 @@
     position: relative;
     min-height: calc(100vh - 5rem);
     padding-top: 5rem;
-    .mockup {
+    $ .mockup {
       perspective: 50rem;
       transform-style: preserve-3d;
       max-height: 80vh;
@@ -246,12 +246,14 @@
         right: 0;
         top: 5rem;
         transform: translate(0, 0);
+        /*
         + .title {
           left: -100% !important;
           & + .title {
             right: -100% !important;
           }
         }
+          */
       }
       .phone {
         height: 29em;

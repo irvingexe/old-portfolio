@@ -25,6 +25,7 @@ export default function Work() {
     });
   };
   const open = (id) => {
+    window.scrollBy(0, -window.scrollY);
     actions({
       type: "setState",
       payload: {

@@ -1,6 +1,6 @@
 #project .modal {
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   position: fixed;
   left: 0;
   width: 100%;
@@ -10,22 +10,20 @@
 }
 
 #project .modal .modal-scroll {
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   position: fixed;
   left: 0;
-  height: 100%;
   width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 #project .modal .modal-scroll .modal-content {
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   margin-top: 22rem;
 }
 
-#project .modal .modal-scroll .modal-content > *:not(.screens), #project .modal .modal-scroll .modal-content .screens section > *:not(*:last-child) {
+#project .modal .modal-scroll .modal-content > *:not(.screens),
+#project .modal .modal-scroll .modal-content .screens section > *:not(*:last-child) {
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -44,7 +42,7 @@
 }
 
 #project .modal .modal-scroll .modal-content .role {
-  color: #0094B9;
+  color: #0094b9;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -71,6 +69,11 @@
 #project .modal .modal-scroll .modal-content .description + .img {
   -webkit-transform: translate(0px, 50%);
           transform: translate(0px, 50%);
+}
+
+#project .modal .modal-scroll .modal-content .description + .img img {
+  width: 100%;
+  height: 100%;
 }
 
 #project .modal .modal-scroll .modal-content .screens {
@@ -131,8 +134,8 @@
   width: 100%;
   height: 20rem;
   background-color: #ffffff80;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   z-index: 1;
 }
 
@@ -147,8 +150,8 @@
 
 #project .modal .modal-scroll .modal-content .screens > *:last-child img {
   width: 100%;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 @media screen and (max-width: 940px) {
