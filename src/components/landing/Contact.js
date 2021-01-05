@@ -31,7 +31,7 @@ export default function Contact() {
   }, [shining]);
 
   return (
-    <div id="contact" className="center">
+    <div id="contact" className="center scrollOut" data-section="contact">
       <div>
         <h1 className="font-m">Let's get in touch</h1>
         <div>

@@ -19,7 +19,8 @@ export default function Who() {
   return (
     <div
       id="who"
-      className="center"
+      className="center scrollOut"
+      data-section="who"
       onMouseEnter={cursorImage}
       onMouseLeave={resetCursor}
     >

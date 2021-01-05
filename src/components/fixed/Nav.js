@@ -23,6 +23,7 @@ export default function Nav() {
   };
   const changeSection = (section) => {
     document.body.style.overflow = "overlay";
+    //document.querySelector("." + section).classList.add("clicked");
     actions({
       type: "setState",
       payload: { ...state, section, project: { isOpened: false, id: 0 } },
@@ -43,9 +44,14 @@ export default function Nav() {
           <Logo />
         </a>
       </label>
-      <ul id="menu-items" className={"center links" + (menu ? " active" : "")}>
+      <ul
+        id="menu-items"
+        className={"center links" + (menu ? " clicked active" : "")}
+      >
         <li
-          className={"link" + (state.section === "work" ? " active" : "")}
+          className={
+            "work link" + (state.section === "work" ? " clicked active" : "")
+          }
           onClick={() => changeSection("work")}
         >
           <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#work">
@@ -53,7 +59,9 @@ export default function Nav() {
           </a>
         </li>
         <li
-          className={"link" + (state.section === "ido" ? " active" : "")}
+          className={
+            "ido link" + (state.section === "ido" ? " clicked active" : "")
+          }
           onClick={() => changeSection("ido")}
         >
           <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#ido">
@@ -61,7 +69,9 @@ export default function Nav() {
           </a>
         </li>
         <li
-          className={"link" + (state.section === "who" ? " active" : "")}
+          className={
+            "who link" + (state.section === "who" ? " clicked active" : "")
+          }
           onClick={() => changeSection("who")}
         >
           <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#who">
@@ -70,7 +80,8 @@ export default function Nav() {
         </li>
         <li
           className={
-            "contact link" + (state.section === "contact" ? " active" : "")
+            "contact link" +
+            (state.section === "contact" ? " clicked active" : "")
           }
           onClick={() => changeSection("contact")}
         >

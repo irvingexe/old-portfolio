@@ -28,7 +28,7 @@ export default function Cover() {
     });
   };
   return (
-    <div id="cover">
+    <div id="cover" className="scrollOut" data-section="cover">
       <div>
         <p className="center">
           Hey! <br />

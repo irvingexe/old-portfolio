@@ -72,7 +72,7 @@ export default function Work() {
 
   for (let i in infoProjects) {
     projects.push(
-      <div key={i} className="center scrollOut">
+      <div key={i} className="center scrollOut" data-section="work">
         <div
           onClick={() => {
             open(parseInt(i));
@@ -109,6 +109,7 @@ export default function Work() {
   return (
     <div
       id="work"
+      className="scrollOut"
       onMouseMove={transform}
       onMouseLeave={stopTransform}
       onMouseEnter={fastTransition}
