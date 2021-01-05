@@ -23,12 +23,14 @@ export default class Ido extends Component {
       areas.push(
         <div
           key={i}
+          data-section="ido"
+          className={
+            "scrollOut area link" +
+            (this.state.active === ido[i].name ? " active" : "")
+          }
           onMouseEnter={(e) => {
             this.setState((state, props) => ({ active: ido[i].name }));
           }}
-          className={
-            "area link" + (this.state.active === ido[i].name ? " active" : "")
-          }
         >
           <div className="tag center font-m bold">
             <div>

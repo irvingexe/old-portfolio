@@ -28,6 +28,10 @@ export default function Nav() {
       type: "setState",
       payload: { ...state, section, project: { isOpened: false, id: 0 } },
     });
+    window.scrollBy(
+      0,
+      document.querySelector("#" + section).offsetTop - window.scrollY
+    );
     setMenu(false);
   };
 
@@ -40,7 +44,7 @@ export default function Nav() {
         onMouseLeave={resetCursor}
         onClick={() => changeSection("cover")}
       >
-        <a id="home" href="#cover">
+        <a id="home">
           <Logo />
         </a>
       </label>
@@ -54,7 +58,7 @@ export default function Nav() {
           }
           onClick={() => changeSection("work")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#work">
+          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>Works
           </a>
         </li>
@@ -64,7 +68,7 @@ export default function Nav() {
           }
           onClick={() => changeSection("ido")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#ido">
+          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>I do
           </a>
         </li>
@@ -74,7 +78,7 @@ export default function Nav() {
           }
           onClick={() => changeSection("who")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor} href="#who">
+          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>Who
           </a>
         </li>
@@ -85,11 +89,7 @@ export default function Nav() {
           }
           onClick={() => changeSection("contact")}
         >
-          <a
-            onMouseEnter={cursorHover}
-            onMouseLeave={resetCursor}
-            href="#contact"
-          >
+          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>Contact
           </a>
         </li>

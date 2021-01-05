@@ -5,6 +5,12 @@ import Context from "../../store/context";
 
 export default function Cover() {
   const { state, actions } = useContext(Context);
+  const changeSection = () => {
+    window.scrollBy(
+      0,
+      document.querySelector("#work").offsetTop - window.scrollY
+    );
+  };
   const cursorMsg = () => {
     actions({
       type: "setState",
@@ -36,12 +42,13 @@ export default function Cover() {
           design and interactivity
         </p>
 
-        <a href="#work">
+        <a>
           <label
             id="arrow"
             className="center"
             onMouseEnter={cursorMsg}
             onMouseLeave={resetCursor}
+            onClick={() => changeSection()}
           >
             <img alt="" src={arrow} className="up" />
           </label>
