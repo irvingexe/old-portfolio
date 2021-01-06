@@ -44,9 +44,9 @@ export default function Nav() {
         onMouseLeave={resetCursor}
         onClick={() => changeSection("cover")}
       >
-        <a id="home">
+        <div id="home">
           <Logo />
-        </a>
+        </div>
       </label>
       <ul
         id="menu-items"
@@ -58,9 +58,9 @@ export default function Nav() {
           }
           onClick={() => changeSection("work")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>Works
-          </a>
+          </div>
         </li>
         <li
           className={
@@ -68,9 +68,9 @@ export default function Nav() {
           }
           onClick={() => changeSection("ido")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>I do
-          </a>
+          </div>
         </li>
         <li
           className={
@@ -78,9 +78,9 @@ export default function Nav() {
           }
           onClick={() => changeSection("who")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>Who
-          </a>
+          </div>
         </li>
         <li
           className={
@@ -89,9 +89,9 @@ export default function Nav() {
           }
           onClick={() => changeSection("contact")}
         >
-          <a onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
             <div className="line"></div>Contact
-          </a>
+          </div>
         </li>
       </ul>
       <label
