@@ -11,7 +11,7 @@
     />
     <script type="text/javascript" src="cursorTracking.js"></script>
     <script type="text/javascript" src="scroll-out.js"></script>
-    <script type="text/javascript" src="smoothScroll.js"></script>
+    <script type="text/javascript" src="parallaxScroll.js"></script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -29,7 +29,7 @@
     -->
     <title>Irving Work</title>
   </head>
-  <body onmousemove="cursorTracking(event)" onload="scrollTo(); ScrollOut({targets: '.scrollOut', threshold: .5})">
+  <body onmousemove="cursorTracking(event)" onload="parallax(); ScrollOut({targets: '.scrollOut', threshold: .5})">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

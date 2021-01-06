@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bentham&family=Jomolhari&family=Libre+Caslon+Display&family=Playfair+Display&family=Playfair+Display+SC&family=Ramaraja&family=Sree+Krushnadevaraya&family=Suranna&family=Vidaloka&display=swap");
 .bg-title {
   position: absolute;
   width: 80%;
@@ -310,6 +311,18 @@
   position: relative;
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
+  /*
+    &[data-scroll="in"] {
+      .title {
+        &:nth-child(2) {
+          left: -0.12em;
+        }
+        &:nth-child(3) {
+          right: -0.05em;
+        }
+      }
+    }
+    */
 }
 
 #work > div:not(.bg-title) .mockup {
@@ -358,32 +371,31 @@
 }
 
 #work > div:not(.bg-title) .title {
-  position: fixed;
-  margin: 0;
-  height: 1em;
-  letter-spacing: -0.05em;
+  font-family: "Playfair Display", serif;
+  z-index: 2;
   pointer-events: none;
-  white-space: nowrap;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-#work > div:not(.bg-title) .title:nth-child(2) {
-  left: -100%;
-  top: calc(calc(calc(calc(100% + 5rem) / 2) - 0.3em) + 23%);
-}
-
-#work > div:not(.bg-title) .title:nth-child(3) {
-  text-align: right;
-  right: -100%;
-  bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
-}
-
-#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(2) {
-  left: -0.12em;
-}
-
-#work > div:not(.bg-title)[data-scroll="in"] .title:nth-child(3) {
-  right: -0.05em;
+  position: absolute;
+  left: 5rem;
+  top: 13rem;
+  /*
+      position: fixed;
+      margin: 0;
+      height: 1em;
+      letter-spacing: -0.05em;
+      pointer-events: none;
+      white-space: nowrap;
+      transition: all 0.5s ease-out;
+      &:nth-child(2) {
+        left: -100%;
+        //bottom: 1rem;
+        top: calc(calc(calc(calc(100% + 5rem) / 2) - 0.3em) + 23%);
+      }
+      &:nth-child(3) {
+        text-align: right;
+        right: -100%;
+        //top: 2rem;
+        bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
+      }
+      */
 }
 /*# sourceMappingURL=landing.css.map */

@@ -100,8 +100,10 @@ export default function Work() {
             img2={"../../assets/projects/" + i + "/-1.png"}
           />
         </div>
-        <h1 className="title font-xl">{infoProjects[i].splitTitle[0]}</h1>
-        <h1 className="title font-xl">{infoProjects[i].splitTitle[1]}</h1>
+        <div className="title parallax" data-speed="-0.2">
+          <h1 className="font-xl">{infoProjects[i].splitTitle[0]}</h1>
+          <h1 className="font-xl">{infoProjects[i].splitTitle[1]}</h1>
+        </div>
       </div>
     );
   }
