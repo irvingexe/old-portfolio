@@ -59,7 +59,12 @@ export default function App() {
     const difference = data.current - data.rounded;
     const acceleration = difference / size.width;
     const velocity = +acceleration;
-    const skew = velocity * 20;
+    let skew = velocity * 20;
+    if (skew > 20) {
+      skew = 20;
+    } else if (skew < -20) {
+      skew = -20;
+    }
 
     //Assign skew and smooth scrolling to the scroll container
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px) skewY(${skew}deg)`;
