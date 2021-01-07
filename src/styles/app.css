@@ -99,7 +99,7 @@ p {
 }
 
 .font-xl {
-  font-size: 7rem;
+  font-size: calc(min(15vw, 7rem));
   font-weight: 100;
 }
 
@@ -138,8 +138,8 @@ ul {
 }
 
 #cursor > :first-child {
-  -webkit-transition: all 0s;
-  transition: all 0s;
+  -webkit-transition: width 0.2s, height 0.2s;
+  transition: width 0.2s, height 0.2s;
   background-color: #000;
   border-radius: 50%;
   width: 0.5em;
@@ -162,6 +162,7 @@ ul {
 #cursor > div.msg {
   font-size: 0;
   white-space: nowrap;
+  color: #fcfcfc;
 }
 
 #cursor > div.img {
@@ -173,10 +174,24 @@ ul {
   height: 100%;
 }
 
+#cursor.cursor-hover :first-child {
+  width: 0;
+  height: 0;
+}
+
 #cursor.cursor-hover .hover {
-  background-color: #fcfcfc;
+  /*
+      background-color: #00000000;
+      backdrop-filter: invert(1);
+      */
   width: 4em;
   height: 4em;
+  /*
+      & .back {
+        background-color: #fff;
+        backdrop-filter: none;
+      }
+      */
 }
 
 #cursor.cursor-hover .img {
@@ -197,10 +212,25 @@ ul {
   height: 10em;
 }
 
+#cursor.cursor-project :first-child {
+  width: 0;
+  height: 0;
+}
+
 #cursor.cursor-project .hover {
-  background-color: #fcfcfc;
+  /*
+      background-color: #00000000;
+      backdrop-filter: invert(1);
+      */
   width: 10em;
   height: 10em;
+  /*
+      &.back {
+        background-color: #fff;
+        backdrop-filter: none;
+        z-index: -100000;
+      }
+      */
 }
 
 .link:hover .line {

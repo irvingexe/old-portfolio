@@ -13,7 +13,7 @@ import Project from "./components/fixed/Project";
 import useWindowSize from "./hooks/useWindowSize";
 
 export default function App() {
-  const { state, actions } = useContext(Context);
+  const { state } = useContext(Context);
   const [x, setX] = useState(0),
     [y, setY] = useState(0);
   const size = useWindowSize();

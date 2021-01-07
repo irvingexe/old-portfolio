@@ -8,6 +8,7 @@ export default function Cursor() {
   return (
     <div id="cursor" className={"center cursor-" + state.cursor.type}>
       <div></div>
+      <div className="hover back"></div>
       <div className="hover"></div>
       <div className="img center">
         <img alt="" src={me}></img>

@@ -92,7 +92,7 @@ p {
 }
 
 .font-xl {
-  font-size: 7rem;
+  font-size: calc(min(15vw, 7rem));
   font-weight: 100;
 }
 
@@ -127,7 +127,7 @@ ul {
   pointer-events: none;
   z-index: 3;
   > :first-child {
-    transition: all 0s;
+    transition: width 0.2s, height 0.2s;
     background-color: #000;
     border-radius: 50%;
     width: 0.5em;
@@ -145,6 +145,7 @@ ul {
     &.msg {
       font-size: 0;
       white-space: nowrap;
+      color: #fcfcfc;
     }
     &.img {
       opacity: 0;
@@ -155,10 +156,23 @@ ul {
     }
   }
   &.cursor-hover {
+    :first-child {
+      width: 0;
+      height: 0;
+    }
     .hover {
-      background-color: #fcfcfc;
+      /*
+      background-color: #00000000;
+      backdrop-filter: invert(1);
+      */
       width: 4em;
       height: 4em;
+      /*
+      & .back {
+        background-color: #fff;
+        backdrop-filter: none;
+      }
+      */
     }
     .img {
       width: 4em;
@@ -179,10 +193,24 @@ ul {
     }
   }
   &.cursor-project {
+    :first-child {
+      width: 0;
+      height: 0;
+    }
     .hover {
-      background-color: #fcfcfc;
+      /*
+      background-color: #00000000;
+      backdrop-filter: invert(1);
+      */
       width: 10em;
       height: 10em;
+      /*
+      &.back {
+        background-color: #fff;
+        backdrop-filter: none;
+        z-index: -100000;
+      }
+      */
     }
     .msg {
       @extend .font-xs;

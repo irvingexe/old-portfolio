@@ -22,14 +22,14 @@
 
 #nav #menu-items .contact {
   position: absolute;
-  right: .5em;
+  right: 0.5em;
   top: 0em;
 }
 
 #toggle {
   position: fixed;
   top: 0;
-  right: .8em;
+  right: 0.8em;
   margin: 1.15em;
   margin-top: 1em;
   display: none;
@@ -141,7 +141,7 @@
   }
   #nav #menu-items {
     height: 100vh;
-    background-color: #EAE6E1;
+    background-color: #eae6e1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -153,8 +153,8 @@
             justify-content: center;
     -webkit-clip-path: circle(0px at 86% 2em);
             clip-path: circle(0px at 86% 2em);
-    -webkit-transition: all .5s ease-out, height 0s;
-    transition: all .5s ease-out, height 0s;
+    -webkit-transition: all 0.5s ease-out, height 0s;
+    transition: all 0.5s ease-out, height 0s;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -196,7 +196,7 @@
   background-color: #000;
   position: absolute;
   top: 50%;
-  margin-top: -.75px;
+  margin-top: -0.75px;
   -webkit-transform: translateY(-3.75px) translateZ(0);
           transform: translateY(-3.75px) translateZ(0);
   -webkit-transition: background-color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);

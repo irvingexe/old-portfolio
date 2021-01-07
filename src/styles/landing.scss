@@ -20,16 +20,14 @@
     margin: 0;
   }
 
-  a {
+  #arrow {
     z-index: 3;
-    #arrow {
-      height: 6em;
-      width: 6em;
-      margin-left: auto;
-      margin-right: auto;
-      img {
-        width: 40px;
-      }
+    height: 6em;
+    width: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 40px;
     }
   }
 
@@ -275,8 +273,9 @@
       z-index: 2;
       pointer-events: none;
       position: absolute;
-      left: 5rem;
-      top: 13rem;
+      left: calc(max(0px, min(5rem, calc(10vw - 5rem))));
+      //top: 13rem;
+      top: calc(max(7rem, min(15vw, 13rem)));
       /*
       position: fixed;
       margin: 0;

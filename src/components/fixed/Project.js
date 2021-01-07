@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect } from "react";
 import "../../styles/project.css";
 import Context from "../../store/context";
-import github from "../../assets/github.svg";
+//import github from "../../assets/github.svg";
 import infoProjects from "../projects.json";
 import useWindowSize from "../../hooks/useWindowSize";
 
@@ -92,16 +92,10 @@ export default function Project() {
       >
         <div ref={scrollContainer} className="modal-scroll">
           <div className="modal-content">
-            <div className="center">
-              <label className="btn-repo center">
-                <img alt="" src={github} />
-                Source code
-              </label>
-            </div>
+            <div className="center"></div>
 
             <div className="font-xs role">{role}</div>
 
-            <h1 className="font-m">{infoProjects[id].title}</h1>
             <h2 className="font-xs">{infoProjects[id].subtitle}</h2>
             <div className="description">
               <p className="font-s">{infoProjects[id].abstract}</p>

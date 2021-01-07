@@ -30,7 +30,17 @@ export default function Cover() {
   const resetCursor = () => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "default" } },
+      payload: {
+        ...state,
+        cursor: {
+          type: "default",
+          msg: (
+            <div>
+              Take a look <br /> at my work
+            </div>
+          ),
+        },
+      },
     });
   };
   return (
@@ -42,17 +52,15 @@ export default function Cover() {
           design and interactivity
         </p>
 
-        <a>
-          <label
-            id="arrow"
-            className="center"
-            onMouseEnter={cursorMsg}
-            onMouseLeave={resetCursor}
-            onClick={() => changeSection()}
-          >
-            <img alt="" src={arrow} className="up" />
-          </label>
-        </a>
+        <label
+          id="arrow"
+          className="center"
+          onMouseEnter={cursorMsg}
+          onMouseLeave={resetCursor}
+          onClick={() => changeSection()}
+        >
+          <img alt="" src={arrow} className="up" />
+        </label>
       </div>
     </div>
   );

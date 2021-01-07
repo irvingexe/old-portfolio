@@ -2,7 +2,7 @@
     {
         "title" : "AR Gallery",
         "splitTitle" : ["AR", "Gallery"],
-        "subtitle" : "An app that helps you choose the right outfit",
+        "subtitle" : "Bringing art to life with AR",
         "abstract" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.",
         "technologies" : [
             "Fnsetur",
@@ -38,7 +38,7 @@
     {
         "title" : "Robix UML",
         "splitTitle" : ["Robix", "UML"],
-        "subtitle" : "An app that helps you choose the right outfit",
+        "subtitle" : "UML diagramming web application",
         "abstract" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.",
         "technologies" : [
             "Fnsetur",
