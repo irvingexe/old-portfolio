@@ -64,138 +64,279 @@
 }
 
 #ido {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  /*
   display: flex;
-}
-
-#ido .content {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 60em;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-rows: 1fr;
-  position: relative;
-}
-
-#ido .content .area {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 10em 1fr;
+  .content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 60em;
+    display: grid;
+    grid-auto-rows: 1fr;
+    position: relative;
+    .area {
+      display: grid;
       grid-template-columns: 10em 1fr;
-  min-height: 6em;
-}
-
-#ido .content .area .tag {
-  position: relative;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-#ido .content .area .tag > div {
-  position: absolute;
-  left: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-#ido .content .area.active .tag > div {
-  left: 10px;
-}
-
-#ido .content .area.active .description {
-  -webkit-filter: none;
+      min-height: 6em;
+      .tag {
+        position: relative;
+        align-items: baseline;
+        > div {
+          position: absolute;
+          left: 0;
+          transition: all 0.5s;
+        }
+      }
+      &.active {
+        .tag > div {
+          left: 10px;
+        }
+        .description {
           filter: none;
-  opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
+          opacity: 1;
+          transition: all 0.5s;
+        }
+        .images {
+          top: 5rem;
+          opacity: 1;
+          transition: all 0.5s;
+        }
+      }
+    }
 
-#ido .content .area.active .images {
-  top: 5rem;
-  opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-#ido .content .info {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 18em;
+    .info {
+      display: grid;
       grid-template-columns: 1fr 18em;
-  gap: 1em;
-}
+      gap: 1em;
+      .description {
+        margin: 5px;
+        filter: blur(1px);
+        opacity: 0.3;
+      }
+    }
 
-#ido .content .info .description {
-  margin: 5px;
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
-  opacity: 0.3;
-}
-
-#ido .content .images {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (5em)[3];
+    .images {
+      display: grid;
       grid-template-columns: repeat(3, 5em);
-  gap: 1.5em;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  position: absolute;
-  top: 6rem;
-  right: 0;
+      gap: 1.5em;
+      align-items: start;
+      position: absolute;
+      top: 6rem;
+      right: 0;
+      opacity: 0;
+      pointer-events: none;
+      text-align: center;
+      > div {
+        flex-direction: column;
+        > img {
+          width: 3.5em;
+          height: 3.5em;
+        }
+      }
+    }
+  }
+  */
+}
+
+#ido .container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+#ido .box {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  position: relative;
+  height: 160px;
+  z-index: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#ido .box .border {
   opacity: 0;
-  pointer-events: none;
-  text-align: center;
+  border: 1px solid #0000005e;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-#ido .content .images > div {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#ido .box:hover {
+  z-index: 10;
 }
 
-#ido .content .images > div > img {
-  width: 3.5em;
-  height: 3.5em;
+#ido .box .top-left:before, #ido .box .top-left:after,
+#ido .box .bottom-left:before,
+#ido .box .bottom-left:after,
+#ido .box .top-right:before,
+#ido .box .top-right:after,
+#ido .box .bottom-right:before,
+#ido .box .bottom-right:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #000000;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  height: 1px;
+  width: 7px;
+  z-index: 1;
+  -webkit-transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
+  transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
+}
+
+#ido .box .top-left:before, #ido .box .top-left:after {
+  left: 0;
+  top: 0;
+}
+
+#ido .box .top-left:after {
+  height: 7px;
+  width: 1px;
+}
+
+#ido .box .bottom-left:before, #ido .box .bottom-left:after {
+  left: 0;
+  top: 100%;
+}
+
+#ido .box .bottom-left:after {
+  height: 7px;
+  width: 1px;
+  top: 96%;
+}
+
+#ido .box .top-right:before, #ido .box .top-right:after {
+  left: 96%;
+  top: 0;
+}
+
+#ido .box .top-right:after {
+  height: 7px;
+  width: 1px;
+  left: 100%;
+}
+
+#ido .box .bottom-right:before, #ido .box .bottom-right:after {
+  left: 96%;
+  top: 100%;
+}
+
+#ido .box .bottom-right:after {
+  height: 7px;
+  width: 1px;
+  left: 100%;
+  top: 96%;
+}
+
+#ido .box:hover .border, #ido .box:focus .border {
+  opacity: 1;
+}
+
+#ido .box:hover .top-left:before, #ido .box:focus .top-left:before {
+  -webkit-transition: height 0.2s ease, width 0.2s ease;
+  transition: height 0.2s ease, width 0.2s ease;
+  width: 15%;
+}
+
+#ido .box:hover .top-left:after, #ido .box:focus .top-left:after {
+  -webkit-transition: height 0.2s ease, width 0.2s ease;
+  transition: height 0.2s ease, width 0.2s ease;
+  height: 15%;
+}
+
+#ido .box:hover .bottom-left:before, #ido .box:focus .bottom-left:before {
+  -webkit-transition: height 0.2s ease, width 0.2s ease;
+  transition: height 0.2s ease, width 0.2s ease;
+  width: 15%;
+}
+
+#ido .box:hover .bottom-left:after, #ido .box:focus .bottom-left:after {
+  -webkit-transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
+  transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
+  top: 85%;
+  height: 15%;
+}
+
+#ido .box:hover .top-right:before, #ido .box:focus .top-right:before {
+  -webkit-transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
+  transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
+  width: 15%;
+  left: 85%;
+}
+
+#ido .box:hover .top-right:after, #ido .box:focus .top-right:after {
+  -webkit-transition: height 0.2s ease, width 0.2s ease;
+  transition: height 0.2s ease, width 0.2s ease;
+  height: 15%;
+}
+
+#ido .box:hover .bottom-right:before, #ido .box:focus .bottom-right:before {
+  -webkit-transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
+  transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
+  width: 15%;
+  left: 85%;
+}
+
+#ido .box:hover .bottom-right:after, #ido .box:focus .bottom-right:after {
+  -webkit-transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
+  transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
+  top: 85%;
+  height: 15%;
+}
+
+#ido .box__image {
+  fill: #0000005e;
+  width: 60%;
+  will-change: width;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 2;
 }
 
 @media screen and (max-width: 940px) {
   #work > div:not(.bg-title) .title {
     font-size: 20vw;
   }
+  /*
   #ido {
     display: block;
-  }
-  #ido .content {
-    grid-auto-rows: unset;
-    gap: 2em;
-  }
-  #ido .content .area .tag > div {
-    left: 0 !important;
-  }
-  #ido .content .area .tag > div .line {
-    display: none;
-  }
-  #ido .content .area .info {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  #ido .content .area .info .images {
-    -ms-grid-columns: (5em)[auto-fit];
-        grid-template-columns: repeat(auto-fit, 5em);
-    position: initial;
-    opacity: 1;
-  }
-  #ido .content .area .info .description {
-    -webkit-filter: none;
+    .content {
+      grid-auto-rows: unset;
+      gap: 2em;
+      .area {
+        .tag > div {
+          left: 0 !important;
+          .line {
+            display: none;
+          }
+        }
+        .info {
+          grid-template-columns: 1fr;
+          .images {
+            grid-template-columns: repeat(auto-fit, 5em);
+            position: initial;
+            opacity: 1;
+          }
+          .description {
             filter: none;
-    opacity: 1;
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
+  */
 }
 
 @media screen and (max-width: 600px) {

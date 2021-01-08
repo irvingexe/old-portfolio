@@ -118,7 +118,7 @@ export default function Work() {
     >
       {projects}
       <div className="bg-title font-xxl bold center unselectable">
-        <h1>Works</h1>
+        <h1>Work</h1>
       </div>
     </div>
   );

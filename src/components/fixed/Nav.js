@@ -59,7 +59,7 @@ export default function Nav() {
           onClick={() => changeSection("work")}
         >
           <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
-            <div className="line"></div>Works
+            <div className="line"></div>Work
           </div>
         </li>
         <li
