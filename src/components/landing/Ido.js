@@ -6,7 +6,7 @@ export default function Ido() {
   let blocks = [];
   for (let i = 0; i < 18; i++) {
     blocks.push(
-      <div href="#" className="box">
+      <div key={i} href="#" className="box">
         <div className="border"></div>
         <div className="top-left"></div>
         <div className="top-right"></div>
@@ -17,7 +17,7 @@ export default function Ido() {
   }
   return (
     <div id="ido">
-      <div className="container center">
+      <div className="container">
         <div className="footer">{blocks}</div>
       </div>
     </div>

@@ -138,21 +138,28 @@
 }
 
 #ido .container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  min-height: 100vh;
+  /*
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+    */
+}
+
+#ido .container .footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(calc(min(12rem, calc(max(20vw, 5rem)))), 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(calc(min(12rem, calc(max(20vw, 5rem)))), 1fr));
 }
 
 #ido .box {
   display: inline-block;
-  float: left;
-  width: 160px;
   position: relative;
-  height: 160px;
   z-index: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  height: calc(min(10rem, calc(max(20vw, 7rem))));
 }
 
 #ido .box .border {
@@ -184,7 +191,7 @@
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   height: 1px;
-  width: 7px;
+  width: 5%;
   z-index: 1;
   -webkit-transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
   transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
@@ -196,7 +203,7 @@
 }
 
 #ido .box .top-left:after {
-  height: 7px;
+  height: 5%;
   width: 1px;
 }
 
@@ -206,32 +213,32 @@
 }
 
 #ido .box .bottom-left:after {
-  height: 7px;
+  height: 5%;
   width: 1px;
-  top: 96%;
+  top: 95%;
 }
 
 #ido .box .top-right:before, #ido .box .top-right:after {
-  left: 96%;
+  left: calc(95% + 1px);
   top: 0;
 }
 
 #ido .box .top-right:after {
-  height: 7px;
+  height: 5%;
   width: 1px;
   left: 100%;
 }
 
 #ido .box .bottom-right:before, #ido .box .bottom-right:after {
-  left: 96%;
+  left: calc(95% + 1px);
   top: 100%;
 }
 
 #ido .box .bottom-right:after {
-  height: 7px;
+  height: 5%;
   width: 1px;
   left: 100%;
-  top: 96%;
+  top: 95%;
 }
 
 #ido .box:hover .border, #ido .box:focus .border {
@@ -267,7 +274,7 @@
   -webkit-transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
   transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
   width: 15%;
-  left: 85%;
+  left: calc(85% + 1px);
 }
 
 #ido .box:hover .top-right:after, #ido .box:focus .top-right:after {
@@ -280,7 +287,7 @@
   -webkit-transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
   transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
   width: 15%;
-  left: 85%;
+  left: calc(85% + 1px);
 }
 
 #ido .box:hover .bottom-right:after, #ido .box:focus .bottom-right:after {

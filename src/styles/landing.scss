@@ -60,10 +60,19 @@ $color: set-color($bg-color);
 
 #ido {
   .container {
+    /*
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     min-height: 100vh;
+    */
+    .footer {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc(min(12rem, calc(max(20vw, 5rem)))), 1fr)
+      );
+    }
   }
 
   .box {
@@ -75,12 +84,10 @@ $color: set-color($bg-color);
       transition: all 1s ease;
     }
     display: inline-block;
-    float: left;
-    width: 160px;
     position: relative;
-    height: 160px;
     z-index: 0;
     transition: all 0.3s ease;
+    height: calc(min(10rem, calc(max(20vw, 7rem))));
 
     &:hover {
       z-index: 10;
@@ -99,7 +106,7 @@ $color: set-color($bg-color);
         animation-iteration-count: 1;
         transform-origin: 50% 50%;
         height: 1px;
-        width: 7px;
+        width: 5%;
         z-index: 1;
         transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease,
           width 1s ease;
@@ -113,7 +120,7 @@ $color: set-color($bg-color);
         top: 0;
       }
       &:after {
-        height: 7px;
+        height: 5%;
         width: 1px;
       }
     }
@@ -125,20 +132,20 @@ $color: set-color($bg-color);
         top: 100%;
       }
       &:after {
-        height: 7px;
+        height: 5%;
         width: 1px;
-        top: 96%;
+        top: 95%;
       }
     }
 
     .top-right {
       &:before,
       &:after {
-        left: 96%;
+        left: calc(95% + 1px);
         top: 0;
       }
       &:after {
-        height: 7px;
+        height: 5%;
         width: 1px;
         left: 100%;
       }
@@ -147,14 +154,14 @@ $color: set-color($bg-color);
     .bottom-right {
       &:before,
       &:after {
-        left: 96%;
+        left: calc(95% + 1px);
         top: 100%;
       }
       &:after {
-        height: 7px;
+        height: 5%;
         width: 1px;
         left: 100%;
-        top: 96%;
+        top: 95%;
       }
     }
 
@@ -189,7 +196,7 @@ $color: set-color($bg-color);
         &:before {
           transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
           width: 15%;
-          left: 85%;
+          left: calc(85% + 1px);
         }
         &:after {
           transition: height 0.2s ease, width 0.2s ease;
@@ -201,7 +208,7 @@ $color: set-color($bg-color);
         &:before {
           transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
           width: 15%;
-          left: 85%;
+          left: calc(85% + 1px);
         }
         &:after {
           transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
