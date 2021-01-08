@@ -16,7 +16,7 @@ export default function Ido() {
     );
   }
   return (
-    <div id="ido">
+    <div id="ido" className="center">
       <div className="container">
         <div className="footer">{blocks}</div>
       </div>

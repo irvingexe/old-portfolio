@@ -60,12 +60,7 @@ $color: set-color($bg-color);
 
 #ido {
   .container {
-    /*
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    min-height: 100vh;
-    */
     .footer {
       display: grid;
       grid-template-columns: repeat(
