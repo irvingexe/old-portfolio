@@ -339,11 +339,17 @@ $color: set-color($bg-color);
   */
 }
 
+@media screen and (max-width: 765px) {
+  .box.title {
+    grid-column: auto / span 2;
+  }
+}
+
+/*
 @media screen and (max-width: 940px) {
   #work > div:not(.bg-title) .title {
     font-size: 20vw;
   }
-  /*
   #ido {
     display: block;
     .content {
@@ -371,8 +377,8 @@ $color: set-color($bg-color);
       }
     }
   }
-  */
 }
+  */
 
 @media screen and (max-width: 600px) {
   .area {

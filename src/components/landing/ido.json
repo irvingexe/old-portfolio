@@ -10,11 +10,7 @@
             },
             {
                 "img": "../../assets/tecnologies/javascript.svg",
-                "title": "JavaScript"
-            },
-            {
-                "img": "../../assets/tecnologies/html.svg",
-                "title": "HTML"
+                "title": "Woocomerce"
             },
             {
                 "img": "../../assets/tecnologies/sass.svg",
@@ -26,7 +22,7 @@
             },
             {
                 "img": "../../assets/tecnologies/bootstrap.svg",
-                "title": "Bootstrap"
+                "title": "WebGL"
             }
         ]
     },
@@ -56,7 +52,7 @@
     {
         "name": "Mobile",
         "name2": "",
-        "description": "Native Android applications and Cross Platform applications Android & IOS using React Native",
+        "description": "Native Android applications with Kotlin",
         "tecnologies": [
             {
                 "img": "../../assets/tecnologies/react.svg",
@@ -75,11 +71,11 @@
     {
         "name": "Design",
         "name2": "",
-        "description": "Wireframing and prototiping with tools such as Sketch and Figma, 3D modeling and SVG illustration and animation",
+        "description": "Wireframing with tools such as Figma, 3D modeling and SVG illustration and animation",
         "tecnologies": [
             {
                 "img": "../../assets/tecnologies/react.svg",
-                "title": "Sketch"
+                "title": "Figma"
             },
             {
                 "img": "../../assets/tecnologies/react.svg",
