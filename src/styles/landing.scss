@@ -7,42 +7,61 @@
   z-index: -1;
 }
 
-#cover > div {
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr 6rem;
-  grid-template-columns: 100%;
-  min-height: calc(100vh - 5rem);
-  padding-top: 5rem;
-  p {
-    font-size: 3em;
-    max-width: 13em;
-    margin: 0;
-  }
-
-  #arrow {
-    z-index: 3;
-    height: 6em;
-    width: 6em;
-    margin-left: auto;
-    margin-right: auto;
-    img {
-      width: 40px;
-    }
-  }
-
-  .up {
-    animation: uparrow 0.6s infinite alternate ease-in-out;
-  }
-
-  @keyframes uparrow {
-    0% {
-      -webkit-transform: translateY(0);
-      opacity: 0.7;
-    }
-    100% {
-      -webkit-transform: translateY(-0.4em);
-      opacity: 0.9;
+#cover {
+  height: 100%;
+  > div {
+    min-height: calc(100vh - 5rem);
+    padding-top: 5rem;
+    > div {
+      width: 100%;
+      display: grid;
+      p {
+        font-size: 3em;
+        max-width: 13em;
+        margin: 0;
+      }
+      > div {
+        pointer-events: all;
+        width: fit-content;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        &:hover .arrow,
+        &:active .arrow {
+          transform: translateY(2rem) rotate(90deg);
+          width: 15rem !important;
+        }
+        :nth-child(2) {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          position: relative;
+        }
+        .arrow {
+          position: relative;
+          transform-origin: 0%;
+          transform: rotate(90deg);
+          transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease;
+          pointer-events: none;
+          width: 10rem;
+          height: 1px;
+          background-color: #000;
+          &:before {
+            content: "";
+            display: block;
+            position: relative;
+            left: 100%;
+            top: 0;
+            width: 0.5rem;
+            height: 0.5px;
+            background-color: #000;
+            transform: rotate(130deg);
+            transform-origin: 0%;
+          }
+          &:after {
+            @extend .arrow:before;
+            transform: rotate(-130deg);
+          }
+        }
+      }
     }
   }
 }
