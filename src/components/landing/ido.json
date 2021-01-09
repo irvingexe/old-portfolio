@@ -1,6 +1,7 @@
 [
     {
         "name": "Front",
+        "name2": "End",
         "description": "Responsive front-end developement using React",
         "tecnologies": [
             {
@@ -31,6 +32,7 @@
     },
     {
         "name": "Back",
+        "name2": "End",
         "description": "Backend microservices as well as database management",
         "tecnologies": [
             {
@@ -53,6 +55,7 @@
     },
     {
         "name": "Mobile",
+        "name2": "",
         "description": "Native Android applications and Cross Platform applications Android & IOS using React Native",
         "tecnologies": [
             {
@@ -71,6 +74,7 @@
     },
     {
         "name": "Design",
+        "name2": "",
         "description": "Wireframing and prototiping with tools such as Sketch and Figma, 3D modeling and SVG illustration and animation",
         "tecnologies": [
             {
