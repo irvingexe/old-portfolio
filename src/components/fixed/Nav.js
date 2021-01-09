@@ -7,6 +7,7 @@ export default function Nav() {
   const [menu, setMenu] = useState(false);
   const { state, actions } = useContext(Context);
   const menuState = () => {
+    document.body.style.overflow = menu ? "overlay" : "hidden";
     setMenu(!menu);
   };
   const cursorHover = () => {
