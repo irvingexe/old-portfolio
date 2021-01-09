@@ -63,80 +63,6 @@
   }
 }
 
-#ido {
-  /*
-  display: flex;
-  .content {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    max-width: 60em;
-    display: grid;
-    grid-auto-rows: 1fr;
-    position: relative;
-    .area {
-      display: grid;
-      grid-template-columns: 10em 1fr;
-      min-height: 6em;
-      .tag {
-        position: relative;
-        align-items: baseline;
-        > div {
-          position: absolute;
-          left: 0;
-          transition: all 0.5s;
-        }
-      }
-      &.active {
-        .tag > div {
-          left: 10px;
-        }
-        .description {
-          filter: none;
-          opacity: 1;
-          transition: all 0.5s;
-        }
-        .images {
-          top: 5rem;
-          opacity: 1;
-          transition: all 0.5s;
-        }
-      }
-    }
-
-    .info {
-      display: grid;
-      grid-template-columns: 1fr 18em;
-      gap: 1em;
-      .description {
-        margin: 5px;
-        filter: blur(1px);
-        opacity: 0.3;
-      }
-    }
-
-    .images {
-      display: grid;
-      grid-template-columns: repeat(3, 5em);
-      gap: 1.5em;
-      align-items: start;
-      position: absolute;
-      top: 6rem;
-      right: 0;
-      opacity: 0;
-      pointer-events: none;
-      text-align: center;
-      > div {
-        flex-direction: column;
-        > img {
-          width: 3.5em;
-          height: 3.5em;
-        }
-      }
-    }
-  }
-  */
-}
-
 #ido .container {
   width: 100%;
 }
@@ -361,40 +287,6 @@
   }
 }
 
-/*
-@media screen and (max-width: 940px) {
-  #work > div:not(.bg-title) .title {
-    font-size: 20vw;
-  }
-  #ido {
-    display: block;
-    .content {
-      grid-auto-rows: unset;
-      gap: 2em;
-      .area {
-        .tag > div {
-          left: 0 !important;
-          .line {
-            display: none;
-          }
-        }
-        .info {
-          grid-template-columns: 1fr;
-          .images {
-            grid-template-columns: repeat(auto-fit, 5em);
-            position: initial;
-            opacity: 1;
-          }
-          .description {
-            filter: none;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-}
-  */
 @media screen and (max-width: 600px) {
   .area {
     -ms-grid-columns: 2.1em 1fr !important;
@@ -505,18 +397,6 @@
   position: relative;
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
-  /*
-    &[data-scroll="in"] {
-      .title {
-        &:nth-child(2) {
-          left: -0.12em;
-        }
-        &:nth-child(3) {
-          right: -0.05em;
-        }
-      }
-    }
-    */
 }
 
 #work > div:not(.bg-title) .mockup {
@@ -565,31 +445,59 @@
 }
 
 #work > div:not(.bg-title) .title {
-  font-family: "Playfair Display", serif;
   z-index: 2;
   pointer-events: none;
   position: absolute;
   left: calc(max(0px, min(5rem, calc(10vw - 5rem))));
-  top: calc(max(7rem, min(15vw, 13rem)));
-  /*
-      position: fixed;
-      margin: 0;
-      height: 1em;
-      letter-spacing: -0.05em;
-      pointer-events: none;
-      white-space: nowrap;
-      transition: all 0.5s ease-out;
-      &:nth-child(2) {
-        left: -100%;
-        //bottom: 1rem;
-        top: calc(calc(calc(calc(100% + 5rem) / 2) - 0.3em) + 23%);
-      }
-      &:nth-child(3) {
-        text-align: right;
-        right: -100%;
-        //top: 2rem;
-        bottom: calc(calc(calc(100% - 5rem) / 2) + 23%);
-      }
-      */
+  top: calc(max(4rem, min(15vw, 13rem)));
+}
+
+#work > div:not(.bg-title) .title h1 {
+  font-family: "Playfair Display", serif;
+}
+
+#work > div:not(.bg-title) .title > div {
+  pointer-events: all;
+  width: 15rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+#work > div:not(.bg-title) .title > div:hover .arrow,
+#work > div:not(.bg-title) .title > div:active .arrow {
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+  width: 15rem;
+}
+
+#work > div:not(.bg-title) .title > div .arrow {
+  -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
+  transition: width 0.7s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, width 0.7s ease;
+  transition: transform 0.5s ease, width 0.7s ease, -webkit-transform 0.5s ease;
+  margin-top: 0.5rem;
+  width: 10rem;
+  height: 1px;
+  background-color: #000;
+}
+
+#work > div:not(.bg-title) .title > div .arrow:before, #work > div:not(.bg-title) .title > div .arrow:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 100%;
+  top: 0;
+  width: 0.5rem;
+  height: 0.5px;
+  background-color: #000;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+#work > div:not(.bg-title) .title > div .arrow:after {
+  -webkit-transform: rotate(-130deg);
+          transform: rotate(-130deg);
 }
 /*# sourceMappingURL=landing.css.map */

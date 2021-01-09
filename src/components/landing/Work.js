@@ -12,6 +12,12 @@ export default function Work() {
   const [transition, setTransition] = useState("all 0.2s ease");
   const [dimensions, setDimensions] = useState({ width: window.innerWidth });
 
+  const cursorHover = () => {
+    actions({
+      type: "setState",
+      payload: { ...state, cursor: { type: "hover", msg: "See project" } },
+    });
+  };
   const cursorProject = () => {
     actions({
       type: "setState",
@@ -103,6 +109,17 @@ export default function Work() {
         <div className="title parallax" data-speed="-0.2">
           <h1 className="font-xl">{infoProjects[i].splitTitle[0]}</h1>
           <h1 className="font-xl">{infoProjects[i].splitTitle[1]}</h1>
+          <div
+            className="font-xs"
+            onMouseEnter={cursorHover}
+            onMouseLeave={resetCursor}
+            onClick={() => {
+              open(parseInt(i));
+            }}
+          >
+            See project
+            <div className="arrow"></div>
+          </div>
         </div>
       </div>
     );
