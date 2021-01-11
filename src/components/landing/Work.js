@@ -102,8 +102,8 @@ export default function Work() {
               },
             }}
             device={infoProjects[i].device}
-            img1={"../../assets/projects/" + i + "/0.png"}
-            img2={"../../assets/projects/" + i + "/-1.png"}
+            img1={"../../assets/projects/" + i + "/-1.png"}
+            img2={"../../assets/projects/" + i + "/-2.png"}
           />
         </div>
         <div className="title parallax" data-speed="-0.2">

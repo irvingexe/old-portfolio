@@ -1,6 +1,6 @@
 #project .modal {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
   position: fixed;
   left: 0;
   width: 100%;
@@ -10,8 +10,6 @@
 }
 
 #project .modal .modal-scroll {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
   position: fixed;
   left: 0;
   width: 100%;
@@ -20,12 +18,13 @@
 #project .modal .modal-scroll .modal-content {
   background-color: #faf5f0;
   margin-top: 22rem;
+  padding-top: 3.5rem;
 }
 
 #project .modal .modal-scroll .modal-content > *:not(.screens),
 #project .modal .modal-scroll .modal-content .screens section > *:not(*:last-child) {
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 80vw;
+  margin: auto;
 }
 
 #project .modal .modal-scroll .modal-content .btn-repo {
@@ -42,19 +41,18 @@
 }
 
 #project .modal .modal-scroll .modal-content .role {
-  color: #0094b9;
-  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-weight: bold;
 }
 
 #project .modal .modal-scroll .modal-content .description {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr min-content;
-      grid-template-columns: 1fr -webkit-min-content;
-      grid-template-columns: 1fr min-content;
-  gap: 5rem;
-  margin-top: 5rem;
+  -ms-grid-columns: max-content 1fr;
+      grid-template-columns: -webkit-max-content 1fr;
+      grid-template-columns: max-content 1fr;
+  gap: 4rem 5rem;
+  margin-top: 3rem;
 }
 
 #project .modal .modal-scroll .modal-content .description p {
@@ -66,98 +64,31 @@
   font-weight: bold;
 }
 
-#project .modal .modal-scroll .modal-content .description + .img {
-  -webkit-transform: translate(0px, 50%);
-          transform: translate(0px, 50%);
+#project .modal .modal-scroll .modal-content .description ul {
+  margin: 0.5rem 0 0 0;
 }
 
-#project .modal .modal-scroll .modal-content .description + .img img {
+#project .modal .modal-scroll .modal-content .description .img {
+  grid-column: auto / span 2;
+}
+
+#project .modal .modal-scroll .modal-content .description .img img {
   width: 100%;
   height: 100%;
-}
-
-#project .modal .modal-scroll .modal-content .screens {
-  padding-top: 50vh;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  min-height: 100vh;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div.reverse {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div.three {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 2rem;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div.three img {
-  width: 100%;
-  max-width: 16rem;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div:last-child {
-  overflow: hidden;
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div:last-child img {
-  height: 100vh;
-}
-
-#project .modal .modal-scroll .modal-content .screens section > div p {
-  margin: 5rem;
-  text-align: justify;
-  max-width: 20rem;
-}
-
-#project .modal .modal-scroll .modal-content .screens > *:last-child {
-  height: 20rem;
-  overflow: hidden;
-}
-
-#project .modal .modal-scroll .modal-content .screens > *:last-child h1 {
-  position: absolute;
-  width: 100%;
-  height: 20rem;
-  background-color: #ffffff80;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  z-index: 1;
-}
-
-#project .modal .modal-scroll .modal-content .screens > *:last-child h1:hover {
-  background-color: #ffffff00;
-}
-
-#project .modal .modal-scroll .modal-content .screens > *:last-child h1:hover + img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-#project .modal .modal-scroll .modal-content .screens > *:last-child img {
-  width: 100%;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
 }
 
 @media screen and (max-width: 940px) {
   .description {
     -ms-grid-columns: 1fr !important;
         grid-template-columns: 1fr !important;
+  }
+  .description > div:nth-child(2) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .description .img {
+    grid-column: auto !important;
   }
   .screens section > div {
     -webkit-box-orient: vertical;

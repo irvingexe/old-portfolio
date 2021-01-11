@@ -10,8 +10,9 @@
             "Tetur huu",
             "Bonsectur"],
         "role" : [
-            "UI design", 
-            "App developer"],
+            "UX/UI design", 
+            "Front-end developement", 
+            "Back-end developement"],
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
@@ -28,8 +29,8 @@
             "Tetur huu",
             "Bonsectur"],
         "role" : [
-            "UI design", 
-            "Front-end developer"],
+            "UX/UI design", 
+            "Front-end developement"],
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
@@ -46,8 +47,8 @@
             "Tetur huu",
             "Bonsectur"],
         "role" : [
-            "UI design", 
-            "App developement"],
+            "UX/UI design", 
+            "Front-end developement"],
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],

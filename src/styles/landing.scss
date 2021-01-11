@@ -17,7 +17,7 @@
       display: grid;
       p {
         font-size: 3em;
-        max-width: 13em;
+        max-width: calc(min(13em, 80vw));
         margin: 0;
       }
       > div {
