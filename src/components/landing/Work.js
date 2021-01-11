@@ -31,15 +31,16 @@ export default function Work() {
     });
   };
   const open = (id) => {
-    window.scrollBy(0, -window.scrollY);
     actions({
       type: "setState",
       payload: {
         ...state,
         project: { isOpened: true, id: id },
         cursor: { type: "default" },
+        scroll: window.scrollY,
       },
     });
+    window.scrollBy(0, -window.scrollY);
   };
   const transform = (e) => {
     let xAxisP = e.screenX / 2 / 30 - 30;

@@ -29,10 +29,18 @@ export default function Nav() {
       type: "setState",
       payload: { ...state, section, project: { isOpened: false, id: 0 } },
     });
-    window.scrollBy(
-      0,
-      document.querySelector("#" + section).offsetTop - window.scrollY
-    );
+    setTimeout(() => {
+      if (!state.project.isOpened || section !== "cover") {
+        window.scrollBy(
+          0,
+          document.querySelector("#" + section).offsetTop - window.scrollY
+        );
+      } else {
+        window.scrollBy(0, 0);
+        window.scrollBy(0, state.scroll);
+      }
+    }, 1);
+
     setMenu(false);
   };
 
