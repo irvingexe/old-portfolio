@@ -40,6 +40,10 @@
 #cover > div > div > div:active .arrow {
   -webkit-transform: translateY(2rem) rotate(90deg);
           transform: translateY(2rem) rotate(90deg);
+  -webkit-transition: opacity 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease !important;
+  transition: opacity 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease !important;
+  transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease !important;
+  transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease !important;
   width: 15rem !important;
 }
 

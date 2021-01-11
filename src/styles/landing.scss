@@ -28,6 +28,7 @@
         &:hover .arrow,
         &:active .arrow {
           transform: translateY(2rem) rotate(90deg);
+          transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease !important;
           width: 15rem !important;
         }
         :nth-child(2) {

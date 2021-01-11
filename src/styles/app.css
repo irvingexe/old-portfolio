@@ -156,13 +156,13 @@ ul {
 }
 
 #cursor > div.hover {
-  background-color: #000;
+  background-color: #fff;
 }
 
 #cursor > div.msg {
   font-size: 0;
   white-space: nowrap;
-  color: #fcfcfc;
+  color: #000;
 }
 
 #cursor > div.img {

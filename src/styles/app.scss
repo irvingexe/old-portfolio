@@ -140,12 +140,12 @@ ul {
     width: 0;
     height: 0;
     &.hover {
-      background-color: #000;
+      background-color: #fff;
     }
     &.msg {
       font-size: 0;
       white-space: nowrap;
-      color: #fcfcfc;
+      color: #000;
     }
     &.img {
       opacity: 0;
