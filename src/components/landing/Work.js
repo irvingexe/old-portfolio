@@ -15,22 +15,17 @@ export default function Work() {
   const cursorHover = () => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "hover", msg: "See project" } },
-    });
-  };
-  const cursorProject = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "project", msg: "See project" } },
+      payload: { ...state, cursor: { type: "hover" } },
     });
   };
   const resetCursor = () => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "default", msg: "See project" } },
+      payload: { ...state, cursor: { type: "default" } },
     });
   };
   const open = (id) => {
+    document.querySelector(".modal-scroll").style.position = "fixed";
     actions({
       type: "setState",
       payload: {
@@ -88,7 +83,7 @@ export default function Work() {
             "mockup center unselectable" +
             (state.project.isOpened ? " open" : "")
           }
-          onMouseEnter={cursorProject}
+          onMouseEnter={cursorHover}
           onMouseLeave={resetCursor}
         >
           <Mockup

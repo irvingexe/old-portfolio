@@ -10,21 +10,25 @@ let parallax = () => {
   window.addEventListener("scroll", () => {
     scrollDirY = document.documentElement.dataset.scrollDirY;
 
-    parallax.forEach((e, i) => {
-      scroll = e.offsetTop + works.item(i).offsetTop - window.pageYOffset;
-      speed = e.dataset.speed;
-      e.style.transform = `translateY(${scroll * speed}px)`;
-    });
+    if (document.querySelector(".modal").style.top !== "0px") {
+      parallax.forEach((e, i) => {
+        scroll = e.offsetTop + works.item(i).offsetTop - window.pageYOffset;
+        speed = e.dataset.speed;
+        e.style.transform = `translateY(${scroll * speed}px)`;
+      });
 
-    arrow.style.transition =
-      scrollDirY === -1 || window.pageYOffset === 0
-        ? "opacity 0.5s ease, transform 0.5s ease, width 1.3s ease"
-        : "opacity 0.5s ease, transform 0.5s ease, width 0s";
-    arrow.style.top = `${window.pageYOffset * 0.5}px`;
-    arrow.style.opacity = 1 - (window.pageYOffset * 0.8) / 100;
-    arrow.style.width = `calc(10rem + ${window.pageYOffset * 2}px)`;
-    cta.style.opacity = 1 - (window.pageYOffset * 0.8) / 100;
-    cta.style.top = `${window.pageYOffset * 0.25}px`;
+      arrow.style.transition =
+        scrollDirY === -1 || window.pageYOffset === 0
+          ? "opacity 0.5s ease, transform 0.5s ease, width 1.3s ease"
+          : "opacity 0.5s ease, transform 0.5s ease, width 0s";
+      arrow.style.top = `${window.pageYOffset * 0.5}px`;
+      arrow.style.opacity = 1 - (window.pageYOffset * 0.8) / 100;
+      arrow.style.width = `calc(10rem + ${window.pageYOffset * 2}px)`;
+      cta.style.opacity = 1 - (window.pageYOffset * 0.8) / 100;
+      cta.style.top = `${window.pageYOffset * 0.25}px`;
+
+      hello.style.opacity = 1 - (window.pageYOffset * 0.2) / 100;
+    }
 
     modal.style.marginLeft = `max(${
       3 - (window.pageYOffset * 0.8) / 100
@@ -32,7 +36,5 @@ let parallax = () => {
     modal.style.marginRight = `max(${
       3 - (window.pageYOffset * 0.8) / 100
     }vw, 0rem`;
-
-    hello.style.opacity = 1 - (window.pageYOffset * 0.15) / 100;
   });
 };

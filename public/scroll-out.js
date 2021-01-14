@@ -269,9 +269,11 @@ var ScrollOut = (function () {
                 } catch (error) {}
               }
               try {
-                document
-                  .querySelector("." + el.dataset.section)
-                  .classList.add("active");
+                if (document.querySelector(".modal").style.top !== "0px") {
+                  document
+                    .querySelector("." + el.dataset.section)
+                    .classList.add("active");
+                }
               } catch (error) {}
             } else {
               navClick = false;

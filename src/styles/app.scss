@@ -127,25 +127,26 @@ ul {
   pointer-events: none;
   z-index: 3;
   > :first-child {
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.3s ease, height 0.3s ease;
     background-color: #000;
     border-radius: 50%;
     width: 0.5em;
     height: 0.5em;
+    opacity: 1;
   }
   > div {
-    transition: all 0.2s ease-out, left 0s, top 0s;
+    transition: all 0.3s ease, left 0s, top 0s;
     position: absolute;
     border-radius: 50%;
     width: 0;
     height: 0;
     &.hover {
-      background-color: #fff;
+      background-color: rgba(0, 0, 0, 0.11);
     }
     &.msg {
       font-size: 0;
       white-space: nowrap;
-      color: #000;
+      color: #fcfcfc;
     }
     &.img {
       opacity: 0;
@@ -157,8 +158,10 @@ ul {
   }
   &.cursor-hover {
     :first-child {
+      transition: all 0.1s ease;
       width: 0;
       height: 0;
+      opacity: 0;
     }
     .hover {
       /*

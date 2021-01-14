@@ -457,13 +457,13 @@
 }
 
 #work > div:not(.bg-title) .mockup .phone {
-  height: 29em;
-  width: 20em;
+  height: 25em;
+  width: 15em;
 }
 
 #work > div:not(.bg-title) .mockup .desktop {
-  height: 29em;
-  width: 44em;
+  height: 25em;
+  width: 39em;
 }
 
 #work > div:not(.bg-title) .mockup :first-child {

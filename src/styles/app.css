@@ -138,17 +138,18 @@ ul {
 }
 
 #cursor > :first-child {
-  -webkit-transition: width 0.2s, height 0.2s;
-  transition: width 0.2s, height 0.2s;
+  -webkit-transition: width 0.3s ease, height 0.3s ease;
+  transition: width 0.3s ease, height 0.3s ease;
   background-color: #000;
   border-radius: 50%;
   width: 0.5em;
   height: 0.5em;
+  opacity: 1;
 }
 
 #cursor > div {
-  -webkit-transition: all 0.2s ease-out, left 0s, top 0s;
-  transition: all 0.2s ease-out, left 0s, top 0s;
+  -webkit-transition: all 0.3s ease, left 0s, top 0s;
+  transition: all 0.3s ease, left 0s, top 0s;
   position: absolute;
   border-radius: 50%;
   width: 0;
@@ -156,13 +157,13 @@ ul {
 }
 
 #cursor > div.hover {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.11);
 }
 
 #cursor > div.msg {
   font-size: 0;
   white-space: nowrap;
-  color: #000;
+  color: #fcfcfc;
 }
 
 #cursor > div.img {
@@ -175,8 +176,11 @@ ul {
 }
 
 #cursor.cursor-hover :first-child {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   width: 0;
   height: 0;
+  opacity: 0;
 }
 
 #cursor.cursor-hover .hover {

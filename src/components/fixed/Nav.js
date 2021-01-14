@@ -36,7 +36,8 @@ export default function Nav() {
           document.querySelector("#" + section).offsetTop - window.scrollY
         );
       } else {
-        window.scrollBy(0, 0);
+        document.querySelector(".modal-scroll").style.position = "unset";
+        window.scrollBy(0, -window.scrollY);
         window.scrollBy(0, state.scroll);
       }
     }, 1);
