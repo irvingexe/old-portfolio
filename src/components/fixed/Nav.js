@@ -1,11 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Logo from "./Logo";
+import Lottie from "../Lottie";
 import "../../styles/nav.css";
 import Context from "../../store/context";
+import backSVG from "../../assets/back.json";
 
 export default function Nav() {
   const [menu, setMenu] = useState(false);
   const { state, actions } = useContext(Context);
+  const [isBack, setBack] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBack(!state.project.isOpened);
+    }, 100);
+  }, [state.project.isOpened]);
+
   const menuState = () => {
     document.body.style.overflow = menu ? "overlay" : "hidden";
     setMenu(!menu);
@@ -55,7 +65,14 @@ export default function Nav() {
         onClick={() => changeSection("cover")}
       >
         <div id="home">
-          <Logo />
+          {state.project.isOpened ? (
+            <Lottie
+              play={isBack && state.project.isOpened}
+              animationData={backSVG}
+            />
+          ) : (
+            <Logo />
+          )}
         </div>
       </label>
       <ul
@@ -67,8 +84,10 @@ export default function Nav() {
             "work link" + (state.section === "work" ? " clicked active" : "")
           }
           onClick={() => changeSection("work")}
+          onMouseEnter={cursorHover}
+          onMouseLeave={resetCursor}
         >
-          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div>
             <div className="line"></div>Work
           </div>
         </li>
@@ -77,8 +96,10 @@ export default function Nav() {
             "ido link" + (state.section === "ido" ? " clicked active" : "")
           }
           onClick={() => changeSection("ido")}
+          onMouseEnter={cursorHover}
+          onMouseLeave={resetCursor}
         >
-          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div>
             <div className="line"></div>I do
           </div>
         </li>
@@ -87,8 +108,10 @@ export default function Nav() {
             "who link" + (state.section === "who" ? " clicked active" : "")
           }
           onClick={() => changeSection("who")}
+          onMouseEnter={cursorHover}
+          onMouseLeave={resetCursor}
         >
-          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div>
             <div className="line"></div>Who
           </div>
         </li>
@@ -98,8 +121,10 @@ export default function Nav() {
             (state.section === "contact" ? " clicked active" : "")
           }
           onClick={() => changeSection("contact")}
+          onMouseEnter={cursorHover}
+          onMouseLeave={resetCursor}
         >
-          <div onMouseEnter={cursorHover} onMouseLeave={resetCursor}>
+          <div>
             <div className="line"></div>Contact
           </div>
         </li>

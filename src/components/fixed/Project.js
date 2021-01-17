@@ -63,6 +63,8 @@ export default function Project() {
     requests.current.push(requestAnimationFrame(skewScrolling));
   };
 
+  /*
+
   const cursorProject = () => {
     actions({
       type: "setState",
@@ -75,6 +77,7 @@ export default function Project() {
       payload: { ...state, cursor: { type: "default" } },
     });
   };
+  */
 
   let id = state.project.id;
 

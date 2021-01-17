@@ -45,14 +45,12 @@ export default class Logo extends Component {
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
       >
-        <div className="smile">
-          <Lottie
-            animationData={smile}
-            playFromCurrent={
-              this.state.playFromCurrent ? this.state.isHover : null
-            }
-          />
-        </div>
+        <Lottie
+          animationData={smile}
+          playFromCurrent={
+            this.state.playFromCurrent ? this.state.isHover : null
+          }
+        />
       </label>
     );
   }
