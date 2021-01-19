@@ -9,6 +9,8 @@ export default function Nav() {
   const [menu, setMenu] = useState(false);
   const { state, actions } = useContext(Context);
   const [isBack, setBack] = useState(true);
+  const [isClose, setClose] = useState(false);
+  const [playClose, setPlayClose] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,7 +36,18 @@ export default function Nav() {
   };
   const changeSection = (section) => {
     document.body.style.overflow = "overlay";
-    //document.querySelector("." + section).classList.add("clicked");
+
+    if (document.querySelector(".arrow.active")) {
+      setClose(true);
+      setTimeout(() => {
+        setPlayClose(true);
+      }, 300);
+      setTimeout(() => {
+        setClose(false);
+        setPlayClose(false);
+      }, 800);
+    }
+
     actions({
       type: "setState",
       payload: { ...state, section, project: { isOpened: false, id: 0 } },
@@ -65,14 +78,18 @@ export default function Nav() {
         onClick={() => changeSection("cover")}
       >
         <div id="home">
-          {state.project.isOpened ? (
+          {!state.project.isOpened && !isClose ? (
+            <Logo />
+          ) : (
             <Lottie
               play={isBack && state.project.isOpened}
+              playReverse={playClose}
               animationData={backSVG}
             />
-          ) : (
-            <Logo />
           )}
+          <div
+            className={`arrow ${state.project.isOpened ? "active" : "close"}`}
+          ></div>
         </div>
       </label>
       <ul

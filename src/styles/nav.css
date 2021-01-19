@@ -37,16 +37,227 @@
 }
 
 .App-logo {
-  width: 100px;
   position: fixed;
   pointer-events: all;
 }
 
-#home div {
+#home {
+  height: 4.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 2.6rem;
+}
+
+#home div:not(.arrow) {
   width: 1.8rem;
   height: 1.8rem;
   padding: 1.3rem;
   position: absolute;
+}
+
+#home:hover .arrow.active,
+#home:active .arrow.active {
+  width: 9rem;
+  left: -3rem;
+}
+
+#home .arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 0;
+  height: 1px;
+  position: relative;
+  top: 50%;
+  left: 1.6rem;
+  -webkit-transition: width 0.6s ease, left 0.6s ease;
+  transition: width 0.6s ease, left 0.6s ease;
+  background-color: #000;
+}
+
+#home .arrow:before, #home .arrow:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  content: "";
+  display: block;
+  position: relative;
+  left: 100%;
+  top: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+#home .arrow:after {
+  top: -1px;
+  -webkit-transform: rotate(-130deg);
+          transform: rotate(-130deg);
+}
+
+#home .arrow.active {
+  width: 6rem;
+  -webkit-animation-name: back;
+          animation-name: back;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+#home .arrow.active:before, #home .active.arrow:after {
+  width: 0.5rem;
+  -webkit-animation-name: backBefore;
+          animation-name: backBefore;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+#home .arrow.active:after {
+  -webkit-animation-name: backAfter;
+          animation-name: backAfter;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+#home .arrow.close {
+  width: 0;
+  left: 1.6rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#home .arrow.close:before, #home .close.arrow:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#home .arrow.close:after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@-webkit-keyframes back {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 6rem;
+  }
+}
+
+@keyframes back {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 6rem;
+  }
+}
+
+@-webkit-keyframes backBefore {
+  0% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
+  }
+}
+
+@keyframes backBefore {
+  0% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
+  }
+}
+
+@-webkit-keyframes backAfter {
+  0% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(230deg);
+            transform: rotate(230deg);
+  }
+}
+
+@keyframes backAfter {
+  0% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    width: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(230deg);
+            transform: rotate(230deg);
+  }
+}
+
+@-webkit-keyframes backCLose {
+  0% {
+    width: 9rem;
+    left: -3rem;
+  }
+  50% {
+    width: 9rem;
+    left: -3rem;
+  }
+  100% {
+    width: 0;
+    left: 1.6rem;
+  }
+}
+
+@keyframes backCLose {
+  0% {
+    width: 9rem;
+    left: -3rem;
+  }
+  50% {
+    width: 9rem;
+    left: -3rem;
+  }
+  100% {
+    width: 0;
+    left: 1.6rem;
+  }
 }
 
 #logo-text {

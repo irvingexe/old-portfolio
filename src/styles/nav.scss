@@ -39,16 +39,134 @@
 }
 
 .App-logo {
-  width: 100px;
+  //width: 100px;
   position: fixed;
   pointer-events: all;
 }
 
-#home div {
-  width: 1.8rem;
-  height: 1.8rem;
-  padding: 1.3rem;
-  position: absolute;
+#home {
+  height: 4.4rem;
+  width: fit-content;
+  padding-right: 2.6rem;
+  div:not(.arrow) {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 1.3rem;
+    position: absolute;
+  }
+  &:hover .arrow.active,
+  &:active .arrow.active {
+    width: 9rem;
+    left: -3rem;
+  }
+  .arrow {
+    transform: rotate(180deg);
+    width: 0;
+    height: 1px;
+    position: relative;
+    top: 50%;
+    left: 1.6rem;
+    transition: width 0.6s ease, left 0.6s ease;
+    background-color: #000;
+    &:before {
+      transition: all 0.3s;
+      content: "";
+      display: block;
+      position: relative;
+      left: 100%;
+      top: 0;
+      width: 0;
+      height: 1px;
+      background-color: #000;
+      transform: rotate(130deg);
+      transform-origin: 0%;
+    }
+    &:after {
+      @extend .arrow:before;
+      top: -1px;
+      transform: rotate(-130deg);
+    }
+    &.active {
+      width: 6rem;
+      animation-name: back;
+      animation-duration: 0.6s;
+      &:before {
+        width: 0.5rem;
+        animation-name: backBefore;
+        animation-duration: 0.6s;
+      }
+      &:after {
+        animation-name: backAfter;
+        animation-duration: 0.6s;
+      }
+    }
+    &.close {
+      width: 0;
+      left: 1.6rem;
+      transition: all 0.3s;
+      &:before {
+        transform: rotate(180deg);
+      }
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+@keyframes back {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 6rem;
+  }
+}
+
+@keyframes backBefore {
+  0% {
+    width: 0;
+    transform: rotate(180deg);
+  }
+  50% {
+    width: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(130deg);
+  }
+}
+
+@keyframes backAfter {
+  0% {
+    width: 0;
+    transform: rotate(180deg);
+  }
+  50% {
+    width: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(230deg);
+  }
+}
+
+@keyframes backCLose {
+  0% {
+    width: 9rem;
+    left: -3rem;
+  }
+  50% {
+    width: 9rem;
+    left: -3rem;
+  }
+  100% {
+    width: 0;
+    left: 1.6rem;
+  }
 }
 
 #logo-text {
