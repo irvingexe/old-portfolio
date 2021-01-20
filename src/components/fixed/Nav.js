@@ -54,14 +54,15 @@ export default function Nav() {
     });
     setTimeout(() => {
       if (!state.project.isOpened || section !== "cover") {
+        document.querySelector(".modal-scroll").style.position = "unset";
         window.scrollBy(
           0,
           document.querySelector("#" + section).offsetTop - window.scrollY
         );
       } else {
         document.querySelector(".modal-scroll").style.position = "unset";
-        window.scrollBy(0, -window.scrollY);
-        window.scrollBy(0, state.scroll);
+        //window.scrollBy(0, );
+        window.scrollBy(0, state.scroll - window.scrollY);
       }
     }, 1);
 
