@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import Context from "../../store/context";
 import Mockup from "./Mockup";
 import infoProjects from "../projects.json";
+import useWindowSize from "../../hooks/useWindowSize";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
@@ -26,13 +27,20 @@ export default function Work() {
   };
   const open = (id) => {
     document.querySelector(".modal-scroll").style.position = "fixed";
+    document.querySelector(".sections").style.transform = `translateY(-${
+      id + 1
+    }00vh)`;
+    document.querySelector(".sections").style.transition = "all 1s ease";
+    setTimeout(() => {
+      document.querySelector(".sections").style.transition = "none";
+    }, 1000);
     actions({
       type: "setState",
       payload: {
         ...state,
         project: { isOpened: true, id: id },
         cursor: { type: "default" },
-        scroll: window.scrollY,
+        scroll: window.innerHeight * (id + 1),
       },
     });
     window.scrollBy(0, -window.scrollY);

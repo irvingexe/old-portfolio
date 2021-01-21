@@ -16,7 +16,8 @@
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
-        "device":1
+        "device" : 1,
+        "color" : "rgb(133, 167, 189)"
     },
     {
         "title" : "La guarida del sushi",
@@ -34,7 +35,8 @@
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
-        "device":0
+        "device" : 0,
+        "color" : "rgb(193, 163, 133)"
     },
     {
         "title" : "Robix UML",
@@ -52,6 +54,7 @@
         "details" : [
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
-        "device":0
+        "device" : 0,
+        "color" : "rgb(133, 167, 189)"
     }
 ]

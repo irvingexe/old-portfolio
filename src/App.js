@@ -21,7 +21,7 @@ export default function App() {
   const data = {
     ease: 0.07,
     current: 0,
-    previous: 0,
+    previous: state.scroll,
     rounded: 0,
   };
   const requests = useRef([]);
@@ -37,7 +37,9 @@ export default function App() {
   // Run scrollrender once page is loaded.
   useEffect(() => {
     if (!state.project.isOpened) {
-      requests.current.push(requestAnimationFrame(skewScrolling));
+      setTimeout(() => {
+        requests.current.push(requestAnimationFrame(skewScrolling));
+      }, 1000);
     } else {
       requests.current.map((i) => {
         cancelAnimationFrame(i);
@@ -86,7 +88,12 @@ export default function App() {
       <Background />
       <Nav />
       <Project />
-      <div ref={scrollContainer} className="sections lateral-margin">
+      <div
+        ref={scrollContainer}
+        className={`sections lateral-margin ${
+          state.project.isOpened ? "project-open" : ""
+        }`}
+      >
         <Cover />
         <Work />
         <Ido />

@@ -439,8 +439,8 @@
   top: calc(calc(100% + 5rem) / 2);
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #work > div:not(.bg-title) .mockup.open {
@@ -456,6 +456,19 @@
           }
         }
           */
+}
+
+#work > div:not(.bg-title) .mockup.open + .title {
+  top: 5rem;
+  left: 0;
+  -webkit-transform: none !important;
+          transform: none !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#work > div:not(.bg-title) .mockup.open + .title div {
+  opacity: 0;
 }
 
 #work > div:not(.bg-title) .mockup .phone {
@@ -478,6 +491,13 @@
   position: absolute;
   left: calc(max(0px, min(5rem, calc(10vw - 5rem))));
   top: calc(max(4rem, min(15vw, 13rem)));
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#work > div:not(.bg-title) .title div {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #work > div:not(.bg-title) .title h1 {

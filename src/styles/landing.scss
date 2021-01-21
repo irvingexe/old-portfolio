@@ -384,11 +384,20 @@ $color: set-color($bg-color);
       right: 50%;
       top: calc(calc(100% + 5rem) / 2);
       transform: translate(50%, -50%);
-      transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease;
       &.open {
         right: 0;
         top: 5rem;
         transform: translate(0, 0);
+        + .title {
+          top: 5rem;
+          left: 0;
+          transform: none !important;
+          transition: all 0.5s ease;
+          div {
+            opacity: 0;
+          }
+        }
         /*
         + .title {
           left: -100% !important;
@@ -417,6 +426,11 @@ $color: set-color($bg-color);
       position: absolute;
       left: calc(max(0px, min(5rem, calc(10vw - 5rem))));
       top: calc(max(4rem, min(15vw, 13rem)));
+      transition: all 0.5s ease;
+      div {
+        transition: all 0.5s ease;
+      }
+
       h1 {
         font-family: "Playfair Display", serif;
       }

@@ -5,10 +5,14 @@
   z-index: -2;
   left: 0;
   top: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #background #doodle {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 /*# sourceMappingURL=background.css.map */

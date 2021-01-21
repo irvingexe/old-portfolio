@@ -145,8 +145,8 @@ ul {
 }
 
 #cursor > :first-child {
-  -webkit-transition: width 0.3s ease, height 0.3s ease;
-  transition: width 0.3s ease, height 0.3s ease;
+  -webkit-transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
   background-color: #000;
   border-radius: 50%;
   width: 0.5em;
