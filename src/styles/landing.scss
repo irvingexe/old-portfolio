@@ -3,7 +3,7 @@
 .bg-title {
   position: absolute;
   width: 80%;
-  color: rgba(0, 69, 126, 0.15);
+  color: hsla(0, 13%, 40%, 0.8);
   z-index: -1;
 }
 
@@ -19,6 +19,7 @@
         font-size: 3em;
         max-width: calc(min(13em, 80vw));
         margin: 0;
+        transition: opacity 0.5s ease-out;
       }
       > div {
         pointer-events: all;
@@ -40,7 +41,8 @@
           position: relative;
           transform-origin: 0%;
           transform: rotate(90deg);
-          transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease;
+          transition: opacity 0.5s ease-out, transform 0.5s ease,
+            width 1.3s ease;
           pointer-events: none;
           width: 10rem;
           height: 1px;
@@ -322,7 +324,7 @@ $color: set-color($bg-color);
       text-align: justify;
       margin-top: 2em;
       &:last-child {
-        margin-left: auto;
+        margin-right: auto;
       }
     }
   }

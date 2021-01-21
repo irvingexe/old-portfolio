@@ -1,6 +1,6 @@
 #project {
   .modal {
-    transition: all 0.7s ease;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
     position: fixed;
     left: 0;
     width: 100%;
@@ -21,6 +21,7 @@
         background-color: #faf5f0;
         margin-top: 22rem;
         padding-top: 3.5rem;
+        transition: all 1s ease;
 
         > *:not(.screens),
         .screens section > *:not(*:last-child) {

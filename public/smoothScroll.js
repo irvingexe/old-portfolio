@@ -16,7 +16,9 @@ let smoothScroll = () => {
       // Set rounded to
       data.rounded = Math.round(data.previous * 100) / 100;
 
-      document.querySelector(".App").style.top = `${-window.scrollY}px`;
+      document.querySelector(
+        ".scrollContainer"
+      ).style.top = `${-window.scrollY}px`;
 
       //for until those two are the same
     }

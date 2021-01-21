@@ -130,9 +130,6 @@ export default function Work() {
       onMouseEnter={fastTransition}
     >
       {projects}
-      <div className="bg-title font-xxl bold center unselectable">
-        <h1>Work</h1>
-      </div>
     </div>
   );
 }

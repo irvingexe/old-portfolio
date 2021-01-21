@@ -29,15 +29,12 @@ export default function Who() {
         <p className="font-s">
           I am a software developer who enjoy creating beautiful design and good
           experiences. Simply passionated with create pixel perfect experiences.
-        </p>
-        <p className="font-s">
+          <br />
+          <br />
           I’m majorly involved into front-end developement and I like to play
           around with different tecnologies. I see myself every day more
           involved into interactivity.
         </p>
-      </div>
-      <div className="bg-title font-xxl bold center unselectable">
-        <h1>Who</h1>
       </div>
     </div>
   );

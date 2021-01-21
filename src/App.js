@@ -19,7 +19,7 @@ export default function App() {
   const size = useWindowSize();
   const scrollContainer = useRef();
   const data = {
-    ease: 0.1,
+    ease: 0.07,
     current: 0,
     previous: 0,
     rounded: 0,

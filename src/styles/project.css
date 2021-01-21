@@ -1,6 +1,6 @@
 #project .modal {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
   position: fixed;
   left: 0;
   width: 100%;
@@ -19,6 +19,8 @@
   background-color: #faf5f0;
   margin-top: 22rem;
   padding-top: 3.5rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #project .modal .modal-scroll .modal-content > *:not(.screens),

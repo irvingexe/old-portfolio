@@ -3,6 +3,14 @@
 body {
   background-color: #eae6e1;
   overflow: overlay;
+  &:not(:hover) {
+    #cursor > :first-child {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    }
+  }
 }
 
 ::-webkit-scrollbar {

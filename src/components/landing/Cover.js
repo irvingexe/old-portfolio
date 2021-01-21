@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "../../styles/landing.css";
-import arrow from "../../assets/arrow.svg";
 import Context from "../../store/context";
 
 export default function Cover() {

@@ -4,6 +4,14 @@ body {
   overflow: overlay;
 }
 
+body:not(:hover) #cursor > :first-child {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  -webkit-transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
