@@ -315,17 +315,25 @@ $color: set-color($bg-color);
 }
 
 #who {
-  display: flex;
-  div:first-child {
+  > div {
     width: 100%;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+
+    h1 {
+      margin-bottom: 2rem;
+    }
     p {
       width: 100%;
-      max-width: 27em;
+      //max-width: 27rem;
       text-align: justify;
-      margin-top: 2em;
-      &:last-child {
-        margin-right: auto;
-      }
+      //margin-top: 2rem;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 20rem;
     }
   }
 }

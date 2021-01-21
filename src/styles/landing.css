@@ -337,25 +337,28 @@
   }
 }
 
-#who {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#who > div {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 4rem;
+  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 }
 
-#who div:first-child {
-  width: 100%;
+#who > div h1 {
+  margin-bottom: 2rem;
 }
 
-#who div:first-child p {
+#who > div p {
   width: 100%;
-  max-width: 27em;
   text-align: justify;
-  margin-top: 2em;
 }
 
-#who div:first-child p:last-child {
-  margin-right: auto;
+#who > div img {
+  height: 100%;
+  width: 100%;
+  max-width: 20rem;
 }
 
 #contact {
