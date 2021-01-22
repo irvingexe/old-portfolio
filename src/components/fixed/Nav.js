@@ -22,18 +22,14 @@ export default function Nav() {
     document.body.style.overflow = menu ? "overlay" : "hidden";
     setMenu(!menu);
   };
-  const cursorHover = () => {
+
+  const changeCursor = (cursor) => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "hover" } },
+      payload: { ...state, cursor: { type: cursor } },
     });
   };
-  const resetCursor = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "default" } },
-    });
-  };
+
   const changeSection = (section) => {
     document.body.style.overflow = "overlay";
 
@@ -74,8 +70,12 @@ export default function Nav() {
       <label
         htmlFor="#home"
         className="App-logo"
-        onMouseEnter={cursorHover}
-        onMouseLeave={resetCursor}
+        onMouseEnter={() => {
+          changeCursor("hover");
+        }}
+        onMouseLeave={() => {
+          changeCursor("default");
+        }}
         onClick={() => changeSection("cover")}
       >
         <div id="home">
@@ -102,8 +102,12 @@ export default function Nav() {
             "work link" + (state.section === "work" ? " clicked active" : "")
           }
           onClick={() => changeSection("work")}
-          onMouseEnter={cursorHover}
-          onMouseLeave={resetCursor}
+          onMouseEnter={() => {
+            changeCursor("hover");
+          }}
+          onMouseLeave={() => {
+            changeCursor("default");
+          }}
         >
           <div>
             <div className="line"></div>Work
@@ -114,8 +118,12 @@ export default function Nav() {
             "ido link" + (state.section === "ido" ? " clicked active" : "")
           }
           onClick={() => changeSection("ido")}
-          onMouseEnter={cursorHover}
-          onMouseLeave={resetCursor}
+          onMouseEnter={() => {
+            changeCursor("hover");
+          }}
+          onMouseLeave={() => {
+            changeCursor("default");
+          }}
         >
           <div>
             <div className="line"></div>I do
@@ -126,8 +134,12 @@ export default function Nav() {
             "who link" + (state.section === "who" ? " clicked active" : "")
           }
           onClick={() => changeSection("who")}
-          onMouseEnter={cursorHover}
-          onMouseLeave={resetCursor}
+          onMouseEnter={() => {
+            changeCursor("hover");
+          }}
+          onMouseLeave={() => {
+            changeCursor("default");
+          }}
         >
           <div>
             <div className="line"></div>Who
@@ -139,8 +151,12 @@ export default function Nav() {
             (state.section === "contact" ? " clicked active" : "")
           }
           onClick={() => changeSection("contact")}
-          onMouseEnter={cursorHover}
-          onMouseLeave={resetCursor}
+          onMouseEnter={() => {
+            changeCursor("hover");
+          }}
+          onMouseLeave={() => {
+            changeCursor("default");
+          }}
         >
           <div>
             <div className="line"></div>Contact
@@ -150,8 +166,12 @@ export default function Nav() {
       <label
         id="toggle"
         onClick={menuState}
-        onMouseEnter={cursorHover}
-        onMouseLeave={resetCursor}
+        onMouseEnter={() => {
+          changeCursor("hover");
+        }}
+        onMouseLeave={() => {
+          changeCursor("default");
+        }}
       >
         <ul className={"buns" + (menu ? " active" : "")}>
           <li className="bun"></li>

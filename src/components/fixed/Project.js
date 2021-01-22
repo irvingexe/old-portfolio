@@ -1,7 +1,6 @@
 import React, { useContext, useRef, useEffect } from "react";
 import "../../styles/project.css";
 import Context from "../../store/context";
-//import github from "../../assets/github.svg";
 import infoProjects from "../projects.json";
 import useWindowSize from "../../hooks/useWindowSize";
 
@@ -63,30 +62,7 @@ export default function Project() {
     requests.current.push(requestAnimationFrame(skewScrolling));
   };
 
-  /*
-
-  const cursorProject = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "project", msg: "See project" } },
-    });
-  };
-  const resetCursor = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "default" } },
-    });
-  };
-  */
-
   let id = state.project.id;
-
-  /*
-  let role = "";
-  for (let i in infoProjects[id].role) {
-    role += i > 0 ? " ● " + infoProjects[id].role[i] : infoProjects[id].role[i];
-  }
-  */
 
   let role = [];
   for (let i in infoProjects[id].role) {

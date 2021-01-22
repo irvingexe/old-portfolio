@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Context from "../../store/context";
-import me from "../../assets/me.svg";
 
 export default function Cursor() {
   const { state } = useContext(Context);
@@ -10,10 +9,6 @@ export default function Cursor() {
       <div></div>
       <div className="hover back"></div>
       <div className="hover"></div>
-      <div className="img center">
-        <img alt="" src={me}></img>
-      </div>
-      <div className="msg center font-xs">{state.cursor.msg}</div>
     </div>
   );
 }

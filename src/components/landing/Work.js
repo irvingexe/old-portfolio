@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Context from "../../store/context";
 import Mockup from "./Mockup";
 import infoProjects from "../projects.json";
-import useWindowSize from "../../hooks/useWindowSize";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
@@ -11,26 +10,20 @@ export default function Work() {
     desk: { x: -10, y: -90 },
   });
   const [transition, setTransition] = useState("all 0.2s ease");
-  const [dimensions, setDimensions] = useState({ width: window.innerWidth });
 
-  const cursorHover = () => {
+  const changeCursor = (cursor) => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "hover" } },
+      payload: { ...state, cursor: { type: cursor } },
     });
   };
-  const resetCursor = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "default" } },
-    });
-  };
+
   const open = (id) => {
     document.querySelector(".modal-scroll").style.position = "fixed";
+    document.querySelector(".sections").style.transition = "all 1s ease";
     document.querySelector(".sections").style.transform = `translateY(-${
       id + 1
     }00vh)`;
-    document.querySelector(".sections").style.transition = "all 1s ease";
     setTimeout(() => {
       document.querySelector(".sections").style.transition = "none";
     }, 1000);
@@ -45,38 +38,31 @@ export default function Work() {
     });
     window.scrollBy(0, -window.scrollY);
   };
+
   const transform = (e) => {
-    let xAxisP = e.screenX / 2 / 30 - 30;
-    let yAxisP = -e.screenY / 2 / 30 - 75;
-    let xAxisD = e.screenX / 2 / 30 - 20;
-    let yAxisD = -e.screenY / 2 / 30 - 80;
-    setAxis({
-      phone: { x: xAxisP, y: yAxisP },
-      desk: { x: xAxisD, y: yAxisD },
-    });
+    if (!state.project.isOpened) {
+      const xAxisP = e.screenX / 2 / 30 - 30;
+      const yAxisP = -e.screenY / 2 / 30 - 75;
+      const xAxisD = e.screenX / 2 / 30 - 20;
+      const yAxisD = -e.screenY / 2 / 30 - 80;
+      setAxis({
+        phone: { x: xAxisP, y: yAxisP },
+        desk: { x: xAxisD, y: yAxisD },
+      });
+    }
   };
+
   const stopTransform = () => {
-    setAxis({ phone: { x: -20, y: -85 }, desk: { x: -10, y: -90 } });
     setTransition("all 0.5s ease");
+    setAxis({ phone: { x: -20, y: -85 }, desk: { x: -10, y: -90 } });
   };
   const fastTransition = () => {
     setTransition("all 0.2s ease");
   };
 
-  React.useEffect(() => {
-    function handleResize() {
-      setDimensions({ width: window.innerWidth });
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return (_) => {
-      window.removeEventListener("resize", handleResize);
-    };
-  });
   const scale =
-    ((dimensions.width - dimensions.width * 0.4) * 0.7) / 921.5 > 0.45
-      ? ((dimensions.width - dimensions.width * 0.4) * 0.7) / 921.5
+    ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5 > 0.45
+      ? ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5
       : 0.45;
   const projects = [];
 
@@ -91,8 +77,12 @@ export default function Work() {
             "mockup center unselectable" +
             (state.project.isOpened ? " open" : "")
           }
-          onMouseEnter={cursorHover}
-          onMouseLeave={resetCursor}
+          onMouseEnter={() => {
+            changeCursor("hover");
+          }}
+          onMouseLeave={() => {
+            changeCursor("default");
+          }}
         >
           <Mockup
             style={{
@@ -115,8 +105,12 @@ export default function Work() {
           <h1 className="font-xl">{infoProjects[i].splitTitle[1]}</h1>
           <div
             className="font-xs"
-            onMouseEnter={cursorHover}
-            onMouseLeave={resetCursor}
+            onMouseEnter={() => {
+              changeCursor("hover");
+            }}
+            onMouseLeave={() => {
+              changeCursor("default");
+            }}
             onClick={() => {
               open(parseInt(i));
             }}
