@@ -14,8 +14,6 @@ import useWindowSize from "./hooks/useWindowSize";
 
 export default function App() {
   const { state } = useContext(Context);
-  const [x, setX] = useState(0),
-    [y, setY] = useState(0);
   const size = useWindowSize();
   const scrollContainer = useRef();
   const data = {
@@ -77,13 +75,7 @@ export default function App() {
   };
 
   return (
-    <div
-      className="App"
-      onMouseMove={(e) => {
-        setX(e.clientX);
-        setY(e.clientY);
-      }}
-    >
+    <div className="App">
       <Cursor />
       <Background />
       <Nav />
@@ -97,7 +89,7 @@ export default function App() {
         <Cover />
         <Work />
         <Ido />
-        <Who x={x} y={y} />
+        <Who />
         <Contact />
       </div>
     </div>

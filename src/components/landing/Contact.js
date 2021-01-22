@@ -7,19 +7,13 @@ export default function Contact() {
   const [shining, setShining] = useState(false);
   const { state, actions } = useContext(Context);
   const mailHover = () => {
-    cursorHover();
+    changeCursor("hover");
     shine();
   };
-  const cursorHover = () => {
+  const changeCursor = (cursor) => {
     actions({
       type: "setState",
-      payload: { ...state, cursor: { type: "hover" } },
-    });
-  };
-  const resetCursor = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "default" } },
+      payload: { ...state, cursor: { type: cursor } },
     });
   };
   const shine = () => {
@@ -44,7 +38,9 @@ export default function Contact() {
               <div className="link">
                 <a
                   onMouseEnter={mailHover}
-                  onMouseLeave={resetCursor}
+                  onMouseLeave={() => {
+                    changeCursor("default");
+                  }}
                   className="font-s"
                   href="mailto:hello@irving.work"
                   target="_blank"
@@ -59,8 +55,12 @@ export default function Contact() {
             </li>
             <li className="link">
               <a
-                onMouseEnter={cursorHover}
-                onMouseLeave={resetCursor}
+                onMouseEnter={() => {
+                  changeCursor("hover");
+                }}
+                onMouseLeave={() => {
+                  changeCursor("default");
+                }}
                 className="font-s"
                 href="https://www.linkedin.com/in/irving-mariscales/"
                 target="_blank"
@@ -71,8 +71,12 @@ export default function Contact() {
             </li>
             <li className="link">
               <a
-                onMouseEnter={cursorHover}
-                onMouseLeave={resetCursor}
+                onMouseEnter={() => {
+                  changeCursor("hover");
+                }}
+                onMouseLeave={() => {
+                  changeCursor("default");
+                }}
                 className="font-s"
                 href="https://github.com/irvingexe"
                 target="_blank"

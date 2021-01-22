@@ -1,22 +1,7 @@
-import React, { useContext } from "react";
-import Context from "../../store/context";
+import React from "react";
 import me from "../../assets/me.svg";
 
 export default function Who() {
-  const { state, actions } = useContext(Context);
-  const cursorImage = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "image" } },
-    });
-  };
-  const resetCursor = () => {
-    actions({
-      type: "setState",
-      payload: { ...state, cursor: { type: "default" } },
-    });
-  };
-
   return (
     <div id="who" className="center scrollOut" data-section="who">
       <div>
