@@ -31,9 +31,7 @@
 
 #cover > div > div > div {
   pointer-events: all;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 16rem;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }

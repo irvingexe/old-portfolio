@@ -4,32 +4,18 @@ import Context from "../../store/context";
 
 export default function Cover() {
   const { state, actions } = useContext(Context);
+
   const changeSection = () => {
     window.scrollBy(
       0,
       document.querySelector("#work").offsetTop - window.scrollY
     );
   };
-  const cursorHover = () => {
+
+  const changeCursor = (cursor) => {
     actions({
       type: "setState",
-      payload: {
-        ...state,
-        cursor: {
-          type: "hover",
-        },
-      },
-    });
-  };
-  const resetCursor = () => {
-    actions({
-      type: "setState",
-      payload: {
-        ...state,
-        cursor: {
-          type: "default",
-        },
-      },
+      payload: { ...state, cursor: { type: cursor } },
     });
   };
 
@@ -44,8 +30,12 @@ export default function Cover() {
           </p>
           <div
             className="font-xs"
-            onMouseEnter={cursorHover}
-            onMouseLeave={resetCursor}
+            onMouseEnter={() => {
+              changeCursor("hover");
+            }}
+            onMouseLeave={() => {
+              changeCursor("default");
+            }}
             onClick={changeSection}
           >
             <div className="arrow" />

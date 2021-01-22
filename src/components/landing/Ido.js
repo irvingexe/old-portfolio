@@ -3,7 +3,7 @@ import ido from "./ido.json";
 import "../../styles/landing.css";
 
 export default function Ido() {
-  let blocks = [];
+  const blocks = [];
   let key = 0;
   ido.forEach((e) => {
     blocks.push(
