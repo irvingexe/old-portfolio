@@ -173,7 +173,7 @@
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   height: 1px;
-  width: 5%;
+  width: 0%;
   z-index: 1;
   -webkit-transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
   transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
@@ -185,7 +185,7 @@
 }
 
 #ido .box .top-left:after {
-  height: 5%;
+  height: 0%;
   width: 1px;
 }
 
@@ -195,32 +195,32 @@
 }
 
 #ido .box .bottom-left:after {
-  height: 5%;
+  height: 0%;
   width: 1px;
-  top: 95%;
+  top: 100%;
 }
 
 #ido .box .top-right:before, #ido .box .top-right:after {
-  left: calc(95% + 1px);
+  left: calc(100% + 1px);
   top: 0;
 }
 
 #ido .box .top-right:after {
-  height: 5%;
+  height: 0%;
   width: 1px;
   left: 100%;
 }
 
 #ido .box .bottom-right:before, #ido .box .bottom-right:after {
-  left: calc(95% + 1px);
+  left: calc(100% + 1px);
   top: 100%;
 }
 
 #ido .box .bottom-right:after {
-  height: 5%;
+  height: 0%;
   width: 1px;
   left: 100%;
-  top: 95%;
+  top: 100%;
 }
 
 #ido .box:hover .border, #ido .box:focus .border {
@@ -357,6 +357,7 @@
   height: 100%;
   width: 100%;
   max-width: 20rem;
+  border-radius: 50%;
 }
 
 #contact {

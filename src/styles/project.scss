@@ -20,7 +20,7 @@
       .modal-content {
         background-color: #e0e0e0;
         margin-top: 53vh;
-        padding-top: 3.5rem;
+        padding-top: calc(min(10vw, 3rem));
         transition: all 1s ease;
 
         > *:not(.screens),
@@ -45,16 +45,14 @@
         }
 
         .role {
-          //margin-top: 1.5rem;
-          margin-bottom: 1.5rem;
           font-weight: bold;
         }
 
         .description {
           display: grid;
           grid-template-columns: max-content 1fr;
-          gap: 4rem 5rem;
-          margin-top: 3rem;
+          gap: calc(min(10vw, 3rem)) 5rem;
+          margin-top: calc(min(10vw, 3rem));
 
           p {
             text-align: justify;

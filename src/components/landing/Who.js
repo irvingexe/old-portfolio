@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../assets/me.svg";
+import me from "../../assets/me.jpg";
 
 export default function Who() {
   return (

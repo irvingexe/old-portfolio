@@ -18,7 +18,7 @@
 #project .modal .modal-scroll .modal-content {
   background-color: #e0e0e0;
   margin-top: 53vh;
-  padding-top: 3.5rem;
+  padding-top: calc(min(10vw, 3rem));
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -43,7 +43,6 @@
 }
 
 #project .modal .modal-scroll .modal-content .role {
-  margin-bottom: 1.5rem;
   font-weight: bold;
 }
 
@@ -53,8 +52,8 @@
   -ms-grid-columns: max-content 1fr;
       grid-template-columns: -webkit-max-content 1fr;
       grid-template-columns: max-content 1fr;
-  gap: 4rem 5rem;
-  margin-top: 3rem;
+  gap: calc(min(10vw, 3rem)) 5rem;
+  margin-top: calc(min(10vw, 3rem));
 }
 
 #project .modal .modal-scroll .modal-content .description p {

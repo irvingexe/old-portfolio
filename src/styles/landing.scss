@@ -152,7 +152,7 @@ $color: set-color($bg-color);
         animation-iteration-count: 1;
         transform-origin: 50% 50%;
         height: 1px;
-        width: 5%;
+        width: 0%;
         z-index: 1;
         transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease,
           width 1s ease;
@@ -166,7 +166,7 @@ $color: set-color($bg-color);
         top: 0;
       }
       &:after {
-        height: 5%;
+        height: 0%;
         width: 1px;
       }
     }
@@ -178,20 +178,20 @@ $color: set-color($bg-color);
         top: 100%;
       }
       &:after {
-        height: 5%;
+        height: 0%;
         width: 1px;
-        top: 95%;
+        top: 100%;
       }
     }
 
     .top-right {
       &:before,
       &:after {
-        left: calc(95% + 1px);
+        left: calc(100% + 1px);
         top: 0;
       }
       &:after {
-        height: 5%;
+        height: 0%;
         width: 1px;
         left: 100%;
       }
@@ -200,14 +200,14 @@ $color: set-color($bg-color);
     .bottom-right {
       &:before,
       &:after {
-        left: calc(95% + 1px);
+        left: calc(100% + 1px);
         top: 100%;
       }
       &:after {
-        height: 5%;
+        height: 0%;
         width: 1px;
         left: 100%;
-        top: 95%;
+        top: 100%;
       }
     }
 
@@ -334,6 +334,7 @@ $color: set-color($bg-color);
       height: 100%;
       width: 100%;
       max-width: 20rem;
+      border-radius: 50%;
     }
   }
 }
