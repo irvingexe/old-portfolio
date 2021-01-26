@@ -25,8 +25,9 @@ export default function Cover() {
         <div>
           <p>
             Hello! <br />
-            My name is Irving, <br />a software developer with a taste for
-            design and interactivity
+            My name is Irving, <br />
+            I'm a software developer <br />
+            with a taste for design and interactivity
           </p>
           <div
             className="font-xs"

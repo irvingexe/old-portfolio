@@ -17,7 +17,7 @@ export default function App() {
   const size = useWindowSize();
   const scrollContainer = useRef();
   const data = {
-    ease: 0.07,
+    ease: 0.05,
     current: 0,
     previous: state.scroll,
     rounded: 0,

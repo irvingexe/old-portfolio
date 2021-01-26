@@ -38,12 +38,8 @@
 
 #cover > div > div > div:hover .arrow,
 #cover > div > div > div:active .arrow {
-  -webkit-transform: translateY(2rem) rotate(90deg);
-          transform: translateY(2rem) rotate(90deg);
-  -webkit-transition: opacity 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease !important;
-  transition: opacity 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease !important;
-  transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease !important;
-  transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease !important;
+  -webkit-transform: translateY(2rem) rotate(90deg) !important;
+          transform: translateY(2rem) rotate(90deg) !important;
   width: 15rem !important;
 }
 
@@ -59,10 +55,10 @@
           transform-origin: 0%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: opacity 0.5s ease-out, width 1.3s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease-out, width 1.3s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease-out, transform 0.5s ease, width 1.3s ease;
-  transition: opacity 0.5s ease-out, transform 0.5s ease, width 1.3s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: width 1.3s ease, -webkit-transform 1.3s ease;
+  transition: width 1.3s ease, -webkit-transform 1.3s ease;
+  transition: transform 1.3s ease, width 1.3s ease;
+  transition: transform 1.3s ease, width 1.3s ease, -webkit-transform 1.3s ease;
   pointer-events: none;
   width: 10rem;
   height: 1px;
@@ -441,8 +437,8 @@
   top: calc(calc(100% + 5rem) / 2);
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #work > div:not(.bg-title) .mockup.open {
@@ -450,19 +446,10 @@
   top: 5rem;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  /*
-        + .title {
-          left: -100% !important;
-          & + .title {
-            right: -100% !important;
-          }
-        }
-          */
 }
 
 #work > div:not(.bg-title) .mockup.open + .title {
   top: 5rem;
-  left: 0;
   -webkit-transform: none !important;
           transform: none !important;
   -webkit-transition: all 0.5s ease;
@@ -491,7 +478,7 @@
   z-index: 2;
   pointer-events: none;
   position: absolute;
-  left: calc(max(0px, min(5rem, calc(10vw - 5rem))));
+  left: 0;
   top: calc(max(4rem, min(15vw, 13rem)));
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;

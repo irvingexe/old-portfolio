@@ -1,15 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
+import { debounce } from "lodash";
 import Context from "../../store/context";
 import Mockup from "./Mockup";
 import infoProjects from "../projects.json";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
-  const [axis, setAxis] = useState({
-    phone: { x: -20, y: -85 },
-    desk: { x: -10, y: -90 },
-  });
-  const [transition, setTransition] = useState("all 0.2s ease");
+
+  useEffect(() => {
+    transform();
+  }, [window.innerWidth]);
 
   const changeCursor = (cursor) => {
     actions({
@@ -20,7 +20,7 @@ export default function Work() {
 
   const open = (id) => {
     document.querySelector(".modal-scroll").style.position = "fixed";
-    document.querySelector(".sections").style.transition = "all 1s ease";
+    document.querySelector(".sections").style.transition = "all .5s ease";
     document.querySelector(".sections").style.transform = `translateY(-${
       id + 1
     }00vh)`;
@@ -39,26 +39,28 @@ export default function Work() {
     window.scrollBy(0, -window.scrollY);
   };
 
-  const transform = (e) => {
+  const transform = debounce((screenX, screenY) => {
+    //only if scrolling
     if (!state.project.isOpened) {
-      const xAxisP = e.screenX / 2 / 30 - 30;
-      const yAxisP = -e.screenY / 2 / 30 - 75;
-      const xAxisD = e.screenX / 2 / 30 - 20;
-      const yAxisD = -e.screenY / 2 / 30 - 80;
-      setAxis({
-        phone: { x: xAxisP, y: yAxisP },
-        desk: { x: xAxisD, y: yAxisD },
+      const xAxisP = (screenX ? screenX : window.innerWidth / 2) / 2 / 30 - 30;
+      const yAxisP = -(screenY ? screenY : window.innerWidth / 2) / 2 / 30 - 75;
+      const xAxisD = (screenX ? screenX : window.innerWidth / 2) / 2 / 30 - 20;
+      const yAxisD = -(screenY ? screenY : window.innerWidth / 2) / 2 / 30 - 80;
+
+      document.querySelectorAll(".phone .scene").forEach((e) => {
+        e.style.transform = `rotateX(${yAxisP}deg) rotateZ(${xAxisP}deg) scale3d(${scale},${scale},${scale})`;
+      });
+      document.querySelectorAll(".desktop .scene").forEach((e) => {
+        e.style.transform = `rotateX(${yAxisD}deg) rotateZ(${xAxisD}deg) scale3d(${scale},${scale},${scale})`;
       });
     }
-  };
+  }, 10);
 
+  /*
   const stopTransform = () => {
-    setTransition("all 0.5s ease");
     setAxis({ phone: { x: -20, y: -85 }, desk: { x: -10, y: -90 } });
   };
-  const fastTransition = () => {
-    setTransition("all 0.2s ease");
-  };
+*/
 
   const scale =
     ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5 > 0.45
@@ -85,16 +87,6 @@ export default function Work() {
           }}
         >
           <Mockup
-            style={{
-              phone: {
-                transform: `rotateX(${axis.phone.y}deg) rotateZ(${axis.phone.x}deg) scale3d(${scale},${scale},${scale})`,
-                transition: transition,
-              },
-              desk: {
-                transform: `rotateX(${axis.desk.y}deg) rotateZ(${axis.desk.x}deg) scale3d(${scale}, ${scale}, ${scale})`,
-                transition: transition,
-              },
-            }}
             device={infoProjects[i].device}
             img1={"../../assets/projects/" + i + "/-1.png"}
             img2={"../../assets/projects/" + i + "/-2.png"}
@@ -127,9 +119,7 @@ export default function Work() {
     <div
       id="work"
       className="scrollOut"
-      onMouseMove={transform}
-      onMouseLeave={stopTransform}
-      onMouseEnter={fastTransition}
+      onMouseMove={(e) => transform(e.screenX, e.screenY)}
     >
       {projects}
     </div>

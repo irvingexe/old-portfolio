@@ -4,22 +4,43 @@ let lastX = 0;
 let lastY = 0;
 let timeout;
 let deformation = false;
+let dirX = false;
+let dirY = false;
+let rotationDir = false;
+let rotation = 0;
+let lastRotation = 0;
 
 cursorTracking = (e) => {
-    clearTimeout(timeout);
-    cursor = document.getElementById("cursor");
-    deformation = (document.getElementsByClassName("cursor-default")[0])? true :false;
-    dot = document.querySelector("#cursor :first-child");
+  cursor = document.getElementById("cursor");
+  dot = document.querySelector("#cursor :first-child");
 
-    cursor.style.left = e.clientX+"px";
-    cursor.style.top = e.clientY+"px";
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
 
-    dot.style.transform = (Math.abs((e.clientY-lastY)+(e.clientX-lastX))>4)?
-        "rotate("+(deformation? Math.atan2((e.clientY-lastY), (e.clientX-lastX))*180/Math.PI :0) 
-            +"deg) rotateX("+(deformation? 60 :0)+"deg) scale("+(deformation? 1.5 :1)+")"
-        :"none"
+  /*
+  clearTimeout(timeout);
 
-    lastX = e.clientX;
-    lastY = e.clientY;
-    timeout = setTimeout(function(){dot.style.transform = "none";}, 50);
-}
+  dirX = lastX < e.clientX;
+  dirY = lastY < e.clientY;
+  rotation = (Math.atan2(e.clientY - lastY, e.clientX - lastX) * 180) / Math.PI;
+  //rotation = rotation >= 0 ? rotation : rotation + 360;
+  //lastRotation = lastRotation >= 0 ? lastRotation : lastRotation + 360;
+  rotationDir = rotation - lastRotation < 180;
+  rotation = rotationDir ? rotation : rotation - 360;
+
+  //(Math.atan2(e.clientY - lastY, e.clientX - lastX) * 180) / Math.PI +
+  if (Math.abs(e.clientY - lastY) > 15 || Math.abs(e.clientX - lastX) > 15) {
+    dot.style.width = "1rem";
+    dot.style.height = ".6rem";
+  }
+  dot.style.transform = "rotate(" + rotation + "deg)";
+
+  lastX = e.clientX;
+  lastY = e.clientY;
+  lastRotation = rotation;
+  timeout = setTimeout(() => {
+    dot.style.width = ".5rem";
+    dot.style.height = ".5rem";
+  }, 30);
+  */
+};

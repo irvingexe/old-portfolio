@@ -1,19 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/mockup.css";
 
 const Mockup = (props) => {
-  let device = props.device;
-  let img1 = props.img1;
-  let img2 = props.img2;
-  return create(props.style, device, img1, img2);
+  return create(props.device, props.img1, props.img2);
 };
 
-function create(style, device, img1, img2) {
+function create(device, img1, img2) {
   switch (device) {
     case 0:
       return (
         <div className="desktop">
-          <div className="scene" style={style.desk}>
+          <div className="scene">
             <div className="shape cuboid-2 desk-body">
               <div className="face ft"></div>
               <div className="face bk"></div>
@@ -138,7 +135,7 @@ function create(style, device, img1, img2) {
     case 1:
       return (
         <div className="phone">
-          <div className="scene" style={style.phone}>
+          <div className="scene">
             <div className="shape cuboid-2 phone-body">
               <div className="face ft"></div>
               <div className="face bk"></div>

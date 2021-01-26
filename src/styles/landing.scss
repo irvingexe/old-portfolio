@@ -28,8 +28,7 @@
         padding-top: 1.5rem;
         &:hover .arrow,
         &:active .arrow {
-          transform: translateY(2rem) rotate(90deg);
-          transition: opacity 0.5s ease, transform 0.5s ease, width 1.3s ease !important;
+          transform: translateY(2rem) rotate(90deg) !important;
           width: 15rem !important;
         }
         :nth-child(2) {
@@ -41,8 +40,7 @@
           position: relative;
           transform-origin: 0%;
           transform: rotate(90deg);
-          transition: opacity 0.5s ease-out, transform 0.5s ease,
-            width 1.3s ease;
+          transition: transform 1.3s ease, width 1.3s ease;
           pointer-events: none;
           width: 10rem;
           height: 1px;
@@ -393,28 +391,20 @@ $color: set-color($bg-color);
       right: 50%;
       top: calc(calc(100% + 5rem) / 2);
       transform: translate(50%, -50%);
-      transition: all 0.5s ease;
+      transition: all 0.8s ease;
       &.open {
         right: 0;
         top: 5rem;
         transform: translate(0, 0);
         + .title {
           top: 5rem;
-          left: 0;
+          //left: 0;
           transform: none !important;
           transition: all 0.5s ease;
           div {
             opacity: 0;
           }
         }
-        /*
-        + .title {
-          left: -100% !important;
-          & + .title {
-            right: -100% !important;
-          }
-        }
-          */
       }
       .phone {
         height: 25em;
@@ -433,7 +423,7 @@ $color: set-color($bg-color);
       z-index: 2;
       pointer-events: none;
       position: absolute;
-      left: calc(max(0px, min(5rem, calc(10vw - 5rem))));
+      left: 0;
       top: calc(max(4rem, min(15vw, 13rem)));
       transition: all 0.5s ease;
       div {
