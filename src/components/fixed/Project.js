@@ -58,6 +58,14 @@ export default function Project() {
     //Assign skew and smooth scrolling to the scroll container
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px) skewY(${skew}deg)`;
 
+    //modal margins
+    document.querySelector(".modal-content").style.marginLeft = `max(${
+      3 - (data.rounded * 0.8) / 100
+    }vw, 0rem)`;
+    document.querySelector(".modal-content").style.marginRight = `max(${
+      3 - (data.rounded * 0.8) / 100
+    }vw, 0rem`;
+
     //loop vai raf
     requests.current.push(requestAnimationFrame(skewScrolling));
   };

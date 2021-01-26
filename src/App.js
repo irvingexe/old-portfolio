@@ -11,6 +11,7 @@ import Cursor from "./components/fixed/Cursor";
 import Work from "./components/landing/Work";
 import Project from "./components/fixed/Project";
 import useWindowSize from "./hooks/useWindowSize";
+import { debounce } from "lodash";
 
 export default function App() {
   const { state } = useContext(Context);
@@ -47,7 +48,9 @@ export default function App() {
 
   // Scrolling
   const skewScrolling = () => {
-    //console.log(!state.project.isOpened);
+    const cta = document.querySelector("#cover .arrow +div");
+    const arrow = document.querySelector("#cover .arrow");
+    const hello = document.querySelector("#cover p");
     //Set Current to the scroll position amount
     data.current = window.scrollY;
     // Set Previous to the scroll previous position
@@ -60,19 +63,43 @@ export default function App() {
     const acceleration = difference / size.width;
     const velocity = +acceleration;
     let skew = velocity * 20;
-    if (skew > 20) {
-      skew = 20;
-    } else if (skew < -20) {
-      skew = -20;
+    //skew limits
+    switch (true) {
+      case skew > 20:
+        skew = 20;
+        break;
+      case skew < -20:
+        skew = -20;
+        break;
+      case (skew > -0.01 && skew < 0) || (skew < 0.01 && skew > 0):
+        skew = 0;
+        break;
+
+      default:
+        break;
     }
 
     //Assign skew and smooth scrolling to the scroll container
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px) skewY(${skew}deg)`;
 
+    if (window.pageYOffset < window.innerHeight) {
+      cta.style.opacity = 1 - (data.rounded * 0.8) / 100;
+      cta.style.top = `${data.rounded * 0.25}px`;
+
+      arrow.style.opacity = 1 - data.rounded / 100;
+      arrow.style.width = `calc(10rem + ${data.rounded * 2}px)`;
+      arrow.style.transform = `translateY(${
+        data.rounded * 0.5
+      }px) rotate(90deg)`;
+
+      hello.style.opacity = 1 - (data.rounded * 0.2) / 100;
+    }
+
     //make it work on scroll only
     //loop vai raf
     requests.current.push(requestAnimationFrame(skewScrolling));
   };
+  console.log("app");
 
   return (
     <div className="App">

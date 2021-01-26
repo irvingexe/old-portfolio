@@ -55,10 +55,6 @@
           transform-origin: 0%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: width 1.3s ease, -webkit-transform 1.3s ease;
-  transition: width 1.3s ease, -webkit-transform 1.3s ease;
-  transition: transform 1.3s ease, width 1.3s ease;
-  transition: transform 1.3s ease, width 1.3s ease, -webkit-transform 1.3s ease;
   pointer-events: none;
   width: 10rem;
   height: 1px;

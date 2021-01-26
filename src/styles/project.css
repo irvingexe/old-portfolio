@@ -19,8 +19,6 @@
   background-color: #e0e0e0;
   margin-top: 53vh;
   padding-top: calc(min(10vw, 3rem));
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
 #project .modal .modal-scroll .modal-content > *:not(.screens),
