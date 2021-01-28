@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../../styles/background.css";
-import doodle from "../../assets/doodle.svg";
 import projects from "../projects.json";
 import Context from "../../store/context";
 
@@ -15,14 +14,12 @@ export default function Background() {
           : "#00000000",
       }}
     >
-      <img
-        alt=""
-        src={doodle}
+      <div
         id="doodle"
         style={{
           opacity: state.project.isOpened ? 0 : 1,
         }}
-      />
+      ></div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ let rotationDir = false;
 let rotation = 0;
 let lastRotation = 0;
 
-cursorTracking = (e) => {
+const cursorTracking = (e) => {
   cursor = document.getElementById("cursor");
   dot = document.querySelector("#cursor :first-child");
 
@@ -44,3 +44,5 @@ cursorTracking = (e) => {
   }, 30);
   */
 };
+
+export default cursorTracking;

@@ -15,10 +15,13 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
+  &:hover {
+    width: 7px;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #9c534e;
 }
 
 .App {

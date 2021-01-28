@@ -16,8 +16,12 @@ body:not(:hover) #cursor > :first-child {
   width: 5px;
 }
 
+::-webkit-scrollbar:hover {
+  width: 7px;
+}
+
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #9c534e;
 }
 
 .App {

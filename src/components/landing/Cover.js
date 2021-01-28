@@ -35,8 +35,7 @@ export default function Cover() {
       <div className="center">
         <div>
           <p>
-            Hello! <br />
-            My name is Irving, <br />
+            Hello! I'm Irving. <br />
             I'm a software developer <br />
             with a taste for design and interactivity
           </p>
