@@ -30,10 +30,12 @@ export default function App() {
     <div
       className="App"
       onMouseMove={(e) => {
+        document.querySelector("#cursor").style.display = "flex";
         scratchCard.pointerMove({ x: e.clientX, y: e.clientY });
         cursorTracking(e);
       }}
       onTouchMove={(e) => {
+        document.querySelector("#cursor").style.display = "none";
         scratchCard.pointerMove({
           x: e.touches[0].clientX,
           y: e.touches[0].clientY,

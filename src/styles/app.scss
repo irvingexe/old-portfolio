@@ -125,15 +125,8 @@ ul {
 * {
   cursor: none;
 }
-
-@media (pointer: fine) {
-  #cursor {
-    display: flex !important;
-  }
-}
-
 #cursor {
-  display: none;
+  display: flex;
   position: fixed;
   pointer-events: none;
   z-index: 3;

@@ -133,16 +133,10 @@ ul {
   cursor: none;
 }
 
-@media (pointer: fine) {
-  #cursor {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-}
-
 #cursor {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   pointer-events: none;
   z-index: 3;
