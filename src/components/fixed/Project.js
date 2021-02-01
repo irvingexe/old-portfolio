@@ -98,7 +98,7 @@ export default function Project() {
                   <p className="font-s">{infoProjects[id].abstract}</p>
                 </div>
                 <div className="img">
-                  <img alt="" src={"../../assets/projects/" + id + "/0.png"} />
+                  <img alt="" src={"../../assets/projects/" + id + "/0.jpg"} />
                 </div>
               </div>
             </div>

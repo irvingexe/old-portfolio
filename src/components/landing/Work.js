@@ -88,8 +88,8 @@ export default function Work() {
         >
           <Mockup
             device={infoProjects[i].device}
-            img1={"../../assets/projects/" + i + "/-1.png"}
-            img2={"../../assets/projects/" + i + "/-2.png"}
+            img1={"../../assets/projects/" + i + "/-1.jpg"}
+            img2={"../../assets/projects/" + i + "/-2.jpg"}
           />
         </div>
         <div className="title parallax" data-speed="-0.2">

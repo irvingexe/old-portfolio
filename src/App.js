@@ -1,13 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, lazy } from "react";
 import "./styles/app.css";
 import Background from "./components/fixed/Background";
-import Nav from "./components/fixed/Nav";
-import Cursor from "./components/fixed/Cursor";
-import Project from "./components/fixed/Project";
-import Landing from "./components/landing/Landing";
 import * as scratchCard from "./scratchCard";
 import cursorTracking from "./cursorTracking";
 import useWindowSize from "./hooks/useWindowSize";
+const Nav = lazy(() => import("./components/fixed/Nav"));
+const Cursor = lazy(() => import("./components/fixed/Cursor"));
+const Project = lazy(() => import("./components/fixed/Project"));
+const Landing = lazy(() => import("./components/landing/Landing"));
 
 export default function App() {
   const windowSize = useWindowSize();
@@ -42,8 +42,8 @@ export default function App() {
         });
       }}
     >
-      <Cursor />
       <Background />
+      <Cursor />
       <Nav />
       <Project />
       <Landing />
