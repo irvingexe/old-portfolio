@@ -3,17 +3,18 @@ import * as PIXI from "pixi.js/dist/pixi";
 let lines = [];
 let cleaning = false;
 let requests = [];
+let mousePosition = { x: 0, y: 0 };
 
 const app = new PIXI.Application({
   resizeTo: window,
   antialias: true,
-  backgroundColor: 0xe7dcce,
+  backgroundColor: 0xe3dcd2,
 });
 const { stage } = app;
 
 const brush = new PIXI.Graphics();
 brush.beginFill(0xffffff);
-brush.drawCircle(0, 0, 150);
+brush.drawRoundedRect(0, 0, 300, 300, 150);
 brush.endFill();
 
 const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
@@ -23,7 +24,7 @@ imageToReveal.width = app.screen.width;
 imageToReveal.height = app.screen.height;
 
 const rec = new PIXI.Sprite(PIXI.Texture.WHITE);
-rec.tint = 0xe7dcce;
+rec.tint = 0xe3dcd2;
 stage.addChild(rec);
 rec.width = app.screen.width;
 rec.height = app.screen.height;
@@ -44,18 +45,14 @@ export const create = () => {
 
 export const pointerMove = (position) => {
   if (!cleaning) {
-    if (lines.length > 0) {
-      rec.alpha = 0;
-    }
     brush.position.set(position.x, position.y);
     app.renderer.render(brush, renderTexture, !lines.length, null, false);
     lines.push(position);
-    //console.log(lines);
     if (lines.length === 200) {
       clean();
-      //lines = [];
     }
   }
+  mousePosition = position;
 };
 
 const clean = () => {
@@ -64,7 +61,7 @@ const clean = () => {
   brush.scale.y += 0.25;
 
   if (brush.scale.x > 0.25 * 30) {
-    console.log((rec.alpha += 1 / 30));
+    rec.alpha += 1 / 30;
   }
   if (brush.scale.x < 0.25 * 60) {
     requests.push(requestAnimationFrame(clean));
@@ -73,10 +70,35 @@ const clean = () => {
     requests.map((i) => {
       cancelAnimationFrame(i);
     });
-    cleaning = false;
     lines = [];
+    rec.alpha = 1;
+    brush.scale.x = 0;
+    brush.scale.y = 0;
+    resetBrush();
+    //cleaning = false;
+    //brush.scale.x = 1;
+    //brush.scale.y = 1;
+    //pointerMove({ x: mousePosition.x, y: mousePosition.y });
+  }
+};
+
+const resetBrush = () => {
+  if (brush.scale.x < 1) {
+    rec.alpha -= 0.05;
+    brush.scale.x += 0.08;
+    brush.scale.y += 0.08;
+    brush.position.set(mousePosition.x, mousePosition.y);
+    app.renderer.render(brush, renderTexture, true, null, false);
+    requests.push(requestAnimationFrame(resetBrush));
+  } else {
+    requests.map((i) => {
+      cancelAnimationFrame(i);
+    });
+    cleaning = false;
     brush.scale.x = 1;
     brush.scale.y = 1;
+    rec.alpha = 0;
+    pointerMove({ x: mousePosition.x, y: mousePosition.y });
   }
 };
 
