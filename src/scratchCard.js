@@ -4,6 +4,10 @@ let lines = [];
 let cleaning = false;
 let requests = [];
 let mousePosition = { x: 0, y: 0 };
+let brushSize =
+  window.innerWidth < window.innerHeight
+    ? window.innerWidth / 2.5
+    : window.innerHeight / 2.5;
 
 const app = new PIXI.Application({
   resizeTo: window,
@@ -14,8 +18,16 @@ const { stage } = app;
 
 const brush = new PIXI.Graphics();
 brush.beginFill(0xffffff);
-brush.drawRoundedRect(0, 0, 300, 300, 150);
+brush.drawCircle(
+  0,
+  0,
+  window.innerWidth < window.innerHeight
+    ? window.innerWidth / 2
+    : window.innerHeight / 2
+);
 brush.endFill();
+brush.width = brushSize;
+brush.height = brushSize;
 
 const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
 imageToReveal.tint = 0xbd8958;
@@ -57,13 +69,13 @@ export const pointerMove = (position) => {
 
 const clean = () => {
   cleaning = true;
-  brush.scale.x += 0.25;
-  brush.scale.y += 0.25;
+  brush.scale.x += 0.1;
+  brush.scale.y += 0.1;
 
-  if (brush.scale.x > 0.25 * 30) {
+  if (brush.scale.x > 0.1 * 30) {
     rec.alpha += 1 / 30;
   }
-  if (brush.scale.x < 0.25 * 60) {
+  if (brush.scale.x < 0.1 * 60) {
     requests.push(requestAnimationFrame(clean));
     app.renderer.render(brush, renderTexture, false, null, false);
   } else {
@@ -72,21 +84,19 @@ const clean = () => {
     });
     lines = [];
     rec.alpha = 1;
-    brush.scale.x = 0;
-    brush.scale.y = 0;
+    brush.scale.x = 1;
+    brush.scale.y = 1;
+    brush.width = 0;
+    brush.height = 0;
     resetBrush();
-    //cleaning = false;
-    //brush.scale.x = 1;
-    //brush.scale.y = 1;
-    //pointerMove({ x: mousePosition.x, y: mousePosition.y });
   }
 };
 
 const resetBrush = () => {
-  if (brush.scale.x < 1) {
-    rec.alpha -= 0.05;
-    brush.scale.x += 0.08;
-    brush.scale.y += 0.08;
+  if (brush.width < brushSize) {
+    rec.alpha -= 0.06;
+    brush.width += brushSize * 0.06;
+    brush.height += brushSize * 0.06;
     brush.position.set(mousePosition.x, mousePosition.y);
     app.renderer.render(brush, renderTexture, true, null, false);
     requests.push(requestAnimationFrame(resetBrush));
@@ -95,8 +105,8 @@ const resetBrush = () => {
       cancelAnimationFrame(i);
     });
     cleaning = false;
-    brush.scale.x = 1;
-    brush.scale.y = 1;
+    brush.width = brushSize;
+    brush.height = brushSize;
     rec.alpha = 0;
     pointerMove({ x: mousePosition.x, y: mousePosition.y });
   }
@@ -110,6 +120,12 @@ export const resize = () => {
   stage.addChild(imageToReveal);
   imageToReveal.width = app.screen.width;
   imageToReveal.height = app.screen.height;
+  brushSize =
+    window.innerWidth < window.innerHeight
+      ? window.innerWidth / 2.5
+      : window.innerHeight / 2.5;
+  brush.width = brushSize;
+  brush.height = brushSize;
 
   renderTexture.resize(app.screen.width, app.screen.height, true);
   stage.addChild(renderTextureSprite);
