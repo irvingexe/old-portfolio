@@ -44,6 +44,7 @@ export default function Project() {
     // Set rounded to
     data.rounded = Math.round(data.previous * 100) / 100;
 
+    /*
     // Difference between
     const difference = data.current - data.rounded;
     const acceleration = difference / size.width;
@@ -54,9 +55,10 @@ export default function Project() {
     } else if (skew < -20) {
       skew = -20;
     }
+    */
 
-    //Assign skew and smooth scrolling to the scroll container
-    scrollContainer.current.style.transform = `translateY(-${data.rounded}px) skewY(${skew}deg)`;
+    //Assign skew and smooth scrolling to the scroll container skewY(${skew}deg)
+    scrollContainer.current.style.transform = `translateY(-${data.rounded}px)`;
 
     //modal margins
     document.querySelector(".modal-content").style.marginLeft = `max(${
