@@ -118,6 +118,7 @@ export const resize = () => {
     stage.removeChild(e);
   });
   stage.addChild(imageToReveal);
+  stage.addChild(rec);
   imageToReveal.width = app.screen.width;
   imageToReveal.height = app.screen.height;
   brushSize =
@@ -126,6 +127,8 @@ export const resize = () => {
       : window.innerHeight / 2.5;
   brush.width = brushSize;
   brush.height = brushSize;
+  rec.width = app.screen.width;
+  rec.height = app.screen.height;
 
   renderTexture.resize(app.screen.width, app.screen.height, true);
   stage.addChild(renderTextureSprite);
