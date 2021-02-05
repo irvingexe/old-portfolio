@@ -33,11 +33,10 @@ export default function Cover() {
   return (
     <div id="cover" className="scrollOut" data-section="cover">
       <div className="center">
-        <div>
+        <div className="center">
           <p>
-            Hello! I'm Irving. <br />
-            I'm a software developer <br />
-            with a taste for design and interactivity
+            Hello! I'm Irving. I'm a software developer with a taste for design
+            and interactivity
           </p>
           <div
             className="font-xs"

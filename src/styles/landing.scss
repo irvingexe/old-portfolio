@@ -16,16 +16,21 @@
       width: 100%;
       display: grid;
       p {
-        font-size: 3em;
-        max-width: calc(min(13em, 80vw));
+        font-size: 4em;
+        max-width: calc(min(15em, 80vw));
         margin: 0;
         transition: opacity 0.5s ease-out;
+        text-align: center;
+        font-family: "Playfair Display", serif;
       }
       > div {
         pointer-events: all;
         width: 16rem;
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
         &:hover .arrow,
         &:active .arrow {
           transform: translateY(2rem) rotate(90deg) !important;
@@ -37,12 +42,14 @@
           position: relative;
         }
         .arrow {
+          left: 50%;
+          top: 3.5rem;
           position: relative;
           transform-origin: 0%;
           transform: rotate(90deg);
           //transition: transform 1.3s ease, width 1.3s ease;
           pointer-events: none;
-          width: 10rem;
+          width: 7rem;
           height: 1px;
           background-color: #000;
           &:before {
@@ -424,7 +431,8 @@ $color: set-color($bg-color);
       pointer-events: none;
       position: absolute;
       left: 0;
-      top: calc(max(4rem, min(15vw, 13rem)));
+      //top: calc(max(4rem, min(15vw, 13rem)));
+      top: 5rem;
       transition: all 0.5s ease;
       div {
         transition: all 0.5s ease;

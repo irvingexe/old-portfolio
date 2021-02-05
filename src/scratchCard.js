@@ -1,5 +1,6 @@
 import * as PIXI from "pixi.js/dist/pixi";
 
+PIXI.utils.skipHello();
 let lines = [];
 let cleaning = false;
 let requests = [];
@@ -12,7 +13,7 @@ let brushSize =
 const app = new PIXI.Application({
   resizeTo: window,
   antialias: true,
-  backgroundColor: 0xe3dcd2,
+  backgroundColor: 0xcccccc,
 });
 const { stage } = app;
 
@@ -30,7 +31,7 @@ brush.width = brushSize;
 brush.height = brushSize;
 
 const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
-imageToReveal.tint = 0xbd8958;
+imageToReveal.tint = 0xaa945f;
 stage.addChild(imageToReveal);
 imageToReveal.width = app.screen.width;
 imageToReveal.height = app.screen.height;

@@ -83,7 +83,7 @@ export default function Landing() {
       cta.style.top = `${data.rounded * 0.25}px`;
 
       arrow.style.opacity = 1 - data.rounded / 100;
-      arrow.style.width = `calc(10rem + ${data.rounded * 2}px)`;
+      arrow.style.width = `calc(7rem + ${data.rounded * 2}px)`;
       arrow.style.transform = `translateY(${
         data.rounded * 0.5
       }px) rotate(90deg)`;
