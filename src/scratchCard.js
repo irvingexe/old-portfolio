@@ -13,7 +13,7 @@ let brushSize =
 const app = new PIXI.Application({
   resizeTo: window,
   antialias: true,
-  backgroundColor: 0xcccccc,
+  backgroundColor: 0xf4f4f4,
 });
 const { stage } = app;
 
@@ -27,11 +27,18 @@ brush.drawCircle(
     : window.innerHeight / 2
 );
 brush.endFill();
-brush.width = brushSize;
-brush.height = brushSize;
+brush.width = brushSize * 2;
+brush.height = brushSize * 2;
+brush.position.x = brushSize;
+brush.position.y = brushSize;
+
+var gContainer = new PIXI.Container();
+gContainer.addChild(brush);
+gContainer.cacheAsBitmap = true;
+gContainer.scale.set(0.5);
 
 const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
-imageToReveal.tint = 0xaa945f;
+imageToReveal.tint = 0xcdba8d;
 stage.addChild(imageToReveal);
 imageToReveal.width = app.screen.width;
 imageToReveal.height = app.screen.height;
@@ -58,8 +65,11 @@ export const create = () => {
 
 export const pointerMove = (position) => {
   if (!cleaning) {
-    brush.position.set(position.x, position.y);
-    app.renderer.render(brush, renderTexture, !lines.length, null, false);
+    gContainer.position.set(
+      position.x - brushSize / 2,
+      position.y - brushSize / 2
+    );
+    app.renderer.render(gContainer, renderTexture, !lines.length, null, false);
     lines.push(position);
     if (lines.length === 200) {
       clean();
