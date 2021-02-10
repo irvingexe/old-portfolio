@@ -1,4 +1,5 @@
 let cursor;
+/*
 let dot;
 let lastX = 0;
 let lastY = 0;
@@ -9,10 +10,11 @@ let dirY = false;
 let rotationDir = false;
 let rotation = 0;
 let lastRotation = 0;
+*/
 
 const cursorTracking = (e) => {
   cursor = document.getElementById("cursor");
-  dot = document.querySelector("#cursor :first-child");
+  //dot = document.querySelector("#cursor :first-child");
 
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";

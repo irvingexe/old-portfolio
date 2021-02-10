@@ -68,24 +68,24 @@
   background-color: #000;
 }
 
-#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > div:not(.bg-title) .title > div .arrow:after, #work > div:not(.bg-title) .title > div #cover > div > div > div .arrow:after {
+#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div .arrow:after, #work > .project .title > div #cover > div > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;
   left: 100%;
   top: 0;
   width: 0.5rem;
-  height: 0.5px;
+  height: 1px;
   background-color: #000;
-  -webkit-transform: rotate(130deg);
-          transform: rotate(130deg);
+  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
+          transform: rotate(130deg) translate(-0.5px, 0px);
   -webkit-transform-origin: 0%;
           transform-origin: 0%;
 }
 
 #cover > div > div > div .arrow:after {
-  -webkit-transform: rotate(-130deg);
-          transform: rotate(-130deg);
+  -webkit-transform: rotate(-130deg) translate(0px, 0.75px);
+          transform: rotate(-130deg) translate(0px, 0.75px);
 }
 
 #ido .container {
@@ -422,13 +422,13 @@
   overflow: hidden;
 }
 
-#work > div:not(.bg-title) {
+#work > .project {
   position: relative;
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
 }
 
-#work > div:not(.bg-title) .mockup {
+#work > .project .mockup {
   -webkit-perspective: 50rem;
           perspective: 50rem;
   -webkit-transform-style: preserve-3d;
@@ -440,18 +440,20 @@
   top: calc(calc(100% + 5rem) / 2);
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-#work > div:not(.bg-title) .mockup.open {
+#work > .project .mockup.open {
   right: 0;
   top: 5rem;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
-#work > div:not(.bg-title) .mockup.open + .title {
+#work > .project .mockup.open + .title {
   top: 5rem;
   -webkit-transform: none !important;
           transform: none !important;
@@ -459,25 +461,30 @@
   transition: all 0.5s ease;
 }
 
-#work > div:not(.bg-title) .mockup.open + .title div {
+#work > .project .mockup.open + .title div {
   opacity: 0;
 }
 
-#work > div:not(.bg-title) .mockup .phone {
+#work > .project .mockup img {
+  height: 40em;
+}
+
+#work > .project .mockup .phone {
   height: 25em;
   width: 15em;
 }
 
-#work > div:not(.bg-title) .mockup .desktop {
+#work > .project .mockup .desktop {
   height: 25em;
   width: 39em;
 }
 
-#work > div:not(.bg-title) .mockup :first-child {
+#work > .project .mockup :first-child {
   pointer-events: none;
 }
 
-#work > div:not(.bg-title) .title {
+#work > .project .title {
+  color: #7c3c38;
   z-index: 2;
   pointer-events: none;
   position: absolute;
@@ -487,30 +494,30 @@
   transition: all 0.5s ease;
 }
 
-#work > div:not(.bg-title) .title div {
+#work > .project .title div {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-#work > div:not(.bg-title) .title h1 {
+#work > .project .title h1 {
   font-family: "Playfair Display", serif;
 }
 
-#work > div:not(.bg-title) .title > div {
+#work > .project .title > div {
   pointer-events: all;
   width: 15rem;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
 }
 
-#work > div:not(.bg-title) .title > div:hover .arrow,
-#work > div:not(.bg-title) .title > div:active .arrow {
+#work > .project .title > div:hover .arrow,
+#work > .project .title > div:active .arrow {
   -webkit-transform: translateX(2rem);
           transform: translateX(2rem);
   width: 15rem;
 }
 
-#work > div:not(.bg-title) .title > div .arrow {
+#work > .project .title > div .arrow {
   -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
   transition: width 0.7s ease, -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, width 0.7s ease;
@@ -518,26 +525,26 @@
   margin-top: 0.5rem;
   width: 10rem;
   height: 1px;
-  background-color: #000;
+  background-color: #7c3c38;
 }
 
-#work > div:not(.bg-title) .title > div .arrow:before, #cover > div > div > div #work > div:not(.bg-title) .title > div .arrow:after, #work > div:not(.bg-title) .title > div .arrow:after {
+#work > .project .title > div .arrow:before, #cover > div > div > div #work > .project .title > div .arrow:after, #work > .project .title > div .arrow:after {
   content: "";
   display: block;
   position: relative;
   left: 100%;
-  top: 0;
+  top: 0px;
   width: 0.5rem;
-  height: 0.5px;
-  background-color: #000;
-  -webkit-transform: rotate(130deg);
-          transform: rotate(130deg);
+  height: 1px;
+  background-color: #7c3c38;
+  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
+          transform: rotate(130deg) translate(-0.5px, 0px);
   -webkit-transform-origin: 0%;
           transform-origin: 0%;
 }
 
-#work > div:not(.bg-title) .title > div .arrow:after {
-  -webkit-transform: rotate(-130deg);
-          transform: rotate(-130deg);
+#work > .project .title > div .arrow:after {
+  -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
+          transform: rotate(-130deg) translate(0.5px, 0.75px);
 }
 /*# sourceMappingURL=landing.css.map */

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "../../styles/background.css";
 import projects from "../projects.json";
 import Context from "../../store/context";
@@ -20,6 +20,7 @@ export default function Background() {
           opacity: state.project.isOpened ? 0 : 1,
         }}
       ></div>
+      <div />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function Who() {
           </p>
         </div>
         <div className="center">
-          <img src={me} />
+          <img src={me} alt="Irving Mariscales" />
         </div>
       </div>
     </div>

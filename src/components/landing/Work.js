@@ -1,11 +1,13 @@
-import React, { useContext, useState, useEffect } from "react";
-import { debounce } from "lodash";
+import React, { useContext, useEffect } from "react";
 import Context from "../../store/context";
-import Mockup from "./Mockup";
 import infoProjects from "../projects.json";
+import mockup0 from "../../assets/projects/0/-1.png";
+import mockup1 from "../../assets/projects/1/-1.png";
+import mockup2 from "../../assets/projects/2/-1.png";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
+  const mockups = [mockup0, mockup1, mockup2];
 
   useEffect(() => {
     transform();
@@ -39,7 +41,8 @@ export default function Work() {
     window.scrollBy(0, -window.scrollY);
   };
 
-  const transform = debounce((screenX, screenY) => {
+  const transform = (screenX, screenY) => {
+    /*
     //only if scrolling
     if (!state.project.isOpened) {
       const xAxisP = (screenX ? screenX : window.innerWidth / 2) / 2 / 30 - 30;
@@ -47,14 +50,22 @@ export default function Work() {
       const xAxisD = (screenX ? screenX : window.innerWidth / 2) / 2 / 30 - 20;
       const yAxisD = -(screenY ? screenY : window.innerWidth / 2) / 2 / 30 - 80;
 
-      document.querySelectorAll(".phone .scene").forEach((e) => {
+      document.querySelectorAll(".phone .scene ").forEach((e) => {
         e.style.transform = `rotateX(${yAxisP}deg) rotateZ(${xAxisP}deg) scale3d(${scale},${scale},${scale})`;
       });
       document.querySelectorAll(".desktop .scene").forEach((e) => {
         e.style.transform = `rotateX(${yAxisD}deg) rotateZ(${xAxisD}deg) scale3d(${scale},${scale},${scale})`;
       });
     }
-  }, 10);
+    */
+    document.querySelectorAll(".mockup").forEach((e) => {
+      e.style.transform = `translateX(calc(50% + (-1 * ${
+        (screenX - window.innerWidth / 2) * 0.05
+      }px))) translateY(calc(-1 * (50% + ${
+        (screenY - window.innerHeight / 2) * 0.05
+      }px)))`;
+    });
+  };
 
   /*
   const stopTransform = () => {
@@ -62,15 +73,11 @@ export default function Work() {
   };
 */
 
-  const scale =
-    ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5 > 0.45
-      ? ((window.innerWidth - window.innerWidth * 0.4) * 0.7) / 921.5
-      : 0.45;
   const projects = [];
 
   for (let i in infoProjects) {
     projects.push(
-      <div key={i} className="center scrollOut" data-section="work">
+      <div key={i} className="center project scrollOut" data-section="work">
         <div
           onClick={() => {
             open(parseInt(i));
@@ -86,11 +93,7 @@ export default function Work() {
             changeCursor("default");
           }}
         >
-          <Mockup
-            device={infoProjects[i].device}
-            img1={"../../assets/projects/" + i + "/-1.jpg"}
-            img2={"../../assets/projects/" + i + "/-2.jpg"}
-          />
+          <img src={mockups[i]} alt={infoProjects[i].title} />
         </div>
         <div className="title parallax" data-speed="-0.2">
           <h1 className="font-xl">{infoProjects[i].splitTitle[0]}</h1>

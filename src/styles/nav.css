@@ -86,16 +86,16 @@
   width: 0;
   height: 1px;
   background-color: #000;
-  -webkit-transform: rotate(130deg);
-          transform: rotate(130deg);
+  -webkit-transform: rotate(130deg) translate(-0.25px, 0.25px);
+          transform: rotate(130deg) translate(-0.25px, 0.25px);
   -webkit-transform-origin: 0%;
           transform-origin: 0%;
 }
 
 #home .arrow:after {
   top: -1px;
-  -webkit-transform: rotate(-130deg);
-          transform: rotate(-130deg);
+  -webkit-transform: rotate(-130deg) translate(-0.25px, 0.25px);
+          transform: rotate(-130deg) translate(-0.25px, 0.25px);
 }
 
 #home .arrow.active {

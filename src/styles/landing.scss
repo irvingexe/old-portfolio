@@ -59,14 +59,14 @@
             left: 100%;
             top: 0;
             width: 0.5rem;
-            height: 0.5px;
+            height: 1px;
             background-color: #000;
-            transform: rotate(130deg);
+            transform: rotate(130deg) translate(-0.5px, 0px);
             transform-origin: 0%;
           }
           &:after {
             @extend .arrow:before;
-            transform: rotate(-130deg);
+            transform: rotate(-130deg) translate(0px, 0.75px);
           }
         }
       }
@@ -384,7 +384,7 @@ $color: set-color($bg-color);
 
 #work {
   overflow: hidden;
-  > div:not(.bg-title) {
+  > .project {
     position: relative;
     min-height: calc(100vh - 5rem);
     padding-top: 5rem;
@@ -398,11 +398,12 @@ $color: set-color($bg-color);
       right: 50%;
       top: calc(calc(100% + 5rem) / 2);
       transform: translate(50%, -50%);
-      transition: all 0.8s ease;
+      transition: all 0.5s ease-out;
       &.open {
         right: 0;
         top: 5rem;
         transform: translate(0, 0);
+        transition: all 0.8s ease;
         + .title {
           top: 5rem;
           //left: 0;
@@ -412,6 +413,10 @@ $color: set-color($bg-color);
             opacity: 0;
           }
         }
+      }
+      img {
+        height: 40em;
+        //width: 15em;
       }
       .phone {
         height: 25em;
@@ -427,6 +432,7 @@ $color: set-color($bg-color);
     }
     .title {
       //font-family: "Playfair Display SC", serif;
+      color: #7c3c38;
       z-index: 2;
       pointer-events: none;
       position: absolute;
@@ -456,22 +462,22 @@ $color: set-color($bg-color);
           margin-top: 0.5rem;
           width: 10rem;
           height: 1px;
-          background-color: #000;
+          background-color: #7c3c38;
           &:before {
             content: "";
             display: block;
             position: relative;
             left: 100%;
-            top: 0;
+            top: 0px;
             width: 0.5rem;
-            height: 0.5px;
-            background-color: #000;
-            transform: rotate(130deg);
+            height: 1px;
+            background-color: #7c3c38;
+            transform: rotate(130deg) translate(-0.5px, 0px);
             transform-origin: 0%;
           }
           &:after {
             @extend .arrow:before;
-            transform: rotate(-130deg);
+            transform: rotate(-130deg) translate(0.5px, 0.75px);
           }
         }
       }

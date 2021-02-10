@@ -20,7 +20,7 @@ body:not(:hover) #cursor > :first-child {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #9c534e;
+  background-color: #7c3c38;
 }
 
 .App {

@@ -7,6 +7,17 @@
   top: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  /*
+  > :first-child {
+    background-color: #d19268de;
+    height: 38rem;
+    width: 38rem;
+    backdrop-filter: blur(1px);
+    box-shadow: 0px 0px 1px 1px #d19268de;
+    position: sticky;
+    top: 5rem;
+  }
+  */
 }
 
 #background #doodle {

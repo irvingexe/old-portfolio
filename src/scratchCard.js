@@ -17,6 +17,9 @@ const app = new PIXI.Application({
 });
 const { stage } = app;
 
+var blurFilter = new PIXI.filters.BlurFilter();
+blurFilter.blur = 1;
+
 const brush = new PIXI.Graphics();
 brush.beginFill(0xffffff);
 brush.drawCircle(
@@ -36,6 +39,7 @@ var gContainer = new PIXI.Container();
 gContainer.addChild(brush);
 gContainer.cacheAsBitmap = true;
 gContainer.scale.set(0.5);
+gContainer.filters = [blurFilter];
 
 const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
 imageToReveal.tint = 0xcdba8d;

@@ -78,13 +78,13 @@
       width: 0;
       height: 1px;
       background-color: #000;
-      transform: rotate(130deg);
+      transform: rotate(130deg) translate(-0.25px, 0.25px);
       transform-origin: 0%;
     }
     &:after {
       @extend .arrow:before;
       top: -1px;
-      transform: rotate(-130deg);
+      transform: rotate(-130deg) translate(-0.25px, 0.25px);
     }
     &.active {
       width: 6rem;
