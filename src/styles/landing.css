@@ -22,7 +22,7 @@
 }
 
 #cover > div > div p {
-  font-size: 4em;
+  font-size: calc(min(12vw, 4rem));
   max-width: calc(min(15em, 80vw));
   margin: 0;
   -webkit-transition: opacity 0.5s ease-out;
@@ -454,6 +454,7 @@
 }
 
 #work > .project .mockup.open + .title {
+  color: #000;
   top: 5rem;
   -webkit-transform: none !important;
           transform: none !important;

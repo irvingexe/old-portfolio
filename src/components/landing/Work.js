@@ -19,13 +19,12 @@ export default function Work() {
       payload: { ...state, cursor: { type: cursor } },
     });
   };
-
   const open = (id) => {
     document.querySelector(".modal-scroll").style.position = "fixed";
     document.querySelector(".sections").style.transition = "all .5s ease";
     document.querySelector(".sections").style.transform = `translateY(-${
-      id + 1
-    }00vh)`;
+      window.innerHeight * (id + 1)
+    }px)`;
     setTimeout(() => {
       document.querySelector(".sections").style.transition = "none";
     }, 1000);

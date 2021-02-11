@@ -16,7 +16,7 @@
       width: 100%;
       display: grid;
       p {
-        font-size: 4em;
+        font-size: calc(min(12vw, 4rem));
         max-width: calc(min(15em, 80vw));
         margin: 0;
         transition: opacity 0.5s ease-out;
@@ -405,6 +405,7 @@ $color: set-color($bg-color);
         transform: translate(0, 0);
         transition: all 0.8s ease;
         + .title {
+          color: #000;
           top: 5rem;
           //left: 0;
           transform: none !important;
