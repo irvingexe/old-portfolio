@@ -4,6 +4,8 @@ import Background from "./components/fixed/Background";
 import * as scratchCard from "./scratchCard";
 import cursorTracking from "./cursorTracking";
 import useWindowSize from "./hooks/useWindowSize";
+import Lottie from "./components/Lottie";
+import smile from "./assets/smile.json";
 const Nav = lazy(() => import("./components/fixed/Nav"));
 const Cursor = lazy(() => import("./components/fixed/Cursor"));
 const Project = lazy(() => import("./components/fixed/Project"));
@@ -47,6 +49,13 @@ export default function App() {
       <Nav />
       <Project />
       <Landing />
+      <div className="center logo">
+        <Lottie
+          play={isInitialMount.current}
+          animationData={smile}
+          speed={0.5}
+        />
+      </div>
     </div>
   );
 }

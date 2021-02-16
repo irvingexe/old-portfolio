@@ -24,6 +24,9 @@ export default class Lottie extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.speed && prevState.anim) {
+      prevState.anim.setSpeed(nextProps.speed);
+    }
     if (typeof nextProps.playFromCurrent === "boolean" && prevState.anim) {
       let s1 = !nextProps.playFromCurrent
         ? prevState.anim.currentFrame + prevState.prevFrame

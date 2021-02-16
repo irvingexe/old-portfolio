@@ -6,6 +6,16 @@
   pointer-events: none;
 }
 
+#nav:before {
+  display: block;
+  background-color: #000;
+  height: 0.5px;
+  width: calc(100vw - 3.6em);
+  left: 1.8em;
+  top: 100%;
+  position: absolute;
+}
+
 #nav #menu-items {
   list-style: none;
   margin: 0;
@@ -53,6 +63,7 @@
   width: 1.8rem;
   height: 1.8rem;
   padding: 1.3rem;
+  padding-left: 1.8rem;
   position: absolute;
 }
 
@@ -69,7 +80,7 @@
   height: 1px;
   position: relative;
   top: 50%;
-  left: 1.6rem;
+  left: 2.1rem;
   -webkit-transition: width 0.6s ease, left 0.6s ease;
   transition: width 0.6s ease, left 0.6s ease;
   background-color: #000;
@@ -123,7 +134,7 @@
 
 #home .arrow.close {
   width: 0;
-  left: 1.6rem;
+  left: 2.1rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }

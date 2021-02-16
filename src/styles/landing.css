@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 .bg-title {
   position: absolute;
   width: 80%;
@@ -23,12 +24,13 @@
 
 #cover > div > div p {
   font-size: calc(min(12vw, 4rem));
-  max-width: calc(min(15em, 80vw));
+  max-width: calc(min(18em, 80vw));
   margin: 0;
   -webkit-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 #cover > div > div > div {
@@ -150,6 +152,15 @@
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   top: 0;
+}
+
+#ido .box .border.title .content > div:nth-child(2):after {
+  font-size: 2rem;
+  font-weight: normal;
+  content: "..";
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
 }
 
 #ido .box:hover {
@@ -429,45 +440,34 @@
 }
 
 #work > .project .mockup {
-  -webkit-perspective: 50rem;
-          perspective: 50rem;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  max-height: 80vh;
   z-index: 1;
   position: absolute;
-  right: 50%;
-  top: calc(calc(100% + 5rem) / 2);
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
 #work > .project .mockup.open {
-  right: 0;
-  top: 5rem;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-}
-
-#work > .project .mockup.open + .title {
-  color: #000;
-  top: 5rem;
-  -webkit-transform: none !important;
+  /*
+        //right: 25%;
+        //top: 0rem;
+        //transform: scale(0.5);
+        transition: all 0.8s ease;
+        + .title {
+          //color: #b87d3a;
+          //top: 5rem;
+          //left: 0;
           transform: none !important;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#work > .project .mockup.open + .title div {
-  opacity: 0;
+          transition: all 0.5s ease;
+          div {
+            opacity: 0;
+          }
+        }
+        */
 }
 
 #work > .project .mockup img {
-  height: 40em;
+  max-height: calc(100vh - 5rem);
+  max-width: 200%;
 }
 
 #work > .project .mockup .phone {
@@ -485,14 +485,12 @@
 }
 
 #work > .project .title {
-  color: #7c3c38;
+  color: #402828;
   z-index: 2;
   pointer-events: none;
   position: absolute;
-  left: 0;
-  top: 5rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 #work > .project .title div {
@@ -501,13 +499,14 @@
 }
 
 #work > .project .title h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 #work > .project .title > div {
   pointer-events: all;
   width: 15rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
   padding-top: 1rem;
 }
 
@@ -526,7 +525,7 @@
   margin-top: 0.5rem;
   width: 10rem;
   height: 1px;
-  background-color: #7c3c38;
+  background-color: #402828;
 }
 
 #work > .project .title > div .arrow:before, #cover > div > div > div #work > .project .title > div .arrow:after, #work > .project .title > div .arrow:after {
@@ -537,7 +536,7 @@
   top: 0px;
   width: 0.5rem;
   height: 1px;
-  background-color: #7c3c38;
+  background-color: #402828;
   -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
           transform: rotate(130deg) translate(-0.5px, 0px);
   -webkit-transform-origin: 0%;

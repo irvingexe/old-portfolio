@@ -6,6 +6,16 @@
   width: 100vw;
   z-index: 5;
   pointer-events: none;
+  &:before {
+    //content: "";
+    display: block;
+    background-color: #000;
+    height: 0.5px;
+    width: calc(100vw - 3.6em);
+    left: 1.8em;
+    top: 100%;
+    position: absolute;
+  }
 
   #menu-items {
     list-style: none;
@@ -52,6 +62,7 @@
     width: 1.8rem;
     height: 1.8rem;
     padding: 1.3rem;
+    padding-left: 1.8rem;
     position: absolute;
   }
   &:hover .arrow.active,
@@ -65,7 +76,7 @@
     height: 1px;
     position: relative;
     top: 50%;
-    left: 1.6rem;
+    left: 2.1rem;
     transition: width 0.6s ease, left 0.6s ease;
     background-color: #000;
     &:before {
@@ -102,7 +113,7 @@
     }
     &.close {
       width: 0;
-      left: 1.6rem;
+      left: 2.1rem;
       transition: all 0.3s;
       &:before {
         transform: rotate(180deg);

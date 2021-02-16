@@ -13,7 +13,7 @@ let brushSize =
 const app = new PIXI.Application({
   resizeTo: window,
   antialias: true,
-  backgroundColor: 0xf4f4f4,
+  backgroundColor: 0xe0d2bb,
 });
 const { stage } = app;
 
@@ -42,13 +42,13 @@ gContainer.scale.set(0.5);
 gContainer.filters = [blurFilter];
 
 const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
-imageToReveal.tint = 0xcdba8d;
+imageToReveal.tint = 0xa18077;
 stage.addChild(imageToReveal);
 imageToReveal.width = app.screen.width;
 imageToReveal.height = app.screen.height;
 
 const rec = new PIXI.Sprite(PIXI.Texture.WHITE);
-rec.tint = 0xe3dcd2;
+rec.tint = 0xe0d2bb;
 stage.addChild(rec);
 rec.width = app.screen.width;
 rec.height = app.screen.height;

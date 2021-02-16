@@ -58,10 +58,17 @@ export default function Work() {
     }
     */
     document.querySelectorAll(".mockup").forEach((e) => {
-      e.style.transform = `translateX(calc(50% + (-1 * ${
+      e.style.transform = `translateX(calc((-1 * ${
         (screenX - window.innerWidth / 2) * 0.05
-      }px))) translateY(calc(-1 * (50% + ${
+      }px))) translateY(calc(-1 * ( ${
         (screenY - window.innerHeight / 2) * 0.05
+      }px)))`;
+    });
+    document.querySelectorAll(".mockup +.title").forEach((e) => {
+      e.style.transform = `translateX(calc((-1 * ${
+        (screenX - window.innerWidth / 2) * 0.02
+      }px))) translateY(calc(-1 * ( ${
+        (screenY - window.innerHeight / 2) * 0.02
       }px)))`;
     });
   };
@@ -95,8 +102,7 @@ export default function Work() {
           <img src={mockups[i]} alt={infoProjects[i].title} />
         </div>
         <div className="title parallax" data-speed="-0.2">
-          <h1 className="font-xl">{infoProjects[i].splitTitle[0]}</h1>
-          <h1 className="font-xl">{infoProjects[i].splitTitle[1]}</h1>
+          <h1 className="font-xl">{infoProjects[i].title}</h1>
           <div
             className="font-xs"
             onMouseEnter={() => {

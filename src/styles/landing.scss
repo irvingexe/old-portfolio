@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 .bg-title {
   position: absolute;
@@ -17,11 +18,13 @@
       display: grid;
       p {
         font-size: calc(min(12vw, 4rem));
-        max-width: calc(min(15em, 80vw));
+        max-width: calc(min(18em, 80vw));
         margin: 0;
         transition: opacity 0.5s ease-out;
         text-align: center;
-        font-family: "Playfair Display", serif;
+        //font-family: "Playfair Display", serif;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
       }
       > div {
         pointer-events: all;
@@ -129,6 +132,14 @@ $color: set-color($bg-color);
             &:nth-child(2) {
               transition: all 0.7s ease;
               top: 0;
+              &:after {
+                font-size: 2rem;
+                font-weight: normal;
+                content: "..";
+                position: absolute;
+                right: 1rem;
+                bottom: 0.5rem;
+              }
             }
           }
         }
@@ -389,24 +400,25 @@ $color: set-color($bg-color);
     min-height: calc(100vh - 5rem);
     padding-top: 5rem;
     .mockup {
-      perspective: 50rem;
-      transform-style: preserve-3d;
-      max-height: 80vh;
+      //perspective: 50rem;
+      //transform-style: preserve-3d;
+      //max-height: 80vh;
       //max-width: 23em;
       z-index: 1;
       position: absolute;
-      right: 50%;
-      top: calc(calc(100% + 5rem) / 2);
-      transform: translate(50%, -50%);
+      //right: 50%;
+      //top: calc(calc(100% + 5rem) / 2);
+      //transform: translate(50%, -50%);
       transition: all 0.5s ease-out;
       &.open {
-        right: 0;
-        top: 5rem;
-        transform: translate(0, 0);
+        /*
+        //right: 25%;
+        //top: 0rem;
+        //transform: scale(0.5);
         transition: all 0.8s ease;
         + .title {
-          color: #000;
-          top: 5rem;
+          //color: #b87d3a;
+          //top: 5rem;
           //left: 0;
           transform: none !important;
           transition: all 0.5s ease;
@@ -414,10 +426,11 @@ $color: set-color($bg-color);
             opacity: 0;
           }
         }
+        */
       }
       img {
-        height: 40em;
-        //width: 15em;
+        max-height: calc(100vh - 5rem);
+        max-width: 200%;
       }
       .phone {
         height: 25em;
@@ -433,25 +446,28 @@ $color: set-color($bg-color);
     }
     .title {
       //font-family: "Playfair Display SC", serif;
-      color: #7c3c38;
+      //mix-blend-mode: hue;
+      color: #402828;
       z-index: 2;
       pointer-events: none;
       position: absolute;
-      left: 0;
+      //left: 0;
       //top: calc(max(4rem, min(15vw, 13rem)));
-      top: 5rem;
-      transition: all 0.5s ease;
+      //top: 15rem;
+      transition: all 0.5s ease-out;
       div {
         transition: all 0.5s ease;
       }
 
       h1 {
-        font-family: "Playfair Display", serif;
+        //font-family: "Playfair Display", serif;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
       }
       > div {
         pointer-events: all;
         width: 15rem;
-        padding-bottom: 1.5rem;
+        padding-bottom: 2.5rem;
         padding-top: 1rem;
         &:hover .arrow,
         &:active .arrow {
@@ -463,7 +479,7 @@ $color: set-color($bg-color);
           margin-top: 0.5rem;
           width: 10rem;
           height: 1px;
-          background-color: #7c3c38;
+          background-color: #402828;
           &:before {
             content: "";
             display: block;
@@ -472,7 +488,7 @@ $color: set-color($bg-color);
             top: 0px;
             width: 0.5rem;
             height: 1px;
-            background-color: #7c3c38;
+            background-color: #402828;
             transform: rotate(130deg) translate(-0.5px, 0px);
             transform-origin: 0%;
           }

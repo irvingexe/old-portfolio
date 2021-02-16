@@ -61,12 +61,18 @@ export default function Project() {
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px)`;
 
     //modal margins
+    /*
     document.querySelector(".modal-content").style.marginLeft = `max(${
       3 - (data.rounded * 0.8) / 100
     }vw, 0rem)`;
     document.querySelector(".modal-content").style.marginRight = `max(${
       3 - (data.rounded * 0.8) / 100
     }vw, 0rem`;
+    */
+
+    document.querySelectorAll(".project").forEach((e) => {
+      e.style.transform = `scale(${1 - (data.rounded * 0.05) / 100})`;
+    });
 
     //loop vai raf
     requests.current.push(requestAnimationFrame(skewScrolling));
@@ -89,15 +95,13 @@ export default function Project() {
         <div ref={scrollContainer} className="modal-scroll">
           <div className="modal-content">
             <div>
-              <h2 className="font-m role">{infoProjects[id].subtitle}</h2>
-
               <div className="description">
                 <div className="font-xs">
                   <h2 className="font-xs">Role</h2>
                   <ul>{role}</ul>
                 </div>
                 <div>
-                  <p className="font-s">{infoProjects[id].abstract}</p>
+                  <p className="font-s">{infoProjects[id].subtitle}</p>
                 </div>
                 <div className="img">
                   <img alt="" src={"../../assets/projects/" + id + "/0.jpg"} />

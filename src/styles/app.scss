@@ -33,15 +33,48 @@ body {
   height: 100%;
   width: 100%;
   //overflow: hidden;
+  .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #a18077;
+    z-index: 50;
+    overflow: hidden;
+    animation: 1.5s ease-in-out smile;
+    animation-fill-mode: forwards;
+    clip-path: inset(0% 0% 0% 0%);
+    > :first-child {
+      width: calc(max(min(25vh, 25vw), 7rem));
+      height: calc(max(min(25vh, 25vw), 7rem));
+    }
+  }
   > .sections {
-    > div:not(#cover),
-    .bg-title {
+    > div:not(#cover) {
       min-height: 100vh;
     }
-    > div > *:not(.bg-title) {
+    > div > * {
       margin-left: 10%;
       margin-right: 10%;
     }
+  }
+}
+
+@keyframes smile {
+  0% {
+  }
+  50% {
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 3rem);
+    margin: 1.5rem;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 3rem);
+    margin: 1.5rem;
+    clip-path: inset(0% 0% 100% 0%);
   }
 }
 
