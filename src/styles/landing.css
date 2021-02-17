@@ -70,7 +70,7 @@
   background-color: #000;
 }
 
-#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div .arrow:after, #work > .project .title > div #cover > div > div > div .arrow:after {
+#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #cover > div > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;
@@ -350,8 +350,8 @@
   display: -ms-grid;
   display: grid;
   gap: 4rem;
-  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 #who > div h1 {
@@ -363,11 +363,14 @@
   text-align: justify;
 }
 
-#who > div img {
-  height: 100%;
-  width: 100%;
+#who > div > :nth-child(2) {
+  background-color: #181818;
+  overflow: hidden;
+}
+
+#who > div > :nth-child(2) img {
+  width: 150%;
   max-width: 20rem;
-  border-radius: 50%;
 }
 
 #contact {
@@ -491,33 +494,44 @@
   position: absolute;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
 }
 
-#work > .project .title div {
+#work > .project .title > div {
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+}
+
+#work > .project .title > div div {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-#work > .project .title h1 {
+#work > .project .title > div h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
 }
 
-#work > .project .title > div {
+#work > .project .title > div > div {
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
   pointer-events: all;
   width: 15rem;
   padding-bottom: 2.5rem;
   padding-top: 1rem;
 }
 
-#work > .project .title > div:hover .arrow,
-#work > .project .title > div:active .arrow {
+#work > .project .title > div > div:hover .arrow,
+#work > .project .title > div > div:active .arrow {
   -webkit-transform: translateX(2rem);
           transform: translateX(2rem);
   width: 15rem;
 }
 
-#work > .project .title > div .arrow {
+#work > .project .title > div > div .arrow {
   -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
   transition: width 0.7s ease, -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, width 0.7s ease;
@@ -528,7 +542,7 @@
   background-color: #402828;
 }
 
-#work > .project .title > div .arrow:before, #cover > div > div > div #work > .project .title > div .arrow:after, #work > .project .title > div .arrow:after {
+#work > .project .title > div > div .arrow:before, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;
@@ -543,7 +557,7 @@
           transform-origin: 0%;
 }
 
-#work > .project .title > div .arrow:after {
+#work > .project .title > div > div .arrow:after {
   -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
           transform: rotate(-130deg) translate(0.5px, 0.75px);
 }

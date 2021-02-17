@@ -1,25 +1,5 @@
 [
     {
-        "title" : "AR Gallery",
-        "splitTitle" : ["AR", "Gallery"],
-        "subtitle" : "Bringing art to life with AR",
-        "abstract" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.",
-        "technologies" : [
-            "Fnsetur",
-            "Consectetur",
-            "Tetur huu",
-            "Bonsectur"],
-        "role" : [
-            "UX/UI design", 
-            "Front-end developement", 
-            "Back-end developement"],
-        "details" : [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id."],
-        "device" : 1,
-        "color" : "rgb(133, 167, 189)"
-    },
-    {
         "title" : "La guarida del sushi",
         "splitTitle" : ["La guarida", "del sushi"],
         "subtitle" : "POS system for a sushi restaurant",

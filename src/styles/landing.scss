@@ -335,7 +335,7 @@ $color: set-color($bg-color);
     width: 100%;
     display: grid;
     gap: 4rem;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 
     h1 {
       margin-bottom: 2rem;
@@ -346,11 +346,15 @@ $color: set-color($bg-color);
       text-align: justify;
       //margin-top: 2rem;
     }
-    img {
-      height: 100%;
-      width: 100%;
-      max-width: 20rem;
-      border-radius: 50%;
+    > :nth-child(2) {
+      background-color: #181818;
+      overflow: hidden;
+      img {
+        //height: 100%;
+        width: 150%;
+        max-width: 20rem;
+        //border-radius: 50%;
+      }
     }
   }
 }
@@ -455,46 +459,52 @@ $color: set-color($bg-color);
       //top: calc(max(4rem, min(15vw, 13rem)));
       //top: 15rem;
       transition: all 0.5s ease-out;
-      div {
-        transition: all 0.5s ease;
-      }
-
-      h1 {
-        //font-family: "Playfair Display", serif;
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-      }
+      transform-origin: 0;
       > div {
-        pointer-events: all;
-        width: 15rem;
-        padding-bottom: 2.5rem;
-        padding-top: 1rem;
-        &:hover .arrow,
-        &:active .arrow {
-          transform: translateX(2rem);
-          width: 15rem;
+        transform-origin: 0;
+        div {
+          transition: all 0.5s ease;
         }
-        .arrow {
-          transition: transform 0.5s ease, width 0.7s ease;
-          margin-top: 0.5rem;
-          width: 10rem;
-          height: 1px;
-          background-color: #402828;
-          &:before {
-            content: "";
-            display: block;
-            position: relative;
-            left: 100%;
-            top: 0px;
-            width: 0.5rem;
+
+        h1 {
+          //font-family: "Playfair Display", serif;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          transform-origin: 0;
+        }
+        > div {
+          transform-origin: 0;
+          pointer-events: all;
+          width: 15rem;
+          padding-bottom: 2.5rem;
+          padding-top: 1rem;
+          &:hover .arrow,
+          &:active .arrow {
+            transform: translateX(2rem);
+            width: 15rem;
+          }
+          .arrow {
+            transition: transform 0.5s ease, width 0.7s ease;
+            margin-top: 0.5rem;
+            width: 10rem;
             height: 1px;
             background-color: #402828;
-            transform: rotate(130deg) translate(-0.5px, 0px);
-            transform-origin: 0%;
-          }
-          &:after {
-            @extend .arrow:before;
-            transform: rotate(-130deg) translate(0.5px, 0.75px);
+            &:before {
+              content: "";
+              display: block;
+              position: relative;
+              left: 100%;
+              top: 0px;
+              width: 0.5rem;
+              height: 1px;
+              background-color: #402828;
+              transform: rotate(130deg) translate(-0.5px, 0px);
+              transform-origin: 0%;
+            }
+            &:after {
+              @extend .arrow:before;
+              transform: rotate(-130deg) translate(0.5px, 0.75px);
+            }
           }
         }
       }

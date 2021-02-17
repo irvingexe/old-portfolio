@@ -7,7 +7,7 @@ import mockup2 from "../../assets/projects/2/-1.png";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
-  const mockups = [mockup0, mockup1, mockup2];
+  const mockups = [mockup1, mockup2];
 
   useEffect(() => {
     transform();
@@ -102,21 +102,23 @@ export default function Work() {
           <img src={mockups[i]} alt={infoProjects[i].title} />
         </div>
         <div className="title parallax" data-speed="-0.2">
-          <h1 className="font-xl">{infoProjects[i].title}</h1>
-          <div
-            className="font-xs"
-            onMouseEnter={() => {
-              changeCursor("hover");
-            }}
-            onMouseLeave={() => {
-              changeCursor("default");
-            }}
-            onClick={() => {
-              open(parseInt(i));
-            }}
-          >
-            See project
-            <div className="arrow"></div>
+          <div>
+            <h1 className="font-xl">{infoProjects[i].title}</h1>
+            <div
+              className="font-xs"
+              onMouseEnter={() => {
+                changeCursor("hover");
+              }}
+              onMouseLeave={() => {
+                changeCursor("default");
+              }}
+              onClick={() => {
+                open(parseInt(i));
+              }}
+            >
+              See project
+              <div className="arrow"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -124,11 +126,7 @@ export default function Work() {
   }
 
   return (
-    <div
-      id="work"
-      className="scrollOut"
-      onMouseMove={(e) => transform(e.screenX, e.screenY)}
-    >
+    <div id="work" onMouseMove={(e) => transform(e.screenX, e.screenY)}>
       {projects}
     </div>
   );

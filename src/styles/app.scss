@@ -1,5 +1,50 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
+/*
+html {
+  &[data-scroll-dir-y="-1"] {
+    .scrollOut {
+      opacity: 0;
+      transition: all 1s;
+      //transition-delay: 0.2s;
+      &[data-scroll="in"] {
+        opacity: 1;
+        animation: in-up 1s;
+      }
+    }
+  }
+  &[data-scroll-dir-y="1"] {
+    .scrollOut {
+      opacity: 0;
+      transition: all 1s;
+      //transition-delay: 0.2s;
+      &[data-scroll="in"] {
+        opacity: 1;
+        animation: in-down 1s;
+      }
+    }
+  }
+}
+
+@keyframes in-down {
+  0% {
+    transform: translateY(25vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes in-up {
+  0% {
+    transform: translateY(-25vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+*/
+
 body {
   //background-color: #afafaf;
   overflow: overlay;

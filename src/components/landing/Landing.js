@@ -52,7 +52,6 @@ export default function Landing() {
     // Set rounded to
     data.rounded = Math.round(data.previous * 100) / 100;
 
-    /*
     // Difference between
     const difference = data.current - data.rounded;
     const acceleration = difference / size.width;
@@ -73,10 +72,12 @@ export default function Landing() {
       default:
         break;
     }
-    */
 
     //Assign skew and smooth scrolling to the scroll container skewY(${skew}deg)
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px)`;
+    document.querySelectorAll(".project .title > div").forEach((e) => {
+      e.style.transform = `translateY(${skew * 10}px)`;
+    });
 
     if (window.pageYOffset < window.innerHeight) {
       cta.style.opacity = 1 - (data.rounded * 0.8) / 100;

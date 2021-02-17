@@ -7,7 +7,7 @@ export default function Ido() {
   let key = 0;
   ido.forEach((e) => {
     blocks.push(
-      <div key={key++} className="box title">
+      <div key={key++} className="box title scrollOut">
         <div className="border center title">
           <div className="content center">
             <div className="center font-s">{e.description}</div>
@@ -27,7 +27,7 @@ export default function Ido() {
 
     e.tecnologies.forEach((e2) => {
       blocks.push(
-        <div key={key++} className="box">
+        <div key={key++} className="box scrollOut">
           <div className="border center">
             <div className="content center">
               <div className="center">
@@ -45,7 +45,7 @@ export default function Ido() {
   });
 
   return (
-    <div id="ido" className="center scrollOut link" data-section="ido">
+    <div id="ido" className="center link" data-section="ido">
       <div className="container">
         <div className="footer">{blocks}</div>
       </div>
