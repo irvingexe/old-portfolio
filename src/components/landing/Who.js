@@ -6,7 +6,7 @@ export default function Who() {
     <div id="who" className="center scrollOut" data-section="who">
       <div>
         <div>
-          <h1 className="font-m">In a few words</h1>
+          <h1 className="font-xxl">WHO</h1>
           <p className="font-s">
             I am a software developer who enjoy creating beautiful design and
             good experiences. Simply passionated with create pixel perfect

@@ -76,7 +76,10 @@ export default function Landing() {
     //Assign skew and smooth scrolling to the scroll container skewY(${skew}deg)
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px)`;
     document.querySelectorAll(".project .title > div").forEach((e) => {
-      e.style.transform = `translateY(${skew * 10}px)`;
+      e.style.transform = `translateY(${skew * 0.8}vh)`;
+    });
+    document.querySelectorAll(".project .mockup img").forEach((e) => {
+      e.style.transform = `scale(${1 - Math.abs(skew / 200)})`;
     });
 
     if (window.pageYOffset < window.innerHeight) {

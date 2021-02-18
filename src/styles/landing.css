@@ -90,8 +90,39 @@
           transform: rotate(-130deg) translate(0px, 0.75px);
 }
 
+#ido {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#ido > :first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: justify;
+  margin-top: calc(max(20vh, 10rem));
+  margin-bottom: 10rem;
+}
+
+#ido > :first-child :first-child {
+  font-family: "Poppins", sans-serif;
+  line-height: 1em;
+  font-weight: 600;
+  margin-right: 5rem;
+}
+
+#ido > :first-child :nth-child(2) {
+  margin-bottom: 1em;
+}
+
 #ido .container {
-  width: 100%;
+  width: 80%;
+  margin-bottom: 10rem;
 }
 
 #ido .container .footer {
@@ -356,6 +387,9 @@
 
 #who > div h1 {
   margin-bottom: 2rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 1em;
 }
 
 #who > div p {
@@ -443,6 +477,10 @@
 }
 
 #work > .project .mockup {
+  -webkit-perspective: 50rem;
+          perspective: 50rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   z-index: 1;
   position: absolute;
   -webkit-transition: all 0.5s ease-out;

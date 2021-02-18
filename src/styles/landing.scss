@@ -89,8 +89,26 @@ $bg-color: #000000;
 $color: set-color($bg-color);
 
 #ido {
+  flex-flow: column;
+  > :first-child {
+    display: flex;
+    align-items: flex-end;
+    text-align: justify;
+    margin-top: calc(max(20vh, 10rem));
+    margin-bottom: 10rem;
+    :first-child {
+      font-family: "Poppins", sans-serif;
+      line-height: 1em;
+      font-weight: 600;
+      margin-right: 5rem;
+    }
+    :nth-child(2) {
+      margin-bottom: 1em;
+    }
+  }
   .container {
-    width: 100%;
+    width: 80%;
+    margin-bottom: 10rem;
     .footer {
       display: grid;
       grid-template-columns: repeat(
@@ -339,6 +357,9 @@ $color: set-color($bg-color);
 
     h1 {
       margin-bottom: 2rem;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      line-height: 1em;
     }
     p {
       width: 100%;
@@ -404,6 +425,8 @@ $color: set-color($bg-color);
     min-height: calc(100vh - 5rem);
     padding-top: 5rem;
     .mockup {
+      perspective: 50rem;
+      transform-style: preserve-3d;
       //perspective: 50rem;
       //transform-style: preserve-3d;
       //max-height: 80vh;

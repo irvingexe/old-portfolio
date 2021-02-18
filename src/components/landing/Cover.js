@@ -35,8 +35,8 @@ export default function Cover() {
       <div className="center">
         <div className="center">
           <p>
-            Hello! I'm Irving. I'm a software developer with a taste for design
-            and interactivity
+            Hello! ✌ I'm Irving. I'm a software developer with a taste for
+            design and interactivity
           </p>
           <div
             className="font-xs"
