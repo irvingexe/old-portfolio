@@ -480,12 +480,10 @@
 }
 
 #work > .project .mockup {
-  -webkit-perspective: 50rem;
-          perspective: 50rem;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   z-index: 1;
   position: absolute;
+  -webkit-transform-origin: center;
+          transform-origin: center;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -507,6 +505,10 @@
           }
         }
         */
+}
+
+#work > .project .mockup.open + .title > div > div {
+  opacity: 0;
 }
 
 #work > .project .mockup img {
@@ -535,15 +537,13 @@
   position: absolute;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-  -webkit-transform-origin: 0;
-          transform-origin: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 #work > .project .title > div {
   -webkit-transform-origin: 0;
           transform-origin: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 #work > .project .title > div div {

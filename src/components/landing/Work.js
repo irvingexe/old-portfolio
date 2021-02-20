@@ -28,6 +28,15 @@ export default function Work() {
         },
       },
     });
+
+    document.querySelectorAll(".project .title > div").forEach((e) => {
+      e.classList.add("static");
+      e.style.transform = "none";
+    });
+    document.querySelectorAll(".project .mockup img").forEach((e) => {
+      e.classList.add("static");
+      e.style.transform = "none";
+    });
     document.querySelector(".modal-scroll").style.position = "fixed";
     document.querySelector(".sections").style.transition = "all .5s ease";
     document.querySelector(".sections").style.transform = `translateY(-${

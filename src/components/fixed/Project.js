@@ -70,7 +70,11 @@ export default function Project() {
     }vw, 0rem`;
     */
 
-    document.querySelectorAll(".project").forEach((e) => {
+    document.querySelectorAll(".project .title").forEach((e) => {
+      e.style.transform = `scale(${1 - (data.rounded * 0.02) / 100})`;
+    });
+
+    document.querySelectorAll(".project .mockup").forEach((e) => {
       e.style.transform = `scale(${1 - (data.rounded * 0.05) / 100})`;
     });
 

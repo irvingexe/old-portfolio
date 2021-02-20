@@ -61,12 +61,28 @@ export default function Nav() {
         );
       } else {
         document.querySelector(".modal-scroll").style.position = "unset";
+        setTimeout(() => {
+          document.querySelectorAll(".project .title > div").forEach((e) => {
+            e.classList.remove("static");
+          });
+          document.querySelectorAll(".project .mockup img").forEach((e) => {
+            e.classList.remove("static");
+          });
+        }, 1000);
         window.scrollBy(
           0,
           document.querySelector(`#work >:nth-child(${state.project.id + 1})`)
             .offsetTop - window.scrollY
         );
       }
+
+      document.querySelectorAll(".project .title").forEach((e) => {
+        e.style.transform = `none`;
+      });
+
+      document.querySelectorAll(".project .mockup").forEach((e) => {
+        e.style.transform = `none`;
+      });
     }, 1);
 
     setMenu(false);
