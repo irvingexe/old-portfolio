@@ -383,14 +383,18 @@ $color: set-color($bg-color);
 #contact {
   display: flex;
   > div:first-child {
-    width: 100%;
-    max-width: 65em;
+    width: 80%;
+    //max-width: 65em;
     display: grid;
     grid-template-rows: 1fr max-content;
     grid-template-columns: 100%;
     min-height: 60vh;
+    gap: 5em;
     h1 {
-      text-align: center;
+      //text-align: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      line-height: 1em;
     }
     ul {
       display: grid;
@@ -398,6 +402,7 @@ $color: set-color($bg-color);
       /*grid-template-columns: repeat(auto-fit, minmax(10em, min-content));*/
       align-items: center;
       margin: 0;
+      margin-top: 2rem;
       gap: 1em;
 
       #mailto {

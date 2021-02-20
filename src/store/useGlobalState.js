@@ -5,7 +5,7 @@ const useGlobalState = () => {
     cursor: { type: "default" },
     project: { isOpened: false, id: 0 },
     section: "cover",
-    scroll: 0,
+    scroll: { y: 0, transform: 0 },
   });
 
   const actions = (action) => {

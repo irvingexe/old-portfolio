@@ -31,7 +31,7 @@ export default function Nav() {
   };
 
   const changeSection = (section) => {
-    document.body.style.overflow = "overlay";
+    //document.body.style.overflow = "overlay";
 
     if (document.querySelector(".arrow.active")) {
       setClose(true);
@@ -46,7 +46,11 @@ export default function Nav() {
 
     actions({
       type: "setState",
-      payload: { ...state, section, project: { isOpened: false, id: 0 } },
+      payload: {
+        ...state,
+        section,
+        project: { isOpened: false, id: state.project.id },
+      },
     });
     setTimeout(() => {
       if (!state.project.isOpened || section !== "cover") {
@@ -57,8 +61,11 @@ export default function Nav() {
         );
       } else {
         document.querySelector(".modal-scroll").style.position = "unset";
-        //window.scrollBy(0, );
-        window.scrollBy(0, state.scroll - window.scrollY);
+        window.scrollBy(
+          0,
+          document.querySelector(`#work >:nth-child(${state.project.id + 1})`)
+            .offsetTop - window.scrollY
+        );
       }
     }, 1);
 

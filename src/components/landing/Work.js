@@ -1,13 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import Context from "../../store/context";
 import infoProjects from "../projects.json";
-import mockup0 from "../../assets/projects/0/-1.png";
-import mockup1 from "../../assets/projects/1/-1.png";
-import mockup2 from "../../assets/projects/2/-1.png";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
-  const mockups = [mockup1, mockup2];
 
   useEffect(() => {
     transform();
@@ -20,23 +16,26 @@ export default function Work() {
     });
   };
   const open = (id) => {
-    document.querySelector(".modal-scroll").style.position = "fixed";
-    document.querySelector(".sections").style.transition = "all .5s ease";
-    document.querySelector(".sections").style.transform = `translateY(-${
-      window.innerHeight * (id + 1)
-    }px)`;
-    setTimeout(() => {
-      document.querySelector(".sections").style.transition = "none";
-    }, 1000);
     actions({
       type: "setState",
       payload: {
         ...state,
         project: { isOpened: true, id: id },
         cursor: { type: "default" },
-        scroll: window.innerHeight * (id + 1),
+        scroll: {
+          y: window.innerHeight * (id + 1) + window.innerHeight / 4,
+          transform: document.querySelector(".sections").style.transform,
+        },
       },
     });
+    document.querySelector(".modal-scroll").style.position = "fixed";
+    document.querySelector(".sections").style.transition = "all .5s ease";
+    document.querySelector(".sections").style.transform = `translateY(-${
+      window.innerHeight * (id + 1) + window.innerHeight / 4
+    }px)`;
+    setTimeout(() => {
+      document.querySelector(".sections").style.transition = "none";
+    }, 500);
     window.scrollBy(0, -window.scrollY);
   };
 
@@ -99,7 +98,10 @@ export default function Work() {
             changeCursor("default");
           }}
         >
-          <img src={mockups[i]} alt={infoProjects[i].title} />
+          <img
+            src={require(`../../assets/projects/${i}/-1.png`)}
+            alt={infoProjects[i].title}
+          />
         </div>
         <div className="title parallax" data-speed="-0.2">
           <div>

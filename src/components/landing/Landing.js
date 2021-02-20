@@ -14,7 +14,7 @@ export default function Landing() {
   const data = {
     ease: 0.05,
     current: 0,
-    previous: state.scroll,
+    previous: state.scroll.y,
     rounded: 0,
   };
   const requests = useRef([]);
@@ -30,9 +30,7 @@ export default function Landing() {
   // Run scrollrender once page is loaded.
   useEffect(() => {
     if (!state.project.isOpened) {
-      setTimeout(() => {
-        requests.current.push(requestAnimationFrame(skewScrolling));
-      }, 1000);
+      requests.current.push(requestAnimationFrame(skewScrolling));
     } else {
       requests.current.map((i) => {
         cancelAnimationFrame(i);

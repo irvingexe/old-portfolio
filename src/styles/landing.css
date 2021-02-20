@@ -414,8 +414,7 @@
 }
 
 #contact > div:first-child {
-  width: 100%;
-  max-width: 65em;
+  width: 80%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr max-content;
@@ -424,10 +423,13 @@
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   min-height: 60vh;
+  gap: 5em;
 }
 
 #contact > div:first-child h1 {
-  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1em;
 }
 
 #contact > div:first-child ul {
@@ -441,6 +443,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  margin-top: 2rem;
   gap: 1em;
 }
 
@@ -539,6 +542,8 @@
 #work > .project .title > div {
   -webkit-transform-origin: 0;
           transform-origin: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #work > .project .title > div div {

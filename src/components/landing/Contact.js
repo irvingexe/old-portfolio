@@ -27,9 +27,9 @@ export default function Contact() {
   return (
     <div id="contact" className="center scrollOut" data-section="contact">
       <div>
-        <h1 className="font-m">Let's get in touch</h1>
+        <h1 className="font-xl">Do you have any proposal?</h1>
         <div>
-          <p className="font-s">Do you have any proposal?</p>
+          <p className="font-m">Let's get in touch</p>
           <ul>
             <li id="mailto" className="center">
               <div className="shine">
@@ -41,7 +41,7 @@ export default function Contact() {
                   onMouseLeave={() => {
                     changeCursor("default");
                   }}
-                  className="font-s"
+                  className="font-m bold"
                   href="mailto:hello@irving.work"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -87,9 +87,6 @@ export default function Contact() {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="bg-title font-xxl bold center unselectable">
-        <h1>@</h1>
       </div>
     </div>
   );

@@ -104,7 +104,10 @@ export default function Project() {
                   <p className="font-s">{infoProjects[id].subtitle}</p>
                 </div>
                 <div className="img">
-                  <img alt="" src={"../../assets/projects/" + id + "/0.jpg"} />
+                  <img
+                    alt=""
+                    src={require(`../../assets/projects/${state.project.id}/0.jpg`)}
+                  />
                 </div>
               </div>
             </div>
