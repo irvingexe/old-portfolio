@@ -71,7 +71,7 @@ export default function Project() {
     */
 
     document.querySelectorAll(".project .title").forEach((e) => {
-      e.style.transform = `scale(${1 - (data.rounded * 0.02) / 100})`;
+      e.style.transform = `scale(${1 - (data.rounded * 0.025) / 100})`;
     });
 
     document.querySelectorAll(".project .mockup").forEach((e) => {
