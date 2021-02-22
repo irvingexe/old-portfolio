@@ -29,7 +29,7 @@ export default function Ido() {
       blocks.push(
         <div key={key++} className="box">
           <div className="border center">
-            <div className="content center">
+            <div className="content center unselectable undragable">
               <div className="center">
                 <img alt="" src={e2.img} />
               </div>

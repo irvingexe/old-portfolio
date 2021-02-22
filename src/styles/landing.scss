@@ -94,8 +94,8 @@ $color: set-color($bg-color);
     display: flex;
     align-items: flex-end;
     text-align: justify;
-    margin-top: calc(max(20vh, 10rem));
-    margin-bottom: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
     :first-child {
       font-family: "Poppins", sans-serif;
       line-height: 1em;
@@ -119,6 +119,15 @@ $color: set-color($bg-color);
   }
 
   .box {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s ease;
+    height: calc(min(10rem, calc(max(20vw, 7rem))));
+    img {
+      width: 5rem;
+      filter: saturate(0) contrast(4);
+    }
     .border {
       border: 1px solid #00000000;
       width: calc(100% - 1px);
@@ -163,11 +172,6 @@ $color: set-color($bg-color);
         }
       }
     }
-    display: inline-block;
-    position: relative;
-    z-index: 0;
-    transition: all 0.3s ease;
-    height: calc(min(10rem, calc(max(20vw, 7rem))));
 
     &:hover {
       z-index: 10;
@@ -352,14 +356,14 @@ $color: set-color($bg-color);
   > div {
     width: 100%;
     display: grid;
-    gap: 4rem;
+    gap: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 
     h1 {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
       font-weight: 600;
       font-family: "Poppins", sans-serif;
-      line-height: 1em;
+      line-height: calc(1em - 2rem);
     }
     p {
       width: 100%;
@@ -425,6 +429,7 @@ $color: set-color($bg-color);
 
 #work {
   overflow: hidden;
+  margin-bottom: 10rem;
   > .project {
     position: relative;
     min-height: calc(100vh - 5rem);

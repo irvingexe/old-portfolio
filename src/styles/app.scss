@@ -150,6 +150,10 @@ p {
   user-select: none;
 }
 
+.undragable {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }

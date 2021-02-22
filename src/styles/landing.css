@@ -105,8 +105,8 @@
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: justify;
-  margin-top: calc(max(20vh, 10rem));
-  margin-bottom: 10rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
 #ido > :first-child :first-child {
@@ -139,6 +139,12 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   height: calc(min(10rem, calc(max(20vw, 7rem))));
+}
+
+#ido .box img {
+  width: 5rem;
+  -webkit-filter: saturate(0) contrast(4);
+          filter: saturate(0) contrast(4);
 }
 
 #ido .box .border {
@@ -380,16 +386,16 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  gap: 4rem;
+  gap: 5rem;
   -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 #who > div h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  line-height: 1em;
+  line-height: calc(1em - 2rem);
 }
 
 #who > div p {
@@ -471,6 +477,7 @@
 
 #work {
   overflow: hidden;
+  margin-bottom: 10rem;
 }
 
 #work > .project {

@@ -27,7 +27,6 @@ export default function App() {
     }
   }, [windowSize]);
 
-  console.log("app");
   return (
     <div
       className="App"
