@@ -91,18 +91,21 @@ $color: set-color($bg-color);
 #ido {
   flex-flow: column;
   > :first-child {
+    gap: 4rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     text-align: justify;
     margin-top: 10rem;
     margin-bottom: 5rem;
     :first-child {
+      flex: 1 0 0;
       font-family: "Poppins", sans-serif;
       line-height: 1em;
       font-weight: 600;
-      margin-right: 5rem;
     }
     :nth-child(2) {
+      flex: 10 0 25rem;
       margin-bottom: 1em;
     }
   }

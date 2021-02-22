@@ -46,8 +46,8 @@ export default function Ido() {
 
   return (
     <div id="ido" className="center scrollOut link" data-section="ido">
-      <div>
-        <div className="font-xxl">WHAT I DO</div>
+      <div className="font-xxl">
+        <div>WHAT I DO</div>
         <div className="font-s">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc
           laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl
