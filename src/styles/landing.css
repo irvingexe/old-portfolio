@@ -107,7 +107,6 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  text-align: justify;
   margin-top: 10rem;
   margin-bottom: 5rem;
 }
@@ -122,9 +121,12 @@
 }
 
 #ido > :first-child :nth-child(2) {
+  text-align: justify;
   -webkit-box-flex: 10;
       -ms-flex: 10 0 25rem;
           flex: 10 0 25rem;
+  -ms-flex-preferred-size: calc(min(25rem, 80vw));
+      flex-basis: calc(min(25rem, 80vw));
   margin-bottom: 1em;
 }
 

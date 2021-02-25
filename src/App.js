@@ -14,6 +14,9 @@ const Landing = lazy(() => import("./components/landing/Landing"));
 export default function App() {
   const windowSize = useWindowSize();
   const isInitialMount = useRef(true);
+  const project = useRef(null);
+  const lastProject = useRef(null);
+  const color = useRef(null);
 
   useEffect(() => {
     scratchCard.create();
@@ -26,6 +29,25 @@ export default function App() {
       scratchCard.resize();
     }
   }, [windowSize]);
+
+  window.addEventListener("scroll", () => {
+    if (document.querySelector(".modal").style.top !== "0px") {
+      project.current =
+        document.querySelector("#work > :nth-child(1)[data-scroll='in']") ||
+        document.querySelector("#work > :nth-child(2)[data-scroll='in']");
+      if (project.current !== lastProject.current) {
+        color.current = document.querySelector(
+          "#work > :nth-child(1)[data-scroll='in']"
+        )
+          ? { background: 0xfae3cc, brush: 0xeec08a }
+          : document.querySelector("#work > :nth-child(2)[data-scroll='in']")
+          ? { background: 0xccdaf5, brush: 0xa1baec }
+          : { background: 0xf2ebe3, brush: 0xc8baa5 };
+        scratchCard.repaint(color.current);
+        lastProject.current = project.current;
+      }
+    }
+  });
 
   return (
     <div

@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js/dist/pixi";
 
 PIXI.utils.skipHello();
+let color = { background: 0, brush: 0 };
 let lines = [];
 let cleaning = false;
 let requests = [];
@@ -13,7 +14,7 @@ let brushSize =
 const app = new PIXI.Application({
   resizeTo: window,
   antialias: true,
-  backgroundColor: 0xe0d2bb,
+  backgroundColor: 0xf2ebe3,
 });
 const { stage } = app;
 
@@ -35,20 +36,20 @@ brush.height = brushSize * 2;
 brush.position.x = brushSize;
 brush.position.y = brushSize;
 
-var gContainer = new PIXI.Container();
+let gContainer = new PIXI.Container();
 gContainer.addChild(brush);
 gContainer.cacheAsBitmap = true;
 gContainer.scale.set(0.5);
 gContainer.filters = [blurFilter];
 
-const imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
-imageToReveal.tint = 0xa18077;
+let imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
+imageToReveal.tint = 0xc8baa5;
 stage.addChild(imageToReveal);
 imageToReveal.width = app.screen.width;
 imageToReveal.height = app.screen.height;
 
-const rec = new PIXI.Sprite(PIXI.Texture.WHITE);
-rec.tint = 0xe0d2bb;
+let rec = new PIXI.Sprite(PIXI.Texture.WHITE);
+rec.tint = 0xf2ebe3;
 stage.addChild(rec);
 rec.width = app.screen.width;
 rec.height = app.screen.height;
@@ -67,6 +68,18 @@ export const create = () => {
   document.querySelector("#background :first-child").appendChild(app.view);
 };
 
+export const repaint = (newColor) => {
+  rec.destroy();
+  rec = new PIXI.Sprite(PIXI.Texture.WHITE);
+  rec.tint = newColor.background;
+  stage.addChild(rec);
+  rec.width = app.screen.width;
+  rec.height = app.screen.height;
+  rec.alpha = 0;
+  color = newColor;
+  clean();
+};
+
 export const pointerMove = (position) => {
   if (!cleaning) {
     gContainer.position.set(
@@ -76,6 +89,7 @@ export const pointerMove = (position) => {
     app.renderer.render(gContainer, renderTexture, !lines.length, null, false);
     lines.push(position);
     if (lines.length === 200) {
+      stage.addChild(rec);
       clean();
     }
   }
@@ -102,9 +116,22 @@ const clean = () => {
       cancelAnimationFrame(i);
     });
     lines = [];
-    rec.alpha = 1;
     gContainer.scale.x = 0;
     gContainer.scale.y = 0;
+    rec.alpha = 1;
+
+    //
+    if (color.background) {
+      app.renderer.backgroundColor = color.background;
+      imageToReveal.destroy();
+      imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
+      imageToReveal.tint = color.brush;
+      stage.addChild(imageToReveal);
+      imageToReveal.width = app.screen.width;
+      imageToReveal.height = app.screen.height;
+      imageToReveal.mask = renderTextureSprite;
+      color = { background: 0, brush: 0 };
+    }
     resetBrush();
   }
 };

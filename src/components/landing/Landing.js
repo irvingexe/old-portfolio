@@ -25,7 +25,7 @@ export default function Landing() {
         scrollContainer.current.getBoundingClientRect().height
       }px`;
     }
-  }, [size.height, state.project.isOpened]);
+  }, [size, state.project.isOpened]);
 
   // Run scrollrender once page is loaded.
   useEffect(() => {

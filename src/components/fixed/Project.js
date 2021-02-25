@@ -22,7 +22,7 @@ export default function Project() {
         scrollContainer.current.getBoundingClientRect().height
       }px`;
     }
-  }, [size.height, state.project.isOpened]);
+  }, [size, state.project.isOpened]);
 
   // Run scrollrender once page is loaded.
   useEffect(() => {
@@ -89,6 +89,69 @@ export default function Project() {
     role.push(<li key={i}>{infoProjects[id].role[i]}</li>);
   }
 
+  let process = [];
+  for (let i = 0; i < infoProjects[id].process.length; i++) {
+    process.push(
+      <h2 className="font-m" key={`h2-${i}`}>
+        {infoProjects[id].process[i][0]}
+      </h2>
+    );
+    process.push(
+      <p className="font-s" key={`p-${i}`}>
+        {infoProjects[id].process[i][1]}
+      </p>
+    );
+    switch (i) {
+      case 0:
+        break;
+      case 1:
+      case 2:
+        process.push(
+          <div key={`img-${i}`} className="img">
+            <img
+              className="undragable unselectable"
+              alt=""
+              src={require(`../../assets/projects/${
+                state.project.id
+              }/${parseInt(i)}.jpg`)}
+            />
+          </div>
+        );
+        process.push(
+          <p className="font-s" key={`p-${i}.1`}>
+            {infoProjects[id].process[i][2]}
+          </p>
+        );
+        process.push(
+          <div key={`img-${i}.1`} className="img">
+            <img
+              className="undragable unselectable"
+              alt=""
+              src={require(`../../assets/projects/${
+                state.project.id
+              }/${parseInt(i)}.1.jpg`)}
+            />
+          </div>
+        );
+
+        break;
+
+      default:
+        process.push(
+          <div key={`img-${i}`} className="img">
+            <img
+              className="undragable unselectable"
+              alt=""
+              src={require(`../../assets/projects/${
+                state.project.id
+              }/${parseInt(i)}.jpg`)}
+            />
+          </div>
+        );
+        break;
+    }
+  }
+
   return (
     <div id="project">
       <div></div>
@@ -101,19 +164,21 @@ export default function Project() {
             <div>
               <div className="description">
                 <div className="font-xs">
-                  <h2 className="font-xs">Role</h2>
+                  <h2 className="font-m">Role</h2>
                   <ul>{role}</ul>
                 </div>
                 <div>
-                  <p className="font-s">{infoProjects[id].subtitle}</p>
+                  <p className="font-m">{infoProjects[id].abstract}</p>
                 </div>
                 <div className="img">
                   <img
+                    className="undragable unselectable"
                     alt=""
                     src={require(`../../assets/projects/${state.project.id}/0.jpg`)}
                   />
                 </div>
               </div>
+              <div className="process">{process}</div>
             </div>
           </div>
         </div>

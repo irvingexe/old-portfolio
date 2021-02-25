@@ -95,7 +95,6 @@ $color: set-color($bg-color);
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    text-align: justify;
     margin-top: 10rem;
     margin-bottom: 5rem;
     :first-child {
@@ -105,7 +104,9 @@ $color: set-color($bg-color);
       font-weight: 600;
     }
     :nth-child(2) {
+      text-align: justify;
       flex: 10 0 25rem;
+      flex-basis: calc(min(25rem, 80vw));
       margin-bottom: 1em;
     }
   }

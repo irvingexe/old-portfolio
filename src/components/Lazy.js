@@ -15,7 +15,7 @@ export default function Lazy() {
   const renderLoader = () => (
     <div
       style={{
-        backgroundColor: "#a18077",
+        backgroundColor: "#c8baa5",
         height: "100vh",
         display: "flex",
         justifyContent: "center",
