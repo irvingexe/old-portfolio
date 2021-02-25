@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import Context from "../../store/context";
+import Lottie from "../Lottie";
+import eye from "../../assets/eye.json";
 
 export default function Cursor() {
   const { state } = useContext(Context);
@@ -8,7 +10,9 @@ export default function Cursor() {
     <div id="cursor" className={"center cursor-" + state.cursor.type}>
       <div></div>
       <div className="hover back"></div>
-      <div className="hover"></div>
+      <div className="hover center ">
+        <Lottie animationData={eye} play={state.cursor.type === "hover eye"} />
+      </div>
     </div>
   );
 }

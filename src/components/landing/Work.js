@@ -101,7 +101,7 @@ export default function Work() {
             (state.project.isOpened ? " open" : "")
           }
           onMouseEnter={() => {
-            changeCursor("hover");
+            changeCursor("hover eye");
           }}
           onMouseLeave={() => {
             changeCursor("default");
@@ -118,7 +118,7 @@ export default function Work() {
             <div
               className="font-xs"
               onMouseEnter={() => {
-                changeCursor("hover");
+                changeCursor("hover eye");
               }}
               onMouseLeave={() => {
                 changeCursor("default");

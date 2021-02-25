@@ -273,6 +273,12 @@ ul {
   background-color: rgba(0, 0, 0, 0.11);
 }
 
+#cursor > div.hover > :first-child {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 0%;
+}
+
 #cursor > div.msg {
   font-size: 0;
   white-space: nowrap;
@@ -288,7 +294,7 @@ ul {
   height: 100%;
 }
 
-#cursor.cursor-hover :first-child {
+#cursor.cursor-hover > :first-child {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   width: 0;
@@ -317,6 +323,22 @@ ul {
   opacity: 0;
 }
 
+#cursor.eye .hover > :first-child {
+  width: 80%;
+}
+
+#cursor.eye .hover > :first-child svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #cursor.cursor-image .hover {
   background-color: #fcfcfc;
   width: 9.9em;
@@ -329,7 +351,7 @@ ul {
   height: 10em;
 }
 
-#cursor.cursor-project :first-child {
+#cursor.cursor-project > :first-child {
   width: 0;
   height: 0;
 }

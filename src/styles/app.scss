@@ -229,6 +229,10 @@ ul {
     height: 0;
     &.hover {
       background-color: rgba(0, 0, 0, 0.11);
+      > :first-child {
+        transition: all 0.3s ease;
+        width: 0%;
+      }
     }
     &.msg {
       font-size: 0;
@@ -244,7 +248,7 @@ ul {
     }
   }
   &.cursor-hover {
-    :first-child {
+    > :first-child {
       transition: all 0.1s ease;
       width: 0;
       height: 0;
@@ -270,6 +274,18 @@ ul {
       opacity: 0;
     }
   }
+  &.eye {
+    .hover {
+      > :first-child {
+        width: 80%;
+        svg {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
   &.cursor-image {
     .hover {
       background-color: #fcfcfc;
@@ -283,7 +299,7 @@ ul {
     }
   }
   &.cursor-project {
-    :first-child {
+    > :first-child {
       width: 0;
       height: 0;
     }
