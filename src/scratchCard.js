@@ -43,7 +43,7 @@ gContainer.scale.set(0.5);
 gContainer.filters = [blurFilter];
 
 let imageToReveal = new PIXI.Sprite(PIXI.Texture.WHITE);
-imageToReveal.tint = 0xc8baa5;
+imageToReveal.tint = 0xd9c7ad;
 stage.addChild(imageToReveal);
 imageToReveal.width = app.screen.width;
 imageToReveal.height = app.screen.height;

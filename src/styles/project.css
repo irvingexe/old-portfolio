@@ -17,8 +17,8 @@
 
 #project .modal .modal-scroll .modal-content {
   padding-bottom: 10rem;
-  background-color: #f4f4f4;
-  margin-top: 53vh;
+  background-color: #ebebeb;
+  margin-top: 45vh;
   padding-top: calc(min(10vw, 3rem));
 }
 

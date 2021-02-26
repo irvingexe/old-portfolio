@@ -451,8 +451,13 @@ $color: set-color($bg-color);
       transform-origin: center;
       transition: all 0.5s ease-out;
       &.open {
-        + .title > div > div {
-          opacity: 0;
+        + .title > div {
+          > h1 {
+            color: #ebebeb;
+          }
+          > div {
+            opacity: 0;
+          }
         }
         /*
         //right: 25%;
@@ -510,6 +515,8 @@ $color: set-color($bg-color);
           font-family: "Poppins", sans-serif;
           font-weight: 600;
           transform-origin: 0;
+          line-height: 1.2em;
+          transition: color 0.5s ease-out;
         }
         > div {
           transform-origin: 0;

@@ -39,10 +39,10 @@ export default function App() {
         color.current = document.querySelector(
           "#work > :nth-child(1)[data-scroll='in']"
         )
-          ? { background: 0xfae3cc, brush: 0xeec08a }
+          ? { background: 0xfde8d7, brush: 0xffcca5 }
           : document.querySelector("#work > :nth-child(2)[data-scroll='in']")
-          ? { background: 0xccdaf5, brush: 0xa1baec }
-          : { background: 0xf2ebe3, brush: 0xc8baa5 };
+          ? { background: 0xccdaf5, brush: 0xa6c0f4 }
+          : { background: 0xf2ebe3, brush: 0xd9c7ad };
         scratchCard.repaint(color.current);
         lastProject.current = project.current;
       }

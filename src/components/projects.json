@@ -1,7 +1,7 @@
 [
     {
         "title" : "La guarida del sushi",
-        "color" : "rgb(250, 227, 204)",
+        "color" : "#FFCCA5",
         "abstract" : "POS system for a sushi restaurant",
         "technologies" : [
             "Fnsetur",
@@ -22,7 +22,7 @@
     },
     {
         "title" : "Robix UML",
-        "color" : "#CCDAF5",
+        "color" : "#a6c0f4",
         "abstract" : "Robix UML is a diagramming web application to facilitate the adoption of the robustness analysis for software requirements specification",
         "technologies" : [
             "Fnsetur",

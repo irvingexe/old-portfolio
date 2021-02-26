@@ -7,7 +7,7 @@ export default function Contact() {
   const [shining, setShining] = useState(false);
   const [word, setWord] = useState("proposal?");
   const { state, actions } = useContext(Context);
-  const words = ["proposal?", "project?", "idea?"];
+  const words = ["project?", "idea?", "proposal?", "job?"];
   const currentWord = useRef(0);
   const currentLength = useRef(words[0].length);
   const dir = useRef(false);

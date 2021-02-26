@@ -6,11 +6,13 @@ import Who from "./Who";
 import Contact from "./Contact";
 import Work from "./Work";
 import useWindowSize from "../../hooks/useWindowSize";
+import useWindowScroll from "../../hooks/useWindowScroll";
 
 export default function Landing() {
-  const { state } = useContext(Context);
+  const { state, actions } = useContext(Context);
   const size = useWindowSize();
   const scrollContainer = useRef();
+  const windowScroll = useWindowScroll();
   const data = {
     ease: 0.05,
     current: 0,
@@ -37,6 +39,18 @@ export default function Landing() {
       });
     }
   }, [state.project.isOpened]);
+
+  useEffect(() => {
+    if (
+      document.querySelector("#work > :nth-child(1)[data-scroll='out']") &&
+      document.querySelector("#work > :nth-child(2)[data-scroll='out']")
+    ) {
+      actions({
+        type: "setState",
+        payload: { ...state, cursor: { type: "default" } },
+      });
+    }
+  }, [windowScroll]);
 
   // Scrolling
   const skewScrolling = () => {

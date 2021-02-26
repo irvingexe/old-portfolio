@@ -524,6 +524,10 @@
         */
 }
 
+#work > .project .mockup.open + .title > div > h1 {
+  color: #ebebeb;
+}
+
 #work > .project .mockup.open + .title > div > div {
   opacity: 0;
 }
@@ -573,6 +577,9 @@
   font-weight: 600;
   -webkit-transform-origin: 0;
           transform-origin: 0;
+  line-height: 1.2em;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
 }
 
 #work > .project .title > div > div {
