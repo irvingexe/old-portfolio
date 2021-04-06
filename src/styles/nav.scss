@@ -98,7 +98,7 @@
       transform: rotate(-130deg) translate(-0.25px, 0.25px);
     }
     &.active {
-      width: 6rem;
+      width: calc(min(6rem, 12.5vw));
       animation-name: back;
       animation-duration: 0.6s;
       &:before {
@@ -242,7 +242,7 @@
 
     #menu-items {
       height: 100vh;
-      background-color: #a18077;
+      background-color: #d9c7ad;
       display: flex;
       align-items: center;
       justify-content: center;

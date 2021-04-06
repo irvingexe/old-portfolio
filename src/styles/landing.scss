@@ -17,7 +17,7 @@
       width: 100%;
       display: grid;
       p {
-        font-size: calc(min(12vw, 4rem));
+        font-size: calc(min(11vw, 4rem));
         max-width: calc(min(18em, 80vw));
         margin: 0;
         transition: opacity 0.5s ease-out;
@@ -45,14 +45,14 @@
           position: relative;
         }
         .arrow {
-          left: 50%;
-          top: 3.5rem;
+          //left: 50%;
+          //top: 3.5rem;
           position: relative;
           transform-origin: 0%;
           transform: rotate(90deg);
           //transition: transform 1.3s ease, width 1.3s ease;
           pointer-events: none;
-          width: 7rem;
+          width: 2rem;
           height: 1px;
           background-color: #000;
           &:before {
@@ -71,6 +71,12 @@
             @extend .arrow:before;
             transform: rotate(-130deg) translate(0px, 0.75px);
           }
+          /*
+          &.reset {
+            width: 2rem !important;
+            transform: rotate(90deg) !important;
+          }
+          */
         }
       }
     }
@@ -112,7 +118,7 @@ $color: set-color($bg-color);
   }
   .container {
     width: 80%;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     .footer {
       display: grid;
       grid-template-columns: repeat(
@@ -331,9 +337,20 @@ $color: set-color($bg-color);
   }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 850px) {
   .box.title {
     grid-column: auto / span 2;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  #contact {
+    #mailto {
+      transform: translate(0, 0) !important;
+    }
+    ul {
+      grid-template-columns: 100% !important;
+    }
   }
 }
 
@@ -346,18 +363,11 @@ $color: set-color($bg-color);
       transform-origin: left;
     }
   }
-  #contact {
-    #mailto {
-      transform: translate(0, 0) !important;
-    }
-    ul {
-      grid-template-columns: 100% !important;
-    }
-  }
 }
 
 #who {
   > div {
+    padding: 5rem 0 5rem 0;
     width: 100%;
     display: grid;
     gap: 5rem;
@@ -376,7 +386,7 @@ $color: set-color($bg-color);
       //margin-top: 2rem;
     }
     > :nth-child(2) {
-      background-color: #181818;
+      background-color: #000000;
       overflow: hidden;
       img {
         //height: 100%;
@@ -398,6 +408,7 @@ $color: set-color($bg-color);
     grid-template-columns: 100%;
     min-height: 60vh;
     gap: 5em;
+    padding: 5rem 0 5rem 0;
     h1 {
       //text-align: center;
       font-family: "Poppins", sans-serif;
@@ -415,6 +426,7 @@ $color: set-color($bg-color);
 
       #mailto {
         flex-direction: column;
+        width: fit-content;
         /*transform: translate(-25%, 0em);*/
         .shine {
           height: 3em;
@@ -426,6 +438,40 @@ $color: set-color($bg-color);
       }
       li {
         z-index: 4;
+        width: fit-content;
+        &:first-child {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .love {
+      margin: 0 auto 0 auto;
+      color: #f2ebe3;
+      position: absolute;
+      bottom: 1rem;
+    }
+    .arrow {
+      transition: transform 0.5s ease, width 0.7s ease;
+      margin: 0.5rem 2rem 0 0;
+      width: 6rem;
+      height: 1px;
+      background-color: #402828;
+      &:before {
+        content: "";
+        display: block;
+        position: relative;
+        left: 100%;
+        top: 0px;
+        width: 0.5rem;
+        height: 1px;
+        background-color: #402828;
+        transform: rotate(130deg) translate(-0.5px, 0px);
+        transform-origin: 0%;
+      }
+      &:after {
+        @extend .arrow:before;
+        transform: rotate(-130deg) translate(0.5px, 0.75px);
       }
     }
   }

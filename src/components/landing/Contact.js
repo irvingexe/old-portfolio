@@ -7,7 +7,7 @@ export default function Contact() {
   const [shining, setShining] = useState(false);
   const [word, setWord] = useState("proposal?");
   const { state, actions } = useContext(Context);
-  const words = ["project?", "idea?", "proposal?", "job?"];
+  const words = ["project?", "idea?", "proposal?"];
   const currentWord = useRef(0);
   const currentLength = useRef(words[0].length);
   const dir = useRef(false);
@@ -65,26 +65,29 @@ export default function Contact() {
         <div>
           <p className="font-m">Let's get in touch</p>
           <ul>
-            <li id="mailto" className="center">
-              <div className="shine">
-                <Lottie play={shining} animationData={shineSVG} />
-              </div>
-              <div className="link">
-                <a
-                  onMouseEnter={mailHover}
-                  onMouseLeave={() => {
-                    changeCursor("default");
-                  }}
-                  className="font-m bold"
-                  href="mailto:hello@irving.work"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="line"></div>hello@irving.work
-                </a>
-              </div>
-              <div className="shine">
-                <Lottie play={shining} animationData={shineSVG} />
+            <li>
+              <div className="arrow"></div>
+              <div id="mailto" className="center">
+                <div className="shine">
+                  <Lottie play={shining} animationData={shineSVG} />
+                </div>
+                <div className="link">
+                  <a
+                    onMouseEnter={mailHover}
+                    onMouseLeave={() => {
+                      changeCursor("default");
+                    }}
+                    className="font-l bold"
+                    href="mailto:hello@irving.work"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="line"></div>hello@irving.work
+                  </a>
+                </div>
+                <div className="shine">
+                  <Lottie play={shining} animationData={shineSVG} />
+                </div>
               </div>
             </li>
             <li className="link">
@@ -120,6 +123,7 @@ export default function Contact() {
               </a>
             </li>
           </ul>
+          <p className="love font-s">Made with ♥ by Irving Mariscales</p>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
     {
         "title" : "La guarida del sushi",
         "color" : "#FFCCA5",
-        "abstract" : "POS system for a sushi restaurant",
+        "abstract" : "POS software for efficient restaurant management experience",
         "technologies" : [
             "Fnsetur",
             "Consectetur",
@@ -12,18 +12,19 @@
             "UX/UI design", 
             "Front-end developement"],
             "process" : [
-                ["Initial research & planning", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-                ["Sketches & Wireframes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-                ["Typography, colors & icons", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-                ["UI elements & components", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-                ["Hi-fi wireframes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
+                ["Problem & challenge", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
+                ["Initial research & planning", "Comencé recopilando información de la aplicación existente y evalué los puntos débiles de los usuarios de software existentes. preguntó a los usuarios actuales sobre su experiencia y qué creen que sería útil agregar / actualizar en el software. Investigué sobre un software POS típico, hice un análisis competitivo y creé un panel de estado de ánimo para cubrir las características necesarias en el software."],
+                ["Sketches & Wireframes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
+                ["Design system", "I chose \"Sofia pro\" for headings and \"Inter\" for body texts and tried to have limited font weights, to have consistency and optimize page loading. The colors are mostly taken from the brand guidelines."],
+                ["Hi-fi wireframes", ""],
+                ["Arquitecture", ""],
                 ["Conclusion", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."]
             ]
     },
     {
         "title" : "Robix UML",
         "color" : "#a6c0f4",
-        "abstract" : "Robix UML is a diagramming web application to facilitate the adoption of the robustness analysis for software requirements specification",
+        "abstract" : "Robix UML is a diagramming web application to facilitate the adoption of the robustness analysis for software requirements specification.",
         "technologies" : [
             "Fnsetur",
             "Consectetur",
@@ -33,12 +34,13 @@
             "UX/UI design", 
             "Front-end developement"],
         "process" : [
-            ["Initial research & planning", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-            ["Sketches & Wireframes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-            ["Typography, colors & icons", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-            ["UI elements & components", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-            ["Hi-fi wireframes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-            ["Conclusion", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."]
+            ["Problem & challenge", "As a result of prioritizing working software over comprehensive documentation, a common problem in agile software development teams is the lack of documentation, resulting in rapid developement projects but unsustainable maintenance. Focusing on requirements specification, Scrumconix is a hybrid methodology that proposes to use the robustness analysis as the main artifact for requirements specification, since it allows sufficient documentation without losing the agile approach. However, due to its low presence in popular methodologies, the use of this type of diagram is not very widespread. The challenge was to design a tool that facilitates the adoption of this diagram as part of a study with the aim of reducing the lack of documentation in software teams."],
+            ["Research & planning", "During this phase we scheduled meetings with the client to agree on the app features based on its needs. Moreover, since the diagram and the methodology it comes from where unfamiliar to the team, it was necessary to do research on it."],
+            ["Initial wireframes", "Being the main funcionality to create a diagram, we focus the UI on the canvas. Keeping this in mind, this component occupies the entire screen, thus the user can visualize a greater number of elements of the diagram."],
+            ["Design system", ""],
+            ["Hi-fi wireframes", ""],
+            ["Developement", "Robix UML is a web based application that works entierly client side, it was build using React and is made out of two parts: A view layer, consisting of the UI elements that the user interacts with, and a business logic layer, which defines the behaviour of the diagram elements."],
+            ["Conclusion", "The application had a positive reception from users and meets the expected goals. Regarding the construction, the biggest challenge was the functionality of joining elements, since drawing the connectors required designing different trigonometric models that would allow calculating the optimal positions of both the lines and their text, allowing the best use of space and avoiding overlapping elements."]
         ]
     }
 ]

@@ -92,47 +92,50 @@ export default function Project() {
   }
 
   let process = [];
-  for (let i = 0; i < infoProjects[id].process.length; i++) {
-    process.push(
-      <h2 className="font-m" key={`h2-${i}`}>
-        {infoProjects[id].process[i][0]}
-      </h2>
-    );
-    process.push(
-      <p className="font-s" key={`p-${i}`}>
-        {infoProjects[id].process[i][1]}
-      </p>
-    );
+  for (let i = 0; i < infoProjects[id].process.length - 1; i++) {
     switch (i) {
       case 0:
-        break;
       case 1:
-      case 2:
+      case 5:
         process.push(
-          <div key={`img-${i}`} className="img">
-            <img
-              className="undragable unselectable"
-              alt=""
-              src={require(`../../assets/projects/${
-                state.project.id
-              }/${parseInt(i)}.jpg`)}
-            />
+          <div className="item" key={i}>
+            <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
+            <div>
+              <p className="font-s">{infoProjects[id].process[i][1]}</p>
+            </div>
           </div>
         );
+        break;
+      case 3:
         process.push(
-          <p className="font-s" key={`p-${i}.1`}>
-            {infoProjects[id].process[i][2]}
-          </p>
-        );
-        process.push(
-          <div key={`img-${i}.1`} className="img">
-            <img
-              className="undragable unselectable"
-              alt=""
-              src={require(`../../assets/projects/${
-                state.project.id
-              }/${parseInt(i)}.1.jpg`)}
-            />
+          <div className="item" key={i}>
+            <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
+            <div>
+              {infoProjects[id].process[i][2] && (
+                <p className="font-s">{infoProjects[id].process[i][1]}</p>
+              )}
+              <div key={`img-${i - 1}`} className="img">
+                <img
+                  className="undragable unselectable"
+                  alt=""
+                  src={require(`../../assets/projects/${
+                    state.project.id
+                  }/${parseInt(i - 1)}.jpg`)}
+                />
+              </div>
+              {infoProjects[id].process[i][2] && (
+                <p className="font-s">{infoProjects[id].process[i][2]}</p>
+              )}
+              <div className="img">
+                <img
+                  className="undragable unselectable"
+                  alt=""
+                  src={require(`../../assets/projects/${
+                    state.project.id
+                  }/${parseInt(i - 1)}.1.jpg`)}
+                />
+              </div>
+            </div>
           </div>
         );
 
@@ -140,19 +143,33 @@ export default function Project() {
 
       default:
         process.push(
-          <div key={`img-${i}`} className="img">
-            <img
-              className="undragable unselectable"
-              alt=""
-              src={require(`../../assets/projects/${
-                state.project.id
-              }/${parseInt(i)}.jpg`)}
-            />
+          <div key={i} className="item">
+            <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
+            <div>
+              {infoProjects[id].process[i][1] && (
+                <p className="font-s">{infoProjects[id].process[i][1]}</p>
+              )}
+              <div className="img">
+                <img
+                  className="undragable unselectable"
+                  alt=""
+                  src={require(`../../assets/projects/${
+                    state.project.id
+                  }/${parseInt(i - 1)}.jpg`)}
+                />
+              </div>
+            </div>
           </div>
         );
         break;
     }
   }
+
+  process.push(
+    <p key={process.length} className="font-m conclution">
+      {infoProjects[id].process[6][1]}
+    </p>
+  );
 
   return (
     <div id="project">
@@ -166,7 +183,7 @@ export default function Project() {
             <div>
               <div className="description">
                 <div className="font-xs">
-                  <h2 className="font-m">Role</h2>
+                  <h2 className="font-s">Role</h2>
                   <ul>{role}</ul>
                 </div>
                 <div>
@@ -180,6 +197,7 @@ export default function Project() {
                   />
                 </div>
               </div>
+              <hr />
               <div className="process">{process}</div>
             </div>
           </div>

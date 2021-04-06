@@ -127,7 +127,7 @@ export default function Work() {
                 open(parseInt(i));
               }}
             >
-              See project
+              See case study
               <div className="arrow"></div>
             </div>
           </div>

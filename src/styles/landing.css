@@ -23,7 +23,7 @@
 }
 
 #cover > div > div p {
-  font-size: calc(min(12vw, 4rem));
+  font-size: calc(min(11vw, 4rem));
   max-width: calc(min(18em, 80vw));
   margin: 0;
   -webkit-transition: opacity 0.5s ease-out;
@@ -57,20 +57,24 @@
 }
 
 #cover > div > div > div .arrow {
-  left: 50%;
-  top: 3.5rem;
   position: relative;
   -webkit-transform-origin: 0%;
           transform-origin: 0%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   pointer-events: none;
-  width: 7rem;
+  width: 2rem;
   height: 1px;
   background-color: #000;
+  /*
+          &.reset {
+            width: 2rem !important;
+            transform: rotate(90deg) !important;
+          }
+          */
 }
 
-#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #cover > div > div > div .arrow:after {
+#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #contact > div:first-child .arrow:after, #contact > div:first-child #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #cover > div > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;
@@ -132,7 +136,7 @@
 
 #ido .container {
   width: 80%;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 #ido .container .footer {
@@ -364,9 +368,20 @@
   z-index: 2;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 850px) {
   .box.title {
     grid-column: auto / span 2;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  #contact #mailto {
+    -webkit-transform: translate(0, 0) !important;
+            transform: translate(0, 0) !important;
+  }
+  #contact ul {
+    -ms-grid-columns: 100% !important;
+        grid-template-columns: 100% !important;
   }
 }
 
@@ -382,17 +397,10 @@
     -webkit-transform-origin: left;
             transform-origin: left;
   }
-  #contact #mailto {
-    -webkit-transform: translate(0, 0) !important;
-            transform: translate(0, 0) !important;
-  }
-  #contact ul {
-    -ms-grid-columns: 100% !important;
-        grid-template-columns: 100% !important;
-  }
 }
 
 #who > div {
+  padding: 5rem 0 5rem 0;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -414,7 +422,7 @@
 }
 
 #who > div > :nth-child(2) {
-  background-color: #181818;
+  background-color: #000000;
   overflow: hidden;
 }
 
@@ -440,6 +448,7 @@
       grid-template-columns: 100%;
   min-height: 60vh;
   gap: 5em;
+  padding: 5rem 0 5rem 0;
 }
 
 #contact > div:first-child h1 {
@@ -468,6 +477,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   /*transform: translate(-25%, 0em);*/
 }
 
@@ -483,6 +495,56 @@
 
 #contact > div:first-child ul li {
   z-index: 4;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#contact > div:first-child ul li:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact > div:first-child .love {
+  margin: 0 auto 0 auto;
+  color: #f2ebe3;
+  position: absolute;
+  bottom: 1rem;
+}
+
+#contact > div:first-child .arrow {
+  -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
+  transition: width 0.7s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, width 0.7s ease;
+  transition: transform 0.5s ease, width 0.7s ease, -webkit-transform 0.5s ease;
+  margin: 0.5rem 2rem 0 0;
+  width: 6rem;
+  height: 1px;
+  background-color: #402828;
+}
+
+#contact > div:first-child .arrow:before, #cover > div > div > div #contact > div:first-child .arrow:after, #contact > div:first-child .arrow:after, #contact > div:first-child #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #contact > div:first-child .arrow:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 100%;
+  top: 0px;
+  width: 0.5rem;
+  height: 1px;
+  background-color: #402828;
+  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
+          transform: rotate(130deg) translate(-0.5px, 0px);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+#contact > div:first-child .arrow:after {
+  -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
+          transform: rotate(-130deg) translate(0.5px, 0.75px);
 }
 
 #work {
@@ -609,7 +671,7 @@
   background-color: #402828;
 }
 
-#work > .project .title > div > div .arrow:before, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div .arrow:after {
+#work > .project .title > div > div .arrow:before, #cover > div > div > div #work > .project .title > div > div .arrow:after, #contact > div:first-child #work > .project .title > div > div .arrow:after, #work > .project .title > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;

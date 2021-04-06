@@ -110,7 +110,7 @@
 }
 
 #home .arrow.active {
-  width: 6rem;
+  width: calc(min(6rem, 12.5vw));
   -webkit-animation-name: back;
           animation-name: back;
   -webkit-animation-duration: 0.6s;
@@ -362,7 +362,7 @@
   }
   #nav #menu-items {
     height: 100vh;
-    background-color: #a18077;
+    background-color: #d9c7ad;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

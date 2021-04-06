@@ -21,6 +21,7 @@ export default function Cover() {
       0,
       document.querySelector("#work").offsetTop - window.scrollY
     );
+    //document.querySelector("#cover .arrow").classList.add("reset");
   };
 
   const changeCursor = (cursor) => {
@@ -28,6 +29,7 @@ export default function Cover() {
       type: "setState",
       payload: { ...state, cursor: { type: cursor } },
     });
+    //document.querySelector("#cover .arrow").classList.remove("reset");
   };
 
   return (

@@ -184,6 +184,10 @@ p {
   font-size: 2.1rem;
 }
 
+.font-l {
+  font-size: calc(min(3rem, 7vw));
+}
+
 .font-xl {
   font-size: calc(min(15vw, 7rem));
   font-weight: 100;
@@ -336,7 +340,7 @@ ul {
 .line {
   pointer-events: none;
   transition: all 0.2s;
-  height: 1.5px;
+  height: 2px;
   width: 0;
   top: 50%;
   background: #000;
