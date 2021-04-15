@@ -74,7 +74,7 @@
           */
 }
 
-#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #contact > div:first-child .arrow:after, #contact > div:first-child #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #cover > div > div > div .arrow:after {
+#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #cover > div > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;
@@ -498,6 +498,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  pointer-events: none;
 }
 
 #contact > div:first-child ul li:first-child {
@@ -507,6 +508,46 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: calc(min(6rem, 10vw) + 2rem);
+}
+
+#contact > div:first-child ul li:first-child:hover .line {
+  width: calc(40% + min(6rem, 10vw));
+}
+
+#contact > div:first-child ul li:first-child .link {
+  pointer-events: all;
+}
+
+#contact > div:first-child ul li:first-child .line {
+  -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
+  transition: width 0.7s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, width 0.7s ease;
+  transition: transform 0.5s ease, width 0.7s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: translate(calc((-1 * min(6rem, 10vw)) - 2rem), 0.75em);
+          transform: translate(calc((-1 * min(6rem, 10vw)) - 2rem), 0.75em);
+  height: 2px;
+  min-width: calc(min(6rem, 10vw));
+}
+
+#contact > div:first-child ul li:first-child .line:before, #contact > div:first-child ul li:first-child .line:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 100%;
+  top: 0.25px;
+  width: 0.5rem;
+  height: 2px;
+  background-color: #000000;
+  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
+          transform: rotate(130deg) translate(-0.5px, 0px);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+#contact > div:first-child ul li:first-child .line:after {
+  -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
+          transform: rotate(-130deg) translate(0.5px, 0.75px);
 }
 
 #contact > div:first-child .love {
@@ -514,37 +555,6 @@
   color: #f2ebe3;
   position: absolute;
   bottom: 1rem;
-}
-
-#contact > div:first-child .arrow {
-  -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
-  transition: width 0.7s ease, -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease, width 0.7s ease;
-  transition: transform 0.5s ease, width 0.7s ease, -webkit-transform 0.5s ease;
-  margin: 0.5rem 2rem 0 0;
-  width: 6rem;
-  height: 1px;
-  background-color: #402828;
-}
-
-#contact > div:first-child .arrow:before, #cover > div > div > div #contact > div:first-child .arrow:after, #contact > div:first-child .arrow:after, #contact > div:first-child #work > .project .title > div > div .arrow:after, #work > .project .title > div > div #contact > div:first-child .arrow:after {
-  content: "";
-  display: block;
-  position: relative;
-  left: 100%;
-  top: 0px;
-  width: 0.5rem;
-  height: 1px;
-  background-color: #402828;
-  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
-          transform: rotate(130deg) translate(-0.5px, 0px);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
-}
-
-#contact > div:first-child .arrow:after {
-  -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
-          transform: rotate(-130deg) translate(0.5px, 0.75px);
 }
 
 #work {
@@ -587,7 +597,7 @@
 }
 
 #work > .project .mockup.open + .title > div > h1 {
-  color: #ebebeb;
+  color: #f8f8f8;
 }
 
 #work > .project .mockup.open + .title > div > div {
@@ -671,7 +681,7 @@
   background-color: #402828;
 }
 
-#work > .project .title > div > div .arrow:before, #cover > div > div > div #work > .project .title > div > div .arrow:after, #contact > div:first-child #work > .project .title > div > div .arrow:after, #work > .project .title > div > div .arrow:after {
+#work > .project .title > div > div .arrow:before, #cover > div > div > div #work > .project .title > div > div .arrow:after, #work > .project .title > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;

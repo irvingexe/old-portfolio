@@ -12,13 +12,13 @@
             "UX/UI design", 
             "Front-end developement"],
             "process" : [
-                ["Problem & challenge", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-                ["Initial research & planning", "Comencé recopilando información de la aplicación existente y evalué los puntos débiles de los usuarios de software existentes. preguntó a los usuarios actuales sobre su experiencia y qué creen que sería útil agregar / actualizar en el software. Investigué sobre un software POS típico, hice un análisis competitivo y creé un panel de estado de ánimo para cubrir las características necesarias en el software."],
-                ["Sketches & Wireframes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."],
-                ["Design system", "I chose \"Sofia pro\" for headings and \"Inter\" for body texts and tried to have limited font weights, to have consistency and optimize page loading. The colors are mostly taken from the brand guidelines."],
-                ["Hi-fi wireframes", ""],
+                ["Problem & challenge", "POS software often tend to have many options on the screen and sometimes the users felt overwhelmed and frustrated. In the previous version of the software, we had the same issues. Although this software was to be designed from scratch, we took it as an opportunity to learn what went wrong and solve certain issues."],
+                ["Initial research & planning", "I started with gathering information from the existing app and evaluated the pain-points of the existing software users. We did not conduct any formal user interviews due to lack of time & resources but asked the current users about their experience and what they think would be helpful to add/update in the software. I researched about a typical POS software, did some competitive analysis and created a mood board for necessary features to cover in the software."],
+                ["Sketches & Wireframes", "The screen was divided into 4 main sections: navbar, table section, items section, main-billing section. Here are some initial lo-fi wireframes."],
+                ["Design system", "To maintain consistency and ensure efficient design to dev handover, I developed a modular design system based on reusable components and their states, such as cards, list items, and controls. I have covered a few here:"],
+                ["Hi-fi wireframes", "After trying some fonts, colors & icons, I started building hi-fi wireframes. I started with the 'Items page' where we can add/edit item-category & items, then continued with the 'Tables page' & 'Billing page'."],
                 ["Arquitecture", ""],
-                ["Conclusion", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl tortor, non tincidunt massa tincidunt id. Vivamus ut urna metus. Mauris ultricies sapien non massa egestas lacinia."]
+                ["Conclusion", "It was a fun project to work on. There were almost no constraints. The communication went very smooth, from initial discovery to branding and through the final revisions and delivery."]
             ]
     },
     {

@@ -439,9 +439,39 @@ $color: set-color($bg-color);
       li {
         z-index: 4;
         width: fit-content;
+        pointer-events: none;
         &:first-child {
           display: flex;
           align-items: center;
+          margin-left: calc(min(6rem, 10vw) + 2rem);
+          &:hover .line {
+            width: calc(40% + min(6rem, 10vw));
+          }
+          .link {
+            pointer-events: all;
+          }
+          .line {
+            transition: transform 0.5s ease, width 0.7s ease;
+            transform: translate(calc((-1 * min(6rem, 10vw)) - 2rem), 0.75em);
+            height: 2px;
+            min-width: calc(min(6rem, 10vw));
+            &:before {
+              content: "";
+              display: block;
+              position: relative;
+              left: 100%;
+              top: 0.25px;
+              width: 0.5rem;
+              height: 2px;
+              background-color: #000000;
+              transform: rotate(130deg) translate(-0.5px, 0px);
+              transform-origin: 0%;
+            }
+            &:after {
+              @extend .line:before;
+              transform: rotate(-130deg) translate(0.5px, 0.75px);
+            }
+          }
         }
       }
     }
@@ -450,29 +480,6 @@ $color: set-color($bg-color);
       color: #f2ebe3;
       position: absolute;
       bottom: 1rem;
-    }
-    .arrow {
-      transition: transform 0.5s ease, width 0.7s ease;
-      margin: 0.5rem 2rem 0 0;
-      width: 6rem;
-      height: 1px;
-      background-color: #402828;
-      &:before {
-        content: "";
-        display: block;
-        position: relative;
-        left: 100%;
-        top: 0px;
-        width: 0.5rem;
-        height: 1px;
-        background-color: #402828;
-        transform: rotate(130deg) translate(-0.5px, 0px);
-        transform-origin: 0%;
-      }
-      &:after {
-        @extend .arrow:before;
-        transform: rotate(-130deg) translate(0.5px, 0.75px);
-      }
     }
   }
 }
@@ -499,7 +506,7 @@ $color: set-color($bg-color);
       &.open {
         + .title > div {
           > h1 {
-            color: #ebebeb;
+            color: #f8f8f8;
           }
           > div {
             opacity: 0;
