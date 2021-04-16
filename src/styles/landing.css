@@ -498,10 +498,10 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  pointer-events: none;
 }
 
 #contact > div:first-child ul li:first-child {
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

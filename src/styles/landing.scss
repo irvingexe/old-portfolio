@@ -439,8 +439,8 @@ $color: set-color($bg-color);
       li {
         z-index: 4;
         width: fit-content;
-        pointer-events: none;
         &:first-child {
+          pointer-events: none;
           display: flex;
           align-items: center;
           margin-left: calc(min(6rem, 10vw) + 2rem);

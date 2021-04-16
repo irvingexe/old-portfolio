@@ -133,7 +133,7 @@
     width: 0;
   }
   100% {
-    width: 6rem;
+    width: calc(min(6rem, 12.5vw));
   }
 }
 
@@ -167,11 +167,11 @@
 
 @keyframes backCLose {
   0% {
-    width: 9rem;
+    width: calc(min(6rem, 12.5vw));
     left: -3rem;
   }
   50% {
-    width: 9rem;
+    width: calc(min(6rem, 12.5vw));
     left: -3rem;
   }
   100% {
