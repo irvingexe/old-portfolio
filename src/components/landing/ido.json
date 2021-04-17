@@ -55,10 +55,6 @@
         "description": "Native Android applications with Kotlin",
         "tecnologies": [
             {
-                "img": "../../assets/tecnologies/react.webp",
-                "title": "React Native"
-            },
-            {
                 "img": "../../assets/tecnologies/kotlin.webp",
                 "title": "Kotlin"
             },
@@ -71,7 +67,7 @@
     {
         "name": "Design",
         "name2": "",
-        "description": "Wireframing with tools such as Figma, 3D modeling and SVG illustration and animation",
+        "description": "Wireframing with tools such as Figma, SVG illustration and animation",
         "tecnologies": [
             {
                 "img": "../../assets/tecnologies/figma.png",

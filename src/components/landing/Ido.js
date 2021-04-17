@@ -49,9 +49,9 @@ export default function Ido() {
       <div className="font-xxl">
         <div>What I do</div>
         <div className="font-s">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nunc
-          laoreet, viverra nunc vel, condimentum metus. Suspendisse maximus nisl
-          tortor, non tincidunt massa tincidunt id.
+          Every project is meaningful and require a lot of effort to reach the
+          goals. Regardless of which goals you are looking to meet, I can work
+          with you to reach them.
         </div>
       </div>
       <div className="container">

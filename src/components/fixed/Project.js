@@ -22,7 +22,12 @@ export default function Project() {
         scrollContainer.current.getBoundingClientRect().height
       }px`;
     }
-  }, [size, state.project.isOpened]);
+  }, [
+    size,
+    scrollContainer.current
+      ? scrollContainer.current.getBoundingClientRect().height
+      : state.project.isOpened,
+  ]);
 
   // Run scrollrender once page is loaded.
   useEffect(() => {
@@ -111,7 +116,7 @@ export default function Project() {
           <div className="item" key={i}>
             <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
             <div>
-              {infoProjects[id].process[i][2] && (
+              {infoProjects[id].process[i][1] && (
                 <p className="font-s">{infoProjects[id].process[i][1]}</p>
               )}
               <div key={`img-${i - 1}`} className="img">

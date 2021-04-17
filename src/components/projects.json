@@ -12,13 +12,13 @@
             "UX/UI design", 
             "Front-end developement"],
             "process" : [
-                ["Problem & challenge", "POS software often tend to have many options on the screen and sometimes the users felt overwhelmed and frustrated. In the previous version of the software, we had the same issues. Although this software was to be designed from scratch, we took it as an opportunity to learn what went wrong and solve certain issues."],
-                ["Initial research & planning", "I started with gathering information from the existing app and evaluated the pain-points of the existing software users. We did not conduct any formal user interviews due to lack of time & resources but asked the current users about their experience and what they think would be helpful to add/update in the software. I researched about a typical POS software, did some competitive analysis and created a mood board for necessary features to cover in the software."],
-                ["Sketches & Wireframes", "The screen was divided into 4 main sections: navbar, table section, items section, main-billing section. Here are some initial lo-fi wireframes."],
-                ["Design system", "To maintain consistency and ensure efficient design to dev handover, I developed a modular design system based on reusable components and their states, such as cards, list items, and controls. I have covered a few here:"],
-                ["Hi-fi wireframes", "After trying some fonts, colors & icons, I started building hi-fi wireframes. I started with the 'Items page' where we can add/edit item-category & items, then continued with the 'Tables page' & 'Billing page'."],
-                ["Arquitecture", ""],
-                ["Conclusion", "It was a fun project to work on. There were almost no constraints. The communication went very smooth, from initial discovery to branding and through the final revisions and delivery."]
+                ["Problem & challenge", "POS software often tend to have many options on the screen and sometimes the users felt overwhelmed and frustrated. Since this software was to be designed from scratch, we took it as an opportunity to learn what the client actually needed and make the software be a natural etension of their proces."],
+                ["Initial research & planning", "We started gathering information from the previous app and evaluated the problems the users had working with it. We did user interviews to evaluate their experience and what they think would be helpful to add/update in the software. W researched about a typical POS software, did some competitive analysis and created a mood board for necessary features to cover in the software."],
+                ["Sketches & Wireframes", "The main screen was divided into 3 sections: navbar, sidebar and items section. Here are some initial lo-fi wireframes."],
+                ["Design system", "To maintain consistency and ensure efficient design to dev handover, We made a modular design system based on reusable components."],
+                ["Hi-fi wireframes", "After trying some fonts, colors & icons, we started building hi-fi wireframes. We put the focus on the 'Orders page' where users can manage the orders, and continued with the ensuing pages such as 'billing page' and 'New order'."],
+                ["Arquitecture", "The software was created from scratch using react in the front end and node.js cliet side. It was designed as a typical MVC model implementing a REST interface."],
+                ["Conclusion", "It was a fun project to work on. There were almost no constraints. The communication went very smooth, from initial analysis and through the final revisions and deployment."]
             ]
     },
     {

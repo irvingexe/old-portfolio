@@ -405,8 +405,8 @@
   display: -ms-grid;
   display: grid;
   gap: 5rem;
-  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 #who > div h1 {
@@ -426,9 +426,25 @@
   overflow: hidden;
 }
 
-#who > div > :nth-child(2) img {
-  width: 150%;
-  max-width: 20rem;
+#who > div > :nth-child(2).img {
+  position: relative;
+  min-height: calc(max(30vh, 20rem));
+}
+
+#who > div > :nth-child(2).img img {
+  position: absolute;
+}
+
+#who > div > :nth-child(2).img img:first-child {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#who > div > :nth-child(2).img img:nth-child(2) {
+  height: 120%;
+  bottom: 0;
 }
 
 #contact {
@@ -513,6 +529,14 @@
 
 #contact > div:first-child ul li:first-child:hover .line {
   width: calc(40% + min(6rem, 10vw));
+}
+
+#contact > div:first-child ul li:first-child:active .line {
+  width: calc(100% + min(6rem, 10vw) + 2rem + 0.5em);
+}
+
+#contact > div:first-child ul li:first-child.active .line {
+  width: calc(100% + min(6rem, 10vw));
 }
 
 #contact > div:first-child ul li:first-child .link {

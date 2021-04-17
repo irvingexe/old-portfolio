@@ -1,5 +1,6 @@
 import React from "react";
-import me from "../../assets/me.jpg";
+import me from "../../assets/me.png";
+import back from "../../assets/back.jpg";
 
 export default function Who() {
   return (
@@ -18,7 +19,8 @@ export default function Who() {
             involved into interactivity.
           </p>
         </div>
-        <div className="center">
+        <div className="center img">
+          <img src={back} alt="background" />
           <img src={me} alt="Irving Mariscales" />
         </div>
       </div>
