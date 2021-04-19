@@ -82,7 +82,8 @@
 
 #project .modal .modal-scroll .modal-content .description .img img {
   width: 100%;
-  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #project .modal .modal-scroll .modal-content hr {
@@ -110,6 +111,11 @@
       flex-basis: calc(min(40rem, 75vw));
 }
 
+#project .modal .modal-scroll .modal-content .process .item > div .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #project .modal .modal-scroll .modal-content .process h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -123,7 +129,6 @@
 
 #project .modal .modal-scroll .modal-content .process .img img {
   width: 100%;
-  height: 100%;
 }
 
 #project .modal .modal-scroll .modal-content .process .img + p {
