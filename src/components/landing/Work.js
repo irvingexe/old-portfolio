@@ -1,13 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import Context from "../../store/context";
 import infoProjects from "../projects.json";
+import useWindowSize from "../../hooks/useWindowSize";
 
 export default function Work() {
   const { state, actions } = useContext(Context);
+  const size = useWindowSize();
 
   useEffect(() => {
     transform();
-  }, [window.innerWidth]);
+  }, [size.width]);
 
   const changeCursor = (cursor) => {
     actions({
