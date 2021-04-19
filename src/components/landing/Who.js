@@ -1,6 +1,6 @@
 import React from "react";
-import me from "../../assets/me.png";
-import back from "../../assets/back.jpg";
+import me from "../../assets/me.webp";
+import back from "../../assets/back.webp";
 
 export default function Who() {
   return (
@@ -9,14 +9,15 @@ export default function Who() {
         <div>
           <h1 className="font-xxl">Who</h1>
           <p className="font-s">
-            I am a software developer who enjoy creating beautiful design and
-            good experiences. Simply passionated with create pixel perfect
-            experiences.
+            First of all it is amazing having you here, welcome! My name is
+            Irving, I am a software developer who enjoy creating beautiful
+            design and good experiences.
             <br />
             <br />
             I’m majorly involved into front-end developement and I like to play
-            around with different tecnologies. I see myself every day more
-            involved into interactivity.
+            around with different tecnologies. I am passionate about technology
+            and interactivity, the two fields which I'd love to stay more
+            involved and keep about.
           </p>
         </div>
         <div className="center img">

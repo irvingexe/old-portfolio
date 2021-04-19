@@ -108,7 +108,7 @@ export default function Work() {
           }}
         >
           <img
-            src={require(`../../assets/projects/${i}/-1.png`)}
+            src={require(`../../assets/projects/${i}/-1.webp`)}
             alt={infoProjects[i].title}
           />
         </div>

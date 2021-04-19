@@ -17,7 +17,7 @@
       width: 100%;
       display: grid;
       p {
-        font-size: calc(min(11vw, 4rem));
+        font-size: calc(min(3.5 * (1vw + 1vh), 4rem));
         max-width: calc(min(18em, 80vw));
         margin: 0;
         transition: opacity 0.5s ease-out;

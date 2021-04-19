@@ -5,24 +5,24 @@
         "description": "Responsive front-end developement using React",
         "tecnologies": [
             {
-                "img": "./assets/tecnologies/react.png",
+                "img": "./assets/tecnologies/react.webp",
                 "title": "React"
             },
             {
-                "img": "../../assets/tecnologies/materialui.png",
+                "img": "../../assets/tecnologies/materialui.webp",
                 "title": "MaterialUI"
             },
             {
-                "img": "../../assets/tecnologies/sass.png",
+                "img": "../../assets/tecnologies/sass.webp",
                 "title": "SCSS/SASS"
             },
             {
-                "img": "../../assets/tecnologies/woocommerce.png",
+                "img": "../../assets/tecnologies/woocommerce.webp",
                 "title": "Woocommerce"
             },
             {
-                "img": "../../assets/tecnologies/webgl.png",
-                "title": "WebGL"
+                "img": "../../assets/tecnologies/pixijs.webp",
+                "title": "PixiJS"
             }
         ]
     },
@@ -32,19 +32,19 @@
         "description": "Backend microservices as well as database management",
         "tecnologies": [
             {
-                "img": "../../assets/tecnologies/node.png",
+                "img": "../../assets/tecnologies/node.webp",
                 "title": "Node.js"
             },
             {
-                "img": "../../assets/tecnologies/java.png",
+                "img": "../../assets/tecnologies/java.webp",
                 "title": "Java"
             },
             {
-                "img": "../../assets/tecnologies/mongodb.png",
+                "img": "../../assets/tecnologies/mongodb.webp",
                 "title": "MongoDB"
             },
             {
-                "img": "../../assets/tecnologies/sql.png",
+                "img": "../../assets/tecnologies/sql.webp",
                 "title": "SQL"
             }
         ]
@@ -55,11 +55,11 @@
         "description": "Native Android applications with Kotlin",
         "tecnologies": [
             {
-                "img": "../../assets/tecnologies/kotlin.png",
+                "img": "../../assets/tecnologies/kotlin.webp",
                 "title": "Kotlin"
             },
             {
-                "img": "../../assets/tecnologies/firebase.png",
+                "img": "../../assets/tecnologies/firebase.webp",
                 "title": "Firebase"
             }
         ]
@@ -70,15 +70,15 @@
         "description": "Wireframing with tools such as Figma, SVG illustration and animation",
         "tecnologies": [
             {
-                "img": "../../assets/tecnologies/figma.png",
+                "img": "../../assets/tecnologies/figma.webp",
                 "title": "Figma"
             },
             {
-                "img": "../../assets/tecnologies/photoshop.png",
+                "img": "../../assets/tecnologies/photoshop.webp",
                 "title": "Photoshop"
             },
             {
-                "img": "../../assets/tecnologies/illustrator.png",
+                "img": "../../assets/tecnologies/illustrator.webp",
                 "title": "Illustrator"
             }
         ]

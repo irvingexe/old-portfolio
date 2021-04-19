@@ -126,7 +126,7 @@ export default function Project() {
                   alt=""
                   src={require(`../../assets/projects/${
                     state.project.id
-                  }/${parseInt(i - 1)}.jpg`)}
+                  }/${parseInt(i - 1)}.webp`)}
                 />
               </div>
               {infoProjects[id].process[i][2] && (
@@ -138,7 +138,7 @@ export default function Project() {
                   alt=""
                   src={require(`../../assets/projects/${
                     state.project.id
-                  }/${parseInt(i - 1)}.1.jpg`)}
+                  }/${parseInt(i - 1)}.1.webp`)}
                 />
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function Project() {
                   alt=""
                   src={require(`../../assets/projects/${
                     state.project.id
-                  }/${parseInt(i - 1)}.jpg`)}
+                  }/${parseInt(i - 1)}.webp`)}
                 />
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function Project() {
                   <img
                     className="undragable unselectable"
                     alt=""
-                    src={require(`../../assets/projects/${state.project.id}/0.jpg`)}
+                    src={require(`../../assets/projects/${state.project.id}/0.webp`)}
                   />
                 </div>
               </div>
