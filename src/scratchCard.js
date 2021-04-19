@@ -4,6 +4,7 @@ PIXI.utils.skipHello();
 let color = { background: 0, brush: 0 };
 let lines = [];
 let cleaning = false;
+let cancel;
 let requests = [];
 let mousePosition = { x: 0, y: 0 };
 let brushSize =
@@ -113,7 +114,7 @@ const clean = () => {
     app.renderer.render(gContainer, renderTexture, false, null, false);
   } else {
     requests.map((i) => {
-      cancelAnimationFrame(i);
+      cancel = cancelAnimationFrame(i);
     });
     lines = [];
     gContainer.scale.x = 0;

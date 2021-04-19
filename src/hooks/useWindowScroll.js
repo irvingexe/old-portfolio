@@ -1,22 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { debounce } from "lodash";
 
 export default function useWindowScroll() {
   const [windowScroll, setWindowScroll] = useState(false);
-  let start = false;
+  let start = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!start) {
+      if (!start.current) {
         setWindowScroll(true);
-        start = true;
+        start.current = true;
       }
       debounceScroll();
     };
 
     const debounceScroll = debounce(() => {
       setWindowScroll(false);
-      start = false;
+      start.current = false;
     }, 100);
 
     window.addEventListener("scroll", handleScroll);
