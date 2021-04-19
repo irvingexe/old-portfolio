@@ -123,7 +123,7 @@ export default function Contact() {
               </a>
             </li>
           </ul>
-          <p className="love font-s">Made with ♥ by Irving Mariscales</p>
+          <p className="love font-s"></p>
         </div>
       </div>
     </div>
