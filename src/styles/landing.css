@@ -156,9 +156,8 @@
 }
 
 #ido .box img {
-  width: 5rem;
-  -webkit-filter: saturate(0) contrast(4);
-          filter: saturate(0) contrast(4);
+  max-width: 5rem;
+  max-height: 5rem;
 }
 
 #ido .box .border {

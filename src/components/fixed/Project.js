@@ -24,6 +24,7 @@ export default function Project() {
     }
   }, [
     size,
+    state.project.isOpened,
     scrollContainer.current
       ? scrollContainer.current.getBoundingClientRect().height
       : state.project.isOpened,

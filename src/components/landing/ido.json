@@ -5,7 +5,7 @@
         "description": "Responsive front-end developement using React",
         "tecnologies": [
             {
-                "img": "./assets/tecnologies/react.webp",
+                "img": "./assets/tecnologies/react.png",
                 "title": "React"
             },
             {
@@ -40,11 +40,11 @@
                 "title": "Java"
             },
             {
-                "img": "../../assets/tecnologies/mongodb.webp",
+                "img": "../../assets/tecnologies/mongodb.png",
                 "title": "MongoDB"
             },
             {
-                "img": "../../assets/tecnologies/sql.webp",
+                "img": "../../assets/tecnologies/sql.png",
                 "title": "SQL"
             }
         ]
@@ -55,11 +55,11 @@
         "description": "Native Android applications with Kotlin",
         "tecnologies": [
             {
-                "img": "../../assets/tecnologies/kotlin.webp",
+                "img": "../../assets/tecnologies/kotlin.png",
                 "title": "Kotlin"
             },
             {
-                "img": "../../assets/tecnologies/firebase.webp",
+                "img": "../../assets/tecnologies/firebase.png",
                 "title": "Firebase"
             }
         ]
@@ -74,7 +74,7 @@
                 "title": "Figma"
             },
             {
-                "img": "../../assets/tecnologies/photoshop.webp",
+                "img": "../../assets/tecnologies/photoshop.png",
                 "title": "Photoshop"
             },
             {
