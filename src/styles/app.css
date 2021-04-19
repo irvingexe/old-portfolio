@@ -68,7 +68,7 @@ body:not(:hover) #cursor > :first-child {
 }
 
 .App {
-  font-family: "Montserrat", "Segoe UI", "Roboto", sans-serif;
+  font-family: "Montserrat", "Segoe UI", "Roboto", Helvetica, sans-serif;
   position: fixed;
   top: 0;
   left: 0;
