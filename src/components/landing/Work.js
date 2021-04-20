@@ -7,9 +7,11 @@ export default function Work() {
   const { state, actions } = useContext(Context);
   const size = useWindowSize();
 
+  /*
   useEffect(() => {
     transform();
   }, [size.width]);
+  */
 
   const changeCursor = (cursor) => {
     actions({
@@ -50,23 +52,8 @@ export default function Work() {
     window.scrollBy(0, -window.scrollY);
   };
 
+  /*
   const transform = (screenX, screenY) => {
-    /*
-    //only if scrolling
-    if (!state.project.isOpened) {
-      const xAxisP = (screenX ? screenX : window.innerWidth / 2) / 2 / 30 - 30;
-      const yAxisP = -(screenY ? screenY : window.innerWidth / 2) / 2 / 30 - 75;
-      const xAxisD = (screenX ? screenX : window.innerWidth / 2) / 2 / 30 - 20;
-      const yAxisD = -(screenY ? screenY : window.innerWidth / 2) / 2 / 30 - 80;
-
-      document.querySelectorAll(".phone .scene ").forEach((e) => {
-        e.style.transform = `rotateX(${yAxisP}deg) rotateZ(${xAxisP}deg) scale3d(${scale},${scale},${scale})`;
-      });
-      document.querySelectorAll(".desktop .scene").forEach((e) => {
-        e.style.transform = `rotateX(${yAxisD}deg) rotateZ(${xAxisD}deg) scale3d(${scale},${scale},${scale})`;
-      });
-    }
-    */
     document.querySelectorAll(".mockup").forEach((e) => {
       e.style.transform = `translateX(calc((-1 * ${
         (screenX - window.innerWidth / 2) * 0.05
@@ -82,6 +69,7 @@ export default function Work() {
       }px)))`;
     });
   };
+  */
 
   /*
   const stopTransform = () => {
@@ -138,9 +126,5 @@ export default function Work() {
     );
   }
 
-  return (
-    <div id="work" onMouseMove={(e) => transform(e.screenX, e.screenY)}>
-      {projects}
-    </div>
-  );
+  return <div id="work">{projects}</div>;
 }
