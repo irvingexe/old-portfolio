@@ -83,19 +83,10 @@ export default function Work() {
     projects.push(
       <div key={i} className="center project scrollOut" data-section="work">
         <div
-          onClick={() => {
-            open(parseInt(i));
-          }}
           className={
             "mockup center unselectable" +
             (state.project.isOpened ? " open" : "")
           }
-          onMouseEnter={() => {
-            changeCursor("hover eye");
-          }}
-          onMouseLeave={() => {
-            changeCursor("default");
-          }}
         >
           <img
             src={require(`../../assets/projects/${i}/-1.webp`)}
@@ -104,9 +95,22 @@ export default function Work() {
         </div>
         <div className="title parallax" data-speed="-0.2">
           <div>
-            <h1 className="font-xl">{infoProjects[i].title}</h1>
+            <label
+              className="font-xl name"
+              onClick={() => {
+                open(parseInt(i));
+              }}
+              onMouseLeave={() => {
+                changeCursor("default");
+              }}
+              onMouseEnter={() => {
+                changeCursor("hover eye");
+              }}
+            >
+              {infoProjects[i].title}
+            </label>
             <div
-              className="font-xs"
+              className="font-xs open"
               onMouseEnter={() => {
                 changeCursor("hover eye");
               }}

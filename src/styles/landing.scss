@@ -525,10 +525,10 @@ $color: set-color($bg-color);
       transition: all 0.5s ease-out;
       &.open {
         + .title > div {
-          > h1 {
+          > .name {
             color: #f8f8f8;
           }
-          > div {
+          > .open {
             opacity: 0;
           }
         }
@@ -583,15 +583,16 @@ $color: set-color($bg-color);
           transition: all 0.5s ease;
         }
 
-        h1 {
+        > .name {
           //font-family: "Playfair Display", serif;
           font-family: "Poppins", sans-serif;
           font-weight: 600;
           transform-origin: 0;
           line-height: 1.2em;
           transition: color 0.5s ease-out;
+          pointer-events: all;
         }
-        > div {
+        > .open {
           transform-origin: 0;
           pointer-events: all;
           width: 15rem;
