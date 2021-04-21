@@ -108,7 +108,7 @@ const clean = () => {
   times.push(now);
   fps = times.length;
 
-  frames = (60 * 60) / fps;
+  frames = (60 * 20) / fps;
 
   cleaning = true;
   gContainer.scale.x += 0.1;

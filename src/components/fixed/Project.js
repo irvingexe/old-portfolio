@@ -9,7 +9,7 @@ export default function Project() {
   const size = useWindowSize();
   const scrollContainer = useRef();
   let data = {
-    ease: 0.07,
+    ease: 0.08,
     current: 0,
     previous: 0,
     rounded: 0,
@@ -44,17 +44,37 @@ export default function Project() {
   const times = [];
   let fps;
 
+  const mode = (a) =>
+    Object.values(
+      a.reduce((count, e) => {
+        if (!(e in count)) {
+          count[e] = [0, e];
+        }
+
+        count[e][0]++;
+        return count;
+      }, {})
+    ).reduce((a, v) => (v[0] < a[0] ? a : v), [0, null])[1];
+
+  const modes = useRef([]);
+
   // Scrolling
   const skewScrolling = () => {
-    //dynamic frame rate
-    const now = performance.now();
-    while (times.length > 0 && times[0] <= now - 1000) {
-      times.shift();
-    }
-    times.push(now);
-    fps = times.length;
+    if (modes.current.length < 100) {
+      //dynamic frame rate
+      const now = performance.now();
+      while (times.length > 0 && times[0] <= now - 1000) {
+        times.shift();
+      }
+      times.push(now);
+      fps = times.length;
 
-    data.ease = (60 * 0.08) / fps;
+      data.ease = (60 * 0.08) / fps;
+      modes.current.push(data.ease);
+    } else if (modes.current.length === 100) {
+      modes.current.push(data.ease);
+      data.ease = mode(modes.current);
+    }
 
     //Set Current to the scroll position amount
     data.current = window.scrollY;
