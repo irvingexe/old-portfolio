@@ -172,7 +172,6 @@ export default function Landing() {
         state.project.isOpened ? "project-open" : ""
       }`}
     >
-      <div>{window.mobileAndTabletCheck() ? "mobile" : "desktop"}</div>
       <Cover />
       <Work />
       <Ido />
