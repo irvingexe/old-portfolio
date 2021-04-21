@@ -13,8 +13,8 @@ export default function Landing() {
   const size = useWindowSize();
   const scrollContainer = useRef();
   const windowScroll = useWindowScroll();
-  const data = {
-    ease: 0.05,
+  let data = {
+    ease: 0.08,
     current: 0,
     previous: state.scroll.y,
     rounded: 0,
@@ -52,8 +52,21 @@ export default function Landing() {
     }
   }, [windowScroll]);
 
+  const times = [];
+  let fps;
+
   // Scrolling
   const skewScrolling = () => {
+    //dynamic frame rate
+    const now = performance.now();
+    while (times.length > 0 && times[0] <= now - 1000) {
+      times.shift();
+    }
+    times.push(now);
+    fps = times.length;
+
+    data.ease = (60 * 0.08) / fps;
+
     const cta = document.querySelector("#cover .arrow +div");
     const arrow = document.querySelector("#cover .arrow");
     const hello = document.querySelector("#cover p");

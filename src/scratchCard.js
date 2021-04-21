@@ -5,6 +5,9 @@ let color = { background: 0, brush: 0 };
 let lines = [];
 let cleaning = false;
 let requests = [];
+const times = [];
+let fps;
+let frames = 40;
 let mousePosition = { x: 0, y: 0 };
 let brushSize =
   window.innerWidth < window.innerHeight
@@ -97,6 +100,16 @@ export const pointerMove = (position) => {
 };
 
 const clean = () => {
+  //dynamic frame rate
+  const now = performance.now();
+  while (times.length > 0 && times[0] <= now - 1000) {
+    times.shift();
+  }
+  times.push(now);
+  fps = times.length;
+
+  frames = (60 * 60) / fps;
+
   cleaning = true;
   gContainer.scale.x += 0.1;
   gContainer.scale.y += 0.1;
@@ -105,10 +118,10 @@ const clean = () => {
     mousePosition.y - gContainer.width / 2
   );
 
-  if (gContainer.scale.x > 0.1 * 30 + 0.5) {
-    rec.alpha += 1 / 30;
+  if (gContainer.scale.x > 1 / (frames / 2) + 0.5) {
+    rec.alpha += 1 / (frames / 2);
   }
-  if (gContainer.scale.x < 0.1 * 60 + 0.5) {
+  if (rec.alpha < 1) {
     requests.push(requestAnimationFrame(clean));
     app.renderer.render(gContainer, renderTexture, false, null, false);
   } else {
@@ -137,14 +150,8 @@ const clean = () => {
 };
 
 const resetBrush = () => {
-  if (gContainer.scale.x < 0.5) {
+  if (rec.alpha >= 0) {
     rec.alpha -= 0.06;
-    gContainer.scale.x += 0.03;
-    gContainer.scale.y += 0.03;
-    gContainer.position.set(
-      mousePosition.x - gContainer.width / 2,
-      mousePosition.y - gContainer.width / 2
-    );
     app.renderer.render(gContainer, renderTexture, true, null, false);
     requests.push(requestAnimationFrame(resetBrush));
   } else {
@@ -155,7 +162,7 @@ const resetBrush = () => {
     gContainer.scale.x = 0.5;
     gContainer.scale.y = 0.5;
     rec.alpha = 0;
-    pointerMove({ x: mousePosition.x, y: mousePosition.y });
+    //pointerMove({ x: mousePosition.x, y: mousePosition.y });
   }
 };
 

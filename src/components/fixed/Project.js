@@ -8,7 +8,7 @@ export default function Project() {
   const { state } = useContext(Context);
   const size = useWindowSize();
   const scrollContainer = useRef();
-  const data = {
+  let data = {
     ease: 0.07,
     current: 0,
     previous: 0,
@@ -41,8 +41,21 @@ export default function Project() {
     }
   }, [state.project.isOpened]);
 
+  const times = [];
+  let fps;
+
   // Scrolling
   const skewScrolling = () => {
+    //dynamic frame rate
+    const now = performance.now();
+    while (times.length > 0 && times[0] <= now - 1000) {
+      times.shift();
+    }
+    times.push(now);
+    fps = times.length;
+
+    data.ease = (60 * 0.08) / fps;
+
     //Set Current to the scroll position amount
     data.current = window.scrollY;
     // Set Previous to the scroll previous position
