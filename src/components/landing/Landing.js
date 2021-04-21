@@ -22,7 +22,7 @@ export default function Landing() {
   const requests = useRef([]);
 
   useEffect(() => {
-    if (!state.project.isOpened) {
+    if (!state.project.isOpened && !windowScroll) {
       document.body.style.height = `${
         scrollContainer.current.getBoundingClientRect().height
       }px`;
