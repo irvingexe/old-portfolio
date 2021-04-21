@@ -46,7 +46,7 @@ export default function Landing() {
     state.project.isOpened,
   ]);
 
-  // Run scrollrender once page is loaded.
+  //Run scrollrender once page is loaded.
   useEffect(() => {
     if (!state.project.isOpened) {
       requests.current.push(requestAnimationFrame(skewScrolling));
