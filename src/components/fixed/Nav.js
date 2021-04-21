@@ -31,8 +31,6 @@ export default function Nav() {
   };
 
   const changeSection = (section) => {
-    //document.body.style.overflow = "overlay";
-
     if (document.querySelector(".arrow.active")) {
       setClose(true);
       setTimeout(() => {
@@ -85,6 +83,7 @@ export default function Nav() {
       });
     }, 1);
 
+    document.body.style.overflow = "overlay";
     setMenu(false);
   };
 
