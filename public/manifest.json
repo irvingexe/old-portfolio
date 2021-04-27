@@ -1,6 +1,6 @@
 {
   "short_name": "Irving Work",
-  "name": "Irving Portfolio",
+  "name": "Irving Mariscales — Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#eae6e1",
-  "background_color": "#eae6e1"
+  "theme_color": "#F2EBE3",
+  "background_color": "#F2EBE3"
 }
