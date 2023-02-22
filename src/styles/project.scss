@@ -8,6 +8,29 @@
     z-index: 2;
     overflow: hidden;
 
+    .site {
+      background-color: #171717;
+      padding: 1rem;
+      border-radius: 2rem;
+      color: #fff;
+      position: absolute;
+      right: calc(min(10vw, 2rem));
+      bottom: calc(min(10vw, 2rem));
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border: solid 2px #171717;
+
+      &:hover {
+        padding: 2rem;
+        border-radius: 4rem;
+        background-color: #f8f8f8;
+        color: #171717;
+      }
+
+      &:active {
+        padding: 3rem;
+      }
+    }
+
     .modal-scroll {
       //transition: all 0.5s ease-out;
       position: fixed;

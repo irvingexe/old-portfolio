@@ -46,19 +46,16 @@ html {
 body {
   overflow: overlay;
 }
-
 body:not(:hover) #cursor > :first-child {
   opacity: 0;
   width: 0;
   height: 0;
-  -webkit-transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
   transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
 
 ::-webkit-scrollbar {
   width: 5px;
 }
-
 ::-webkit-scrollbar:hover {
   width: 7px;
 }
@@ -75,7 +72,6 @@ body:not(:hover) #cursor > :first-child {
   height: 100%;
   width: 100%;
 }
-
 .App .logo {
   position: fixed;
   top: 0;
@@ -92,24 +88,19 @@ body:not(:hover) #cursor > :first-child {
   -webkit-clip-path: inset(0% 0% 0% 0%);
           clip-path: inset(0% 0% 0% 0%);
 }
-
 .App .logo > :first-child {
-  width: calc(max(min(25vh, 25vw), 7rem));
-  height: calc(max(min(25vh, 25vw), 7rem));
+  width: max(min(25vh, 25vw), 7rem);
+  height: max(min(25vh, 25vw), 7rem);
 }
-
-.App > .sections > div:not(#cover) {
+.App > .sections > div:not(#cover):not(#credits) {
   min-height: 100vh;
 }
-
 .App > .sections > div > * {
   margin-left: 10%;
   margin-right: 10%;
 }
 
 @-webkit-keyframes smile {
-  0% {
-  }
   50% {
     width: calc(100vw - 3rem);
     height: calc(100vh - 3rem);
@@ -127,8 +118,6 @@ body:not(:hover) #cursor > :first-child {
 }
 
 @keyframes smile {
-  0% {
-  }
   50% {
     width: calc(100vw - 3rem);
     height: calc(100vh - 3rem);
@@ -144,7 +133,6 @@ body:not(:hover) #cursor > :first-child {
             clip-path: inset(0% 0% 100% 0%);
   }
 }
-
 *:focus {
   outline: none;
 }
@@ -184,15 +172,9 @@ p {
 }
 
 .center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .bold {
@@ -216,11 +198,11 @@ p {
 }
 
 .font-l {
-  font-size: calc(min(3rem, 7vw));
+  font-size: min(3rem, 7vw);
 }
 
 .font-xl {
-  font-size: calc(min(15vw, 7rem));
+  font-size: min(15vw, 7rem);
   font-weight: 100;
 }
 
@@ -233,7 +215,6 @@ p {
     font-size: 8em;
   }
 }
-
 ul {
   list-style: none;
   padding: 0;
@@ -244,138 +225,117 @@ ul {
 }
 
 #cursor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   pointer-events: none;
   z-index: 3;
 }
-
 #cursor > :first-child {
-  -webkit-transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, -webkit-transform 0s;
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, -webkit-transform 0s;
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, transform 0s;
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, transform 0s, -webkit-transform 0s;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, transform 0s;
   background-color: #000;
   border-radius: 50%;
   width: 0.5rem;
   height: 0.5rem;
   opacity: 1;
 }
-
 #cursor > div {
-  -webkit-transition: all 0.3s ease, left 0s, top 0s;
   transition: all 0.3s ease, left 0s, top 0s;
   position: absolute;
   border-radius: 50%;
   width: 0;
   height: 0;
 }
-
 #cursor > div.hover {
   background-color: rgba(0, 0, 0, 0.11);
 }
-
 #cursor > div.hover > :first-child {
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   width: 0%;
 }
-
 #cursor > div.msg {
   font-size: 0;
   white-space: nowrap;
   color: #fcfcfc;
 }
-
 #cursor > div.img {
   opacity: 0;
 }
-
 #cursor > div.img img {
   width: 100%;
   height: 100%;
 }
-
 #cursor.cursor-hover > :first-child {
-  -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
   width: 0;
   height: 0;
   opacity: 0;
 }
-
 #cursor.cursor-hover .hover {
   /*
-      background-color: #00000000;
-      backdrop-filter: invert(1);
-      */
+  background-color: #00000000;
+  backdrop-filter: invert(1);
+  */
   width: 4em;
   height: 4em;
   /*
-      & .back {
-        background-color: #fff;
-        backdrop-filter: none;
-      }
-      */
+  & .back {
+    background-color: #fff;
+    backdrop-filter: none;
+  }
+  */
 }
-
 #cursor.cursor-hover .img {
   width: 4em;
   height: 4em;
   opacity: 0;
 }
-
 #cursor.eye .hover > :first-child {
   width: 80%;
 }
-
 #cursor.eye .hover > :first-child svg {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  -webkit-backdrop-filter: invert;
+          backdrop-filter: invert;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
+#cursor.arrow .hover.img {
+  opacity: 1;
+}
+#cursor.arrow .hover.img > :first-child {
+  opacity: 1;
+  width: 50%;
+  height: 50%;
+}
 #cursor.cursor-image .hover {
   background-color: #fcfcfc;
   width: 9.9em;
   height: 9.9em;
 }
-
 #cursor.cursor-image .img {
   opacity: 1;
   width: 10em;
   height: 10em;
 }
-
 #cursor.cursor-project > :first-child {
   width: 0;
   height: 0;
 }
-
 #cursor.cursor-project .hover {
   /*
-      background-color: #00000000;
-      backdrop-filter: invert(1);
-      */
+  background-color: #00000000;
+  backdrop-filter: invert(1);
+  */
   width: 10em;
   height: 10em;
   /*
-      &.back {
-        background-color: #fff;
-        backdrop-filter: none;
-        z-index: -100000;
-      }
-      */
+  &.back {
+    background-color: #fff;
+    backdrop-filter: none;
+    z-index: -100000;
+  }
+  */
 }
-
 .link:hover .line {
   width: 40%;
 }
@@ -390,23 +350,20 @@ ul {
 
 .line {
   pointer-events: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2px;
   width: 0;
   top: 50%;
   background: #000;
-  -webkit-transform: translate(0px, 0.75em);
-          transform: translate(0px, 0.75em);
+  transform: translate(0px, 0.75em);
 }
 
 ::-moz-selection {
-  color: white;
-  background: black;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
 }
 
 ::selection {
-  color: white;
-  background: black;
-}
-/*# sourceMappingURL=app.css.map */
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}/*# sourceMappingURL=app.css.map */

@@ -5,8 +5,7 @@
   z-index: 5;
   pointer-events: none;
 }
-
-#nav:before {
+#nav:before, #home #nav.arrow:after {
   display: block;
   background-color: #000;
   height: 0.5px;
@@ -15,21 +14,16 @@
   top: 100%;
   position: absolute;
 }
-
 #nav #menu-items {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 #nav #menu-items li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 1.3em;
   pointer-events: all;
 }
-
 #nav #menu-items .contact {
   position: absolute;
   right: 0.5em;
@@ -58,7 +52,6 @@
   width: fit-content;
   padding-right: 2.6rem;
 }
-
 #home div:not(.arrow) {
   width: 1.8rem;
   height: 1.8rem;
@@ -66,28 +59,21 @@
   padding-left: 1.8rem;
   position: absolute;
 }
-
-#home:hover .arrow.active,
-#home:active .arrow.active {
+#home:hover .arrow.active, #home:active .arrow.active {
   width: 9rem;
   left: -3rem;
 }
-
 #home .arrow {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
   width: 0;
   height: 1px;
   position: relative;
   top: 50%;
   left: 2.1rem;
-  -webkit-transition: width 0.6s ease, left 0.6s ease;
   transition: width 0.6s ease, left 0.6s ease;
   background-color: #000;
 }
-
 #home .arrow:before, #home .arrow:after {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   content: "";
   display: block;
@@ -96,57 +82,44 @@
   top: 0;
   width: 0;
   height: 1px;
-  background-color: #000;
-  -webkit-transform: rotate(130deg) translate(-0.25px, 0.25px);
-          transform: rotate(130deg) translate(-0.25px, 0.25px);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  background-color: inherit;
+  transform: rotate(130deg) translate(-0.25px, 0.25px);
+  transform-origin: 0%;
 }
-
 #home .arrow:after {
   top: -1px;
-  -webkit-transform: rotate(-130deg) translate(-0.25px, 0.25px);
-          transform: rotate(-130deg) translate(-0.25px, 0.25px);
+  transform: rotate(-130deg) translate(-0.25px, 0.25px);
 }
-
 #home .arrow.active {
-  width: calc(min(6rem, 12.5vw));
+  width: min(6rem, 12.5vw);
   -webkit-animation-name: back;
           animation-name: back;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
 }
-
-#home .arrow.active:before, #home .active.arrow:after {
+#home .arrow.active:before, #home .arrow.active:after {
   width: 0.5rem;
   -webkit-animation-name: backBefore;
           animation-name: backBefore;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
 }
-
 #home .arrow.active:after {
   -webkit-animation-name: backAfter;
           animation-name: backAfter;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
 }
-
 #home .arrow.close {
   width: 0;
   left: 2.1rem;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
-#home .arrow.close:before, #home .close.arrow:after {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+#home .arrow.close:before, #home .arrow.close:after {
+  transform: rotate(180deg);
 }
-
 #home .arrow.close:after {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 @-webkit-keyframes back {
@@ -157,7 +130,7 @@
     width: 0;
   }
   100% {
-    width: calc(min(6rem, 12.5vw));
+    width: min(6rem, 12.5vw);
   }
 }
 
@@ -169,85 +142,68 @@
     width: 0;
   }
   100% {
-    width: calc(min(6rem, 12.5vw));
+    width: min(6rem, 12.5vw);
   }
 }
-
 @-webkit-keyframes backBefore {
   0% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   50% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   100% {
-    -webkit-transform: rotate(130deg);
-            transform: rotate(130deg);
+    transform: rotate(130deg);
   }
 }
-
 @keyframes backBefore {
   0% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   50% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   100% {
-    -webkit-transform: rotate(130deg);
-            transform: rotate(130deg);
+    transform: rotate(130deg);
   }
 }
-
 @-webkit-keyframes backAfter {
   0% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   50% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   100% {
-    -webkit-transform: rotate(230deg);
-            transform: rotate(230deg);
+    transform: rotate(230deg);
   }
 }
-
 @keyframes backAfter {
   0% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   50% {
     width: 0;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   100% {
-    -webkit-transform: rotate(230deg);
-            transform: rotate(230deg);
+    transform: rotate(230deg);
   }
 }
-
 @-webkit-keyframes backCLose {
   0% {
-    width: calc(min(6rem, 12.5vw));
+    width: min(6rem, 12.5vw);
     left: -3rem;
   }
   50% {
-    width: calc(min(6rem, 12.5vw));
+    width: min(6rem, 12.5vw);
     left: -3rem;
   }
   100% {
@@ -255,14 +211,13 @@
     left: 1.6rem;
   }
 }
-
 @keyframes backCLose {
   0% {
-    width: calc(min(6rem, 12.5vw));
+    width: min(6rem, 12.5vw);
     left: -3rem;
   }
   50% {
-    width: calc(min(6rem, 12.5vw));
+    width: min(6rem, 12.5vw);
     left: -3rem;
   }
   100% {
@@ -270,20 +225,12 @@
     left: 1.6rem;
   }
 }
-
 #logo-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100px;
 }
-
 #logo-text:hover .text {
   opacity: 1;
   width: 100px;
@@ -295,7 +242,6 @@
     opacity: 0;
     -webkit-animation: App-logo-spin infinite 5s linear;
             animation: App-logo-spin infinite 5s linear;
-    -webkit-transition: all 0.33s cubic-bezier(1, 0, 0, 1);
     transition: all 0.33s cubic-bezier(1, 0, 0, 1);
     font-size: 100px;
     letter-spacing: 15px;
@@ -306,29 +252,22 @@
     animation: App-logo-spin infinite reverse 300ms linear;
   }
 }
-
 @-webkit-keyframes App-logo-spin {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes App-logo-spin {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @-webkit-keyframes App-logo-shows {
   from {
     opacity: 0;
@@ -339,7 +278,6 @@
     width: 120px;
   }
 }
-
 @keyframes App-logo-shows {
   from {
     opacity: 0;
@@ -350,7 +288,6 @@
     width: 120px;
   }
 }
-
 @media screen and (max-width: 600px) {
   #nav {
     top: 0em;
@@ -363,26 +300,16 @@
   #nav #menu-items {
     height: 100vh;
     background-color: #d9c7ad;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     -webkit-clip-path: circle(0px at 86% 2em);
             clip-path: circle(0px at 86% 2em);
-    -webkit-transition: all 0.5s ease-out, height 0s;
     transition: all 0.5s ease-out, height 0s;
     list-style: none;
     margin: 0;
     padding: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #nav #menu-items.active {
     -webkit-clip-path: circle(150% at 86% 2em);
@@ -395,22 +322,16 @@
     position: initial;
   }
 }
-
 .buns {
   width: 1.625em;
   height: 1.625em;
   list-style: none;
   margin: 0;
   padding: 0;
-  -webkit-transition: color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
   transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1), color 1s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1), color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   color: #000;
 }
-
 .buns li.bun {
   width: 100%;
   height: 2px;
@@ -418,26 +339,15 @@
   position: absolute;
   top: 50%;
   margin-top: -0.75px;
-  -webkit-transform: translateY(-3.75px) translateZ(0);
-          transform: translateY(-3.75px) translateZ(0);
-  -webkit-transition: background-color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: background-color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(-3.75px) translateZ(0);
   transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1), background-color 1s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1), background-color 1s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
 .buns li.bun:last-child {
-  -webkit-transform: translateY(3.75px) translateZ(0);
-          transform: translateY(3.75px) translateZ(0);
+  transform: translateY(3.75px) translateZ(0);
 }
-
 .buns.active li.bun {
-  -webkit-transform: rotate(45deg) translateZ(0);
-          transform: rotate(45deg) translateZ(0);
+  transform: rotate(45deg) translateZ(0);
 }
-
 .buns.active li.bun:last-child {
-  -webkit-transform: rotate(-45deg) translateZ(0);
-          transform: rotate(-45deg) translateZ(0);
-}
-/*# sourceMappingURL=nav.css.map */
+  transform: rotate(-45deg) translateZ(0);
+}/*# sourceMappingURL=nav.css.map */

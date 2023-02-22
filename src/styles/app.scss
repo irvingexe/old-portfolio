@@ -96,7 +96,7 @@ body {
     }
   }
   > .sections {
-    > div:not(#cover) {
+    > div:not(#cover):not(#credits) {
       min-height: 100vh;
     }
     > div > * {
@@ -283,10 +283,21 @@ ul {
       > :first-child {
         width: 80%;
         svg {
+          backdrop-filter: invert;
           display: flex;
           justify-content: center;
           align-items: center;
         }
+      }
+    }
+  }
+  &.arrow {
+    .hover.img {
+      opacity: 1;
+      > :first-child {
+        opacity: 1;
+        width: 50%;
+        height: 50%;
       }
     }
   }

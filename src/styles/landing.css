@@ -1,38 +1,33 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 .bg-title {
   position: absolute;
   width: 80%;
-  color: rgba(115, 89, 89, 0.8);
+  color: hsla(0deg, 13%, 40%, 0.8);
   z-index: -1;
 }
 
 #cover {
   height: 100%;
 }
-
 #cover > div {
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
 }
-
 #cover > div > div {
   width: 100%;
-  display: -ms-grid;
   display: grid;
 }
-
 #cover > div > div p {
-  font-size: calc(min(3.5 * (1vw + 1vh), 4rem));
-  max-width: calc(min(18em, 80vw));
+  font-size: min(3.5 * (1vw + 1vh), 4rem);
+  max-width: min(18em, 80vw);
   margin: 0;
-  -webkit-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
-
 #cover > div > div > div {
   pointer-events: all;
   width: 16rem;
@@ -42,39 +37,31 @@
   margin-right: auto;
   margin-top: 2rem;
 }
-
-#cover > div > div > div:hover .arrow,
-#cover > div > div > div:active .arrow {
-  -webkit-transform: translateY(2rem) rotate(90deg) !important;
-          transform: translateY(2rem) rotate(90deg) !important;
+#cover > div > div > div:hover .arrow, #cover > div > div > div:active .arrow {
+  transform: translateY(2rem) rotate(90deg) !important;
   width: 15rem !important;
 }
-
 #cover > div > div > div :nth-child(2) {
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
 }
-
 #cover > div > div > div .arrow {
   position: relative;
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform-origin: 0%;
+  transform: rotate(90deg);
   pointer-events: none;
   width: 2rem;
   height: 1px;
   background-color: #000;
   /*
-          &.reset {
-            width: 2rem !important;
-            transform: rotate(90deg) !important;
-          }
-          */
+  &.reset {
+    width: 2rem !important;
+    transform: rotate(90deg) !important;
+  }
+  */
 }
-
-#cover > div > div > div .arrow:before, #cover > div > div > div .arrow:after, #cover > div > div > div #work > .project .title > div > .open .arrow:after, #work > .project .title > div > .open #cover > div > div > div .arrow:after {
+#cover > div > div > div .arrow:before, #cover > div > div > div #work > .project .title > div > .open .arrow:after, #work > .project .title > div > .open #cover > div > div > div .arrow:after, #cover > div > div > div #contact > div:first-child ul li:first-child .arrow.line:after, #contact > div:first-child ul li:first-child #cover > div > div > div .arrow.line:after, #cover > div > div > div .arrow:after {
   content: "";
   display: block;
   position: relative;
@@ -83,150 +70,134 @@
   width: 0.5rem;
   height: 1px;
   background-color: #000;
-  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
-          transform: rotate(130deg) translate(-0.5px, 0px);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  transform: rotate(130deg) translate(-0.5px, 0px);
+  transform-origin: 0%;
 }
-
 #cover > div > div > div .arrow:after {
-  -webkit-transform: rotate(-130deg) translate(0px, 0.75px);
-          transform: rotate(-130deg) translate(0px, 0.75px);
+  transform: rotate(-130deg) translate(0px, 0.75px);
 }
 
 #ido {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: column;
 }
-
 #ido > :first-child {
   gap: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
   margin-top: 10rem;
   margin-bottom: 5rem;
 }
-
 #ido > :first-child :first-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
+  flex: 1 0 0;
   font-family: "Poppins", sans-serif;
   line-height: 1em;
   font-weight: 600;
 }
-
 #ido > :first-child :nth-child(2) {
   text-align: justify;
-  -webkit-box-flex: 10;
-      -ms-flex: 10 0 25rem;
-          flex: 10 0 25rem;
-  -ms-flex-preferred-size: calc(min(25rem, 80vw));
-      flex-basis: calc(min(25rem, 80vw));
+  flex: 10 0 25rem;
+  flex-basis: min(25rem, 80vw);
   margin-bottom: 1em;
 }
-
 #ido .container {
   width: 80%;
   margin-bottom: 5rem;
 }
-
 #ido .container .footer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(calc(min(12rem, calc(max(20vw, 5rem)))), 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(calc(min(12rem, calc(max(20vw, 5rem)))), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, max(20vw, 5rem)), 1fr));
 }
-
 #ido .box {
   display: inline-block;
   position: relative;
   z-index: 0;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  height: calc(min(10rem, calc(max(20vw, 7rem))));
+  height: min(10rem, max(20vw, 7rem));
 }
-
 #ido .box img {
-  max-height: calc(min(10vw, 5rem));
-  max-width: calc(min(10vw, 5rem));
+  max-height: min(10vw, 5rem);
+  max-width: min(10vw, 5rem);
   min-height: 3rem;
   min-width: 3rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 #ido .box .border {
-  border: 1px solid #00000000;
+  border: 1px solid rgba(0, 0, 0, 0);
   width: calc(100% - 1px);
   height: calc(100% - 1px);
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  flex-direction: column;
 }
-
 #ido .box .border.title .content {
   overflow: hidden;
   width: 100%;
   height: 100%;
   background-color: #000;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
   color: #eae6e1;
   font-size: 2rem;
   font-weight: bolder;
   text-align: center;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
 #ido .box .border.title .content > div {
   position: absolute;
   background-color: #000;
   width: 100%;
   height: 100%;
 }
-
 #ido .box .border.title .content > div:first-child {
   font-weight: normal;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition: all 0.3s ease;
+  transform: scale(0.9);
   transition: all 0.3s ease;
 }
-
 #ido .box .border.title .content > div:nth-child(2) {
-  -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   top: 0;
 }
-
 #ido .box .border.title .content > div:nth-child(2):after {
+  transition: all 0.6s ease;
+  transition-delay: 0.15s;
   font-size: 2rem;
   font-weight: normal;
-  content: "..";
+  content: "→";
   position: absolute;
   right: 1rem;
   bottom: 0.5rem;
 }
-
+#ido .box .border.title .content > div:nth-child(2):before, #ido .box .border.title #work > .project .title > div > .open .content > div.arrow:nth-child(2):after, #work > .project .title > div > .open #ido .box .border.title .content > div.arrow:nth-child(2):after, #ido .box .border.title #contact > div:first-child ul li:first-child .content > div.line:nth-child(2):after, #contact > div:first-child ul li:first-child #ido .box .border.title .content > div.line:nth-child(2):after, #ido .box .border.title #cover > div > div > div .content > div.arrow:nth-child(2):after, #cover > div > div > div #ido .box .border.title .content > div.arrow:nth-child(2):after {
+  transition: all 0.6s ease;
+  transition-delay: 0.15s;
+  font-size: 2rem;
+  font-weight: normal;
+  content: "—";
+  position: absolute;
+  right: 2.5rem;
+  bottom: 0.5rem;
+}
 #ido .box:hover {
   z-index: 10;
 }
-
-#ido .box .top-left:before, #ido .box .top-left:after,
+#ido .box .top-left:before, #ido .box #work > .project .title > div > .open .top-left.arrow:after, #work > .project .title > div > .open #ido .box .top-left.arrow:after, #ido .box #contact > div:first-child ul li:first-child .top-left.line:after, #contact > div:first-child ul li:first-child #ido .box .top-left.line:after, #ido .box .top-left:after,
 #ido .box .bottom-left:before,
+#ido .box #work > .project .title > div > .open .bottom-left.arrow:after,
+#work > .project .title > div > .open #ido .box .bottom-left.arrow:after,
+#ido .box #contact > div:first-child ul li:first-child .bottom-left.line:after,
+#contact > div:first-child ul li:first-child #ido .box .bottom-left.line:after,
 #ido .box .bottom-left:after,
 #ido .box .top-right:before,
+#ido .box #work > .project .title > div > .open .top-right.arrow:after,
+#work > .project .title > div > .open #ido .box .top-right.arrow:after,
+#ido .box #contact > div:first-child ul li:first-child .top-right.line:after,
+#contact > div:first-child ul li:first-child #ido .box .top-right.line:after,
 #ido .box .top-right:after,
 #ido .box .bottom-right:before,
+#ido .box #work > .project .title > div > .open .bottom-right.arrow:after,
+#work > .project .title > div > .open #ido .box .bottom-right.arrow:after,
+#ido .box #contact > div:first-child ul li:first-child .bottom-right.line:after,
+#contact > div:first-child ul li:first-child #ido .box .bottom-right.line:after,
 #ido .box .bottom-right:after {
   content: "";
   display: block;
@@ -234,330 +205,250 @@
   background: #000000;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
   height: 1px;
   width: 0%;
   z-index: 1;
-  -webkit-transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
-  transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
+  transition: left 1s ease, top 1s ease, height 1s ease, width 1s ease, width 1s ease;
 }
-
-#ido .box .top-left:before, #ido .box .top-left:after {
+#ido .box .top-left:before, #ido .box #work > .project .title > div > .open .top-left.arrow:after, #work > .project .title > div > .open #ido .box .top-left.arrow:after, #ido .box #contact > div:first-child ul li:first-child .top-left.line:after, #contact > div:first-child ul li:first-child #ido .box .top-left.line:after, #ido .box .top-left:after {
   left: 0;
   top: 0;
 }
-
 #ido .box .top-left:after {
   height: 0%;
   width: 1px;
 }
-
-#ido .box .bottom-left:before, #ido .box .bottom-left:after {
+#ido .box .bottom-left:before, #ido .box #work > .project .title > div > .open .bottom-left.arrow:after, #work > .project .title > div > .open #ido .box .bottom-left.arrow:after, #ido .box #contact > div:first-child ul li:first-child .bottom-left.line:after, #contact > div:first-child ul li:first-child #ido .box .bottom-left.line:after, #ido .box .bottom-left:after {
   left: 0;
   top: 100%;
 }
-
 #ido .box .bottom-left:after {
   height: 0%;
   width: 1px;
   top: 100%;
 }
-
-#ido .box .top-right:before, #ido .box .top-right:after {
+#ido .box .top-right:before, #ido .box #work > .project .title > div > .open .top-right.arrow:after, #work > .project .title > div > .open #ido .box .top-right.arrow:after, #ido .box #contact > div:first-child ul li:first-child .top-right.line:after, #contact > div:first-child ul li:first-child #ido .box .top-right.line:after, #ido .box .top-right:after {
   left: calc(100% + 1px);
   top: 0;
 }
-
 #ido .box .top-right:after {
   height: 0%;
   width: 1px;
   left: 100%;
 }
-
-#ido .box .bottom-right:before, #ido .box .bottom-right:after {
+#ido .box .bottom-right:before, #ido .box #work > .project .title > div > .open .bottom-right.arrow:after, #work > .project .title > div > .open #ido .box .bottom-right.arrow:after, #ido .box #contact > div:first-child ul li:first-child .bottom-right.line:after, #contact > div:first-child ul li:first-child #ido .box .bottom-right.line:after, #ido .box .bottom-right:after {
   left: calc(100% + 1px);
   top: 100%;
 }
-
 #ido .box .bottom-right:after {
   height: 0%;
   width: 1px;
   left: 100%;
   top: 100%;
 }
-
 #ido .box:hover .border, #ido .box:focus .border {
-  border: 1px solid #0000005e;
+  border: 1px solid rgba(0, 0, 0, 0.368627451);
 }
-
 #ido .box:hover .border.title .content, #ido .box:focus .border.title .content {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
 #ido .box:hover .border.title .content > div:first-child, #ido .box:focus .border.title .content > div:first-child {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
 }
-
 #ido .box:hover .border.title .content > div:nth-child(2), #ido .box:focus .border.title .content > div:nth-child(2) {
   top: -100%;
 }
-
-#ido .box:hover .top-left:before, #ido .box:focus .top-left:before {
-  -webkit-transition: height 0.2s ease, width 0.2s ease;
+#ido .box:hover .border.title .content > div:before, #ido .box:hover .border.title #work > .project .title > div > .open .content > div.arrow:after, #work > .project .title > div > .open #ido .box:hover .border.title .content > div.arrow:after, #ido .box:hover .border.title #contact > div:first-child ul li:first-child .content > div.line:after, #contact > div:first-child ul li:first-child #ido .box:hover .border.title .content > div.line:after, #ido .box:hover .border.title #cover > div > div > div .content > div.arrow:after, #cover > div > div > div #ido .box:hover .border.title .content > div.arrow:after, #ido .box:focus .border.title .content > div:before, #ido .box:focus .border.title #work > .project .title > div > .open .content > div.arrow:after, #work > .project .title > div > .open #ido .box:focus .border.title .content > div.arrow:after, #ido .box:focus .border.title #contact > div:first-child ul li:first-child .content > div.line:after, #contact > div:first-child ul li:first-child #ido .box:focus .border.title .content > div.line:after, #ido .box:focus .border.title #cover > div > div > div .content > div.arrow:after, #cover > div > div > div #ido .box:focus .border.title .content > div.arrow:after {
+  right: -2.5rem;
+}
+#ido .box:hover .border.title .content > div:after, #ido .box:focus .border.title .content > div:after {
+  right: -4rem;
+}
+#ido .box:hover .top-left:before, #ido .box:hover #work > .project .title > div > .open .top-left.arrow:after, #work > .project .title > div > .open #ido .box:hover .top-left.arrow:after, #ido .box:hover #contact > div:first-child ul li:first-child .top-left.line:after, #contact > div:first-child ul li:first-child #ido .box:hover .top-left.line:after, #ido .box:hover #cover > div > div > div .top-left.arrow:after, #cover > div > div > div #ido .box:hover .top-left.arrow:after, #ido .box:focus .top-left:before, #ido .box:focus #work > .project .title > div > .open .top-left.arrow:after, #work > .project .title > div > .open #ido .box:focus .top-left.arrow:after, #ido .box:focus #contact > div:first-child ul li:first-child .top-left.line:after, #contact > div:first-child ul li:first-child #ido .box:focus .top-left.line:after, #ido .box:focus #cover > div > div > div .top-left.arrow:after, #cover > div > div > div #ido .box:focus .top-left.arrow:after {
   transition: height 0.2s ease, width 0.2s ease;
   width: 15%;
 }
-
 #ido .box:hover .top-left:after, #ido .box:focus .top-left:after {
-  -webkit-transition: height 0.2s ease, width 0.2s ease;
   transition: height 0.2s ease, width 0.2s ease;
   height: 15%;
 }
-
-#ido .box:hover .bottom-left:before, #ido .box:focus .bottom-left:before {
-  -webkit-transition: height 0.2s ease, width 0.2s ease;
+#ido .box:hover .bottom-left:before, #ido .box:hover #work > .project .title > div > .open .bottom-left.arrow:after, #work > .project .title > div > .open #ido .box:hover .bottom-left.arrow:after, #ido .box:hover #contact > div:first-child ul li:first-child .bottom-left.line:after, #contact > div:first-child ul li:first-child #ido .box:hover .bottom-left.line:after, #ido .box:hover #cover > div > div > div .bottom-left.arrow:after, #cover > div > div > div #ido .box:hover .bottom-left.arrow:after, #ido .box:focus .bottom-left:before, #ido .box:focus #work > .project .title > div > .open .bottom-left.arrow:after, #work > .project .title > div > .open #ido .box:focus .bottom-left.arrow:after, #ido .box:focus #contact > div:first-child ul li:first-child .bottom-left.line:after, #contact > div:first-child ul li:first-child #ido .box:focus .bottom-left.line:after, #ido .box:focus #cover > div > div > div .bottom-left.arrow:after, #cover > div > div > div #ido .box:focus .bottom-left.arrow:after {
   transition: height 0.2s ease, width 0.2s ease;
   width: 15%;
 }
-
 #ido .box:hover .bottom-left:after, #ido .box:focus .bottom-left:after {
-  -webkit-transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
   transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
   top: 85%;
   height: 15%;
 }
-
-#ido .box:hover .top-right:before, #ido .box:focus .top-right:before {
-  -webkit-transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
+#ido .box:hover .top-right:before, #ido .box:hover #work > .project .title > div > .open .top-right.arrow:after, #work > .project .title > div > .open #ido .box:hover .top-right.arrow:after, #ido .box:hover #contact > div:first-child ul li:first-child .top-right.line:after, #contact > div:first-child ul li:first-child #ido .box:hover .top-right.line:after, #ido .box:hover #cover > div > div > div .top-right.arrow:after, #cover > div > div > div #ido .box:hover .top-right.arrow:after, #ido .box:focus .top-right:before, #ido .box:focus #work > .project .title > div > .open .top-right.arrow:after, #work > .project .title > div > .open #ido .box:focus .top-right.arrow:after, #ido .box:focus #contact > div:first-child ul li:first-child .top-right.line:after, #contact > div:first-child ul li:first-child #ido .box:focus .top-right.line:after, #ido .box:focus #cover > div > div > div .top-right.arrow:after, #cover > div > div > div #ido .box:focus .top-right.arrow:after {
   transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
   width: 15%;
   left: calc(85% + 1px);
 }
-
 #ido .box:hover .top-right:after, #ido .box:focus .top-right:after {
-  -webkit-transition: height 0.2s ease, width 0.2s ease;
   transition: height 0.2s ease, width 0.2s ease;
   height: 15%;
 }
-
-#ido .box:hover .bottom-right:before, #ido .box:focus .bottom-right:before {
-  -webkit-transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
+#ido .box:hover .bottom-right:before, #ido .box:hover #work > .project .title > div > .open .bottom-right.arrow:after, #work > .project .title > div > .open #ido .box:hover .bottom-right.arrow:after, #ido .box:hover #contact > div:first-child ul li:first-child .bottom-right.line:after, #contact > div:first-child ul li:first-child #ido .box:hover .bottom-right.line:after, #ido .box:hover #cover > div > div > div .bottom-right.arrow:after, #cover > div > div > div #ido .box:hover .bottom-right.arrow:after, #ido .box:focus .bottom-right:before, #ido .box:focus #work > .project .title > div > .open .bottom-right.arrow:after, #work > .project .title > div > .open #ido .box:focus .bottom-right.arrow:after, #ido .box:focus #contact > div:first-child ul li:first-child .bottom-right.line:after, #contact > div:first-child ul li:first-child #ido .box:focus .bottom-right.line:after, #ido .box:focus #cover > div > div > div .bottom-right.arrow:after, #cover > div > div > div #ido .box:focus .bottom-right.arrow:after {
   transition: left 0.2s ease, height 0.2s ease, width 0.2s ease;
   width: 15%;
   left: calc(85% + 1px);
 }
-
 #ido .box:hover .bottom-right:after, #ido .box:focus .bottom-right:after {
-  -webkit-transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
   transition: top 0.2s ease, height 0.2s ease, width 0.2s ease;
   top: 85%;
   height: 15%;
 }
-
 #ido .box__image {
-  fill: #0000005e;
+  fill: rgba(0, 0, 0, 0.368627451);
   width: 60%;
   will-change: width;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: all 0.5s ease;
+  transform: translate(-50%, -50%) scale(1);
   transition: all 0.5s ease;
   z-index: 2;
 }
 
 @media screen and (max-width: 850px) {
   .box.title {
-    grid-column: auto / span 2;
+    grid-column: auto/span 2;
   }
 }
-
 @media screen and (max-width: 1085px) {
   #contact #mailto {
-    -webkit-transform: translate(0, 0) !important;
-            transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important;
   }
   #contact ul {
-    -ms-grid-columns: 100% !important;
-        grid-template-columns: 100% !important;
+    grid-template-columns: 100% !important;
   }
 }
-
 @media screen and (max-width: 600px) {
   .area {
-    -ms-grid-columns: 2.1em 1fr !important;
-        grid-template-columns: 2.1em 1fr !important;
+    grid-template-columns: 2.1em 1fr !important;
     grid-column-gap: 1em;
   }
   .area .tag > div {
-    -webkit-transform: rotate(-90deg) translate(-90%, 30%);
-            transform: rotate(-90deg) translate(-90%, 30%);
-    -webkit-transform-origin: left;
-            transform-origin: left;
+    transform: rotate(-90deg) translate(-90%, 30%);
+    transform-origin: left;
   }
 }
-
 #who > div {
   padding: 5rem 0 5rem 0;
   width: 100%;
-  display: -ms-grid;
   display: grid;
   gap: 5rem;
-  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
-
 #who > div h1 {
   margin-bottom: 4rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   line-height: calc(1em - 2rem);
 }
-
 #who > div p {
   width: 100%;
   text-align: justify;
 }
-
 #who > div > :nth-child(2) {
   background-color: #000000;
   overflow: hidden;
 }
-
 #who > div > :nth-child(2).img {
   position: relative;
-  min-height: calc(max(30vh, 20rem));
+  min-height: max(30vh, 20rem);
 }
-
 #who > div > :nth-child(2).img img {
   position: absolute;
 }
-
 #who > div > :nth-child(2).img img:first-child {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #who > div > :nth-child(2).img img:nth-child(2) {
   height: 120%;
-  bottom: 0;
+  bottom: -10%;
+  transform: scale(1.3) translateX(-3%);
 }
 
 #contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #contact > div:first-child {
   width: 80%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr max-content;
-      grid-template-rows: 1fr -webkit-max-content;
-      grid-template-rows: 1fr max-content;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  grid-template-columns: 100%;
   min-height: 60vh;
   gap: 5em;
   padding: 5rem 0 5rem 0;
 }
-
 #contact > div:first-child h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.2em;
 }
-
 #contact > div:first-child ul {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr min-content min-content;
-      grid-template-columns: 1fr -webkit-min-content -webkit-min-content;
-      grid-template-columns: 1fr min-content min-content;
+  grid-template-columns: 1fr -webkit-min-content -webkit-min-content;
+  grid-template-columns: 1fr min-content min-content;
   /*grid-template-columns: repeat(auto-fit, minmax(10em, min-content));*/
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0;
   margin-top: 2rem;
   gap: 1em;
 }
-
 #contact > div:first-child ul #mailto {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   /*transform: translate(-25%, 0em);*/
 }
-
 #contact > div:first-child ul #mailto .shine {
   height: 3em;
   width: 5em;
 }
-
 #contact > div:first-child ul #mailto .shine:last-child {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 #contact > div:first-child ul li {
   z-index: 4;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 #contact > div:first-child ul li:first-child {
   pointer-events: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: calc(min(6rem, 10vw) + 2rem);
 }
-
 #contact > div:first-child ul li:first-child:hover .line {
   width: calc(40% + min(6rem, 10vw));
 }
-
 #contact > div:first-child ul li:first-child:active .line {
   width: calc(100% + min(6rem, 10vw) + 2rem + 0.5em);
 }
-
 #contact > div:first-child ul li:first-child.active .line {
   width: calc(100% + min(6rem, 10vw));
 }
-
 #contact > div:first-child ul li:first-child .link {
   pointer-events: all;
 }
-
 #contact > div:first-child ul li:first-child .line {
-  -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
-  transition: width 0.7s ease, -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, width 0.7s ease;
-  transition: transform 0.5s ease, width 0.7s ease, -webkit-transform 0.5s ease;
-  -webkit-transform: translate(calc((-1 * min(6rem, 10vw)) - 2rem), 0.75em);
-          transform: translate(calc((-1 * min(6rem, 10vw)) - 2rem), 0.75em);
+  transform: translate(calc(-1 * min(6rem, 10vw) - 2rem), 0.75em);
   height: 2px;
-  min-width: calc(min(6rem, 10vw));
+  min-width: min(6rem, 10vw);
 }
-
-#contact > div:first-child ul li:first-child .line:before, #contact > div:first-child ul li:first-child .line:after {
+#contact > div:first-child ul li:first-child .line:before, #contact > div:first-child ul li:first-child #work > .project .title > div > .open .line.arrow:after, #work > .project .title > div > .open #contact > div:first-child ul li:first-child .line.arrow:after, #contact > div:first-child ul li:first-child .line:after {
   content: "";
   display: block;
   position: relative;
@@ -566,17 +457,12 @@
   width: 0.5rem;
   height: 2px;
   background-color: #000000;
-  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
-          transform: rotate(130deg) translate(-0.5px, 0px);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  transform: rotate(130deg) translate(-0.5px, 0px);
+  transform-origin: 0%;
 }
-
 #contact > div:first-child ul li:first-child .line:after {
-  -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
-          transform: rotate(-130deg) translate(0.5px, 0.75px);
+  transform: rotate(-130deg) translate(0.5px, 0.75px);
 }
-
 #contact > div:first-child .love {
   margin: 0 auto 0 auto;
   color: #f2ebe3;
@@ -588,128 +474,108 @@
   overflow: hidden;
   margin-bottom: 10rem;
 }
-
 #work > .project {
   position: relative;
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
 }
-
 #work > .project .mockup {
   z-index: 1;
   position: absolute;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: all 0.5s ease-out;
+  transform-origin: center;
   transition: all 0.5s ease-out;
 }
-
 #work > .project .mockup.open {
   /*
-        //right: 25%;
-        //top: 0rem;
-        //transform: scale(0.5);
-        transition: all 0.8s ease;
-        + .title {
-          //color: #b87d3a;
-          //top: 5rem;
-          //left: 0;
-          transform: none !important;
-          transition: all 0.5s ease;
-          div {
-            opacity: 0;
-          }
-        }
-        */
+  //right: 25%;
+  //top: 0rem;
+  //transform: scale(0.5);
+  transition: all 0.8s ease;
+  + .title {
+    //color: #b87d3a;
+    //top: 5rem;
+    //left: 0;
+    transform: none !important;
+    transition: all 0.5s ease;
+    div {
+      opacity: 0;
+    }
+  }
+  */
 }
-
 #work > .project .mockup.open + .title > div > .name {
-  color: #f8f8f8;
+  /*color: #f8f8f8;*/
 }
-
 #work > .project .mockup.open + .title > div > .open {
   opacity: 0;
 }
-
 #work > .project .mockup img {
   max-height: calc(100vh - 5rem);
   max-width: 200%;
 }
-
+#work > .project .mockup img.second {
+  position: absolute;
+}
 #work > .project .mockup .phone {
   height: 25em;
   width: 15em;
 }
-
 #work > .project .mockup .desktop {
   height: 25em;
   width: 39em;
 }
-
 #work > .project .mockup :first-child {
   pointer-events: none;
 }
-
 #work > .project .title {
   color: #402828;
   z-index: 2;
   pointer-events: none;
   position: absolute;
-  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
-
 #work > .project .title > div {
-  -webkit-transform-origin: 0;
-          transform-origin: 0;
+  transform-origin: 0;
 }
-
 #work > .project .title > div div {
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
 #work > .project .title > div > .name {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  -webkit-transform-origin: 0;
-          transform-origin: 0;
+  transform-origin: 0;
   line-height: 1.2em;
-  -webkit-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
   pointer-events: all;
 }
-
 #work > .project .title > div > .open {
-  -webkit-transform-origin: 0;
-          transform-origin: 0;
+  transform-origin: 0;
   pointer-events: all;
   width: 15rem;
   padding-bottom: 2.5rem;
   padding-top: 1rem;
 }
-
-#work > .project .title > div > .open:hover .arrow,
-#work > .project .title > div > .open:active .arrow {
-  -webkit-transform: translateX(2rem);
-          transform: translateX(2rem);
+#work > .project .title > div > .open:hover .arrow, #work > .project .title > div > .open:active .arrow {
+  transform: translateX(2rem);
   width: 15rem;
 }
-
+#work > .project .title > div > .open .background {
+  display: block;
+  position: absolute;
+  background: #ffffff;
+  height: 2em;
+  width: 8.4em;
+  z-index: -1;
+}
 #work > .project .title > div > .open .arrow {
-  -webkit-transition: width 0.7s ease, -webkit-transform 0.5s ease;
-  transition: width 0.7s ease, -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, width 0.7s ease;
-  transition: transform 0.5s ease, width 0.7s ease, -webkit-transform 0.5s ease;
   margin-top: 0.5rem;
   width: 10rem;
   height: 1px;
   background-color: #402828;
 }
-
-#work > .project .title > div > .open .arrow:before, #cover > div > div > div #work > .project .title > div > .open .arrow:after, #work > .project .title > div > .open .arrow:after {
+#work > .project .title > div > .open .arrow:before, #work > .project .title > div > .open .arrow:after {
   content: "";
   display: block;
   position: relative;
@@ -717,15 +583,17 @@
   top: 0px;
   width: 0.5rem;
   height: 1px;
-  background-color: #402828;
-  -webkit-transform: rotate(130deg) translate(-0.5px, 0px);
-          transform: rotate(130deg) translate(-0.5px, 0px);
-  -webkit-transform-origin: 0%;
-          transform-origin: 0%;
+  background-color: inherit;
+  transform: rotate(130deg) translate(-0.5px, 0px);
+  transform-origin: 0%;
+}
+#work > .project .title > div > .open .arrow:after {
+  transform: rotate(-130deg) translate(0.5px, 0.75px);
 }
 
-#work > .project .title > div > .open .arrow:after {
-  -webkit-transform: rotate(-130deg) translate(0.5px, 0.75px);
-          transform: rotate(-130deg) translate(0.5px, 0.75px);
-}
-/*# sourceMappingURL=landing.css.map */
+#credits {
+  height: 2em;
+  background-color: #171717;
+  color: #ffffff;
+  font-size: 14px;
+}/*# sourceMappingURL=landing.css.map */

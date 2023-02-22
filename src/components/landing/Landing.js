@@ -143,7 +143,7 @@ export default function Landing() {
         e.style.transform = `translateY(${skew * 0.8}vh)`;
       });
     document
-      .querySelectorAll(".project .mockup img:not(.static)")
+      .querySelectorAll(".project .mockup img:first-child:not(.static)")
       .forEach((e) => {
         e.style.transform = `scale(${1 - Math.abs(skew / 200)})`;
       });
@@ -177,6 +177,9 @@ export default function Landing() {
       <Ido />
       <Who />
       <Contact />
+      <div id="credits">
+        <div>Made with 🤍 and lots of ☕ by Irving Mariscales</div>
+      </div>
     </div>
   );
 }

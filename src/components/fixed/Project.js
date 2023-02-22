@@ -1,11 +1,11 @@
-import React, { useContext, useRef, useEffect } from "react";
-import "../../styles/project.css";
-import Context from "../../store/context";
-import infoProjects from "../projects.json";
-import useWindowSize from "../../hooks/useWindowSize";
+import React, { useContext, useRef, useEffect } from 'react';
+import '../../styles/project.css';
+import Context from '../../store/context';
+import infoProjects from '../projects.json';
+import useWindowSize from '../../hooks/useWindowSize';
 
 export default function Project() {
-  const { state } = useContext(Context);
+  const { state, actions } = useContext(Context);
   const size = useWindowSize();
   const scrollContainer = useRef();
   let data = {
@@ -40,6 +40,13 @@ export default function Project() {
       });
     }
   }, [state.project.isOpened]);
+
+  const changeCursor = (cursor) => {
+    actions({
+      type: 'setState',
+      payload: { ...state, cursor: { type: cursor } },
+    });
+  };
 
   const times = [];
   let fps;
@@ -109,13 +116,13 @@ export default function Project() {
     }vw, 0rem`;
     */
 
-    document.querySelectorAll(".project .title").forEach((e) => {
+    document.querySelectorAll('.project .title').forEach((e) => {
       e.style.transform = `scale(max(0.5, ${
         1 - (data.rounded * 0.025) / 100
       }))`;
     });
 
-    document.querySelectorAll(".project .mockup").forEach((e) => {
+    document.querySelectorAll('.project .mockup').forEach((e) => {
       e.style.transform = `scale(max(0.5, ${1 - (data.rounded * 0.05) / 100}))`;
     });
 
@@ -140,7 +147,12 @@ export default function Project() {
           <div className="item" key={i}>
             <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
             <div>
-              <p className="font-s">{infoProjects[id].process[i][1]}</p>
+              <p
+                className="font-s"
+                dangerouslySetInnerHTML={{
+                  __html: infoProjects[id].process[i][1],
+                }}
+              ></p>
             </div>
           </div>
         );
@@ -151,7 +163,12 @@ export default function Project() {
             <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
             <div>
               {infoProjects[id].process[i][1] && (
-                <p className="font-s">{infoProjects[id].process[i][1]}</p>
+                <p
+                  className="font-s"
+                  dangerouslySetInnerHTML={{
+                    __html: infoProjects[id].process[i][1],
+                  }}
+                ></p>
               )}
               <div key={`img-${i - 1}`} className="img">
                 <img
@@ -186,7 +203,12 @@ export default function Project() {
             <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
             <div>
               {infoProjects[id].process[i][1] && (
-                <p className="font-s">{infoProjects[id].process[i][1]}</p>
+                <p
+                  className="font-s"
+                  dangerouslySetInnerHTML={{
+                    __html: infoProjects[id].process[i][1],
+                  }}
+                ></p>
               )}
               <div className="img">
                 <img
@@ -205,9 +227,13 @@ export default function Project() {
   }
 
   process.push(
-    <p key={process.length} className="font-m conclution">
-      {infoProjects[id].process[6][1]}
-    </p>
+    <p
+      key={process.length}
+      className="font-m conclution"
+      dangerouslySetInnerHTML={{
+        __html: infoProjects[id].process[6][1],
+      }}
+    ></p>
   );
 
   return (
@@ -215,7 +241,7 @@ export default function Project() {
       <div></div>
       <div
         className="modal"
-        style={{ top: state.project.isOpened ? 0 : "100vh" }}
+        style={{ top: state.project.isOpened ? 0 : '100vh' }}
       >
         <div ref={scrollContainer} className="modal-scroll">
           <div className="modal-content">
@@ -237,10 +263,29 @@ export default function Project() {
                 </div>
               </div>
               <hr />
-              <div className="process">{process}</div>
+              <div className="process">
+                {process[0]}
+                {process[process.length - 1]}
+              </div>
             </div>
           </div>
         </div>
+        {infoProjects[id].site && (
+          <a
+            className="site"
+            href={infoProjects[id].site}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={() => {
+              changeCursor('hover arrow');
+            }}
+            onMouseLeave={() => {
+              changeCursor('default');
+            }}
+          >
+            Visit website
+          </a>
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-import React from "react";
-import ido from "./ido.json";
-import "../../styles/landing.css";
+import React from 'react';
+import ido from './ido.json';
+import '../../styles/landing.css';
 
 export default function Ido() {
   const blocks = [];
@@ -34,6 +34,7 @@ export default function Ido() {
                 <img alt="" src={e2.img} />
               </div>
             </div>
+            <div>{e2.title}</div>
           </div>
           <div className="top-left"></div>
           <div className="top-right"></div>

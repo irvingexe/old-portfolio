@@ -6,6 +6,8 @@ import cursorTracking from "./cursorTracking";
 import useWindowSize from "./hooks/useWindowSize";
 import Lottie from "./components/Lottie";
 import smile from "./assets/smile.json";
+import projects from "./components/projects.json";
+
 const Nav = lazy(() => import("./components/fixed/Nav"));
 const Cursor = lazy(() => import("./components/fixed/Cursor"));
 const Project = lazy(() => import("./components/fixed/Project"));
@@ -34,14 +36,23 @@ export default function App() {
     if (document.querySelector(".modal").style.top !== "0px") {
       project.current =
         document.querySelector("#work > :nth-child(1)[data-scroll='in']") ||
-        document.querySelector("#work > :nth-child(2)[data-scroll='in']");
+        document.querySelector("#work > :nth-child(2)[data-scroll='in']") ||
+        document.querySelector("#work > :nth-child(3)[data-scroll='in']") ||
+        document.querySelector("#work > :nth-child(4)[data-scroll='in']") ||
+        document.querySelector("#work > :nth-child(5)[data-scroll='in']");
       if (project.current !== lastProject.current) {
         color.current = document.querySelector(
           "#work > :nth-child(1)[data-scroll='in']"
         )
-          ? { background: 0xfde8d7, brush: 0xffcca5 }
+          ? { background: projects[0].background, brush: projects[0].brush } //1
           : document.querySelector("#work > :nth-child(2)[data-scroll='in']")
-          ? { background: 0xccdaf5, brush: 0xa6c0f4 }
+          ? { background: projects[1].background, brush: projects[1].brush } //2
+          : document.querySelector("#work > :nth-child(3)[data-scroll='in']")
+          ? { background: projects[2].background, brush: projects[2].brush } //3
+          : document.querySelector("#work > :nth-child(4)[data-scroll='in']")
+          ? { background: projects[3].background, brush: projects[3].brush } //4
+          : document.querySelector("#work > :nth-child(5)[data-scroll='in']")
+          ? { background: projects[4].background, brush: projects[4].brush } //5
           : { background: 0xf2ebe3, brush: 0xd9c7ad };
         scratchCard.repaint(color.current);
         lastProject.current = project.current;

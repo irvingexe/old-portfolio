@@ -68,7 +68,7 @@
             transform-origin: 0%;
           }
           &:after {
-            @extend .arrow:before;
+            @extend :before;
             transform: rotate(-130deg) translate(0px, 0.75px);
           }
           /*
@@ -147,6 +147,7 @@ $color: set-color($bg-color);
       width: calc(100% - 1px);
       height: calc(100% - 1px);
       transition: all 1s ease;
+      flex-direction: column;
 
       &.title {
         .content {
@@ -174,11 +175,23 @@ $color: set-color($bg-color);
               transition: all 0.7s ease;
               top: 0;
               &:after {
+                transition: all 0.6s ease;
+                transition-delay: 0.15s;
                 font-size: 2rem;
                 font-weight: normal;
-                content: "..";
+                content: "→";
                 position: absolute;
                 right: 1rem;
+                bottom: 0.5rem;
+              }
+              &:before {
+                transition: all 0.6s ease;
+                transition-delay: 0.15s;
+                font-size: 2rem;
+                font-weight: normal;
+                content: "—";
+                position: absolute;
+                right: 2.5rem;
                 bottom: 0.5rem;
               }
             }
@@ -275,6 +288,12 @@ $color: set-color($bg-color);
             }
             &:nth-child(2) {
               top: -100%;
+            }
+            &:before {
+              right: -2.5rem;
+            }
+            &:after {
+              right: -4rem;
             }
           }
         }
@@ -404,7 +423,8 @@ $color: set-color($bg-color);
           }
           &:nth-child(2) {
             height: 120%;
-            bottom: 0;
+            bottom: -10%;
+            transform: scale(1.3) translateX(-3%);
           }
         }
       }
@@ -488,7 +508,7 @@ $color: set-color($bg-color);
               transform-origin: 0%;
             }
             &:after {
-              @extend .line:before;
+              @extend :before;
               transform: rotate(-130deg) translate(0.5px, 0.75px);
             }
           }
@@ -526,7 +546,7 @@ $color: set-color($bg-color);
       &.open {
         + .title > div {
           > .name {
-            color: #f8f8f8;
+            /*color: #f8f8f8;*/
           }
           > .open {
             opacity: 0;
@@ -552,6 +572,9 @@ $color: set-color($bg-color);
       img {
         max-height: calc(100vh - 5rem);
         max-width: 200%;
+        &.second {
+          position: absolute;
+        }
       }
       .phone {
         height: 25em;
@@ -603,6 +626,14 @@ $color: set-color($bg-color);
             transform: translateX(2rem);
             width: 15rem;
           }
+          .background {
+            display: block;
+            position: absolute;
+            background: #ffffff;
+            height: 2em;
+            width: 8.4em;
+            z-index: -1;
+          }
           .arrow {
             transition: transform 0.5s ease, width 0.7s ease;
             margin-top: 0.5rem;
@@ -617,12 +648,12 @@ $color: set-color($bg-color);
               top: 0px;
               width: 0.5rem;
               height: 1px;
-              background-color: #402828;
+              background-color: inherit;
               transform: rotate(130deg) translate(-0.5px, 0px);
               transform-origin: 0%;
             }
             &:after {
-              @extend .arrow:before;
+              @extend :before;
               transform: rotate(-130deg) translate(0.5px, 0.75px);
             }
           }
@@ -630,4 +661,11 @@ $color: set-color($bg-color);
       }
     }
   }
+}
+
+#credits {
+  height: 2em;
+  background-color: #171717;
+  color: #ffffff;
+  font-size: 14px;
 }

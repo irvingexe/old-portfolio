@@ -1,5 +1,4 @@
 #project .modal {
-  -webkit-transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
   position: fixed;
   left: 0;
@@ -8,26 +7,42 @@
   z-index: 2;
   overflow: hidden;
 }
-
+#project .modal .site {
+  background-color: #171717;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  position: absolute;
+  right: min(10vw, 2rem);
+  bottom: min(10vw, 2rem);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: solid 2px #171717;
+}
+#project .modal .site:hover {
+  padding: 2rem;
+  border-radius: 4rem;
+  background-color: #f8f8f8;
+  color: #171717;
+}
+#project .modal .site:active {
+  padding: 3rem;
+}
 #project .modal .modal-scroll {
   position: fixed;
   left: 0;
   width: 100%;
 }
-
 #project .modal .modal-scroll .modal-content {
   padding-bottom: 10rem;
   background-color: #f8f8f8;
   margin-top: 45vh;
-  padding-top: calc(min(5rem, 12.5vw));
+  padding-top: min(5rem, 12.5vw);
 }
-
 #project .modal .modal-scroll .modal-content > *:not(.screens),
 #project .modal .modal-scroll .modal-content .screens section > *:not(*:last-child) {
   width: 75vw;
   margin: auto;
 }
-
 #project .modal .modal-scroll .modal-content .btn-repo {
   background-color: #171717;
   padding: 1rem;
@@ -36,155 +51,104 @@
   position: absolute;
   top: 11rem;
 }
-
 #project .modal .modal-scroll .modal-content .btn-repo img {
   margin-right: 1rem;
 }
-
 #project .modal .modal-scroll .modal-content .role {
   font-weight: bold;
 }
-
 #project .modal .modal-scroll .modal-content .description {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: max-content 1fr;
-      grid-template-columns: -webkit-max-content 1fr;
-      grid-template-columns: max-content 1fr;
-  gap: calc(min(5rem, 12.5vw)) 6rem;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  gap: min(5rem, 12.5vw) 6rem;
 }
-
 #project .modal .modal-scroll .modal-content .description > :first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1rem 5rem;
 }
-
 #project .modal .modal-scroll .modal-content .description h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 23px;
   line-height: 1em;
 }
-
 #project .modal .modal-scroll .modal-content .description ul {
   margin: 0;
 }
-
 #project .modal .modal-scroll .modal-content .description .img {
-  grid-column: auto / span 2;
+  grid-column: auto/span 2;
 }
-
 #project .modal .modal-scroll .modal-content .description .img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #project .modal .modal-scroll .modal-content hr {
-  margin: calc(min(10vw, 3rem)) 0 calc(min(8rem, 20vw));
+  margin: min(10vw, 3rem) 0 min(8rem, 20vw);
 }
-
 #project .modal .modal-scroll .modal-content .process .item {
-  gap: calc(min(10vw, 3rem)) 6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  gap: min(10vw, 3rem) 6rem;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: calc(min(8rem, 20vw));
+  flex-wrap: wrap;
+  margin-bottom: min(8rem, 20vw);
 }
-
 #project .modal .modal-scroll .modal-content .process .item > div {
-  display: -ms-grid;
   display: grid;
-  gap: calc(min(10vw, 3rem));
-  -webkit-box-flex: 10;
-      -ms-flex: 10 0 45rem;
-          flex: 10 0 45rem;
-  -ms-flex-preferred-size: calc(min(40rem, 75vw));
-      flex-basis: calc(min(40rem, 75vw));
+  gap: min(10vw, 3rem);
+  flex: 10 0 45rem;
+  flex-basis: min(40rem, 75vw);
 }
-
 #project .modal .modal-scroll .modal-content .process .item > div .img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 #project .modal .modal-scroll .modal-content .process h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0;
-          flex: 1 0;
+  flex: 1 0;
   line-height: 1em;
   min-width: 11em;
   font-size: 23px;
 }
-
 #project .modal .modal-scroll .modal-content .process .img img {
   width: 100%;
 }
-
 #project .modal .modal-scroll .modal-content .process .img + p {
-  margin-top: calc(min(10vw, 3rem));
+  margin-top: min(10vw, 3rem);
 }
-
 #project .modal .modal-scroll .modal-content .process .conclution {
-  margin-top: calc(min(10vw, 3rem));
+  margin-top: min(10vw, 3rem);
 }
 
 @media screen and (max-width: 1145px) {
   .description {
-    -ms-grid-columns: 1fr !important;
-        grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr !important;
   }
   .description > :first-child {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    flex-direction: row !important;
   }
   .description > :first-child h2 {
     margin-bottom: 0 !important;
   }
   .description > :first-child ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     gap: 2rem;
   }
   .description > div:nth-child(2) {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
   .description .img {
     grid-column: auto !important;
   }
   .screens section > div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
   }
   .screens section > div.reverse {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .screens section > div p {
     max-width: none !important;
@@ -192,21 +156,13 @@
     margin-right: 0 !important;
   }
 }
-
 @media screen and (max-width: 730px) {
   .description > :first-child {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
   }
   .description > :first-child ul {
     display: initial;
-    -webkit-box-orient: initial;
-    -webkit-box-direction: initial;
-        -ms-flex-direction: initial;
-            flex-direction: initial;
+    flex-direction: initial;
     gap: unset;
   }
-}
-/*# sourceMappingURL=project.css.map */
+}/*# sourceMappingURL=project.css.map */

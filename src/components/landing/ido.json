@@ -2,23 +2,31 @@
     {
         "name": "Front",
         "name2": "End",
-        "description": "Responsive front-end developement using React",
+        "description": "Responsive web developement using React with a focus on graphics and interactivity",
         "tecnologies": [
             {
                 "img": "./assets/tecnologies/react.webp",
                 "title": "React"
             },
             {
-                "img": "../../assets/tecnologies/materialui.webp",
-                "title": "MaterialUI"
+                "img": "../../assets/tecnologies/aws.webp",
+                "title": "AWS"
             },
             {
-                "img": "../../assets/tecnologies/sass.webp",
-                "title": "SCSS/SASS"
+                "img": "../../assets/tecnologies/gsap.webp",
+                "title": "GSAP"
             },
             {
-                "img": "../../assets/tecnologies/woocommerce.webp",
-                "title": "Woocommerce"
+                "img": "../../assets/tecnologies/threejs.webp",
+                "title": "three.js"
+            },
+            {
+                "img": "../../assets/tecnologies/p5.webp",
+                "title": "p5"
+            },
+            {
+                "img": "../../assets/tecnologies/tensorflow.webp",
+                "title": "Tensorflow"
             },
             {
                 "img": "../../assets/tecnologies/pixijs.webp",
@@ -44,23 +52,8 @@
                 "title": "MongoDB"
             },
             {
-                "img": "../../assets/tecnologies/sql.webp",
-                "title": "SQL"
-            }
-        ]
-    },
-    {
-        "name": "Mobile",
-        "name2": "",
-        "description": "Native Android applications with Kotlin",
-        "tecnologies": [
-            {
-                "img": "../../assets/tecnologies/kotlin.webp",
-                "title": "Kotlin"
-            },
-            {
-                "img": "../../assets/tecnologies/firebase.webp",
-                "title": "Firebase"
+                "img": "../../assets/tecnologies/mysql.webp",
+                "title": "My SQL"
             }
         ]
     },
@@ -80,6 +73,10 @@
             {
                 "img": "../../assets/tecnologies/illustrator.webp",
                 "title": "Illustrator"
+            },
+            {
+                "img": "../../assets/tecnologies/aftereffects.webp",
+                "title": "After Effects"
             }
         ]
     }

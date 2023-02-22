@@ -63,9 +63,11 @@ export default function Nav() {
           document.querySelectorAll(".project .title > div").forEach((e) => {
             e.classList.remove("static");
           });
-          document.querySelectorAll(".project .mockup img").forEach((e) => {
-            e.classList.remove("static");
-          });
+          document
+            .querySelectorAll(".project .mockup img:first-child")
+            .forEach((e) => {
+              e.classList.remove("static");
+            });
         }, 1000);
         window.scrollBy(
           0,

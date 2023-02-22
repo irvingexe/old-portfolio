@@ -7,12 +7,6 @@ export default function Work() {
   const { state, actions } = useContext(Context);
   const size = useWindowSize();
 
-  /*
-  useEffect(() => {
-    transform();
-  }, [size.width]);
-  */
-
   const changeCursor = (cursor) => {
     actions({
       type: "setState",
@@ -37,10 +31,12 @@ export default function Work() {
       e.classList.add("static");
       e.style.transform = "none";
     });
-    document.querySelectorAll(".project .mockup img").forEach((e) => {
-      e.classList.add("static");
-      e.style.transform = "none";
-    });
+    document
+      .querySelectorAll(".project .mockup img:first-child")
+      .forEach((e) => {
+        e.classList.add("static");
+        e.style.transform = "none";
+      });
     document.querySelector(".modal-scroll").style.position = "fixed";
     document.querySelector(".sections").style.transition = "all .5s ease";
     document.querySelector(".sections").style.transform = `translateY(-${
@@ -87,13 +83,31 @@ export default function Work() {
             "mockup center unselectable" +
             (state.project.isOpened ? " open" : "")
           }
+          style={{
+            opacity:
+              infoProjects[i].opacity && state.project.isOpened
+                ? infoProjects[i].opacity
+                : 1,
+          }}
         >
           <img
             src={require(`../../assets/projects/${i}/-1.webp`)}
             alt={infoProjects[i].title}
           />
+          {infoProjects[i].secondImage && (
+            <img
+              className="second"
+              src={require(`../../assets/projects/${i}/-2.webp`)}
+              alt=""
+              style={{ transform: infoProjects[i].secondImage }}
+            />
+          )}
         </div>
-        <div className="title parallax" data-speed="-0.2">
+        <div
+          className="title parallax"
+          data-speed="-0.2"
+          style={{ color: infoProjects[i].titleColor }}
+        >
           <div>
             <label
               className="font-xl name"
@@ -121,8 +135,15 @@ export default function Work() {
                 open(parseInt(i));
               }}
             >
+              <div
+                className="background"
+                style={{ backgroundColor: infoProjects[i].titleBackground }}
+              />
               See case study
-              <div className="arrow"></div>
+              <div
+                className="arrow"
+                style={{ backgroundColor: infoProjects[i].titleColor }}
+              ></div>
             </div>
           </div>
         </div>
