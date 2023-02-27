@@ -116,16 +116,6 @@ export default function Project() {
     }vw, 0rem`;
     */
 
-    document.querySelectorAll('.project .title').forEach((e) => {
-      e.style.transform = `scale(max(0.5, ${
-        1 - (data.rounded * 0.025) / 100
-      }))`;
-    });
-
-    document.querySelectorAll('.project .mockup').forEach((e) => {
-      e.style.transform = `scale(max(0.5, ${1 - (data.rounded * 0.05) / 100}))`;
-    });
-
     //loop vai raf
     requests.current.push(requestAnimationFrame(skewScrolling));
   };
@@ -138,93 +128,33 @@ export default function Project() {
   }
 
   let process = [];
-  for (let i = 0; i < infoProjects[id].process.length - 1; i++) {
-    switch (i) {
-      case 0:
-      case 1:
-      case 5:
-        process.push(
-          <div className="item" key={i}>
-            <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
-            <div>
-              <p
-                className="font-s"
-                dangerouslySetInnerHTML={{
-                  __html: infoProjects[id].process[i][1],
-                }}
-              ></p>
-            </div>
-          </div>
-        );
-        break;
-      case 3:
-        process.push(
-          <div className="item" key={i}>
-            <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
-            <div>
-              {infoProjects[id].process[i][1] && (
-                <p
-                  className="font-s"
-                  dangerouslySetInnerHTML={{
-                    __html: infoProjects[id].process[i][1],
-                  }}
-                ></p>
-              )}
-              <div key={`img-${i - 1}`} className="img">
-                <img
-                  className="undragable unselectable"
-                  alt=""
-                  src={require(`../../assets/projects/${
-                    state.project.id
-                  }/${parseInt(i - 1)}.webp`)}
-                />
-              </div>
-              {infoProjects[id].process[i][2] && (
-                <p className="font-s">{infoProjects[id].process[i][2]}</p>
-              )}
-              <div className="img">
-                <img
-                  className="undragable unselectable"
-                  alt=""
-                  src={require(`../../assets/projects/${
-                    state.project.id
-                  }/${parseInt(i - 1)}.1.webp`)}
-                />
-              </div>
-            </div>
-          </div>
-        );
+  process.push(
+    <div key={process.length} className="item">
+      <h2 className="font-s">{infoProjects[id].process[0][0]}</h2>
+      <div>
+        {infoProjects[id].process[0][1] && (
+          <p
+            className="font-s"
+            dangerouslySetInnerHTML={{
+              __html: infoProjects[id].process[0][1],
+            }}
+          ></p>
+        )}
+      </div>
+    </div>
+  );
 
-        break;
-
-      default:
-        process.push(
-          <div key={i} className="item">
-            <h2 className="font-s">{infoProjects[id].process[i][0]}</h2>
-            <div>
-              {infoProjects[id].process[i][1] && (
-                <p
-                  className="font-s"
-                  dangerouslySetInnerHTML={{
-                    __html: infoProjects[id].process[i][1],
-                  }}
-                ></p>
-              )}
-              <div className="img">
-                <img
-                  className="undragable unselectable"
-                  alt=""
-                  src={require(`../../assets/projects/${
-                    state.project.id
-                  }/${parseInt(i - 1)}.webp`)}
-                />
-              </div>
-            </div>
-          </div>
-        );
-        break;
-    }
-  }
+  try {
+    process.push(
+      <div key={process.length} className="img">
+        <img
+          className="undragable unselectable"
+          alt=""
+          src={require(`../../assets/projects/${state.project.id}/1.webp`)}
+        />
+      </div>
+    );
+  } catch (error) {}
 
   process.push(
     <p
@@ -263,10 +193,7 @@ export default function Project() {
                 </div>
               </div>
               <hr />
-              <div className="process">
-                {process[0]}
-                {process[process.length - 1]}
-              </div>
+              <div className="process">{process}</div>
             </div>
           </div>
         </div>

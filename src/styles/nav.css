@@ -47,7 +47,6 @@
 
 #home {
   height: 4.4rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding-right: 2.6rem;
@@ -92,23 +91,17 @@
 }
 #home .arrow.active {
   width: min(6rem, 12.5vw);
-  -webkit-animation-name: back;
-          animation-name: back;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  animation-name: back;
+  animation-duration: 0.6s;
 }
 #home .arrow.active:before, #home .arrow.active:after {
   width: 0.5rem;
-  -webkit-animation-name: backBefore;
-          animation-name: backBefore;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  animation-name: backBefore;
+  animation-duration: 0.6s;
 }
 #home .arrow.active:after {
-  -webkit-animation-name: backAfter;
-          animation-name: backAfter;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  animation-name: backAfter;
+  animation-duration: 0.6s;
 }
 #home .arrow.close {
   width: 0;
@@ -122,18 +115,6 @@
   transform: rotate(-180deg);
 }
 
-@-webkit-keyframes back {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: min(6rem, 12.5vw);
-  }
-}
-
 @keyframes back {
   0% {
     width: 0;
@@ -143,19 +124,6 @@
   }
   100% {
     width: min(6rem, 12.5vw);
-  }
-}
-@-webkit-keyframes backBefore {
-  0% {
-    width: 0;
-    transform: rotate(180deg);
-  }
-  50% {
-    width: 0;
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(130deg);
   }
 }
 @keyframes backBefore {
@@ -171,19 +139,6 @@
     transform: rotate(130deg);
   }
 }
-@-webkit-keyframes backAfter {
-  0% {
-    width: 0;
-    transform: rotate(180deg);
-  }
-  50% {
-    width: 0;
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(230deg);
-  }
-}
 @keyframes backAfter {
   0% {
     width: 0;
@@ -195,20 +150,6 @@
   }
   100% {
     transform: rotate(230deg);
-  }
-}
-@-webkit-keyframes backCLose {
-  0% {
-    width: min(6rem, 12.5vw);
-    left: -3rem;
-  }
-  50% {
-    width: min(6rem, 12.5vw);
-    left: -3rem;
-  }
-  100% {
-    width: 0;
-    left: 1.6rem;
   }
 }
 @keyframes backCLose {
@@ -240,8 +181,7 @@
   .text {
     width: 60px;
     opacity: 0;
-    -webkit-animation: App-logo-spin infinite 5s linear;
-            animation: App-logo-spin infinite 5s linear;
+    animation: App-logo-spin infinite 5s linear;
     transition: all 0.33s cubic-bezier(1, 0, 0, 1);
     font-size: 100px;
     letter-spacing: 15px;
@@ -252,30 +192,12 @@
     animation: App-logo-spin infinite reverse 300ms linear;
   }
 }
-@-webkit-keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes App-logo-shows {
-  from {
-    opacity: 0;
-    width: 50px;
-  }
-  to {
-    opacity: 1;
-    width: 120px;
   }
 }
 @keyframes App-logo-shows {

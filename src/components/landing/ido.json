@@ -9,10 +9,6 @@
                 "title": "React"
             },
             {
-                "img": "../../assets/tecnologies/aws.webp",
-                "title": "AWS"
-            },
-            {
                 "img": "../../assets/tecnologies/gsap.webp",
                 "title": "GSAP"
             },
@@ -22,7 +18,7 @@
             },
             {
                 "img": "../../assets/tecnologies/p5.webp",
-                "title": "p5"
+                "title": "p5.js"
             },
             {
                 "img": "../../assets/tecnologies/tensorflow.webp",
@@ -60,7 +56,7 @@
     {
         "name": "Design",
         "name2": "",
-        "description": "Wireframing with tools such as Figma, SVG illustration and animation",
+        "description": "Wireframing with tools such as Figma, 3D modeling, illustration and animation",
         "tecnologies": [
             {
                 "img": "../../assets/tecnologies/figma.webp",
@@ -77,6 +73,10 @@
             {
                 "img": "../../assets/tecnologies/aftereffects.webp",
                 "title": "After Effects"
+            },
+            {
+                "img": "../../assets/tecnologies/blender.webp",
+                "title": "Blender"
             }
         ]
     }

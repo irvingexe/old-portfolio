@@ -1,13 +1,13 @@
 [
     {
-        "title": "Formula 1",
+        "title": "Formula1",
         "site": "https://www.mexicogp.mx/cobertura-2022/",
-        "opacity": "0.7",
-        "titleColor": "#F12D1A",
+        "opacity": "1",
+        "titleColor": "#E63010",
         "titleBackground": "#FFFFFF",
-        "color": "#004267",
-        "background": "0xCDDCEC",
-        "brush": "0x004267",
+        "color": "#dddddd",
+        "background": "0xdddddd",
+        "brush": "0x1F303D",
         "abstract": "Mexico Grand Prix 2022 live coverage and box office website",
         "technologies": [
             "Fnsetur",
@@ -50,65 +50,14 @@
         ]
     },
     {
-        "title": "Cartoober",
-        "site": "https://www.cartoober.com/",
-        "opacity": "0.7",
-        "titleColor": "#F2504F",
-        "titleBackground": "#E6DFD7",
-        "color": "#86bcd9",
-        "background": "0xf6e5e5",
-        "brush": "0x86bcd9",
-        "abstract": "Stream as an animated avatar from your browser",
-        "technologies": [
-            "Fnsetur",
-            "Consectetur",
-            "Tetur huu",
-            "Bonsectur"
-        ],
-        "role": [
-            "Front-end developement",
-            "2D animation rigging"
-        ],
-        "process": [
-            [
-                "Case study",
-                "For new content creators, the main obstacle to begin in the streaming industry is not having the best equipment. Cartober aims to simplify streaming video creation for new content creators by providing virtual avatars as a solution to the obstacle of lacking the best equipment. It offers a cross-platform service with a focus on performance and accessibility to make the video creation process easier and more accessible to users."
-            ],
-            [
-                "Initial research & planning",
-                "We started gathering information from the previous app and evaluated the problems the users had working with it. We did user interviews to evaluate their experience and what they think would be helpful to add/update in the software. We researched about a typical POS software, did some competitive analysis and created a mood board for necessary features to cover in the software."
-            ],
-            [
-                "Sketches & Wireframes",
-                "The main screen was divided into 3 sections: navbar, sidebar and items section. Here are some initial lo-fi wireframes."
-            ],
-            [
-                "Design system",
-                "To maintain consistency and ensure efficient design to dev handover, We made a modular design system based on reusable components."
-            ],
-            [
-                "Hi-fi wireframes",
-                "After trying some fonts, colors & icons, we started building hi-fi wireframes. We put the focus on the 'Orders page' where users can manage the orders, and continued with the ensuing pages such as 'billing page' and 'New order'."
-            ],
-            [
-                "Arquitecture",
-                "The software was created from scratch using react in the front end and node.js cliet side. It was designed as a typical MVC model implementing a REST interface."
-            ],
-            [
-                "Conclusion",
-                "Cartoober is the result of combining cutting-edge technologies like React for building a scalable and flexible front-end, Pixi.js, a 2D rendering engine, to create high-performance graphics and animations, Tensorflow, a machine learning library, for realistic facial expressions and movements for the virtual avatars, and RTMP communication to ensure real-time communication between the platform and viewers.<br><br>With the integration of these technologies, Cartoober not only provides an accessible solution for new VTubers, but also allows them to easily stream to multiple social media platforms like YouTube and Facebook, opening new possibilities for content creation and allowing them to reach a wider audience."
-            ]
-        ]
-    },
-    {
         "title": "Crosslink Venues",
         "site": "https://www.centrocitibanamex.com/es/crosslink-venues/",
-        "opacity": "0.6",
+        "opacity": "1",
         "titleColor": "#F8F5FF",
         "titleBackground": "#b8a771",
-        "color": "#485194",
-        "background": "0xb2b5f4",
-        "brush": "0x485194",
+        "color": "#40448F",
+        "background": "0x898bb6",
+        "brush": "0x4c4e7e",
         "abstract": "Linking in-person and virtual events in an immersive platform",
         "technologies": [
             "Fnsetur",
@@ -151,14 +100,15 @@
         ]
     },
     {
-        "title": "LGDS POS",
-        "secondImage": "translate(calc(50% - 5vh), calc(-50% - 5vh))",
-        "titleColor": "#402828",
-        "titleBackground": "#ffda75",
-        "color": "#ffcca5",
-        "background": "0xfde8d7",
-        "brush": "0xffcca5",
-        "abstract": "POS software for efficient restaurant management experience",
+        "title": "Cartoober",
+        "site": "https://www.cartoober.com/",
+        "opacity": "1",
+        "titleColor": "#F2504F",
+        "titleBackground": "#E6DFD7",
+        "color": "#F6E5E5",
+        "background": "0xF6E5E5",
+        "brush": "0x86BCD9",
+        "abstract": "Stream as an animated avatar from your browser",
         "technologies": [
             "Fnsetur",
             "Consectetur",
@@ -166,13 +116,13 @@
             "Bonsectur"
         ],
         "role": [
-            "UX/UI design",
-            "Front-end developement"
+            "Front-end developement",
+            "2D character rigging"
         ],
         "process": [
             [
                 "Case study",
-                "POS software often tend to have many options on the screen and sometimes users felt overwhelmed and frustrated.<br><br>Since this software was designed from scratch, we took it as an opportunity to learn what the client actually needed and make the software be a natural etension of their proces."
+                "For new content creators, the main obstacle to begin in the streaming industry is not having the best equipment. Cartober aims to simplify streaming video creation for new content creators by providing virtual avatars as a solution to the obstacle of lacking the best equipment. It offers a cross-platform service with a focus on performance and accessibility to make the video creation process easier and more accessible to users."
             ],
             [
                 "Initial research & planning",
@@ -196,18 +146,67 @@
             ],
             [
                 "Conclusion",
-                "This project provided an opportunity to learn about the specific needs of the restaurant industry and create a tailored solution to meet them. By focusing on the specific requirements of the client, the team was able to create a software that not only met their needs but also improved the overall efficiency of their processes.<br><br>This software helps to address a common issue faced by many restaurants, feeling overwhelmed by the many options presented by traditional POS systems. By creating a software that is specific to its needs, it provides a more streamlined and user-friendly solution, ultimately contributing to the success and growth of the business."
+                "Cartoober is the result of combining cutting-edge technologies like React for building a scalable and flexible front-end, Pixi.js, a 2D rendering engine, to create high-performance graphics and animations, Tensorflow, a machine learning library, for realistic facial expressions and movements for the virtual avatars, and RTMP communication to ensure real-time communication between the platform and viewers.<br><br>With the integration of these technologies, Cartoober not only provides an accessible solution for new VTubers, but also allows them to easily stream to multiple social media platforms like YouTube and Facebook, opening new possibilities for content creation and allowing them to reach a wider audience."
+            ]
+        ]
+    },
+    {
+        "title": "Aladdín",
+        "site": "https://www.aladdinelmusical.mx/",
+        "titleColor": "#e0ae38",
+        "titleBackground": "#ffda75",
+        "color": "#662A96",
+        "background": "0xEDE7CC",
+        "brush": "0x9F74C2",
+        "abstract": "Aladdin Broadway musical official website",
+        "technologies": [
+            "Fnsetur",
+            "Consectetur",
+            "Tetur huu",
+            "Bonsectur"
+        ],
+        "role": [
+            "Front-end developement"
+        ],
+        "process": [
+            [
+                "Case study",
+                "In order to promote the show and provide information to a potential audience, the website serves as a digital platform for the show that allows people to learn about the show's plot, cast, and creative team, as well as generate excitement and anticipation for the show through photos and videos of the production.<br><br>Additionally, it provides a convenient way for people to check the show program and purchase tickets online."
+            ],
+            [
+                "Initial research & planning",
+                "We started gathering information from the previous app and evaluated the problems the users had working with it. We did user interviews to evaluate their experience and what they think would be helpful to add/update in the software. We researched about a typical POS software, did some competitive analysis and created a mood board for necessary features to cover in the software."
+            ],
+            [
+                "Sketches & Wireframes",
+                "The main screen was divided into 3 sections: navbar, sidebar and items section. Here are some initial lo-fi wireframes."
+            ],
+            [
+                "Design system",
+                "To maintain consistency and ensure efficient design to dev handover, We made a modular design system based on reusable components."
+            ],
+            [
+                "Hi-fi wireframes",
+                "After trying some fonts, colors & icons, we started building hi-fi wireframes. We put the focus on the 'Orders page' where users can manage the orders, and continued with the ensuing pages such as 'billing page' and 'New order'."
+            ],
+            [
+                "Arquitecture",
+                "The software was created from scratch using react in the front end and node.js cliet side. It was designed as a typical MVC model implementing a REST interface."
+            ],
+            [
+                "Conclusion",
+                "In addition to informational content, the website also offers a range of multimedia features. This includes high-quality photos and videos of the production, which can help to showcase the visual spectacle of the show and give audiences a sense of what it will look like on stage. There are also interviews and rewiews from the audience and celebrities, in addition to behind-the-scenes and details that can deepen the audience's engagement with the production.<br><br>The website also offers a highly convenient way for potential audience members to purchase tickets to the show. By providing an easy-to-use booking system, the website streamlines the process of securing seats, reducing the need for patrons to visit the box office in person or make phone calls to book tickets. This helps to ensure that the ticket-buying process is as frictionless as possible, making it more likely that people will follow through on their interest in seeing the show."
             ]
         ]
     },
     {
         "title": "Profuturo",
-        "opacity": "0.7",
+        "opacity": "1",
         "titleColor": "#00207C",
         "titleBackground": "#F9D56F",
-        "color": "#FBEABC",
-        "background": "0xF8F5FF",
-        "brush": "0xFBEABC",
+        "color": "#F5E4D6",
+        "background": "0xF5E4D6",
+        "brush": "0xA8AEDB",
         "abstract": "Turning training process into an interactive experience",
         "technologies": [
             "Fnsetur",
@@ -217,7 +216,8 @@
         ],
         "role": [
             "Full-stack developement",
-            "2D animation"
+            "2D animation",
+            "Game design"
         ],
         "process": [
             [
@@ -247,55 +247,6 @@
             [
                 "Conclusion",
                 "This solution offered an innovative approach to employee training and development, utilizing interactive methods to help employees understand and empathize with clients.<br><br>This is a valuable contribution as it shows the importance of considering the client's perspective and the impact it can have on customer service and satisfaction. By improving the quality of customer service and support, Profuturo can set itself apart and provide a competitive advantage, leading to increased customer loyalty and improved business performance."
-            ]
-        ]
-    },
-    {
-        "title": "Robix UML",
-        "titleColor": "#152666",
-        "titleBackground": "#efe8ff",
-        "color": "#B09EFA",
-        "background": "0xccd3f5",
-        "brush": "0xB09EFA",
-        "abstract": "Simplify software requirements specification by rising robustness analysis adoption",
-        "technologies": [
-            "Fnsetur",
-            "Consectetur",
-            "Tetur huu",
-            "Bonsectur"
-        ],
-        "role": [
-            "UX/UI design",
-            "Front-end developement"
-        ],
-        "process": [
-            [
-                "Case study",
-                "As a result of prioritizing working software over comprehensive documentation, a common problem in agile software teams is the lack of documentation, resulting in fast developement projects but unsustainable maintenance.<br><br>Focusing on requirements specification, Scrumconix, a agile methodology, proposes to use the robustness analysis as the main artifact for requirements specification, since it allows sufficient documentation while maintaining an agile approach. However, due to its low presence in popular methodologies, the use of this type of diagram is not very widespread.<br><br>The challenge was to design a tool that would raise the adoption of this diagram, part of a study aimed to reduce the lack of documentation in software teams."
-            ],
-            [
-                "Research & planning",
-                "During this phase we scheduled meetings with the client to agree on the app features based on its needs. Moreover, since the diagram and the methodology it comes from where unfamiliar to the team, it was necessary to do research on it."
-            ],
-            [
-                "Initial wireframes",
-                "Being the main funcionality to create a diagram, we focus the UI on the canvas. Keeping this in mind, this component occupies the entire screen, thus the user can visualize a greater number of elements of the diagram."
-            ],
-            [
-                "Design system",
-                ""
-            ],
-            [
-                "Hi-fi wireframes",
-                ""
-            ],
-            [
-                "Developement",
-                "Robix UML is a web based application that works entierly client side, it was build using React and is made out of two parts: A view layer, consisting of the UI elements that the user interacts with, and a business logic layer, which defines the behaviour of the diagram elements."
-            ],
-            [
-                "Conclusion",
-                "This project aimed to address a common problem in agile software development, the lack of comprehensive documentation. By focusing on the use of the robustness analysis diagram as the main artifact for requirements specification, the project sought to provide a solution that balances the need for sufficient documentation with the agility of the development process.<br><br>The solution introduced a tool that promotes the adoption of the robustness analysis diagram, helping software teams to create comprehensive documentation while maintaining an agile approach. Additionally, the ability to convert the diagram into a use case model and to allow multiple users to collaborate in real-time on the creation of diagrams, makes it a valuable tool by facilitating better collaboration and improving the documentation process."
             ]
         ]
     }

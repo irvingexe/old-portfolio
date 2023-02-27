@@ -1,12 +1,12 @@
-import React, { useRef, useEffect, useContext } from "react";
-import Context from "../../store/context";
-import Cover from "./Cover";
-import Ido from "./Ido";
-import Who from "./Who";
-import Contact from "./Contact";
-import Work from "./Work";
-import useWindowSize from "../../hooks/useWindowSize";
-import useWindowScroll from "../../hooks/useWindowScroll";
+import React, { useRef, useEffect, useContext } from 'react';
+import Context from '../../store/context';
+import Cover from './Cover';
+import Ido from './Ido';
+import Who from './Who';
+import Contact from './Contact';
+import Work from './Work';
+import useWindowSize from '../../hooks/useWindowSize';
+import useWindowScroll from '../../hooks/useWindowScroll';
 
 export default function Landing() {
   const { state, actions } = useContext(Context);
@@ -63,8 +63,8 @@ export default function Landing() {
       document.querySelector("#work > :nth-child(2)[data-scroll='out']")
     ) {
       actions({
-        type: "setState",
-        payload: { ...state, cursor: { type: "default" } },
+        type: 'setState',
+        payload: { ...state, cursor: { type: 'default' } },
       });
     }
   }, [windowScroll]);
@@ -104,9 +104,9 @@ export default function Landing() {
       data.ease = mode(modes.current);
     }
 
-    const cta = document.querySelector("#cover .arrow +div");
-    const arrow = document.querySelector("#cover .arrow");
-    const hello = document.querySelector("#cover p");
+    const cta = document.querySelector('#cover .arrow +div');
+    const arrow = document.querySelector('#cover .arrow');
+    const hello = document.querySelector('#cover p');
     //Set Current to the scroll position amount
     data.current = window.scrollY;
     // Set Previous to the scroll previous position
@@ -138,12 +138,12 @@ export default function Landing() {
     //Assign skew and smooth scrolling to the scroll container skewY(${skew}deg)
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px)`;
     document
-      .querySelectorAll(".project .title > div:not(.static)")
+      .querySelectorAll('.project .title > div:not(.static)')
       .forEach((e) => {
         e.style.transform = `translateY(${skew * 0.8}vh)`;
       });
     document
-      .querySelectorAll(".project .mockup img:first-child:not(.static)")
+      .querySelectorAll('.project .mockup img:first-child:not(.static)')
       .forEach((e) => {
         e.style.transform = `scale(${1 - Math.abs(skew / 200)})`;
       });
@@ -169,7 +169,7 @@ export default function Landing() {
     <div
       ref={scrollContainer}
       className={`sections lateral-margin ${
-        state.project.isOpened ? "project-open" : ""
+        state.project.isOpened ? 'project-open' : ''
       }`}
     >
       <Cover />
@@ -177,9 +177,6 @@ export default function Landing() {
       <Ido />
       <Who />
       <Contact />
-      <div id="credits">
-        <div>Made with 🤍 and lots of ☕ by Irving Mariscales</div>
-      </div>
     </div>
   );
 }

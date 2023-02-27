@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Robix UML",
+        "titleColor": "#152666",
+        "titleBackground": "#efe8ff",
+        "color": "#B09EFA",
+        "background": "0xccd3f5",
+        "brush": "0xB09EFA",
+        "abstract": "Simplify software requirements specification by rising robustness analysis adoption",
+        "technologies": [
+            "Fnsetur",
+            "Consectetur",
+            "Tetur huu",
+            "Bonsectur"
+        ],
+        "role": [
+            "UX/UI design",
+            "Front-end developement"
+        ],
+        "process": [
+            [
+                "Case study",
+                "As a result of prioritizing working software over comprehensive documentation, a common problem in agile software teams is the lack of documentation, resulting in fast developement projects but unsustainable maintenance.<br><br>Focusing on requirements specification, Scrumconix, a agile methodology, proposes to use the robustness analysis as the main artifact for requirements specification, since it allows sufficient documentation while maintaining an agile approach. However, due to its low presence in popular methodologies, the use of this type of diagram is not very widespread.<br><br>The challenge was to design a tool that would raise the adoption of this diagram, part of a study aimed to reduce the lack of documentation in software teams."
+            ],
+            [
+                "Research & planning",
+                "During this phase we scheduled meetings with the client to agree on the app features based on its needs. Moreover, since the diagram and the methodology it comes from where unfamiliar to the team, it was necessary to do research on it."
+            ],
+            [
+                "Initial wireframes",
+                "Being the main funcionality to create a diagram, we focus the UI on the canvas. Keeping this in mind, this component occupies the entire screen, thus the user can visualize a greater number of elements of the diagram."
+            ],
+            [
+                "Design system",
+                ""
+            ],
+            [
+                "Hi-fi wireframes",
+                ""
+            ],
+            [
+                "Developement",
+                "Robix UML is a web based application that works entierly client side, it was build using React and is made out of two parts: A view layer, consisting of the UI elements that the user interacts with, and a business logic layer, which defines the behaviour of the diagram elements."
+            ],
+            [
+                "Conclusion",
+                "This project aimed to address a common problem in agile software development, the lack of comprehensive documentation. By focusing on the use of the robustness analysis diagram as the main artifact for requirements specification, the project sought to provide a solution that balances the need for sufficient documentation with the agility of the development process.<br><br>The solution introduced a tool that promotes the adoption of the robustness analysis diagram, helping software teams to create comprehensive documentation while maintaining an agile approach. Additionally, the ability to convert the diagram into a use case model and to allow multiple users to collaborate in real-time on the creation of diagrams, makes it a valuable tool by facilitating better collaboration and improving the documentation process."
+            ]
+        ]
+    }
+]

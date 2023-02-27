@@ -81,10 +81,8 @@ body:not(:hover) #cursor > :first-child {
   background-color: #c8baa5;
   z-index: 50;
   overflow: hidden;
-  -webkit-animation: 1.5s ease-in-out smile;
-          animation: 1.5s ease-in-out smile;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 1.5s ease-in-out smile;
+  animation-fill-mode: forwards;
   -webkit-clip-path: inset(0% 0% 0% 0%);
           clip-path: inset(0% 0% 0% 0%);
 }
@@ -98,23 +96,6 @@ body:not(:hover) #cursor > :first-child {
 .App > .sections > div > * {
   margin-left: 10%;
   margin-right: 10%;
-}
-
-@-webkit-keyframes smile {
-  50% {
-    width: calc(100vw - 3rem);
-    height: calc(100vh - 3rem);
-    margin: 1.5rem;
-    -webkit-clip-path: inset(0% 0% 0% 0%);
-            clip-path: inset(0% 0% 0% 0%);
-  }
-  100% {
-    width: calc(100vw - 3rem);
-    height: calc(100vh - 3rem);
-    margin: 1.5rem;
-    -webkit-clip-path: inset(0% 0% 100% 0%);
-            clip-path: inset(0% 0% 100% 0%);
-  }
 }
 
 @keyframes smile {
@@ -159,7 +140,6 @@ p {
   /*user-drag: none;*/
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 

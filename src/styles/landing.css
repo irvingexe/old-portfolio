@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 .bg-title {
@@ -129,6 +128,7 @@
   height: calc(100% - 1px);
   transition: all 1s ease;
   flex-direction: column;
+  gap: 0.5em;
 }
 #ido .box .border.title .content {
   overflow: hidden;
@@ -162,7 +162,7 @@
   transition-delay: 0.15s;
   font-size: 2rem;
   font-weight: normal;
-  content: "→";
+  content: "+";
   position: absolute;
   right: 1rem;
   bottom: 0.5rem;
@@ -172,7 +172,7 @@
   transition-delay: 0.15s;
   font-size: 2rem;
   font-weight: normal;
-  content: "—";
+  content: "";
   position: absolute;
   right: 2.5rem;
   bottom: 0.5rem;
@@ -203,8 +203,7 @@
   display: block;
   position: absolute;
   background: #000000;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation-iteration-count: 1;
   transform-origin: 50% 50%;
   height: 1px;
   width: 0%;
@@ -382,7 +381,6 @@
 #contact > div:first-child {
   width: 80%;
   display: grid;
-  grid-template-rows: 1fr -webkit-max-content;
   grid-template-rows: 1fr max-content;
   grid-template-columns: 100%;
   min-height: 60vh;
@@ -396,7 +394,6 @@
 }
 #contact > div:first-child ul {
   display: grid;
-  grid-template-columns: 1fr -webkit-min-content -webkit-min-content;
   grid-template-columns: 1fr min-content min-content;
   /*grid-template-columns: repeat(auto-fit, minmax(10em, min-content));*/
   align-items: center;
@@ -406,7 +403,6 @@
 }
 #contact > div:first-child ul #mailto {
   flex-direction: column;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   /*transform: translate(-25%, 0em);*/
@@ -420,7 +416,6 @@
 }
 #contact > div:first-child ul li {
   z-index: 4;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -478,14 +473,19 @@
   position: relative;
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
+  gap: 5vmin;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 #work > .project .mockup {
   z-index: 1;
-  position: absolute;
   transform-origin: center;
   transition: all 0.5s ease-out;
+  width: 70vmin;
+  border-radius: 50%;
 }
 #work > .project .mockup.open {
+  transform: scale(1.5) translateX(15%) !important;
   /*
   //right: 25%;
   //top: 0rem;
@@ -503,15 +503,11 @@
   }
   */
 }
-#work > .project .mockup.open + .title > div > .name {
-  /*color: #f8f8f8;*/
-}
 #work > .project .mockup.open + .title > div > .open {
   opacity: 0;
 }
 #work > .project .mockup img {
-  max-height: calc(100vh - 5rem);
-  max-width: 200%;
+  width: 100%;
 }
 #work > .project .mockup img.second {
   position: absolute;
@@ -531,12 +527,13 @@
   color: #402828;
   z-index: 2;
   pointer-events: none;
-  position: absolute;
   transition: all 0.5s ease-out;
   transform-origin: center;
 }
 #work > .project .title > div {
   transform-origin: 0;
+  width: -moz-min-content;
+  width: min-content;
 }
 #work > .project .title > div div {
   transition: all 0.5s ease;
@@ -563,7 +560,6 @@
 #work > .project .title > div > .open .background {
   display: block;
   position: absolute;
-  background: #ffffff;
   height: 2em;
   width: 8.4em;
   z-index: -1;
@@ -596,4 +592,27 @@
   background-color: #171717;
   color: #ffffff;
   font-size: 14px;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #work > .project {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #work > .project .mockup {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-5%);
+  }
+  #work > .project .mockup.open {
+    transform: translateY(100%) scale(1.15) !important;
+  }
+  #work > .project .mockup.open + .title {
+    transform: translateY(-60%) !important;
+  }
+  #work > .project .title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(5%);
+  }
 }/*# sourceMappingURL=landing.css.map */
