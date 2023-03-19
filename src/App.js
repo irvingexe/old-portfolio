@@ -7,6 +7,7 @@ import useWindowSize from './hooks/useWindowSize';
 import Lottie from './components/Lottie';
 import smile from './assets/smile.json';
 import projects from './components/projects.json';
+import { ScrollOutJS } from './components/ScrollOut';
 
 const Nav = lazy(() => import('./components/fixed/Nav'));
 const Cursor = lazy(() => import('./components/fixed/Cursor'));
@@ -19,6 +20,7 @@ export default function App() {
   const project = useRef(null);
   const lastProject = useRef(null);
   const color = useRef(null);
+  ScrollOutJS();
 
   useEffect(() => {
     scratchCard.create();
