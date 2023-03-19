@@ -52,9 +52,11 @@ export default function Ido() {
         <div className="font-s">
           Every project is meaningful and require a lot of effort to reach the
           goals. Regardless of which goals you are looking to meet, I can work
-          with you to reach them. I have experience working both in the
-          front-end and back-end side, also colaborate in the design process to
-          reach meaningful experiences.
+          with you to reach them.
+          <br />
+          <br />I have experience working both in the front-end and back-end
+          side, also colaborate in the design process to reach meaningful
+          experiences.
         </div>
       </div>
       <div className="container">
