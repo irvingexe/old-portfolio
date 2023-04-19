@@ -50,56 +50,6 @@
         ]
     },
     {
-        "title": "Crosslink Venues",
-        "site": "https://www.centrocitibanamex.com/es/crosslink-venues/",
-        "opacity": "1",
-        "titleColor": "#F8F5FF",
-        "titleBackground": "#b8a771",
-        "color": "#40448F",
-        "background": "0x898bb6",
-        "brush": "0x4c4e7e",
-        "abstract": "Linking in-person and virtual events in an immersive platform",
-        "technologies": [
-            "Fnsetur",
-            "Consectetur",
-            "Tetur huu",
-            "Bonsectur"
-        ],
-        "role": [
-            "Front-end developement"
-        ],
-        "process": [
-            [
-                "Case study",
-                "Crosslink Venues provides a solution to the events industry by allowing people to recreate the experience of in-person events in a virtual space.<br><br>By offering virtual tools to enhance the experience, Crosslink Venues expands the possibilities of event creation and eliminates the boundaries between in-person and virtual events. This approach offers not only a replacement for in-person events, but also an extension of the experience, creating new opportunities for event planners and attendees alike."
-            ],
-            [
-                "Initial research & planning",
-                "We started gathering information from the previous app and evaluated the problems the users had working with it. We did user interviews to evaluate their experience and what they think would be helpful to add/update in the software. We researched about a typical POS software, did some competitive analysis and created a mood board for necessary features to cover in the software."
-            ],
-            [
-                "Sketches & Wireframes",
-                "The main screen was divided into 3 sections: navbar, sidebar and items section. Here are some initial lo-fi wireframes."
-            ],
-            [
-                "Design system",
-                "To maintain consistency and ensure efficient design to dev handover, We made a modular design system based on reusable components."
-            ],
-            [
-                "Hi-fi wireframes",
-                "After trying some fonts, colors & icons, we started building hi-fi wireframes. We put the focus on the 'Orders page' where users can manage the orders, and continued with the ensuing pages such as 'billing page' and 'New order'."
-            ],
-            [
-                "Arquitecture",
-                "The software was created from scratch using react in the front end and node.js cliet side. It was designed as a typical MVC model implementing a REST interface."
-            ],
-            [
-                "Conclusion",
-                "The idea of bridging the gap between physical and virtual events was a unique and challenging task, requiring innovative solutions to recreate the atmosphere of an event in a virtual space. This provided an opportunity for the team to showcase their creativity.<br><br>Additionally, the increasing trend of virtual events due to the pandemic has made Crosslink Venues a timely and relevant solution for the event industry. By offering a set of tools, not only acts as a replacement for in-person events, but also extends the experience by providing new and exciting possibilities for attendees.<br><br>Crosslink Venues opens up new avenues for hosting events and offers a unique solution to the challenges posed by the pandemic. It provides a platform for event organizers to host events in a virtual space, allowing them to reach a wider audience, save on costs and provide attendees with an immersive experience."
-            ]
-        ]
-    },
-    {
         "title": "Cartoober",
         "site": "https://www.cartoober.com/",
         "opacity": "1",
